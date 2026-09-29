@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "full_half_add_1bit",
+    "kind": "SystemC sc_module",
+    "clocking_model": "Pure combinational logic; outputs propagate after SystemC signal updates. No clock or reset.",
+    "top_level_port_groups": []
+  },
+  "port_catalog": {
+    "i_a": {"canonical_path": "full_half_add_1bit.i_a", "direction": "input", "systemc_type": "sc_in<bool>", "width_bits": 1, "role": "First addend"},
+    "i_b": {"canonical_path": "full_half_add_1bit.i_b", "direction": "input", "systemc_type": "sc_in<bool>", "width_bits": 1, "role": "Second addend"},
+    "i_cin": {"canonical_path": "full_half_add_1bit.i_cin", "direction": "input", "systemc_type": "sc_in<bool>", "width_bits": 1, "role": "Carry input"},
+    "o_sum": {"canonical_path": "full_half_add_1bit.o_sum", "direction": "output", "systemc_type": "sc_out<bool>", "width_bits": 1, "role": "Sum output"},
+    "o_carry": {"canonical_path": "full_half_add_1bit.o_carry", "direction": "output", "systemc_type": "sc_out<bool>", "width_bits": 1, "role": "Carry output"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "The DUT uses bool ports and signals; Verilog X/Z propagation is outside this two-state interface contract."
+  ]
+}
