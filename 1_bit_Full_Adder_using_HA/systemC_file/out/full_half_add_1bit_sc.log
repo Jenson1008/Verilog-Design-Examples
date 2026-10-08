@@ -1,0 +1,10 @@
+time_ns,a,b,cin,expected_sum,expected_carry,sum,carry,result
+1,0,0,0,0,0,0,0,PASS
+2,0,0,1,1,0,1,0,PASS
+3,0,1,0,1,0,1,0,PASS
+4,0,1,1,0,1,0,1,PASS
+5,1,0,0,1,0,1,0,PASS
+6,1,0,1,0,1,0,1,PASS
+7,1,1,0,0,1,0,1,PASS
+8,1,1,1,1,1,1,1,PASS
+# SUMMARY: PASS
