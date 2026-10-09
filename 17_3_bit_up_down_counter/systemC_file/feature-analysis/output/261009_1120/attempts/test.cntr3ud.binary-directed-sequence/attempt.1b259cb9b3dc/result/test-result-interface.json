@@ -1,0 +1,301 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-result-interface",
+  "campaign_id": "cntr3ud.20261009T031813Z.e1e78e",
+  "request_id": "request.cntr3ud.binary-directed-sequence",
+  "attempt_id": "attempt.1b259cb9b3dc",
+  "status": "passed",
+  "observations": [
+    {
+      "signal": "bin_count",
+      "cycle": 0,
+      "value": 0
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 1,
+      "value": 1
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 2,
+      "value": 2
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 3,
+      "value": 3
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 4,
+      "value": 4
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 5,
+      "value": 5
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 6,
+      "value": 6
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 7,
+      "value": 7
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 8,
+      "value": 0
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 9,
+      "value": 7
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 10,
+      "value": 6
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 11,
+      "value": 5
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 12,
+      "value": 4
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 13,
+      "value": 3
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 14,
+      "value": 2
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 15,
+      "value": 1
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 16,
+      "value": 0
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 17,
+      "value": 0
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 18,
+      "value": 7
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 19,
+      "value": 0
+    }
+  ],
+  "expectation_results": [
+    {
+      "signal": "bin_count",
+      "cycle": 0,
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 1,
+      "expected": 1,
+      "actual": 1,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 2,
+      "expected": 2,
+      "actual": 2,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 3,
+      "expected": 3,
+      "actual": 3,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 4,
+      "expected": 4,
+      "actual": 4,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 5,
+      "expected": 5,
+      "actual": 5,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 6,
+      "expected": 6,
+      "actual": 6,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 7,
+      "expected": 7,
+      "actual": 7,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 8,
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 9,
+      "expected": 7,
+      "actual": 7,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 10,
+      "expected": 6,
+      "actual": 6,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 11,
+      "expected": 5,
+      "actual": 5,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 12,
+      "expected": 4,
+      "actual": 4,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 13,
+      "expected": 3,
+      "actual": 3,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 14,
+      "expected": 2,
+      "actual": 2,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 15,
+      "expected": 1,
+      "actual": 1,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 16,
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 17,
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 18,
+      "expected": 7,
+      "actual": 7,
+      "matched": true
+    },
+    {
+      "signal": "bin_count",
+      "cycle": 19,
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  ],
+  "oracle": {
+    "status": "supported",
+    "detail": "Bounded comparison against explicit per-vector expected values."
+  },
+  "artifacts": [
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/logs/build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "artifact.build-stdout",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    },
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/logs/build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "artifact.build-stderr",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    },
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/logs/run.stdout.log",
+      "sha256": "64a6184dc5ef3ac84cfbfa85e5f36f6a1e9da6ef8274f44f523b0199c8f63479",
+      "artifact_id": "artifact.run-stdout",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    },
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/logs/run.stderr.log",
+      "sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094",
+      "artifact_id": "artifact.run-stderr",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    },
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/run/cntr_3ud_campaign.csv",
+      "sha256": "92e8bb03d2ba800de40340bd869b12f4c8aa128358fbf87dac81ef03699fbfa7",
+      "artifact_id": "artifact.test-log",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    },
+    {
+      "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.1b259cb9b3dc/run/cntr_3ud_campaign_wave.vcd",
+      "sha256": "4ff3d521b5c65ea177f8922d20b5f3472ac689343da8ebd7b47e333cd25f5ea6",
+      "artifact_id": "artifact.waveform",
+      "stage": "execute_test",
+      "attempt_id": "attempt.1b259cb9b3dc"
+    }
+  ],
+  "diagnostics": []
+}

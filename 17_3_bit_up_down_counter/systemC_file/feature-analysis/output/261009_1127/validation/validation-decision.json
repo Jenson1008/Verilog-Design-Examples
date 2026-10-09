@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "artifact_type": "validation-decision",
+  "decision": "pending",
+  "authority": "human-review-required",
+  "validated_artifacts": {
+    "feature_ir": "feature-ir/feature-ir.json",
+    "test_catalog": "tests/test-list.json",
+    "readable_spec": "spec/spec.md"
+  },
+  "validated_artifact_digests": {
+    "feature_ir": "bcc58593bc7cde223e713278d8f00bcf4e02bd8ea2f92533f9576ca18e9495e3",
+    "test_catalog": "fb8cf1492518e558273ca14d91dbe1258afb42e96bb40b540608c5893bac8633",
+    "readable_spec": "b0427871718e6f4963f01f4c791069a6ae1cde563f2b4cade0e5f593dd654583"
+  },
+  "reviewed_unknowns": [],
+  "notes": "Pending human review. Accept is bound to the listed artifact digests."
+}

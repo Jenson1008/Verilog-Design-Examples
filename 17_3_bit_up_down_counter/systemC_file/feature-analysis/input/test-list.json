@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-list",
+  "tests": [
+    {
+      "test_id": "test.cntr3ud.binary-directed-sequence",
+      "feature_ids": [
+        "feature.modulo-counter-step"
+      ],
+      "rule_ids": [
+        "rule.cntr3ud.bounded-step"
+      ],
+      "request_ids": [
+        "request.cntr3ud.binary-directed-sequence"
+      ],
+      "source_path": "stimulus/cntr_3ud_campaign_test.cpp",
+      "build_target": "C++17 compile of stimulus/cntr_3ud_campaign_test.cpp against DUT/cntr_3ud.h and SystemC 2.3.4",
+      "run_command": [
+        "{executable_wsl}"
+      ],
+      "seed_policy": "Deterministic fixed vectors; no random seed is consumed.",
+      "oracle_ref": "input/campaign-config.json#evidence_rules[0]",
+      "status": "generated"
+    }
+  ]
+}

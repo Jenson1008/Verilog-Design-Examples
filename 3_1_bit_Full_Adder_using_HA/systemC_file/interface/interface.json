@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "full_half_add_1bit",
+    "kind": "combinational",
+    "clocking_model": "无时钟；连续组合逻辑，输出在输入变化后经 SystemC delta-cycle 更新。"
+  },
+  "port_catalog": {
+    "i_a": {
+      "canonical_path": "full_half_add_1bit.i_a",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "第一个加数输入"
+    },
+    "i_b": {
+      "canonical_path": "full_half_add_1bit.i_b",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "第二个加数输入"
+    },
+    "i_cin": {
+      "canonical_path": "full_half_add_1bit.i_cin",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "低位进位输入"
+    },
+    "o_sum": {
+      "canonical_path": "full_half_add_1bit.o_sum",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "和输出"
+    },
+    "o_carry": {
+      "canonical_path": "full_half_add_1bit.o_carry",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "高位进位输出"
+    }
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": []
+}

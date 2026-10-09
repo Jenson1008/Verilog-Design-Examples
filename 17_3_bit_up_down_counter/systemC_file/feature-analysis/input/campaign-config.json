@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "campaign_id": "cntr3ud",
+  "scope": {
+    "kind": "ip",
+    "path": "17_3_bit_up_down_counter/cntr_3ud",
+    "parent_campaign_id": null
+  },
+  "source_root": "../..",
+  "inputs": {
+    "interface": "interface.json",
+    "basic_description": "basic-description.md",
+    "static_facts": "static-facts.json",
+    "feature_proposal": "feature-proposal.json",
+    "test_list": "test-list.json"
+  },
+  "source_files": [
+    "DUT/cntr_3ud.h",
+    "stimulus/cntr_3ud_campaign_test.cpp"
+  ],
+  "backend": {
+    "kind": "wsl",
+    "distribution": "Ubuntu"
+  },
+  "compiler": "g++",
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "systemc_version": "SystemC 2.3.4",
+  "build_command": [
+    "g++",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-O2",
+    "-I{source_root_wsl}",
+    "{source_root_wsl}/stimulus/cntr_3ud_campaign_test.cpp",
+    "-L/usr/lib",
+    "-Wl,-rpath,/usr/lib",
+    "-lsystemc",
+    "-o",
+    "{executable_wsl}"
+  ],
+  "run_command": [
+    "{executable_wsl}"
+  ],
+  "executable_name": "cntr_3ud_campaign_test",
+  "test_id": "test.cntr3ud.binary-directed-sequence",
+  "request_id": "request.cntr3ud.binary-directed-sequence",
+  "experiment_id": "experiment.cntr3ud.binary-directed-sequence",
+  "observation_id": "observation.cntr3ud.binary-directed-sequence",
+  "primary_feature_id": "feature.modulo-counter-step",
+  "stimulus_signals": [
+    "clk",
+    "reset",
+    "up_down"
+  ],
+  "output_signals": [
+    "bin_count"
+  ],
+  "test_vectors": [
+    {"stimulus": {"clk": 1, "reset": 1, "up_down": 0}, "expected": {"bin_count": 0}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 1}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 2}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 3}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 4}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 5}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 6}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 7}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 0}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 7}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 6}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 5}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 4}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 3}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 2}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 1}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 0}},
+    {"stimulus": {"clk": 1, "reset": 1, "up_down": 1}, "expected": {"bin_count": 0}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 1}, "expected": {"bin_count": 7}},
+    {"stimulus": {"clk": 1, "reset": 0, "up_down": 0}, "expected": {"bin_count": 0}}
+  ],
+  "log_file": "cntr_3ud_campaign.csv",
+  "waveform_file": "cntr_3ud_campaign_wave.vcd",
+  "required_wave_signals": [
+    "clk",
+    "reset",
+    "up_down",
+    "bin_count"
+  ],
+  "log_columns": {
+    "inputs": {
+      "clk": "clk",
+      "reset": "reset",
+      "up_down": "up_down"
+    },
+    "outputs": {
+      "bin_count": "actual"
+    },
+    "status": "status"
+  },
+  "coverage": {
+    "mode": "directed",
+    "signals": [
+      "reset",
+      "up_down"
+    ]
+  },
+  "cycle_semantics": "Cycle 0 is the first test vector after clk/reset/up_down have been initialized low. For each cycle, clk is held low while reset and up_down are driven, inputs settle for 1 ns, clk rises, and bin_count is sampled after a further 1 ns. The vector index is the cycle number; the CSV and VCD use nanoseconds. Only binary input values are requested.",
+  "experiment_time_window": "Each vector is one positive-edge sample with 1 ns input setup and 1 ns post-edge settling before bin_count is read.",
+  "evidence_rules": [
+    {
+      "evidence_id": "evidence.cntr3ud.bounded-step",
+      "rule_id": "rule.cntr3ud.bounded-step",
+      "feature_id": "feature.modulo-counter-step",
+      "statement": "For this 20-vector directed sequence, reset=1 at a rising clock sample produces 000; otherwise up_down=0 advances the three-bit count modulo 8 and up_down=1 decrements it modulo 8. Every configured bin_count expectation matched.",
+      "preconditions": [
+        "The claim is bounded to the exact 20 binary vectors and cycle semantics recorded in this campaign.",
+        "Cycle 0 samples reset=1 on a rising edge; no initial count value is assumed before that edge.",
+        "No claim is made for X/Z inputs or other timing schedules."
+      ],
+      "required_observables": [
+        "bin_count"
+      ],
+      "source_fact_refs": [
+        "fact.counter.width",
+        "fact.counter.clock-edge",
+        "fact.counter.reset",
+        "fact.counter.direction"
+      ],
+      "require_complete_domain": false
+    }
+  ],
+  "timeout_seconds": 60,
+  "max_log_bytes": 1048576,
+  "max_artifact_bytes": 10485760,
+  "seed": 0
+}

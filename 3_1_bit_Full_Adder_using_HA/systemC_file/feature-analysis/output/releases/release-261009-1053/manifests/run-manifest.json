@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "run-manifest",
+  "campaign_id": "fa.20261009T023614Z.b1ee09",
+  "source_revision": "sha256:8bcc7aa923ac50e90865ef9a68e8dd987c182c595de2aee3aa3ffebf86979636",
+  "input_files": [
+    {
+      "path": "input/interface.json",
+      "sha256": "652a8ee77ec7222d95c431587be00c3182a0a07f15c9f3ed392b227a3bb10e6f",
+      "artifact_id": "input.interface",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/basic-description.md",
+      "sha256": "801d507052cfe89bee607a0b379bca4ea3502abe700ada829d2ca8f07989f3de",
+      "artifact_id": "input.basic_description",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/static-facts.json",
+      "sha256": "ee411420466fd5a2a780c40291815fa5ea8bb3e3a70c7267bb38e44afc2d22bd",
+      "artifact_id": "input.static_facts",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/feature-proposal.json",
+      "sha256": "89275a15fcfee703ebe14298ebe4fcd6aa5427280b333df300694c1f747938ba",
+      "artifact_id": "input.feature_proposal",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-list.json",
+      "sha256": "598b802e1195cdcc6e7eefe766787454964f50a9f81efd51c315487d1f2417eb",
+      "artifact_id": "input.test_list",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/campaign-config.json",
+      "sha256": "425592af1bd43d7d55ec0e26445575916b29a20cda8bba67283821190981f18c",
+      "artifact_id": "input.campaign-config",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/DUT/full_half_add_1bit.h",
+      "sha256": "42721532169313a9f903042322c2bf59e09218a90a37aabf44f09b42ba2fa0a4",
+      "artifact_id": "source.0",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/DUT/half_adder.h",
+      "sha256": "52d8e868a3845c12414332118add31f9130b0fb707e38d9ccbb89524caeb088b",
+      "artifact_id": "source.1",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/feature-analysis/input/campaign_tb.cpp",
+      "sha256": "5f297f16719b4820fb0c35d897e45426ffa177bf421fd98cc6ce60774a751f78",
+      "artifact_id": "source.2",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-request-interface.json",
+      "sha256": "3760579e07b66d286e10ad66ae30afb39e25307ceb578f78f064fe4d85981ed4",
+      "artifact_id": "input.test-request",
+      "stage": "generate_test_requests"
+    }
+  ],
+  "test_request_ref": {
+    "path": "input/test-request-interface.json",
+    "sha256": "3760579e07b66d286e10ad66ae30afb39e25307ceb578f78f064fe4d85981ed4",
+    "artifact_id": "input.test-request",
+    "stage": "generate_test_requests"
+  },
+  "build_profile": "wsl:ip:1_bit_Full_Adder_using_HA/systemC_file",
+  "scope": {
+    "kind": "ip",
+    "path": "1_bit_Full_Adder_using_HA/systemC_file"
+  },
+  "systemc_version": "2.3.4",
+  "compiler_version": "13.3.0",
+  "harness_version": "0.1.0",
+  "created_at": "2026-10-09T02:36:14.822909+00:00",
+  "seed": 0,
+  "budgets": {
+    "max_experiments": 1,
+    "max_tests": 1,
+    "timeout_seconds": 60,
+    "max_artifact_bytes": 10485760
+  },
+  "status": "awaiting_validation"
+}

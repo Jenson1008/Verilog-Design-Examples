@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "evidence-manifest",
+  "evidence": [
+    {
+      "id": "evidence.cntr3ud.bounded-step",
+      "rule_id": "rule.cntr3ud.bounded-step",
+      "feature_id": "feature.modulo-counter-step",
+      "source_fact_refs": [
+        "fact.counter.width",
+        "fact.counter.clock-edge",
+        "fact.counter.reset",
+        "fact.counter.direction"
+      ],
+      "test_refs": [
+        "test.cntr3ud.binary-directed-sequence"
+      ],
+      "observation_refs": [
+        "observation.cntr3ud.binary-directed-sequence"
+      ],
+      "test_result_refs": [
+        {
+          "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.bb85f07198a0/result/test-result-interface.json",
+          "sha256": "f2cdb1fbb83f9b9210e61a24dd5ba1f11178ff4ffdf65508b1a461f733e79ee9",
+          "artifact_id": "artifact.test-result",
+          "stage": "analyze_trace",
+          "attempt_id": "attempt.bb85f07198a0"
+        }
+      ],
+      "trace_refs": [
+        {
+          "path": "attempts/test.cntr3ud.binary-directed-sequence/attempt.bb85f07198a0/run/cntr_3ud_campaign_wave.vcd",
+          "sha256": "a6832c8ec1541f438def0cf5aababa8db0f8752c530ffb69be11e5536160edce",
+          "artifact_id": "artifact.waveform",
+          "stage": "execute_test",
+          "attempt_id": "attempt.bb85f07198a0"
+        }
+      ],
+      "transaction_refs": [],
+      "decision": "confirmed",
+      "reason": "All configured vectors passed, every required observable was sampled, and coverage mode was directed."
+    }
+  ]
+}

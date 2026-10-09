@@ -1,0 +1,264 @@
+{
+  "schema_version": 2,
+  "artifact_type": "coverage-ledger",
+  "targets": [
+    {
+      "target_id": "coverage.port.up_down",
+      "kind": "interface_port",
+      "reference": "up_down",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is part of the configured bounded test interface.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.clk",
+      "kind": "interface_port",
+      "reference": "clk",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is part of the configured bounded test interface.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.reset",
+      "kind": "interface_port",
+      "reference": "reset",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is part of the configured bounded test interface.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.bin_count",
+      "kind": "interface_port",
+      "reference": "bin_count",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is part of the configured bounded test interface.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.unknown.1",
+      "kind": "declared_unknown",
+      "reference": "The RTL does not initialize bin_count; its power-up value is unknown until a positive clock edge evaluates reset as logic 1.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.2",
+      "kind": "declared_unknown",
+      "reference": "The Verilog testbench changes reset at 25 ns, coincident with a positive clock edge, so the value sampled at that edge is scheduling-dependent.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.3",
+      "kind": "declared_unknown",
+      "reference": "The original testbench also drives up_down on the same positive edge at which the DUT samples it; this SystemC stimulus avoids that race and does not claim to reproduce its random sequence.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.4",
+      "kind": "declared_unknown",
+      "reference": "The count is not initialized before the first active clock event that samples reset=1.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.5",
+      "kind": "declared_unknown",
+      "reference": "X/Z behavior for clk, reset, and up_down is outside this campaign's integer-valued test request; the prior SystemC self-test's representative four-state checks are separate and are not bound as evidence here.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.6",
+      "kind": "declared_unknown",
+      "reference": "The original Verilog testbench's randomized stimulus and same-edge reset/input scheduling races are not reproduced or assessed by this campaign.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.unknown.7",
+      "kind": "declared_unknown",
+      "reference": "Clock/reset timing outside the specified one-nanosecond setup and post-edge sample schedule is untested.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.hypothesis.feature.modulo-counter-step",
+      "kind": "hypothesis",
+      "reference": "feature.modulo-counter-step",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "The candidate hypothesis was exercised by the configured experiment; its bounded rule was evaluated separately by Evidence Gate.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.behavior.rule.cntr3ud.bounded-step",
+      "kind": "behavioral_dimension",
+      "reference": "rule.cntr3ud.bounded-step",
+      "status": "covered",
+      "priority": "high",
+      "rationale": "For this 20-vector directed sequence, reset=1 at a rising clock sample produces 000; otherwise up_down=0 advances the three-bit count modulo 8 and up_down=1 decrements it modulo 8. Every configured bin_count expectation matched.",
+      "experiment_ids": [
+        "experiment.cntr3ud.binary-directed-sequence"
+      ],
+      "source_refs": [
+        {
+          "path": "input/campaign-config.json",
+          "sha256": "64f061b919abe6b6d9bf81fd54cf679ab2656a6c6993350a11b53d104795d842",
+          "artifact_id": "input.campaign-config",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.static-analysis.systemc",
+      "kind": "static_analysis_gap",
+      "reference": "General SystemC/C++ semantics outside caller-supplied static facts",
+      "status": "unsupported",
+      "priority": "medium",
+      "rationale": "The deterministic MVP consumes static facts supplied by the caller and does not parse arbitrary SystemC/C++ semantics.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/static-facts.json",
+          "sha256": "9a527b18ae74430aa6e9e4ab38a247e1f8244b6fe5cde00b42b14b68a8ecb405",
+          "artifact_id": "input.static-facts",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "No general SystemC/C++ static analyzer is implemented in this runner."
+    }
+  ]
+}

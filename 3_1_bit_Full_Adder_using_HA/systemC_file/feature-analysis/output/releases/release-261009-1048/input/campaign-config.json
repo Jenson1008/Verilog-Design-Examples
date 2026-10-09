@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "campaign_id": "fa",
+  "scope": {
+    "kind": "ip",
+    "path": "1_bit_Full_Adder_using_HA/systemC_file",
+    "parent_campaign_id": null
+  },
+  "source_root": "../..",
+  "inputs": {
+    "interface": "interface.json",
+    "basic_description": "basic-description.md",
+    "static_facts": "static-facts.json",
+    "feature_proposal": "feature-proposal.json",
+    "test_list": "test-list.json"
+  },
+  "source_files": [
+    "DUT/full_half_add_1bit.h",
+    "DUT/half_adder.h",
+    "feature-analysis/input/campaign_tb.cpp"
+  ],
+  "backend": {
+    "kind": "wsl",
+    "distribution": "Ubuntu"
+  },
+  "compiler": "g++",
+  "compiler_version": "13.3.0",
+  "systemc_version": "2.3.4",
+  "build_command": [
+    "g++",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-I/usr/include",
+    "{source_root_wsl}/feature-analysis/input/campaign_tb.cpp",
+    "-L/usr/lib",
+    "-Wl,-rpath,/usr/lib",
+    "-lsystemc",
+    "-o",
+    "{executable_wsl}"
+  ],
+  "run_command": ["{executable_wsl}"],
+  "executable_name": "full_adder_campaign_test",
+  "test_id": "test.fa",
+  "request_id": "request.full-adder.truth-table",
+  "experiment_id": "experiment.full-adder.binary-domain",
+  "observation_id": "observation.full-adder.truth-table",
+  "primary_feature_id": "feature.full-adder.binary",
+  "stimulus_signals": ["i_a", "i_b", "i_cin"],
+  "output_signals": ["o_sum", "o_carry"],
+  "test_vectors": [
+    {"stimulus": {"i_a": 0, "i_b": 0, "i_cin": 0}, "expected": {"o_sum": 0, "o_carry": 0}},
+    {"stimulus": {"i_a": 0, "i_b": 0, "i_cin": 1}, "expected": {"o_sum": 1, "o_carry": 0}},
+    {"stimulus": {"i_a": 0, "i_b": 1, "i_cin": 0}, "expected": {"o_sum": 1, "o_carry": 0}},
+    {"stimulus": {"i_a": 0, "i_b": 1, "i_cin": 1}, "expected": {"o_sum": 0, "o_carry": 1}},
+    {"stimulus": {"i_a": 1, "i_b": 0, "i_cin": 0}, "expected": {"o_sum": 1, "o_carry": 0}},
+    {"stimulus": {"i_a": 1, "i_b": 0, "i_cin": 1}, "expected": {"o_sum": 0, "o_carry": 1}},
+    {"stimulus": {"i_a": 1, "i_b": 1, "i_cin": 0}, "expected": {"o_sum": 0, "o_carry": 1}},
+    {"stimulus": {"i_a": 1, "i_b": 1, "i_cin": 1}, "expected": {"o_sum": 1, "o_carry": 1}}
+  ],
+  "log_file": "full_adder_campaign.csv",
+  "waveform_file": "full_adder_campaign_wave.vcd",
+  "log_columns": {
+    "inputs": {"i_a": "i_a", "i_b": "i_b", "i_cin": "i_cin"},
+    "outputs": {"o_sum": "o_sum", "o_carry": "o_carry"},
+    "status": "result"
+  },
+  "coverage": {
+    "mode": "exhaustive",
+    "signals": ["i_a", "i_b", "i_cin"],
+    "values": [0, 1]
+  },
+  "cycle_semantics": "纯组合 DUT。cycle 0 从首组输入开始；每组输入驱动后等待 1 ns 以完成 SystemC delta-cycle 更新，再采样 o_sum 与 o_carry。无时钟、复位和随机 seed。",
+  "evidence_rules": [
+    {
+      "evidence_id": "evidence.full-adder.truth-table",
+      "rule_id": "rule.full-adder.truth-table",
+      "feature_id": "feature.full-adder.binary",
+      "statement": "对全部 8 种 i_a、i_b、i_cin 的二值组合，稳定采样的 o_sum 等于 i_a+i_b+i_cin 的最低位，o_carry 等于进位位。",
+      "preconditions": [
+        "i_a、i_b、i_cin 均属于 {0,1}。",
+        "每组输入驱动后等待 1 ns，再采样两个输出。"
+      ],
+      "required_observables": ["o_sum", "o_carry"],
+      "source_fact_refs": ["fact.half-adder.sum", "fact.half-adder.carry", "fact.full-adder.hierarchy", "fact.full-adder.carry-combine"],
+      "require_complete_domain": true
+    }
+  ],
+  "timeout_seconds": 60,
+  "max_log_bytes": 1048576,
+  "max_artifact_bytes": 10485760,
+  "seed": 0
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "cntr_3ud",
+    "kind": "SystemC sc_module",
+    "clocking_model": "Single-clock, positive-edge-triggered, three-bit modulo-8 counter. State changes only on a Verilog positive-edge transition.",
+    "top_level_port_groups": []
+  },
+  "port_catalog": {
+    "up_down": {"canonical_path": "cntr_3ud.up_down", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Logic 1 decrements; logic 0, X, or Z takes the procedural if else branch and increments.", "sampling": "Sampled on each Verilog positive-edge transition of clk.", "timing_contract": "The value at the active clock event controls the next count."},
+    "clk": {"canonical_path": "cntr_3ud.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Clock; active edge is positive, including Verilog 0-to-1/X/Z and X/Z-to-1 transitions.", "edge": "rising", "timing_contract": "A Verilog positive-edge transition triggers the state update."},
+    "reset": {"canonical_path": "cntr_3ud.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Active-high synchronous reset sampled on the active clock edge; X/Z follows procedural Verilog if semantics.", "polarity": "active_high", "sampling": "Synchronous to clk; sampled only on its Verilog positive-edge transition.", "asserted_meaning": "Logic 1 clears bin_count to 000.", "reset_binding": "cntr_3ud.clk", "timing_contract": "Reset assertion and release affect state only when sampled at an active clock event."},
+    "bin_count": {"canonical_path": "cntr_3ud.bin_count", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<3>>", "width_bits": 3, "role": "Three-bit modulo-8 count; wraps on increment/decrement overflow.", "timing_contract": "Updated after a Verilog positive-edge transition of clk."}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "The RTL does not initialize bin_count; its power-up value is unknown until a positive clock edge evaluates reset as logic 1.",
+    "The Verilog testbench changes reset at 25 ns, coincident with a positive clock edge, so the value sampled at that edge is scheduling-dependent.",
+    "The original testbench also drives up_down on the same positive edge at which the DUT samples it; this SystemC stimulus avoids that race and does not claim to reproduce its random sequence."
+  ]
+}

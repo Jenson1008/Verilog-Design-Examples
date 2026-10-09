@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "artifact_type": "feature-proposal",
+  "status": "proposed",
+  "inputs": {
+    "interface": "input/interface.json",
+    "basic_description": "input/basic-description.md",
+    "static_facts": "analysis/static-facts.json",
+    "coverage_ledger": "analysis/coverage-ledger.json"
+  },
+  "features": [
+    {
+      "id": "feature.modulo-counter-step",
+      "hypothesis": "For the configured directed binary sequence, a sampled active clock event with reset=1 clears bin_count; otherwise up_down=0 advances it modulo 8 and up_down=1 decrements it modulo 8.",
+      "scope": "Limited to the 20 explicit binary test vectors and one-nanosecond setup and post-edge sampling intervals in this campaign.",
+      "triggers": [
+        "Each configured vector includes a rising clock transition."
+      ],
+      "observables": [
+        "bin_count"
+      ],
+      "discovery_basis": [
+        {
+          "kind": "interface_contract",
+          "reference": "cntr_3ud.clk, cntr_3ud.reset, cntr_3ud.up_down, cntr_3ud.bin_count",
+          "rationale": "The DUT interface identifies the sampled clock, synchronous reset, direction control, and count output."
+        },
+        {
+          "kind": "basic_description",
+          "reference": "input/basic-description.md",
+          "rationale": "The caller-supplied design summary proposes a three-bit modulo-8 up/down counter."
+        },
+        {
+          "kind": "static_fact",
+          "reference": "fact.counter.direction",
+          "rationale": "The SystemC branch structure is a candidate source for the direction hypothesis, not dynamic confirmation."
+        },
+        {
+          "kind": "declared_unknown",
+          "reference": "The RTL does not initialize bin_count; its power-up value is unknown until a positive clock edge evaluates reset as logic 1.",
+          "rationale": "The experiment explicitly establishes state with a synchronous reset before checking count transitions."
+        }
+      ],
+      "source_refs": [
+        {
+          "file": "input/source/DUT/cntr_3ud.h",
+          "start_line": 54,
+          "end_line": 68,
+          "symbol": "update_count"
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "The count is not initialized before the first active clock event that samples reset=1.",
+    "X/Z behavior for clk, reset, and up_down is outside this campaign's integer-valued test request; the prior SystemC self-test's representative four-state checks are separate and are not bound as evidence here.",
+    "The original Verilog testbench's randomized stimulus and same-edge reset/input scheduling races are not reproduced or assessed by this campaign.",
+    "Clock/reset timing outside the specified one-nanosecond setup and post-edge sample schedule is untested."
+  ]
+}

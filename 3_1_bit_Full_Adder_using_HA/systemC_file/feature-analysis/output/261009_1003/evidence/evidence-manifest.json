@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "evidence-manifest",
+  "evidence": [
+    {
+      "id": "evidence.full-adder.truth-table",
+      "rule_id": "rule.full-adder.truth-table",
+      "feature_id": "feature.full-adder.binary",
+      "source_fact_refs": [
+        "fact.half-adder.sum",
+        "fact.half-adder.carry",
+        "fact.full-adder.hierarchy",
+        "fact.full-adder.carry-combine"
+      ],
+      "test_refs": [
+        "test.fa"
+      ],
+      "observation_refs": [
+        "observation.full-adder.truth-table"
+      ],
+      "test_result_refs": [
+        {
+          "path": "attempts/test.fa/attempt.db4172052b9e/result/test-result-interface.json",
+          "sha256": "3bfd15703e3102be743406b7a7efc85277551689d6288dddd94c90da6551d8c0",
+          "artifact_id": "artifact.test-result",
+          "stage": "analyze_trace",
+          "attempt_id": "attempt.db4172052b9e"
+        }
+      ],
+      "trace_refs": [
+        {
+          "path": "attempts/test.fa/attempt.db4172052b9e/run/full_adder_campaign_wave.vcd",
+          "sha256": "ad180d595bf974580cefb4e531fa6e7c1db873300c4c3c60a4ebdd3ad7c0f5fb",
+          "artifact_id": "artifact.waveform",
+          "stage": "execute_test",
+          "attempt_id": "attempt.db4172052b9e"
+        }
+      ],
+      "transaction_refs": [],
+      "decision": "confirmed",
+      "reason": "All configured vectors passed, every required observable was sampled, and coverage mode was exhaustive."
+    }
+  ]
+}

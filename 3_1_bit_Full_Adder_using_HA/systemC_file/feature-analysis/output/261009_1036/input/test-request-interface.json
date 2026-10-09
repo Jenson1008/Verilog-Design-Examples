@@ -1,0 +1,239 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-request-interface",
+  "origin": "caller_seed",
+  "dut_interface_ref": {
+    "path": "input/interface.json",
+    "sha256": "652a8ee77ec7222d95c431587be00c3182a0a07f15c9f3ed392b227a3bb10e6f",
+    "artifact_id": "input.interface",
+    "stage": "snapshot_inputs"
+  },
+  "requests": [
+    {
+      "request_id": "request.full-adder.truth-table",
+      "feature_id": "feature.full-adder.binary",
+      "experiment_id": "experiment.full-adder.binary-domain",
+      "stimulus": [
+        {
+          "signal": "i_a",
+          "value": 0,
+          "cycle": 0
+        },
+        {
+          "signal": "i_b",
+          "value": 0,
+          "cycle": 0
+        },
+        {
+          "signal": "i_cin",
+          "value": 0,
+          "cycle": 0
+        },
+        {
+          "signal": "i_a",
+          "value": 0,
+          "cycle": 1
+        },
+        {
+          "signal": "i_b",
+          "value": 0,
+          "cycle": 1
+        },
+        {
+          "signal": "i_cin",
+          "value": 1,
+          "cycle": 1
+        },
+        {
+          "signal": "i_a",
+          "value": 0,
+          "cycle": 2
+        },
+        {
+          "signal": "i_b",
+          "value": 1,
+          "cycle": 2
+        },
+        {
+          "signal": "i_cin",
+          "value": 0,
+          "cycle": 2
+        },
+        {
+          "signal": "i_a",
+          "value": 0,
+          "cycle": 3
+        },
+        {
+          "signal": "i_b",
+          "value": 1,
+          "cycle": 3
+        },
+        {
+          "signal": "i_cin",
+          "value": 1,
+          "cycle": 3
+        },
+        {
+          "signal": "i_a",
+          "value": 1,
+          "cycle": 4
+        },
+        {
+          "signal": "i_b",
+          "value": 0,
+          "cycle": 4
+        },
+        {
+          "signal": "i_cin",
+          "value": 0,
+          "cycle": 4
+        },
+        {
+          "signal": "i_a",
+          "value": 1,
+          "cycle": 5
+        },
+        {
+          "signal": "i_b",
+          "value": 0,
+          "cycle": 5
+        },
+        {
+          "signal": "i_cin",
+          "value": 1,
+          "cycle": 5
+        },
+        {
+          "signal": "i_a",
+          "value": 1,
+          "cycle": 6
+        },
+        {
+          "signal": "i_b",
+          "value": 1,
+          "cycle": 6
+        },
+        {
+          "signal": "i_cin",
+          "value": 0,
+          "cycle": 6
+        },
+        {
+          "signal": "i_a",
+          "value": 1,
+          "cycle": 7
+        },
+        {
+          "signal": "i_b",
+          "value": 1,
+          "cycle": 7
+        },
+        {
+          "signal": "i_cin",
+          "value": 1,
+          "cycle": 7
+        }
+      ],
+      "observe": [
+        {
+          "signal": "o_sum",
+          "from_cycle": 0,
+          "to_cycle": 7
+        },
+        {
+          "signal": "o_carry",
+          "from_cycle": 0,
+          "to_cycle": 7
+        }
+      ],
+      "expected": [
+        {
+          "signal": "o_sum",
+          "cycle": 0,
+          "value": 0
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 0,
+          "value": 0
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 1,
+          "value": 1
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 1,
+          "value": 0
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 2,
+          "value": 1
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 2,
+          "value": 0
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 3,
+          "value": 0
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 3,
+          "value": 1
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 4,
+          "value": 1
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 4,
+          "value": 0
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 5,
+          "value": 0
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 5,
+          "value": 1
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 6,
+          "value": 0
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 6,
+          "value": 1
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 7,
+          "value": 1
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 7,
+          "value": 1
+        }
+      ],
+      "constraints": {
+        "max_cycles": 8,
+        "timeout_s": 60
+      },
+      "expected_status": "pass"
+    }
+  ]
+}

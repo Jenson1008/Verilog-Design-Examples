@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "artifact_type": "static-facts",
+  "module": "full_half_add_1bit",
+  "facts": [
+    {
+      "id": "fact.half-adder.sum",
+      "kind": "combinational_equation",
+      "name": "half_adder.h_sum",
+      "value": {
+        "operator": "xor",
+        "operands": ["h_a", "h_b"],
+        "result": "h_sum"
+      },
+      "source": {
+        "file": "DUT/half_adder.h",
+        "start_line": 17,
+        "end_line": 18,
+        "symbol": "half_adder::combinational"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.half-adder.carry",
+      "kind": "combinational_equation",
+      "name": "half_adder.h_carry",
+      "value": {
+        "operator": "and",
+        "operands": ["h_a", "h_b"],
+        "result": "h_carry"
+      },
+      "source": {
+        "file": "DUT/half_adder.h",
+        "start_line": 17,
+        "end_line": 19,
+        "symbol": "half_adder::combinational"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.full-adder.hierarchy",
+      "kind": "module_hierarchy",
+      "name": "full_half_add_1bit",
+      "value": {
+        "instances": ["h1", "h2"],
+        "module": "half_adder",
+        "connection": "h1.h_sum drives h2.h_a; the two carry outputs are ORed to o_carry"
+      },
+      "source": {
+        "file": "DUT/full_half_add_1bit.h",
+        "start_line": 19,
+        "end_line": 39,
+        "symbol": "full_half_add_1bit"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.full-adder.carry-combine",
+      "kind": "combinational_equation",
+      "name": "full_half_add_1bit.o_carry",
+      "value": {
+        "operator": "or",
+        "operands": ["w_carry1", "w_carry2"],
+        "result": "o_carry"
+      },
+      "source": {
+        "file": "DUT/full_half_add_1bit.h",
+        "start_line": 34,
+        "end_line": 39,
+        "symbol": "full_half_add_1bit::combine_carries"
+      },
+      "confidence": "exact"
+    }
+  ]
+}

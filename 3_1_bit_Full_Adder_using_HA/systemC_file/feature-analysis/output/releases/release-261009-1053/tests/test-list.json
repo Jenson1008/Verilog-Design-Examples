@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-list",
+  "tests": [
+    {
+      "test_id": "test.fa",
+      "feature_ids": [
+        "feature.full-adder.binary"
+      ],
+      "rule_ids": [
+        "rule.full-adder.truth-table"
+      ],
+      "request_ids": [
+        "request.full-adder.truth-table"
+      ],
+      "source_path": "input/source/feature-analysis/input/campaign_tb.cpp",
+      "build_target": "full_adder_campaign_test",
+      "run_command": [
+        "{executable_wsl}"
+      ],
+      "seed_policy": "确定性穷举；按 000 到 111 的固定顺序运行，不使用随机数。",
+      "oracle_ref": "campaign-config.json#/evidence_rules/0",
+      "status": "proposed"
+    }
+  ]
+}

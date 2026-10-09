@@ -1,0 +1,338 @@
+{
+  "schema_version": 2,
+  "artifact_type": "experiment-plan",
+  "status": "approved_example",
+  "proposal": "proposals/feature-proposal.json",
+  "experiments": [
+    {
+      "id": "experiment.cntr3ud.binary-directed-sequence",
+      "feature": "feature.modulo-counter-step",
+      "hypothesis_ref": "feature.modulo-counter-step",
+      "request_ids": [
+        "request.cntr3ud.binary-directed-sequence"
+      ],
+      "stimulus": {
+        "actions": [
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 0
+          },
+          {
+            "signal": "reset",
+            "value": 1,
+            "cycle": 0
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 0
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 1
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 1
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 1
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 2
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 2
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 2
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 3
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 3
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 3
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 4
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 4
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 4
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 5
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 5
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 5
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 6
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 6
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 6
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 7
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 7
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 7
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 8
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 8
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 8
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 9
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 9
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 9
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 10
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 10
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 10
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 11
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 11
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 11
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 12
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 12
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 12
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 13
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 13
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 13
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 14
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 14
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 14
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 15
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 15
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 15
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 16
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 16
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 16
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 17
+          },
+          {
+            "signal": "reset",
+            "value": 1,
+            "cycle": 17
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 17
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 18
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 18
+          },
+          {
+            "signal": "up_down",
+            "value": 1,
+            "cycle": 18
+          },
+          {
+            "signal": "clk",
+            "value": 1,
+            "cycle": 19
+          },
+          {
+            "signal": "reset",
+            "value": 0,
+            "cycle": 19
+          },
+          {
+            "signal": "up_down",
+            "value": 0,
+            "cycle": 19
+          }
+        ]
+      },
+      "observes": [
+        "bin_count"
+      ],
+      "coverage_targets": [
+        "reset",
+        "up_down",
+        "coverage.hypothesis.feature.modulo-counter-step",
+        "coverage.behavior.rule.cntr3ud.bounded-step"
+      ],
+      "discovery_basis": [
+        "interface_contract",
+        "static_facts",
+        "caller_seed"
+      ],
+      "time_window": "Each vector is one positive-edge sample with 1 ns input setup and 1 ns post-edge settling before bin_count is read.",
+      "oracle": "Explicit expected values in the campaign's test vectors",
+      "cost": 1,
+      "approved": true
+    }
+  ]
+}

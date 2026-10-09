@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "artifact_type": "static-facts",
+  "module": "cntr_3ud",
+  "facts": [
+    {
+      "id": "fact.counter.width",
+      "kind": "port_width",
+      "name": "bin_count",
+      "value": "3-bit sc_lv output",
+      "source": {
+        "file": "DUT/cntr_3ud.h",
+        "start_line": 5,
+        "end_line": 9,
+        "symbol": "cntr_3ud"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.counter.clock-edge",
+      "kind": "clock_trigger",
+      "name": "clk",
+      "value": "State update occurs only when the SystemC clock event matches a Verilog positive-edge transition.",
+      "source": {
+        "file": "DUT/cntr_3ud.h",
+        "start_line": 12,
+        "end_line": 51,
+        "symbol": "observe_clock"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.counter.reset",
+      "kind": "reset_behavior",
+      "name": "reset",
+      "value": "Logic 1 sampled at an active clock transition writes 000 to bin_count; reset is synchronous.",
+      "source": {
+        "file": "DUT/cntr_3ud.h",
+        "start_line": 54,
+        "end_line": 58,
+        "symbol": "update_count"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.counter.direction",
+      "kind": "direction_behavior",
+      "name": "up_down",
+      "value": "Logic 1 decrements; all other sc_logic values take the else branch and increment.",
+      "source": {
+        "file": "DUT/cntr_3ud.h",
+        "start_line": 60,
+        "end_line": 68,
+        "symbol": "update_count"
+      },
+      "confidence": "exact"
+    }
+  ]
+}

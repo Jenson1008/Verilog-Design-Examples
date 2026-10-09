@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "run-manifest",
+  "campaign_id": "cntr3ud.20261009T032702Z.dec64d",
+  "source_revision": "sha256:fcd27934bf871dfc114e66404925795900447aac709c05aeefe6bf7fff157ec1",
+  "input_files": [
+    {
+      "path": "input/interface.json",
+      "sha256": "77ea83422f729ad1c60f29414ff4c0c07f2fd0aa319fa626909e3cae51a5bd6b",
+      "artifact_id": "input.interface",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/basic-description.md",
+      "sha256": "2cb09f6d9c353385ea674eb5ba256dcb4c7fdfe796703f1fe0d279fb934b9a0f",
+      "artifact_id": "input.basic_description",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/static-facts.json",
+      "sha256": "9a527b18ae74430aa6e9e4ab38a247e1f8244b6fe5cde00b42b14b68a8ecb405",
+      "artifact_id": "input.static_facts",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/feature-proposal.json",
+      "sha256": "6ab1cc5744e8668db354466bbf4c404f2c310b2454ec4f1fbb3d6d7c791ff906",
+      "artifact_id": "input.feature_proposal",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-list.json",
+      "sha256": "58f8d101010ebf90540457234b3b8ec018528af50e7b765bb089294c32b99f2d",
+      "artifact_id": "input.test_list",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/campaign-config.json",
+      "sha256": "64f061b919abe6b6d9bf81fd54cf679ab2656a6c6993350a11b53d104795d842",
+      "artifact_id": "input.campaign-config",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/DUT/cntr_3ud.h",
+      "sha256": "39a7800b5095b96428646a3c0e34fd3b24709d696a25ec90589a6f77a6983487",
+      "artifact_id": "source.0",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/stimulus/cntr_3ud_campaign_test.cpp",
+      "sha256": "022b6a56588bc4adc0973d19f7eae9f70b57575e8a4bbd31a4e1bbcf4bd47af8",
+      "artifact_id": "source.1",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-request-interface.json",
+      "sha256": "d1bf74a30c6cfcffccd0d04123f1e7a6c7fdafd26bc8ef4b63845ce6f0526a1c",
+      "artifact_id": "input.test-request",
+      "stage": "generate_test_requests"
+    }
+  ],
+  "test_request_ref": {
+    "path": "input/test-request-interface.json",
+    "sha256": "d1bf74a30c6cfcffccd0d04123f1e7a6c7fdafd26bc8ef4b63845ce6f0526a1c",
+    "artifact_id": "input.test-request",
+    "stage": "generate_test_requests"
+  },
+  "build_profile": "wsl:ip:3_bit_up_down_counter/cntr_3ud",
+  "scope": {
+    "kind": "ip",
+    "path": "3_bit_up_down_counter/cntr_3ud"
+  },
+  "systemc_version": "SystemC 2.3.4",
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "harness_version": "0.1.0",
+  "created_at": "2026-10-09T03:27:02.861721+00:00",
+  "seed": 0,
+  "budgets": {
+    "max_experiments": 1,
+    "max_tests": 1,
+    "timeout_seconds": 60,
+    "max_artifact_bytes": 10485760
+  },
+  "status": "awaiting_validation"
+}
