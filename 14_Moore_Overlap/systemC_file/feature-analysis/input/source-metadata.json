@@ -1,0 +1,108 @@
+{
+    "metadata_version": 1,
+    "design": "14_Moore_Overlap",
+    "module": "moore_ol",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository contains unrelated local modifications/deletions; listed source bytes bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "moore_ol_sc_tb.cpp",
+            "DUT/moore_ol_sc.h",
+            "stimulus/moore_ol_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-I. -std=c++17 -O2 -Wall -Wextra -Wpedantic -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/moore_ol_sc_tb.cpp",
+            "sha256": "dcfedbd2616db67729a470ce929abbe0b1923302984380bf27394164c455fbe4",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/DUT/moore_ol_sc.h",
+            "sha256": "7bd341241aa5b98a0553e744b984cc8cb1b82edca4fcec3c8fea65c532049ddb",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/stimulus/moore_ol_sc_stimulus.h",
+            "sha256": "f6f319af09992dae3047d0af49147c2ecfd2eede553169f77b02175f4457ebc7",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/Makefile",
+            "sha256": "bf4453e6a73ac391c33a81d36c7bf43156c1077a64aa3690859b438de7b391ed",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/interface/interface.json",
+            "sha256": "c192604bc8c06d4e9dc97c805d4c6dc6e5037ae154aa658210bf98601d18dc68",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/systemC_file/out/simulation.log",
+            "sha256": "9def843fd471f72eafd1d06eddf1f74a618f5d17d5eca5fb481eeb3d9695f390",
+            "role": "prior finite SystemC self-check log"
+        },
+        {
+            "repository_path": "14_Moore_Overlap/moore_ol.v",
+            "sha256": "93f7dac91a9cff71165f259fe179b7bdebabcbed25539fe3d6b3e2d64f35407f",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "14_Moore_Overlap/systemC_file/interface/interface.json",
+        "authority_sha256": "c192604bc8c06d4e9dc97c805d4c6dc6e5037ae154aa658210bf98601d18dc68",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness v2 projection; RTL/SystemC declarations and authority port contract cross-checked; bin_gry width uses default N=8."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavior unknowns retained",
+        "ports": [
+            "in",
+            "clk",
+            "reset",
+            "out"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "14_Moore_Overlap/systemC_file/out/simulation.log",
+        "log_sha256": "9def843fd471f72eafd1d06eddf1f74a618f5d17d5eca5fb481eeb3d9695f390",
+        "summary_line": "SUMMARY checks=62 failures=0 csv=moore_ol.csv vcd=moore_ol_wave.vcd",
+        "meaning": "Historical finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "1088563c73bf85fbf55c7c1d353e6bf16e876244f9560398c2c0018ecb0543cf"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "3a17529466f8d906758673851727274d8f8f240c9318b81ef7bd8e2fc36554aa"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "Historical log was read as an existing input and not replayed.",
+        "Compiler and SystemC versions were not re-measured.",
+        "Feature proposals remain hypotheses; no rules are confirmed.",
+        "No campaign snapshot or run-time evidence was created."
+    ]
+}

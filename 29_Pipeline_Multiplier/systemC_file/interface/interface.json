@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "top_module": "pipeline",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [
+      {
+        "port": "clk",
+        "active_edge": "rising"
+      }
+    ],
+    "resets": [
+      {
+        "port": "reset",
+        "polarity": "active_high",
+        "behavior": "synchronous",
+        "sampling_edge": "rising",
+        "asserted_meaning": "在时钟上升沿将 xtemp 与 ytemp 置零；其他流水级寄存器不由 reset 清零。"
+      }
+    ]
+  },
+  "ports": [
+    {
+      "name": "x",
+      "canonical_path": "x",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>",
+      "width": 64,
+      "role": "被乘数输入；在 reset 非高电平的时钟上升沿采样。"
+    },
+    {
+      "name": "y",
+      "canonical_path": "y",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>",
+      "width": 64,
+      "role": "乘数输入；在 reset 非高电平的时钟上升沿采样。"
+    },
+    {
+      "name": "clk",
+      "canonical_path": "clk",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width": 1,
+      "role": "所有时序寄存器共用的时钟，上升沿触发。"
+    },
+    {
+      "name": "reset",
+      "canonical_path": "reset",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width": 1,
+      "role": "同步高有效复位；SystemVerilog/Verilog 条件为 X/Z 时按 else 分支处理。"
+    },
+    {
+      "name": "prod",
+      "canonical_path": "prod",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>",
+      "width": 128,
+      "role": "由 temps3、temps2[31:0]、temp1[31:0] 拼接的乘积数据输出。",
+      "timing_contract": {
+        "sampling": "x、y 在每个上升沿进入 xtemp、ytemp；其他寄存器按 RTL 各级非阻塞赋值推进。",
+        "latency": "当 x、y 保持不变时，从其首次被上升沿采样起，经过 5 个上升沿后 prod 收敛到 x*y。",
+        "notes": [
+          "RTL 没有 valid/ready 信号。",
+          "prod 直接拼接不同级寄存器；连续每拍改变输入时，各输出片段可能对应不同级/不同采样时刻，不应假定为每拍一笔且同一固定事务延迟的流接口。",
+          "reset 只清除 xtemp 和 ytemp，不清除后续流水寄存器。",
+          "未初始化的后级流水寄存器在被时钟覆盖前可使 prod 为 X；DUT 使用四态类型保留该初始未知状态。"
+        ]
+      }
+    }
+  ],
+  "declared_unknowns": []
+}

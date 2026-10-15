@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "artifact_type": "trace-binding",
+  "protocol": "c2s.trace-identity.v1",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "test_id": "test.half_adder.binary.truth_table",
+  "run_id": "run.b2739de59ed3",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "attempt_id": "attempt.566324927ab5",
+  "csv_ref": {
+    "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder.csv",
+    "sha256": "c846b0bdc3c2160a0de07cce3388a95059032b744c6fcd0002cc47fb79aaecc7",
+    "artifact_id": "artifact.test-log",
+    "stage": "execute_test",
+    "attempt_id": "attempt.566324927ab5"
+  },
+  "vcd_ref": {
+    "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder_wave.vcd",
+    "sha256": "b8dab1c2b3fdcec09a056623ca5eed60845d6e9b50c388634c9a553598fd9b36",
+    "artifact_id": "artifact.waveform",
+    "stage": "execute_test",
+    "attempt_id": "attempt.566324927ab5"
+  }
+}

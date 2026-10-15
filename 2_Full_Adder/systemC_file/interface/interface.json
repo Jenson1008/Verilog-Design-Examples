@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "top_module": "full_adder_1bit",
+  "clocking_model": {"kind": "combinational", "clocks": [], "resets": []},
+  "ports": [
+    {"name": "i_a", "canonical_path": "i_a", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "first addend bit"},
+    {"name": "i_b", "canonical_path": "i_b", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "second addend bit"},
+    {"name": "i_cin", "canonical_path": "i_cin", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "carry input"},
+    {"name": "o_sum", "canonical_path": "o_sum", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "sum bit"},
+    {"name": "o_carry", "canonical_path": "o_carry", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "carry output"}
+  ],
+  "declared_unknowns": []
+}

@@ -1,18 +1,5 @@
-time_ns,test,i_a,i_b,expected_o_sum,expected_o_carry,actual_o_sum,actual_o_carry,result
-1,four_state_truth_table,0,0,0,0,0,0,PASS
-2,four_state_truth_table,0,1,1,0,1,0,PASS
-3,four_state_truth_table,0,X,X,0,X,0,PASS
-4,four_state_truth_table,0,Z,X,0,X,0,PASS
-5,four_state_truth_table,1,0,1,0,1,0,PASS
-6,four_state_truth_table,1,1,0,1,0,1,PASS
-7,four_state_truth_table,1,X,X,X,X,X,PASS
-8,four_state_truth_table,1,Z,X,X,X,X,PASS
-9,four_state_truth_table,X,0,X,0,X,0,PASS
-10,four_state_truth_table,X,1,X,X,X,X,PASS
-11,four_state_truth_table,X,X,X,X,X,X,PASS
-12,four_state_truth_table,X,Z,X,X,X,X,PASS
-13,four_state_truth_table,Z,0,X,0,X,0,PASS
-14,four_state_truth_table,Z,1,X,X,X,X,PASS
-15,four_state_truth_table,Z,X,X,X,X,X,PASS
-16,four_state_truth_table,Z,Z,X,X,X,X,PASS
-# SUMMARY: PASS checks=16 failed=0
+time_ns,test_name,i_a,i_b,expected_sum,actual_sum,expected_carry,actual_carry,status
+1,exhaustive,0,0,0,0,0,0,PASS
+2,exhaustive,0,1,1,1,0,0,PASS
+3,exhaustive,1,0,1,1,0,0,PASS
+4,exhaustive,1,1,0,0,1,1,PASS

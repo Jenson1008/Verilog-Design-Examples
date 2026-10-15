@@ -1,0 +1,106 @@
+{
+    "metadata_version": 1,
+    "design": "16_Binary_to_Gray",
+    "module": "bin_gry",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository contains unrelated local modifications/deletions; listed source bytes bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "bin_gry_sc_tb.cpp",
+            "DUT/bin_gry_sc.h",
+            "stimulus/bin_gry_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-I. -std=c++17 -O2 -Wall -Wextra -Wpedantic -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/bin_gry_sc_tb.cpp",
+            "sha256": "0b9fde543831bb6b55841792f3088976758352b758e4ade8194f9af1c11276b0",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/DUT/bin_gry_sc.h",
+            "sha256": "542d2c938f9aaa2bf755ce316879fd7069f4596c5b7ed12e61b7a634e7e54e59",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/stimulus/bin_gry_sc_stimulus.h",
+            "sha256": "8fc89c5ceed680395566666d2c0499e38754c5469fde6dd9dae225593e5b2b4d",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/Makefile",
+            "sha256": "17c38454f7aeec3a7dcaa303872fc9203913878281546c08778c8801899035cd",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/interface/interface.json",
+            "sha256": "92f0a31cd70c6e00a31a90f1136740a12971e723a642286faf5d3b030f2d1d95",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/systemC_file/out/simulation.log",
+            "sha256": "4c27e6557c01155c284ea15941b8163045e848381053aa1f62f6b651c1a94b46",
+            "role": "prior finite SystemC self-check log"
+        },
+        {
+            "repository_path": "16_Binary_to_Gray/bin_gry.v",
+            "sha256": "c07ed5342d95e42371ef0401f4dfc4930e58db8de593d374a9516a30529b1f25",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "16_Binary_to_Gray/systemC_file/interface/interface.json",
+        "authority_sha256": "92f0a31cd70c6e00a31a90f1136740a12971e723a642286faf5d3b030f2d1d95",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness v2 projection; RTL/SystemC declarations and authority port contract cross-checked; bin_gry width uses default N=8."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavior unknowns retained",
+        "ports": [
+            "binary",
+            "gray"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "16_Binary_to_Gray/systemC_file/out/simulation.log",
+        "log_sha256": "4c27e6557c01155c284ea15941b8163045e848381053aa1f62f6b651c1a94b46",
+        "summary_line": "SUMMARY checks=258 failures=0 exhaustive_binary_inputs=256 directed_four_state_vectors=2 csv=bin_gry.csv vcd=bin_gry_wave.vcd",
+        "meaning": "Historical finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "3730d0428ba260f5f7934a214765332eacf77666845c6b9d328fa86ad6f0c493"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "56eb4110eb431b49ea508c93f3245d9431d96d1a8c92dea429f2919aac33a75d"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "Historical log was read as an existing input and not replayed.",
+        "Compiler and SystemC versions were not re-measured.",
+        "Feature proposals remain hypotheses; no rules are confirmed.",
+        "No campaign snapshot or run-time evidence was created."
+    ]
+}

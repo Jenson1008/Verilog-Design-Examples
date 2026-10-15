@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "top_module": "lfsr",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "lfsr.clk", "active_edge": "rising"}],
+    "resets": [{"port": "lfsr.reset", "polarity": "active_high", "behavior": "synchronous", "sampling_edge": "rising", "asserted_meaning": "下一个时钟上升沿将状态种入 4'b0001。"}]
+  },
+  "ports": [
+    {"name": "reset", "canonical_path": "lfsr.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "同步高有效复位"},
+    {"name": "clk", "canonical_path": "lfsr.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "状态移位时钟"},
+    {"name": "data_out", "canonical_path": "lfsr.data_out", "direction": "output", "systemc_type": "sc_dt::sc_lv<4>", "width": 4, "role": "4 位 LFSR 当前状态"}
+  ],
+  "declared_unknowns": [
+    {"description": "状态寄存器无 RTL 初始化；仿真初态为未知，且只有复位或已知全零状态触发种子 1。"}
+  ]
+}

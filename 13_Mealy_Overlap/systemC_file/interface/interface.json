@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0","top_module":"mealy_ol",
+  "clocking_model":{"kind":"single_clock","clocks":[{"port":"clk","active_edge":"rising"}],"resets":[{"port":"reset","polarity":"active_high","behavior":"asynchronous","sampling_edge":"rising","asserted_meaning":"Asynchronously returns the state to S0."}]},
+  "ports":[
+    {"name":"in","canonical_path":"in","direction":"input","systemc_type":"sc_dt::sc_logic","width":1,"role":"Four-state serial sequence input used by the transition decoder."},
+    {"name":"clk","canonical_path":"clk","direction":"input","systemc_type":"bool","width":1,"role":"Rising-edge state clock."},
+    {"name":"reset","canonical_path":"reset","direction":"input","systemc_type":"bool","width":1,"role":"Active-high asynchronous state reset."},
+    {"name":"out","canonical_path":"out","direction":"output","systemc_type":"sc_dt::sc_logic","width":1,"role":"Four-state Mealy output pulse on matching 1101, with partial-match retention for overlap."}
+  ],
+  "declared_unknowns":[{"description":"The RTL state register has no declaration-time initialization; the test checks unknown output before asserting asynchronous reset."},{"description":"A directed X input confirms that procedural if follows the RTL false branch; Z behavior is not separately exercised. State encodings outside S0-S3 are unreachable after reset."},{"description":"RTL state parameters S0..S3 are represented by their defaults (0..3); non-default parameter overrides are not implemented or tested."},{"description":"Clock and reset SystemC ports use bool and are modeled only for binary 0/1 levels; X/Z on clock or reset is outside the modeled verification scope."}]
+}

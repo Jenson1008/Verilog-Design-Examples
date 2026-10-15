@@ -1,0 +1,33 @@
+{
+  "metadata_version": "1.0",
+  "design": "23_Custom_Design",
+  "module": "custdesign",
+  "source_root": "D:/repo_github/Verilog-Design-Examples/23_Custom_Design",
+  "handoff_root": "systemC_file/feature-analysis/input",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "working_tree_state": "dirty; source file SHA-256 values below bind the inspected contents"
+  },
+  "build_entry": "systemC_file/Makefile",
+  "source_files": [
+    {"file": "custdesign.v", "sha256": "8f4eba519023bcc1d1d3adef79d91758476e19a1c335c81834ca6523ea16acf1", "role": "原始 RTL"},
+    {"file": "systemC_file/DUT/custdesign_sc.h", "sha256": "7f7b2becfc660e0f33cc50b7899e67d298867f86404a677612b73c4f8968ec2e", "role": "SystemC DUT"},
+    {"file": "systemC_file/interface/interface.json", "sha256": "b2911749236b746ea0b0d7c82c90d134dd6c67f4da777e1e2d0237961b6d0b44", "role": "现有设计接口来源"},
+    {"file": "systemC_file/interface/interface.schema.json", "sha256": "2e4af2016eeedef5a51e66b2d09a0ab2595f9f3ceb6f63f7c5fbeab9d923b38d", "role": "现有设计接口结构来源"},
+    {"file": "systemC_file/Makefile", "sha256": "7e9dc0ecaa66cf306e91e4d8e6c5201770b3a6b7fab8128d79c16f8cb98b0574", "role": "构建入口"}
+  ],
+  "handoff_files": [
+    {"file": "interface.json", "sha256": "69b237cf36bb7007cdc665da614e909eb096bec2df91a0dcfd9ad606555028f8", "role": "下游接口投影"},
+    {"file": "basic-description.md", "sha256": "5ccce65b25dcaf1c7f8ff65dddc98d09cbb5b58f72bf01eec13af814955aee94", "role": "下游行为简介"},
+    {"file": "interface.schema.json", "sha256": "eff4d8bc570d2dd17c75292d2c63de461c8d511e091a8e2323cb758f57849674", "role": "自包含接口 schema"}
+  ],
+  "contract_basis": {
+    "interface_schema_version": 2,
+    "harness_contract": "Harness Spec Draft v0.7 interface schema v2",
+    "schema_file": "D:/repo_github/Harness-Engineering/MVP/code_to_spec_sp/code_to_spec/harness-spec/schemas/interface.schema.json",
+    "schema_sha256": "e286d29b948c4d4552d8bed628fdf7a35600a054a1f01770797d8f2cea8897bf",
+    "common_schema_file": "D:/repo_github/Harness-Engineering/MVP/code_to_spec_sp/code_to_spec/harness-spec/schemas/common.schema.json",
+    "common_schema_sha256": "19139c7c7e0197fbfbb754e360951024edbadf6fedaff3ea4fd3c1cb3c7bd753"
+  },
+  "metadata_schema_status": "未发现 Harness source-metadata 专用 schema；本文件仅记录来源和摘要，不声称通过专用 schema 校验。"
+}

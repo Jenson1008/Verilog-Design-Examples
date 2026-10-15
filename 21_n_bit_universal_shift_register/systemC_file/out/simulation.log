@@ -1,0 +1,15 @@
+
+        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+        Copyright (c) 1996-2022 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I703) tracing timescale unit set: 1 ns (wave.vcd)
+t=7 ns control-0-hold data_in=1010010100111100 control=0 expected=0000000000000000 actual=0000000000000000 PASS
+t=10 ns control-1-left data_in=1010010100111100 control=1 expected=0100101001111000 actual=0100101001111000 PASS
+t=13 ns control-2-right data_in=1010010100111100 control=2 expected=0101001010011110 actual=0101001010011110 PASS
+t=16 ns control-3-load data_in=1010010100111100 control=3 expected=1010010100111100 actual=1010010100111100 PASS
+t=19 ns left-msb-boundary data_in=1000000000000001 control=1 expected=0000000000000010 actual=0000000000000010 PASS
+t=22 ns right-lsb-boundary data_in=1000000000000001 control=2 expected=0100000000000000 actual=0100000000000000 PASS
+t=25 ns load-before-hold data_in=1000000000000001 control=3 expected=1000000000000001 actual=1000000000000001 PASS
+t=28 ns hold-after-load data_in=1111111111111111 control=0 expected=1000000000000001 actual=1000000000000001 PASS
+SUMMARY checks=8 failures=0 csv=checks.csv vcd=wave.vcd

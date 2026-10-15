@@ -1,0 +1,8 @@
+time_ns,test,in_a,in_b,load,expected_valid,actual_valid,expected_out_prod,actual_out_prod,status
+2,"async-reset-z",0,0,0,0,0,"Z","ZZZZZZZZZZZZZZZZ",PASS
+5,"first-load-old-partials-unknown",3,7,1,1,1,"X","XXXXXXXXXXXXXXXX",PASS
+8,"second-load-checks-prior-product",9,11,1,1,1,"bank","0000000000010101",PASS
+11,"load-low-holds-output",255,2,0,1,1,"known","0000000000010101",PASS
+14,"third-load-checks-prior-product",128,255,1,1,1,"bank","0000000001100011",PASS
+17,"zero-multiplicand",0,0,1,1,1,"bank","0111111110000000",PASS
+#summary,checks=6,failures=0

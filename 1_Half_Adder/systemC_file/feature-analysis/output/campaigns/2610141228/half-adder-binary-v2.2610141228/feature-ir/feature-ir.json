@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "artifact_type": "feature-ir",
+  "campaign_id": "half-adder-binary-v2.2610141228",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "status": "awaiting_validation",
+  "features": [
+    {
+      "id": "feature.half_adder.binary",
+      "statement": "For every binary input pair i_a, i_b in {0,1}, after applying the pair and allowing 1 ns for settling, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "scope": "The half_adder top-level outputs for the four two-state input combinations only; outputs are sampled 1 ns after each input pair is applied.",
+      "rule_ids": [
+        "rule.half_adder.binary"
+      ],
+      "source_refs": [
+        {
+          "file": "input/source/DUT/half_adder_sc.h",
+          "start_line": 11,
+          "end_line": 12,
+          "symbol": "half_adder::evaluate"
+        },
+        {
+          "file": "input/source/DUT/half_adder_sc.h",
+          "start_line": 15,
+          "end_line": 16,
+          "symbol": "half_adder::half_adder"
+        }
+      ],
+      "unknowns": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule.half_adder.binary",
+      "feature_id": "feature.half_adder.binary",
+      "statement": "For each binary pair (i_a, i_b), sampled 1 ns after application, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "preconditions": [
+        "Both scalar inputs are driven with 0 or 1.",
+        "Outputs are sampled 1 ns after applying each pair."
+      ],
+      "observables": [
+        "o_sum",
+        "o_carry"
+      ],
+      "source_fact_refs": [
+        "fact.half_adder.sum_xor",
+        "fact.half_adder.carry_and"
+      ],
+      "test_refs": [
+        "test.half_adder.binary.truth_table"
+      ],
+      "observation_refs": [
+        "observation.half_adder.binary.truth_table"
+      ],
+      "evidence_ref": {
+        "path": "evidence/evidence-manifest.json",
+        "sha256": "dd5ca61e8efe1ab365417a09f15a6aecfd959bc1d10c288e8bd7edb1fc799d6c",
+        "artifact_id": "artifact.evidence-manifest",
+        "stage": "evidence_gate"
+      }
+    }
+  ],
+  "unknowns": [
+    "The exact delta-cycle update count and latency were not measured; this campaign samples outputs 1 ns after applying each binary input pair."
+  ]
+}

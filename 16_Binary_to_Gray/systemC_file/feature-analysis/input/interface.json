@@ -1,0 +1,54 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "bin_gry",
+                   "kind":  "SystemC template module; this testbench uses default N=8",
+                   "clocking_model":  "combinational; no clock or reset",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "binary":  {
+                                        "canonical_path":  "bin_gry.binary",
+                                        "direction":  "input",
+                                        "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_lv\u003c8\u003e\u003e",
+                                        "width_bits":  8,
+                                        "role":  "N-bit four-state binary value, with RTL default parameter N=8."
+                                    },
+                         "gray":  {
+                                      "canonical_path":  "bin_gry.gray",
+                                      "direction":  "output",
+                                      "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_lv\u003c8\u003e\u003e",
+                                      "width_bits":  8,
+                                      "role":  "N-bit four-state Gray encoding corresponding to binary."
+                                  }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "binary"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "gray"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "The RTL slice [N-2:0] implies N must be at least 2; the SystemC implementation enforces this constraint and is simulated with default N=8.",
+                              "sc_lv preserves four-state XOR propagation; the self-check includes one directed X and one directed Z input vector, but not an exhaustive four-state input space."
+                          ]
+}

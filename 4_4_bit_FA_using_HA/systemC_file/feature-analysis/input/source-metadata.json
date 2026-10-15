@@ -1,0 +1,109 @@
+{
+  "metadata_version": 1,
+  "design": "4_4_bit_FA_using_HA",
+  "module": "full_add_4bit",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; exact bytes bound by file digests"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "full_add_4bit_sc_tb.cpp",
+      "DUT/full_add_4bit_sc.h",
+      "stimulus/full_add_4bit_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured"
+  },
+  "source_files": [
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/full_add_4bit_sc_tb.cpp",
+      "sha256": "af0405784b610f7a1c8222412dfff142435d196fac78828d92648734e3e59e2f",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/DUT/full_add_4bit_sc.h",
+      "sha256": "93ad565bc362e6ac00fd37c852cea748446aa7feaaeccefb093ce89cd953e5ed",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/stimulus/full_add_4bit_sc_stimulus.h",
+      "sha256": "ca5ce3721ee25bf6a3ba9ab224b2cc29da0d4f9bbd44d88895b6f8df19ad67ea",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/Makefile",
+      "sha256": "06bcde5a53c82af3c9d723ab8071117343b1ca8484608a804dd602f187d84b79",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/interface/interface.json",
+      "sha256": "f14d17228e016d36d00f35217011e9777a5b813e98b5701406c3addd47627343",
+      "role": "authority interface"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/interface/interface.schema.json",
+      "sha256": "a6a418028d89c2eb2bc73d3be21332e4913a8f6b614522fb48f914b54a02a967",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/full_add_4bit.v",
+      "sha256": "ac7aaacaf26edd9a1860fef5b72b89288a7c270185aa0980b2ac56270548e833",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "4_4_bit_FA_using_HA/systemC_file/out/simulation.log",
+      "sha256": "bc29e96dd2fa93b1fbdce981066915b9ee5f28c389e287aa7de2986d610aff7d",
+      "role": "prior self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "4_4_bit_FA_using_HA/systemC_file/interface/interface.json",
+    "authority_sha256": "f14d17228e016d36d00f35217011e9777a5b813e98b5701406c3addd47627343",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection; RTL/SystemC/authority top-level port maps cross-checked"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "names/directions/types/widths match",
+    "rtl_vs_systemc": "names/directions/widths match",
+    "ports": [
+      "i_a",
+      "i_b",
+      "i_cin",
+      "o_carry",
+      "o_sum"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "4_4_bit_FA_using_HA/systemC_file/out/simulation.log",
+    "log_sha256": "bc29e96dd2fa93b1fbdce981066915b9ee5f28c389e287aa7de2986d610aff7d",
+    "summary_line": "SUMMARY checks=524 failures=0 csv=full_add_4bit.csv vcd=full_add_4bit_wave.vcd",
+    "meaning": "historical finite self-check only; not rerun, not Gate evidence, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "9789430219dc7bcd591e03870909726f0ee03b4321828e5fa2bbd4c968a8d9ab"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "367bfb013caca2aa8afe82fb63f7fc18b7510fb0d7f3b6b9b73e43c78e55b384"
+    }
+  ],
+  "not_performed": [
+    "DUT build/run",
+    "campaign",
+    "VCD preflight",
+    "reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler/SystemC versions not re-measured",
+    "historical trace not replayed",
+    "proposals remain unconfirmed"
+  ]
+}

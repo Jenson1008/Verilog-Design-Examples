@@ -1,14 +1,13 @@
-time_ns,test,cycle,i_a,i_b,i_cin,expected_o_sum,expected_o_carry,o_sum,o_carry,result
-1,binary_truth_table,0,0,0,0,0,0,0,0,PASS
-2,binary_truth_table,1,0,0,1,1,0,1,0,PASS
-3,binary_truth_table,2,0,1,0,1,0,1,0,PASS
-4,binary_truth_table,3,0,1,1,0,1,0,1,PASS
-5,binary_truth_table,4,1,0,0,1,0,1,0,PASS
-6,binary_truth_table,5,1,0,1,0,1,0,1,PASS
-7,binary_truth_table,6,1,1,0,0,1,0,1,PASS
-8,binary_truth_table,7,1,1,1,1,1,1,1,PASS
-9,x_input_with_zero,8,0,X,0,X,0,X,0,PASS
-10,z_input_with_carry,9,0,Z,1,X,X,X,X,PASS
-11,x_carry_in_after_two_ones,10,1,1,X,X,1,X,1,PASS
-12,x_input_with_one_zero,11,X,0,0,X,0,X,0,PASS
-# SUMMARY: PASS checks=12 failed=0 csv=full_half_add_1bit.csv vcd=full_half_add_1bit_wave.vcd
+time_ns,test_name,inputs,expected_sum,actual_sum,expected_carry,actual_carry,status
+1,half_adder_leaf,h_a=0;h_b=0,0,0,0,0,PASS
+2,half_adder_leaf,h_a=0;h_b=1,1,1,0,0,PASS
+3,half_adder_leaf,h_a=1;h_b=0,1,1,0,0,PASS
+4,half_adder_leaf,h_a=1;h_b=1,0,0,1,1,PASS
+5,full_half_add_1bit,i_a=0;i_b=0;i_cin=0,0,0,0,0,PASS
+6,full_half_add_1bit,i_a=0;i_b=0;i_cin=1,1,1,0,0,PASS
+7,full_half_add_1bit,i_a=0;i_b=1;i_cin=0,1,1,0,0,PASS
+8,full_half_add_1bit,i_a=0;i_b=1;i_cin=1,0,0,1,1,PASS
+9,full_half_add_1bit,i_a=1;i_b=0;i_cin=0,1,1,0,0,PASS
+10,full_half_add_1bit,i_a=1;i_b=0;i_cin=1,0,0,1,1,PASS
+11,full_half_add_1bit,i_a=1;i_b=1;i_cin=0,0,0,1,1,PASS
+12,full_half_add_1bit,i_a=1;i_b=1;i_cin=1,1,1,1,1,PASS

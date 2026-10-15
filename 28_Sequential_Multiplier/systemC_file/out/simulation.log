@@ -1,0 +1,13 @@
+
+        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+        Copyright (c) 1996-2022 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I703) tracing timescale unit set: 1 ns (wave.vcd)
+t=2 ns async-reset-z in_a=0 in_b=0 load=0 expected_out_valid=0 actual_out_valid=0 expected_out_prod=Z actual_out_prod=ZZZZZZZZZZZZZZZZ PASS
+t=5 ns first-load-old-partials-unknown in_a=3 in_b=7 load=1 expected_out_valid=1 actual_out_valid=1 expected_out_prod=X actual_out_prod=XXXXXXXXXXXXXXXX PASS
+t=8 ns second-load-checks-prior-product in_a=9 in_b=11 load=1 expected_out_valid=1 actual_out_valid=1 expected_out_prod=bank actual_out_prod=0000000000010101 PASS
+t=11 ns load-low-holds-output in_a=255 in_b=2 load=0 expected_out_valid=1 actual_out_valid=1 expected_out_prod=known actual_out_prod=0000000000010101 PASS
+t=14 ns third-load-checks-prior-product in_a=128 in_b=255 load=1 expected_out_valid=1 actual_out_valid=1 expected_out_prod=bank actual_out_prod=0000000001100011 PASS
+t=17 ns zero-multiplicand in_a=0 in_b=0 load=1 expected_out_valid=1 actual_out_valid=1 expected_out_prod=bank actual_out_prod=0111111110000000 PASS
+SUMMARY checks=6 failures=0 csv=checks.csv vcd=wave.vcd

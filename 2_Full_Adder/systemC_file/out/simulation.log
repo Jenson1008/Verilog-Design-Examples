@@ -1,0 +1,10 @@
+time_ns,test_name,i_a,i_b,i_cin,expected_sum,actual_sum,expected_carry,actual_carry,status
+1,exhaustive,0,0,0,0,0,0,0,PASS
+2,exhaustive,0,0,1,1,1,0,0,PASS
+3,exhaustive,0,1,0,1,1,0,0,PASS
+4,exhaustive,0,1,1,0,0,1,1,PASS
+5,exhaustive,1,0,0,1,1,0,0,PASS
+6,exhaustive,1,0,1,0,0,1,1,PASS
+7,exhaustive,1,1,0,0,0,1,1,PASS
+8,exhaustive,1,1,1,1,1,1,1,PASS
+SUMMARY checks=8 failures=0 csv=full_adder_1bit.csv vcd=full_adder_1bit_wave.vcd

@@ -1,0 +1,107 @@
+{
+    "metadata_version": 1,
+    "design": "19_Clock_Divider",
+    "module": "clkdivider",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository contains unrelated local modifications/deletions; listed source bytes bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "clkdivider_sc_tb.cpp",
+            "DUT/clkdivider_sc.h",
+            "stimulus/clkdivider_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-I. -std=c++17 -O2 -Wall -Wextra -Wpedantic -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/clkdivider_sc_tb.cpp",
+            "sha256": "4e5fd436d72b803a4f8c564e70e17682241cc3854b03d4a0ac5184b79b85dc69",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/DUT/clkdivider_sc.h",
+            "sha256": "5897b628b9edd8a19f8c189449c9410fa444fec771e911203ca60232b0a15326",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/stimulus/clkdivider_sc_stimulus.h",
+            "sha256": "ebaa0e6ed78f7103bec4350d0e75305115f14481afa842f42053b303649706e5",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/Makefile",
+            "sha256": "7977ec76224cef62e0c534c53bc9262c80cf8f1e40d4351d5f97d015f5a8761e",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/interface/interface.json",
+            "sha256": "a86583ae60657fe972f4e2aa77b5111d1339e79ac968e283f59514f8ccba2766",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "19_Clock_Divider/systemC_file/out/simulation.log",
+            "sha256": "f832ce7648dc2e9185a376749cda25d11b6a1652f6497ee271444de2fcc01e82",
+            "role": "prior finite SystemC self-check log"
+        },
+        {
+            "repository_path": "19_Clock_Divider/clkdivider.v",
+            "sha256": "28874172bb1a9eefc0acfe1dee7e1d7b235e0b507b598e22cd8935cba927f25c",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "19_Clock_Divider/systemC_file/interface/interface.json",
+        "authority_sha256": "a86583ae60657fe972f4e2aa77b5111d1339e79ac968e283f59514f8ccba2766",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness v2 projection; RTL/SystemC declarations and authority port contract cross-checked; bin_gry width uses default N=8."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavior unknowns retained",
+        "ports": [
+            "reset",
+            "clk",
+            "out_clk"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "19_Clock_Divider/systemC_file/out/simulation.log",
+        "log_sha256": "f832ce7648dc2e9185a376749cda25d11b6a1652f6497ee271444de2fcc01e82",
+        "summary_line": "SUMMARY checks=17 failures=0 rising_edges=15 csv=clkdivider.csv vcd=clkdivider_wave.vcd",
+        "meaning": "Historical finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "553bc6d1fd117d91101e7fb87cc9056febadc1483f9f6cf52952888873e22af4"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "f5c58c3c5a3d8a16c10997592c9bd87188f21c02536700df1f4cae13f6126bca"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "Historical log was read as an existing input and not replayed.",
+        "Compiler and SystemC versions were not re-measured.",
+        "Feature proposals remain hypotheses; no rules are confirmed.",
+        "No campaign snapshot or run-time evidence was created."
+    ]
+}

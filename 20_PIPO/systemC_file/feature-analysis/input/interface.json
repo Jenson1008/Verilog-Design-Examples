@@ -1,0 +1,89 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "pipo_shift",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single_clock; reset behavior according to source contract",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "data_in":  {
+                                         "canonical_path":  "pipo_shift.data_in",
+                                         "direction":  "input",
+                                         "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_lv\u003c16\u003e\u003e",
+                                         "width_bits":  16,
+                                         "role":  "Parallel input word captured into temp_data while load is high."
+                                     },
+                         "load":  {
+                                      "canonical_path":  "pipo_shift.load",
+                                      "direction":  "input",
+                                      "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_logic\u003e",
+                                      "width_bits":  1,
+                                      "role":  "Four-state load enable for temp_data capture and the selected operation on the previous temp_data value."
+                                  },
+                         "shift_en":  {
+                                          "canonical_path":  "pipo_shift.shift_en",
+                                          "direction":  "input",
+                                          "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_lv\u003c2\u003e\u003e",
+                                          "width_bits":  2,
+                                          "role":  "Selects left, logical-right, arithmetic-left, or explicit sign-preserving right shift for selector values 00 through 11."
+                                      },
+                         "clk":  {
+                                     "canonical_path":  "pipo_shift.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Rising-edge register clock.",
+                                     "edge":  "rising"
+                                 },
+                         "reset":  {
+                                       "canonical_path":  "pipo_shift.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "Active-high synchronous data_out reset; does not clear temp_data.",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "Sets data_out to zero; temp_data is not reset."
+                                   },
+                         "data_out":  {
+                                          "canonical_path":  "pipo_shift.data_out",
+                                          "direction":  "output",
+                                          "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_lv\u003c16\u003e\u003e",
+                                          "width_bits":  16,
+                                          "role":  "Registered transformed previous temp_data; holds when load is low."
+                                      }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "data_in",
+                                               "load",
+                                               "shift_en",
+                                               "clk",
+                                               "reset"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "data_out"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "temp_data is not initialized or reset; the first loaded operation uses its unknown prior value. data_out is unknown until a rising edge with reset asserted or a defined assignment.",
+                              "Arithmetic left shift on the unsigned packed register is modeled as a logical left shift. Directed X-valued load and shift selector checks exercise procedural-if and case behavior; Z selector behavior is not separately exercised."
+                          ]
+}

@@ -1,0 +1,307 @@
+{
+  "metadata_version": 1,
+  "generated_at": "2026-10-14T21:44:59.308+08:00",
+  "design": {
+    "name": "29_Pipeline_Multiplier",
+    "repository_revision": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "working_tree_state": "dirty",
+    "revision_binding_note": "The repository revision is the current HEAD; the converted RTL and SystemC package are working-tree content not represented by that commit. The per-file SHA-256 values below bind this handoff to the observed disk contents."
+  },
+  "handoff": {
+    "input_directory": "systemC_file/feature-analysis/input",
+    "authority_interface": {
+      "relative_path": "systemC_file/interface/interface.json",
+      "sha256": "dcb23bac044db9bb94a3e6e13adfd7d6c35ae5606b370db062809e379143ac27",
+      "authority_schema_relative_path": "systemC_file/interface/interface.schema.json",
+      "authority_schema_sha256": "bad6dc6a7efd532fef6d15242d42a0b9d2eecaf462428c12178acff12d571bec",
+      "authority_schema_version": "1.0"
+    },
+    "interface_projection": {
+      "relative_path": "systemC_file/feature-analysis/input/interface.json",
+      "sha256": "74288a1ef7fe6bc1049bba0aeda9fbc6d5b56c4514e15de37eb708c187ceaf41",
+      "schema_version": 2,
+      "derived_from": "systemC_file/interface/interface.json and the public declarations in systemC_file/DUT/pipeline_sc.h"
+    },
+    "basic_description": {
+      "relative_path": "systemC_file/feature-analysis/input/basic-description.md",
+      "sha256": "5af28c2441f4588aeccbeb9c40dd8fc97a9d1ad3dfa7f1465e3cd43fc51c2989"
+    },
+    "handoff_contents": [
+      "interface.json",
+      "basic-description.md",
+      "source-metadata.json"
+    ],
+    "excluded_input_artifacts": [
+      "static-facts.json",
+      "feature-proposal.json",
+      "test-list.json"
+    ]
+  },
+  "contract_validation": {
+    "harness_specification": "SystemC Code-to-Spec Harness Draft v0.7",
+    "harness_repository_revision": "25b2fe601ab89fb2b47f566a8365c3f2adaf498f",
+    "harness_working_tree_state": "dirty; the applicable agent instruction differs from HEAD, so its exact SHA-256 and the loaded schema-file SHA-256 values are recorded.",
+    "agent_instruction_absolute_path": "C:/Users/guojiamin/.copilot/agents/systemc-to-spec.agent.md",
+    "agent_instruction_sha256": "b53e7638e469c30d65ae8a2ac1dfe877f06907f2a26a4c80b30da54c116c3917",
+    "implementation_plan_absolute_path": "C:/Users/guojiamin/.copilot/agents/systemc-to-spec.harness/harness-implementation-plan.md",
+    "implementation_plan_sha256": "5fee3e11b1d75bac27afa59a302e16f6c79057f14370d0c524ec09379f6092ad",
+    "interface_schema_absolute_path": "C:/Users/guojiamin/.copilot/agents/systemc-to-spec.harness/schemas/interface.schema.json",
+    "interface_schema_sha256": "f5725043e333bb6bce622affedc435977fffd97308ee558b116f4b5fe15e1061",
+    "common_schema_absolute_path": "C:/Users/guojiamin/.copilot/agents/systemc-to-spec.harness/schemas/common.schema.json",
+    "common_schema_sha256": "592a9216f27599092261ed14cdb13ec4489f3665aa68a0e0184c6c6a44430c09",
+    "interface_schema_guide_absolute_path": "C:/Users/guojiamin/.copilot/agents/systemc-to-spec.harness/schemas/interface-schema-guide.md",
+    "interface_schema_guide_sha256": "2bf34c61243abadadd9dd4b5aa158c840da3f943850fe0d896009f2bac7f0fdf",
+    "schema_reference_status": "interface.schema.json references common.schema.json; both files were present and their SHA-256 values recorded.",
+    "validation_status": "JSON parsed and the projection was manually checked against the available Harness interface schema, its common-schema references, and the SystemC declarations. A runnable JSON Schema validator was unavailable in this environment; formal validator execution remains unverified."
+  },
+  "public_interface_cross_check": {
+    "systemc_module_declaration": "SC_MODULE(pipeline)",
+    "systemc_source_relative_path": "systemC_file/DUT/pipeline_sc.h",
+    "interface_projection_port_count": 5,
+    "all_ports_match_name_direction_width_and_systemc_type": true,
+    "ports": [
+      {
+        "name": "x",
+        "direction": "input",
+        "width_bits": 64,
+        "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>"
+      },
+      {
+        "name": "y",
+        "direction": "input",
+        "width_bits": 64,
+        "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>"
+      },
+      {
+        "name": "clk",
+        "direction": "input",
+        "width_bits": 1,
+        "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>"
+      },
+      {
+        "name": "reset",
+        "direction": "input",
+        "width_bits": 1,
+        "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>"
+      },
+      {
+        "name": "prod",
+        "direction": "output",
+        "width_bits": 128,
+        "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>"
+      }
+    ]
+  },
+  "build_context": {
+    "build_entry_relative_path": "systemC_file/Makefile",
+    "build_target": "run",
+    "working_directory_relative_to_design": "systemC_file",
+    "build_command_from_working_directory": "make run",
+    "systemc_compile_source_relative_paths": [
+      "systemC_file/pipeline_sc_tb.cpp"
+    ],
+    "systemc_headers_relative_paths": [
+      "systemC_file/DUT/pipeline_sc.h",
+      "systemC_file/stimulus/pipeline_sc_stimulus.h"
+    ],
+    "compiler_default": "g++",
+    "language_standard": "C++17",
+    "compiler_flags_default": "-std=c++17 -Wall -Wextra -Wpedantic",
+    "link_libraries_default": "-lsystemc -pthread",
+    "systemc_include_default": "/usr/include",
+    "toolchain_version_status": "The current build.log is empty and the existing simulation.log does not record compiler or SystemC version; actual versions are therefore not asserted here.",
+    "rtl_dependency_selection_basis": "The explicit RTL_SOURCES list in systemC_file/Makefile; these RTL files are tracked dependencies and hashed by the Makefile, not compiled as part of the SystemC C++ command.",
+    "active_rtl_sources_relative_paths": [
+      "pipeline.v",
+      "vdcmul_32b.v",
+      "vdcmul_16b.v",
+      "vdcmul_8b.v",
+      "vdcmul_4b.v",
+      "vdcmul_2b.v",
+      "rca64.v",
+      "rca32b.v",
+      "rca16b.v",
+      "rca8b.v",
+      "rca_4b.v",
+      "half_adder.v"
+    ],
+    "macro_definitions": "None specified in the Makefile.",
+    "inactive_modified_variant": {
+      "relative_path": "vdcmul_64b.v",
+      "sha256": "6059fa7a492b51284ffa7176ac64fc65f51297ac59ab5ebf40900c3bec1b0d37",
+      "reason": "Its include path was corrected, but it is not in the Makefile RTL_SOURCES list and is not instantiated by the pipeline top."
+    }
+  },
+  "recorded_conversion_changes": [
+    {
+      "relative_path": "pipeline.v",
+      "sha256": "864cf4f7702cb93df2a706773b02a1934a84e15c63ff3cba9d5c488c966066b7",
+      "summary": "Corrected sibling include paths and merged xtemp/ytemp updates into one posedge process with synchronous active-high reset."
+    },
+    {
+      "relative_path": "rca16b.v",
+      "sha256": "df513759865e68d410fe5a05a18c013e7c770d7745753e71753f626135c3ae51",
+      "summary": "Corrected the sibling include path."
+    },
+    {
+      "relative_path": "rca32b.v",
+      "sha256": "3324c1c39bacdd6d49fa640ed20dad02fb04e0adcfceaf4f06869281ea7c3eb6",
+      "summary": "Corrected the sibling include path."
+    },
+    {
+      "relative_path": "rca64.v",
+      "sha256": "c9f0efa87be596c39649f00cccf8b412c7c8fdf0ae17caf3f81260c25513cf72",
+      "summary": "Corrected the sibling include path."
+    },
+    {
+      "relative_path": "vdcmul_16b.v",
+      "sha256": "1a8a301c83b3504d896c49cb673cfc87e59ce2c6b6c4b37b69e225a42805d3f4",
+      "summary": "Corrected sibling include paths."
+    },
+    {
+      "relative_path": "vdcmul_32b.v",
+      "sha256": "b99b5f3393cc4ed5252f036ce55fa74026f922dce30aecaf52de5dc81dc78279",
+      "summary": "Corrected sibling include paths."
+    },
+    {
+      "relative_path": "vdcmul_4b.v",
+      "sha256": "d55665fd5223e157a3d3042fa93b0f212274cff54f6a9c9d38eda2bf1bd4ec8f",
+      "summary": "Corrected sibling include paths."
+    },
+    {
+      "relative_path": "vdcmul_8b.v",
+      "sha256": "f80147f293d9cbba4ecaea018d3d4eca76f4ef483d6c5c51716ffee9b18d8d7d",
+      "summary": "Corrected sibling include paths."
+    }
+  ],
+  "source_files": [
+    {
+      "relative_path": "pipeline.v",
+      "role": "Active RTL top module.",
+      "sha256": "864cf4f7702cb93df2a706773b02a1934a84e15c63ff3cba9d5c488c966066b7"
+    },
+    {
+      "relative_path": "vdcmul_32b.v",
+      "role": "Active recursively decomposed 32-bit partial-product multiplier.",
+      "sha256": "b99b5f3393cc4ed5252f036ce55fa74026f922dce30aecaf52de5dc81dc78279"
+    },
+    {
+      "relative_path": "vdcmul_16b.v",
+      "role": "Active recursive multiplier dependency.",
+      "sha256": "1a8a301c83b3504d896c49cb673cfc87e59ce2c6b6c4b37b69e225a42805d3f4"
+    },
+    {
+      "relative_path": "vdcmul_8b.v",
+      "role": "Active recursive multiplier dependency.",
+      "sha256": "f80147f293d9cbba4ecaea018d3d4eca76f4ef483d6c5c51716ffee9b18d8d7d"
+    },
+    {
+      "relative_path": "vdcmul_4b.v",
+      "role": "Active recursive multiplier dependency.",
+      "sha256": "d55665fd5223e157a3d3042fa93b0f212274cff54f6a9c9d38eda2bf1bd4ec8f"
+    },
+    {
+      "relative_path": "vdcmul_2b.v",
+      "role": "Active recursive multiplier leaf.",
+      "sha256": "08bdc8dd950829903b44b8f96caabdf6b181c7bae87697ba2c853dce6758469e"
+    },
+    {
+      "relative_path": "rca64.v",
+      "role": "Active carry-adder dependency.",
+      "sha256": "c9f0efa87be596c39649f00cccf8b412c7c8fdf0ae17caf3f81260c25513cf72"
+    },
+    {
+      "relative_path": "rca32b.v",
+      "role": "Active recursive carry-adder dependency.",
+      "sha256": "3324c1c39bacdd6d49fa640ed20dad02fb04e0adcfceaf4f06869281ea7c3eb6"
+    },
+    {
+      "relative_path": "rca16b.v",
+      "role": "Active recursive carry-adder dependency.",
+      "sha256": "df513759865e68d410fe5a05a18c013e7c770d7745753e71753f626135c3ae51"
+    },
+    {
+      "relative_path": "rca8b.v",
+      "role": "Active recursive carry-adder dependency.",
+      "sha256": "cf74c93641ee9250543f6a78aa8963bca092a0caf6306b019bcff8ddb8492a9a"
+    },
+    {
+      "relative_path": "rca_4b.v",
+      "role": "Active carry-adder leaf dependency.",
+      "sha256": "91320445a263b5536113354f12b15fc472918c26c3814b7b204a171605eade0b"
+    },
+    {
+      "relative_path": "half_adder.v",
+      "role": "Active top-level carry-combine dependency.",
+      "sha256": "70f14086a8be5b05f7cd8390d31c72184ce058d610698b850eed0429fa49e26b"
+    },
+    {
+      "relative_path": "systemC_file/Makefile",
+      "role": "Build/run entry and explicit source/dependency configuration.",
+      "sha256": "40cfef834015e1d92baaf48ab4ed0afbbfe4e3b39f9dd911302382ca57fb34b3"
+    },
+    {
+      "relative_path": "systemC_file/DUT/pipeline_sc.h",
+      "role": "SystemC DUT and public port declarations.",
+      "sha256": "19327484ffc9e71a431f8c69c1f68e6e216dc9e12694cef2070b8f007b42bcb4"
+    },
+    {
+      "relative_path": "systemC_file/pipeline_sc_tb.cpp",
+      "role": "Existing self-check testbench source.",
+      "sha256": "96d61f6310959f0cc5a8b4e72957181070f853c5e42f198356af55d85ddd73f2"
+    },
+    {
+      "relative_path": "systemC_file/stimulus/pipeline_sc_stimulus.h",
+      "role": "Existing test-vector generator and fixed seed.",
+      "sha256": "cb0d11a2678a50d77dd777e0a3fd93bf5d32cfa8b970d4a44225253dbb454e80"
+    },
+    {
+      "relative_path": "systemC_file/README.md",
+      "role": "Existing conversion scope and observed timing explanation.",
+      "sha256": "894aaa4ad45fdefab06918f43502071d81ecc2b3c46aa7f022f4920678c9636a"
+    },
+    {
+      "relative_path": "systemC_file/interface/interface.json",
+      "role": "Unique authority interface contract.",
+      "sha256": "dcb23bac044db9bb94a3e6e13adfd7d6c35ae5606b370db062809e379143ac27"
+    },
+    {
+      "relative_path": "systemC_file/interface/interface.schema.json",
+      "role": "Schema for the authority interface contract.",
+      "sha256": "bad6dc6a7efd532fef6d15242d42a0b9d2eecaf462428c12178acff12d571bec"
+    }
+  ],
+  "prior_run": {
+    "run_id": "pipeline_seed29_rtl_f7774be65051d8384bc362bda44c6328e87222cab3ab39991624dcc8f8a2ebca",
+    "summary_as_recorded_in_existing_log": "50 checks, 0 failures; stable-input products and cycle-level changing-input reference checks are both represented.",
+    "scope_note": "This identifies existing conversion self-check artifacts only; this handoff task did not build, simulate, or claim formal equivalence."
+  },
+  "prior_run_evidence": [
+    {
+      "relative_path": "systemC_file/out/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "note": "Present but empty."
+    },
+    {
+      "relative_path": "systemC_file/out/simulation.log",
+      "sha256": "7fb030e730a8444ecec5b6514b1cd03a4c0b6b9636e02f86a1b3b12340c38029"
+    },
+    {
+      "relative_path": "systemC_file/out/checks.csv",
+      "sha256": "ca0449975203b9e6467009ffd9ea54c174b2f2c5f13603d05baa44c691979494"
+    },
+    {
+      "relative_path": "systemC_file/out/wave.vcd",
+      "sha256": "c0fa4acf3bfc03fc9de58b3bf88d2372da13fd7c8503d935fb129916924aaa72"
+    }
+  ],
+  "source_metadata_schema_status": {
+    "dedicated_schema_found": false,
+    "validation_performed": [
+      "UTF-8 JSON parsing",
+      "referenced path existence",
+      "SHA-256 comparison against files on disk"
+    ],
+    "note": "No source-metadata-specific schema was present in the design input or local Harness schemas; no schema was invented. Cross-record consistency was checked directly."
+  }
+}

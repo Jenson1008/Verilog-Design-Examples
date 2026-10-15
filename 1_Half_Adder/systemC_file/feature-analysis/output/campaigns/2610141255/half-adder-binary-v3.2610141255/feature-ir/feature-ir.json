@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "artifact_type": "feature-ir",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "status": "awaiting_validation",
+  "features": [
+    {
+      "id": "feature.half_adder.binary",
+      "statement": "半加器接收两个二进制输入位，并输出它们相加后的结果：o_sum 表示和位，o_carry 表示向更高位产生的进位。",
+      "scope": "仅涵盖 i_a 和 i_b 分别取 0 或 1 的四种输入组合；每组输入施加后 1 ns 采样 half_adder 顶层输出。",
+      "rule_ids": [
+        "rule.half_adder.binary"
+      ],
+      "source_refs": [
+        {
+          "file": "input/source/DUT/half_adder_sc.h",
+          "start_line": 11,
+          "end_line": 12,
+          "symbol": "half_adder::evaluate"
+        },
+        {
+          "file": "input/source/DUT/half_adder_sc.h",
+          "start_line": 15,
+          "end_line": 16,
+          "symbol": "half_adder::half_adder"
+        }
+      ],
+      "unknowns": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule.half_adder.binary",
+      "feature_id": "feature.half_adder.binary",
+      "statement": "For each binary pair (i_a, i_b), sampled 1 ns after application, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "preconditions": [
+        "Both scalar inputs are driven with 0 or 1.",
+        "Outputs are sampled 1 ns after applying each pair."
+      ],
+      "observables": [
+        "o_sum",
+        "o_carry"
+      ],
+      "source_fact_refs": [
+        "fact.half_adder.sum_xor",
+        "fact.half_adder.carry_and"
+      ],
+      "test_refs": [
+        "test.half_adder.binary.truth_table"
+      ],
+      "observation_refs": [
+        "observation.half_adder.binary.truth_table"
+      ],
+      "evidence_ref": {
+        "path": "evidence/evidence-manifest.json",
+        "sha256": "609a6751c1356e21c890492a1f049f9ac67abcb2a5079a0ec5ef0227e61654b8",
+        "artifact_id": "artifact.evidence-manifest",
+        "stage": "evidence_gate"
+      }
+    }
+  ],
+  "unknowns": [
+    "精确的 delta-cycle 更新次数和延迟尚未测量；本次 campaign 在施加每组二态输入后 1 ns 采样输出。"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local RTL/SystemC interface contract schema (not a Harness standard)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "top_module", "clocking_model", "ports", "declared_unknowns"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "top_module": {"type": "string", "minLength": 1},
+    "clocking_model": {"$ref": "#/$defs/clocking_model"},
+    "ports": {"type": "array", "items": {"$ref": "#/$defs/port"}},
+    "declared_unknowns": {"type": "array", "items": {"$ref": "#/$defs/unknown"}},
+    "port_hierarchy": {"type": "array", "items": {"$ref": "#/$defs/hierarchy"}}
+  },
+  "$defs": {
+    "clocking_model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "clocks", "resets"],
+      "properties": {
+        "kind": {"enum": ["combinational", "single_clock", "multi_clock", "unknown"]},
+        "clocks": {"type": "array", "items": {"$ref": "#/$defs/clock"}},
+        "resets": {"type": "array", "items": {"$ref": "#/$defs/reset"}}
+      }
+    },
+    "clock": {
+      "type": "object", "additionalProperties": false,
+      "required": ["port", "active_edge"],
+      "properties": {"port": {"type": "string", "minLength": 1}, "active_edge": {"enum": ["rising", "falling", "unknown"]}}
+    },
+    "reset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["port", "polarity", "behavior", "sampling_edge", "asserted_meaning"],
+      "properties": {
+        "port": {"type": "string", "minLength": 1},
+        "polarity": {"enum": ["active_high", "active_low", "unknown"]},
+        "behavior": {"enum": ["synchronous", "asynchronous", "mixed", "unknown"]},
+        "sampling_edge": {"enum": ["rising", "falling", "level", "unknown"]},
+        "asserted_meaning": {"type": "string", "minLength": 1}
+      }
+    },
+    "port": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "canonical_path", "direction", "systemc_type", "width", "role"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "canonical_path": {"type": "string", "minLength": 1},
+        "direction": {"enum": ["input", "output", "inout"]},
+        "systemc_type": {"type": "string", "minLength": 1},
+        "width": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "string", "minLength": 1}]},
+        "role": {"type": "string", "minLength": 1},
+        "timing_contract": {"$ref": "#/$defs/timing"}
+      }
+    },
+    "timing": {
+      "type": "object", "additionalProperties": false, "minProperties": 1,
+      "properties": {
+        "sampling": {"type": "string", "minLength": 1},
+        "latency": {"type": "string", "minLength": 1},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "hierarchy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "ports"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "ports": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "unknown": {
+      "type": "object", "additionalProperties": false,
+      "required": ["description"],
+      "properties": {
+        "description": {"type": "string", "minLength": 1},
+        "related_ports": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "metadata_version": 1,
+  "design": "8_ALU",
+  "module": "alu",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; exact bytes bound by file digests"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "alu_sc_tb.cpp",
+      "DUT/alu_sc.h",
+      "stimulus/alu_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured"
+  },
+  "source_files": [
+    {
+      "repository_path": "8_ALU/systemC_file/alu_sc_tb.cpp",
+      "sha256": "08939e88e308224ae642331809f183bc0625f0dfa46431966d8ae852fb8afc65",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/DUT/alu_sc.h",
+      "sha256": "52316d2fb5e868b02e4ad8daa6607cf9a7150ebe5ef154bdf351523d45ca0769",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/stimulus/alu_sc_stimulus.h",
+      "sha256": "64ea08ec4a8b94abc3f0d79c60f30d4b9ddf2437b41c539b7a03944947c228cb",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/Makefile",
+      "sha256": "225979bc0799cae2075c92ce0b1b059b3226f5605bfd0b23cc6b88fafaee2ce1",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/interface/interface.json",
+      "sha256": "377bcf0c5228e158085558ef43ff7e23b956f1f92f3d60bd2e5b15aac73e7e7b",
+      "role": "authority interface"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/interface/interface.schema.json",
+      "sha256": "c6b449cbc4b929041dd2e6be6f52b85b879ecebc0dfe5c5888c59e2e75c48ac1",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "8_ALU/alu.v",
+      "sha256": "b391de8a9a58cfaf52bd047b6a34748a06f8282c7a3e1f2b24e4da02bc165846",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "8_ALU/systemC_file/out/simulation.log",
+      "sha256": "c10e7831c95f036ddd22bfd0d5f165e1dde17b2606086b441b2e38e11b14d063",
+      "role": "prior self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "8_ALU/systemC_file/interface/interface.json",
+    "authority_sha256": "377bcf0c5228e158085558ef43ff7e23b956f1f92f3d60bd2e5b15aac73e7e7b",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection; RTL/SystemC/authority top-level port maps cross-checked"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "names/directions/types/widths match",
+    "rtl_vs_systemc": "names/directions/widths match",
+    "ports": [
+      "a",
+      "b",
+      "carry",
+      "out",
+      "overflow",
+      "parity",
+      "select",
+      "sign",
+      "zero"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "8_ALU/systemC_file/out/simulation.log",
+    "log_sha256": "c10e7831c95f036ddd22bfd0d5f165e1dde17b2606086b441b2e38e11b14d063",
+    "summary_line": "SUMMARY checks=1027 failures=0 csv=alu.csv vcd=alu_wave.vcd",
+    "meaning": "historical finite self-check only; not rerun, not Gate evidence, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "b4458d318546652d954a67f7a080e286bcccae945a0ebf2dcb5f387cc0f8e37c"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "10ae37aa4140f8f2f1a6863b40917f344ac1ae2577de2e4d71a74a2683431d77"
+    }
+  ],
+  "not_performed": [
+    "DUT build/run",
+    "campaign",
+    "VCD preflight",
+    "reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler/SystemC versions not re-measured",
+    "historical trace not replayed",
+    "proposals remain unconfirmed"
+  ]
+}

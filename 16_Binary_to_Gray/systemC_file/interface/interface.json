@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0","top_module":"bin_gry",
+  "clocking_model":{"kind":"combinational","clocks":[],"resets":[]},
+  "ports":[
+    {"name":"binary","canonical_path":"binary","direction":"input","systemc_type":"sc_dt::sc_lv<N>","width":"N","role":"N-bit four-state binary value, with RTL default parameter N=8."},
+    {"name":"gray","canonical_path":"gray","direction":"output","systemc_type":"sc_dt::sc_lv<N>","width":"N","role":"N-bit four-state Gray encoding corresponding to binary."}
+  ],
+  "declared_unknowns":[{"description":"The RTL slice [N-2:0] implies N must be at least 2; the SystemC implementation enforces this constraint and is simulated with default N=8."},{"description":"sc_lv preserves four-state XOR propagation; the self-check includes one directed X and one directed Z input vector, but not an exhaustive four-state input space."}]
+}

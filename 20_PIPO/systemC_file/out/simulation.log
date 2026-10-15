@@ -1,0 +1,16 @@
+
+Info: (I703) tracing timescale unit set: 1 ns (pipo_shift_wave.vcd)
+t=1 ns test=uninitialized_data_out data_in=0000000000000000 shift_en=00 load=0 reset=0 expected_data_out=XXXXXXXXXXXXXXXX actual_data_out=XXXXXXXXXXXXXXXX PASS
+t=2 ns test=synchronous_reset data_in=0000000000000000 shift_en=00 load=0 reset=1 expected_data_out=0000000000000000 actual_data_out=0000000000000000 PASS
+t=4 ns test=first_load_uses_uninitialized_old_temp data_in=1000111000010110 shift_en=00 load=1 reset=0 expected_data_out=XXXXXXXXXXXXXXX0 actual_data_out=XXXXXXXXXXXXXXX0 PASS
+t=6 ns test=load_shift_right_uses_previous_temp data_in=0101010101010101 shift_en=01 load=1 reset=0 expected_data_out=0100011100001011 actual_data_out=0100011100001011 PASS
+t=8 ns test=load_arithmetic_left_on_unsigned_register data_in=1000000000000011 shift_en=10 load=1 reset=0 expected_data_out=1010101010101010 actual_data_out=1010101010101010 PASS
+t=10 ns test=load_arithmetic_right_explicit_sign_bit data_in=0111111111111110 shift_en=11 load=1 reset=0 expected_data_out=1100000000000001 actual_data_out=1100000000000001 PASS
+t=12 ns test=load_low_holds_data_out data_in=1111000011110000 shift_en=00 load=0 reset=0 expected_data_out=1100000000000001 actual_data_out=1100000000000001 PASS
+t=14 ns test=reset_does_not_clear_temp data_in=0000000000000000 shift_en=00 load=0 reset=1 expected_data_out=0000000000000000 actual_data_out=0000000000000000 PASS
+t=16 ns test=post_reset_load_shifts_preserved_temp data_in=0011001100110011 shift_en=11 load=1 reset=0 expected_data_out=0011111111111111 actual_data_out=0011111111111111 PASS
+t=18 ns test=unknown_shift_selector_holds_output data_in=1111111100000000 shift_en=0X load=1 reset=0 expected_data_out=0011111111111111 actual_data_out=0011111111111111 PASS
+t=20 ns test=unknown_load_is_not_true_and_holds_registers data_in=0000000011111111 shift_en=01 load=X reset=0 expected_data_out=0011111111111111 actual_data_out=0011111111111111 PASS
+SUMMARY checks=11 failures=0 csv=pipo_shift.csv vcd=pipo_shift_wave.vcd
+
+Info: /OSCI/SystemC: Simulation stopped by user.

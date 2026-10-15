@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "artifact_type": "run-manifest",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "input_files": [
+    {
+      "path": "input/interface.json",
+      "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+      "artifact_id": "input.interface",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/basic-description.md",
+      "sha256": "23621635bfe19d44508ea11a8723b559f75eb4f7f639a4ed0434fadae8fe76b3",
+      "artifact_id": "input.basic_description",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/static-facts.json",
+      "sha256": "f36aeb6762059ab2df245e60d10c575698844342873303d662cb0903e736b713",
+      "artifact_id": "input.static_facts",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/feature-proposal.json",
+      "sha256": "4610b0f7b6916405a2c5889e8a68cb962c4ef03e4ed8b9d40da78da447cd0f9e",
+      "artifact_id": "input.feature_proposal",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-list.json",
+      "sha256": "22570d3d9950a011d6062496971fdb7d906a28f8f940eaee5b271189aa762fdb",
+      "artifact_id": "input.test_list",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/campaign-config.schema.json",
+      "sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+      "artifact_id": "input.campaign-config-schema",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/campaign-config.json",
+      "sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+      "artifact_id": "input.campaign-config",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/DUT/half_adder_sc.h",
+      "sha256": "8f601e137568d40a644c9531c239a9b7cca3e1976c9c7905bcbba626356d140c",
+      "artifact_id": "source.0",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/source/campaign_testbench.cpp",
+      "sha256": "632ba810a5c5e3ecd914263df7f472e65e2e48a0c5d7bdbdf850b9facbb5d973",
+      "artifact_id": "source.1",
+      "stage": "snapshot_inputs"
+    },
+    {
+      "path": "input/test-request-interface.json",
+      "sha256": "0f23273d81e6aa852d4f5c5eb06ac0f7919e8364b0f05cf7bbe2ca8fe39808af",
+      "artifact_id": "input.test-request",
+      "stage": "generate_test_requests"
+    },
+    {
+      "path": "manifests/preflight-authorization.json",
+      "sha256": "8c0d82059ad096a12dd58bbef3c7e1ad28cb9261a841f42259668e536a95dc73",
+      "artifact_id": "input.execution-preflight",
+      "stage": "preflight_execution",
+      "attempt_id": "attempt.566324927ab5"
+    }
+  ],
+  "test_request_ref": {
+    "path": "input/test-request-interface.json",
+    "sha256": "0f23273d81e6aa852d4f5c5eb06ac0f7919e8364b0f05cf7bbe2ca8fe39808af",
+    "artifact_id": "input.test-request",
+    "stage": "generate_test_requests"
+  },
+  "build_profile": "wsl:ip:1_Half_Adder/half_adder",
+  "scope": {
+    "kind": "ip",
+    "path": "1_Half_Adder/half_adder",
+    "parent_campaign_id": "half-adder-binary-v2.2610141228"
+  },
+  "systemc_version": "2.3.4-3build1",
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "harness_version": "0.1.0",
+  "created_at": "2026-10-14T12:55:50.531028+00:00",
+  "seed": 0,
+  "budgets": {
+    "max_experiments": 1,
+    "max_tests": 1,
+    "timeout_seconds": 30,
+    "max_artifact_bytes": 10485760
+  },
+  "status": "awaiting_validation"
+}

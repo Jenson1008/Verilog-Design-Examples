@@ -1,0 +1,25 @@
+
+        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+        Copyright (c) 1996-2022 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I703) tracing timescale unit set: 1 ns (wave.vcd)
+t=5 ns fill-0 write_en=1 read_en=0 data_in=11 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=8 ns fill-1 write_en=1 read_en=0 data_in=48 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=11 ns fill-2 write_en=1 read_en=0 data_in=85 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=14 ns fill-3 write_en=1 read_en=0 data_in=122 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=17 ns fill-4 write_en=1 read_en=0 data_in=159 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=20 ns fill-5 write_en=1 read_en=0 data_in=196 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=23 ns fill-6 write_en=1 read_en=0 data_in=233 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=26 ns fill-7 write_en=1 read_en=0 data_in=14 expected_full=1 actual_full=1 expected_empty=0 actual_empty=0 expected_out=unknown (uninitialized/held) actual_out=XXXXXXXX PASS
+t=29 ns read-first write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=00001011 actual_out=00001011 PASS
+t=32 ns simultaneous-interior-read-write write_en=1 read_en=1 data_in=167 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=00110000 actual_out=00110000 PASS
+t=35 ns drain-0 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=01010101 actual_out=01010101 PASS
+t=38 ns drain-1 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=01111010 actual_out=01111010 PASS
+t=41 ns drain-2 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=10011111 actual_out=10011111 PASS
+t=44 ns drain-3 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=11000100 actual_out=11000100 PASS
+t=47 ns drain-4 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=11101001 actual_out=11101001 PASS
+t=50 ns drain-5 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=0 actual_empty=0 expected_out=00001110 actual_out=00001110 PASS
+t=53 ns drain-6 write_en=0 read_en=1 data_in=0 expected_full=0 actual_full=0 expected_empty=1 actual_empty=1 expected_out=10100111 actual_out=10100111 PASS
+t=56 ns idle-empty write_en=0 read_en=0 data_in=0 expected_full=0 actual_full=0 expected_empty=1 actual_empty=1 expected_out=10100111 actual_out=10100111 PASS
+SUMMARY checks=18 failures=0 csv=checks.csv vcd=wave.vcd

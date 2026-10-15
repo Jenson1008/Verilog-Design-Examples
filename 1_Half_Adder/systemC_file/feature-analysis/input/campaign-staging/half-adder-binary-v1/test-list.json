@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-list",
+  "tests": [
+    {
+      "test_id": "test.half_adder.binary.truth_table",
+      "feature_ids": [
+        "feature.half_adder.binary"
+      ],
+      "rule_ids": [
+        "rule.half_adder.binary"
+      ],
+      "request_ids": [
+        "request.half_adder.binary.truth_table"
+      ],
+      "source_path": "campaign_testbench.cpp",
+      "build_target": "half_adder_campaign_test",
+      "run_command": [
+        "{executable_wsl}"
+      ],
+      "seed_policy": "No random seed; exhaustively execute all four binary input pairs.",
+      "oracle_ref": "input/campaign-config.json#/test_vectors",
+      "status": "generated"
+    }
+  ]
+}

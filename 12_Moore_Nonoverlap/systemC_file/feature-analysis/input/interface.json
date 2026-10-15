@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "moore_nonol",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "single rising-edge clock with active-high asynchronous reset",
+    "top_level_port_groups": ["inputs", "outputs"]
+  },
+  "port_catalog": {
+    "in": {
+      "canonical_path": "moore_nonol.in",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "串行输入位；状态译码进程据此计算下一状态。",
+      "timing_contract": "输入或当前状态变化时，组合译码进程更新 next_state 和 out。"
+    },
+    "clk": {
+      "canonical_path": "moore_nonol.clk",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "当前状态寄存器的时钟。",
+      "edge": "rising",
+      "timing_contract": "状态寄存器在 RTL 正边沿事件时更新。"
+    },
+    "reset": {
+      "canonical_path": "moore_nonol.reset",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "高电平异步复位。",
+      "polarity": "active_high",
+      "asserted_meaning": "reset 的有效上升事件将 present_state 置为 S0。",
+      "timing_contract": "不必等待 clk 上升沿；输出随状态译码在后续 delta-cycle 更新。"
+    },
+    "out": {
+      "canonical_path": "moore_nonol.out",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "由当前状态译码得到的 Moore 输出。",
+      "timing_contract": "状态为 S4 时为 1；状态变化后由组合进程更新。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": ["in", "clk", "reset"],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": ["out"],
+      "children": []
+    }
+  ],
+  "declared_unknowns": [
+    "present_state、next_state 和 out 未在声明时初始化；复位建立 S0 前的可观察值不能预先确定。",
+    "RTL 的 case 语句没有 default；非法或未知 present_state 编码下，next_state 和 out 保持先前值。",
+    "RTL 参数 S0..S4 的默认编码为 0..4；参数覆盖未实现或验证。",
+    "S4 下输入为 1 时下一状态为 S1；这是 RTL 的字面转移行为。"
+  ]
+}

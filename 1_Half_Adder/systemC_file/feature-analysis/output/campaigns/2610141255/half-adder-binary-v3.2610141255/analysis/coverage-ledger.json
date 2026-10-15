@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "artifact_type": "coverage-ledger",
+  "targets": [
+    {
+      "target_id": "coverage.port.i_a",
+      "kind": "interface_port",
+      "reference": "i_a",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is not considered exercised until a valid test result observes or drives it.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.i_b",
+      "kind": "interface_port",
+      "reference": "i_b",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is not considered exercised until a valid test result observes or drives it.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.o_sum",
+      "kind": "interface_port",
+      "reference": "o_sum",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is not considered exercised until a valid test result observes or drives it.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.port.o_carry",
+      "kind": "interface_port",
+      "reference": "o_carry",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "Port is not considered exercised until a valid test result observes or drives it.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.group.inputs",
+      "kind": "interface_group",
+      "reference": "inputs",
+      "status": "exercised",
+      "priority": "medium",
+      "rationale": "Interface group coverage is recorded separately from individual port coverage.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.group.outputs",
+      "kind": "interface_group",
+      "reference": "outputs",
+      "status": "exercised",
+      "priority": "medium",
+      "rationale": "Interface group coverage is recorded separately from individual port coverage.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/interface.json",
+          "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+          "artifact_id": "input.interface",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.unknown.1",
+      "kind": "declared_unknown",
+      "reference": "The exact delta-cycle update count and latency were not measured; this campaign samples outputs 1 ns after applying each binary input pair.",
+      "status": "out_of_scope",
+      "priority": "low",
+      "rationale": "This declared unknown is not evaluated by the configured test vectors.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "4610b0f7b6916405a2c5889e8a68cb962c4ef03e4ed8b9d40da78da447cd0f9e",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "The configured campaign does not include an experiment for this unknown."
+    },
+    {
+      "target_id": "coverage.hypothesis.feature.half_adder.binary",
+      "kind": "hypothesis",
+      "reference": "feature.half_adder.binary",
+      "status": "exercised",
+      "priority": "high",
+      "rationale": "The candidate hypothesis was exercised by the configured experiment; its bounded rule was evaluated separately by Evidence Gate.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/feature-proposal.json",
+          "sha256": "4610b0f7b6916405a2c5889e8a68cb962c4ef03e4ed8b9d40da78da447cd0f9e",
+          "artifact_id": "input.feature-proposal",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.behavior.rule.half_adder.binary",
+      "kind": "behavioral_dimension",
+      "reference": "rule.half_adder.binary",
+      "status": "covered",
+      "priority": "high",
+      "rationale": "For each binary pair (i_a, i_b), sampled 1 ns after application, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "experiment_ids": [
+        "experiment.half_adder.binary.truth_table"
+      ],
+      "source_refs": [
+        {
+          "path": "input/campaign-config.json",
+          "sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+          "artifact_id": "input.campaign-config",
+          "stage": "snapshot_inputs"
+        }
+      ]
+    },
+    {
+      "target_id": "coverage.static-analysis.systemc",
+      "kind": "static_analysis_gap",
+      "reference": "General SystemC/C++ semantics outside caller-supplied static facts",
+      "status": "unsupported",
+      "priority": "medium",
+      "rationale": "The deterministic MVP consumes static facts supplied by the caller and does not parse arbitrary SystemC/C++ semantics.",
+      "experiment_ids": [],
+      "source_refs": [
+        {
+          "path": "input/static-facts.json",
+          "sha256": "f36aeb6762059ab2df245e60d10c575698844342873303d662cb0903e736b713",
+          "artifact_id": "input.static-facts",
+          "stage": "snapshot_inputs"
+        }
+      ],
+      "status_reason": "No general SystemC/C++ static analyzer is implemented in this runner."
+    }
+  ]
+}

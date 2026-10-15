@@ -1,6 +1,6 @@
-`include "../src/vdcmul_4b.v"
-`include "../src/rca8b.v"
-`include "../src/half_adder.v"
+`include "vdcmul_4b.v"
+`include "rca8b.v"
+`include "half_adder.v"
 
 module vdcmul_8b(
                    x,

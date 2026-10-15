@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "lfsr",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿采样 reset 并更新 4 位状态。"
+  },
+  "port_catalog": {
+    "reset": {"canonical_path": "lfsr.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "同步高有效复位", "polarity": "active_high"},
+    "clk": {"canonical_path": "lfsr.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "状态移位时钟", "edge": "rising"},
+    "data_out": {"canonical_path": "lfsr.data_out", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<4>>", "width_bits": 4, "role": "4 位 LFSR 当前状态"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "状态寄存器没有 RTL 初始化；初始状态未定义。时钟上升沿采样到 reset 高电平，或采样到已知全零状态时，才装入种子 0001。"
+  ]
+}

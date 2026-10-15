@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "artifact_type": "spec-finalization",
+  "status": "finalized",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "validation": {
+    "path": "validation/validation-decision.json",
+    "sha256": "98dde01546bab7ccd630745091948a8cbd8798d7e265ab6b4a34584b55f1d84d",
+    "artifact_id": "artifact.validation-decision",
+    "stage": "human_validation"
+  },
+  "candidate_spec": {
+    "path": "spec/spec.md",
+    "sha256": "5e00823dd8dc2f9c7f337476c533bfa0b41f321a3b1c4c15369a64d835941f77",
+    "artifact_id": "artifact.candidate-spec",
+    "stage": "human_validation"
+  },
+  "feature_ir": {
+    "path": "feature-ir/feature-ir.json",
+    "sha256": "49dfb62bcd10a21ed28ecbf177e4a3d7b453d79348c7d2edcd5a0aac5513fe2b",
+    "artifact_id": "artifact.feature-ir",
+    "stage": "human_validation"
+  },
+  "test_catalog": {
+    "path": "tests/test-list.json",
+    "sha256": "51bb6e076bf28a7781f10b3145f27d5eda40b4e721eb8cb91778858d14384fbd",
+    "artifact_id": "artifact.test-list",
+    "stage": "human_validation"
+  },
+  "evidence": {
+    "path": "evidence/evidence-manifest.json",
+    "sha256": "609a6751c1356e21c890492a1f049f9ac67abcb2a5079a0ec5ef0227e61654b8",
+    "artifact_id": "artifact.evidence-manifest",
+    "stage": "human_validation"
+  },
+  "final_spec": {
+    "path": "spec/finalized/spec.md",
+    "sha256": "78f140b2bc948c11e59f5697717e56d7b9a61c01cab2943c76119b2bebfc1e10",
+    "artifact_id": "artifact.final-spec",
+    "stage": "spec_finalization"
+  }
+}

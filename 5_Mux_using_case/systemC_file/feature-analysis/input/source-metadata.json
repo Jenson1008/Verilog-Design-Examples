@@ -1,0 +1,110 @@
+{
+  "metadata_version": 1,
+  "design": "5_Mux_using_case",
+  "module": "mux_case",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; exact bytes bound by file digests"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "mux_case_sc_tb.cpp",
+      "DUT/mux_case_sc.h",
+      "stimulus/mux_case_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured"
+  },
+  "source_files": [
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/mux_case_sc_tb.cpp",
+      "sha256": "3806a841f3db47f9805651a694ca3e9d77b2579a0c98afe8ea6cb12d3c223603",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/DUT/mux_case_sc.h",
+      "sha256": "b9bbf9c7a46e0e5e6e6c41bf257e3bdfa0a2834e372833f3002dab2a3cc225e6",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/stimulus/mux_case_sc_stimulus.h",
+      "sha256": "714eeb775feede8d78314b3683a74d3307edc367a1e8d19a22f2df83e9c32a58",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/Makefile",
+      "sha256": "07d485e00b9c993fb9e3bd05e0e361414fc0721ed17855fcbf15d41b263641fc",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/interface/interface.json",
+      "sha256": "6907310c14d9644e0938b41dcfcb8ed31f9e8332b7ec16b7fd6ff2559504f881",
+      "role": "authority interface"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/interface/interface.schema.json",
+      "sha256": "c6b449cbc4b929041dd2e6be6f52b85b879ecebc0dfe5c5888c59e2e75c48ac1",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "5_Mux_using_case/mux_case.v",
+      "sha256": "e0b69faf8f892352155abb43a0dd5729d48da9a5f608fe5d6d3dc013ffaed792",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "5_Mux_using_case/systemC_file/out/simulation.log",
+      "sha256": "10698d4f0ba82b770ac5d2e44ed5bca667f8828fede92aa2c2b302767aa3875b",
+      "role": "prior self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "5_Mux_using_case/systemC_file/interface/interface.json",
+    "authority_sha256": "6907310c14d9644e0938b41dcfcb8ed31f9e8332b7ec16b7fd6ff2559504f881",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection; RTL/SystemC/authority top-level port maps cross-checked"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "names/directions/types/widths match",
+    "rtl_vs_systemc": "names/directions/widths match",
+    "ports": [
+      "in0",
+      "in1",
+      "in2",
+      "in3",
+      "out",
+      "select"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "5_Mux_using_case/systemC_file/out/simulation.log",
+    "log_sha256": "10698d4f0ba82b770ac5d2e44ed5bca667f8828fede92aa2c2b302767aa3875b",
+    "summary_line": "SUMMARY checks=1025 failures=0 csv=mux_case.csv vcd=mux_case_wave.vcd",
+    "meaning": "historical finite self-check only; not rerun, not Gate evidence, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "f99c4116125e2ead201acbd62553e37c1cec5c3731566ea8f0813bf5edd767c7"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "bf1fcb4cc8406dea7607385e76c9f333a95a7b984bc36ba68f41b1292bb67051"
+    }
+  ],
+  "not_performed": [
+    "DUT build/run",
+    "campaign",
+    "VCD preflight",
+    "reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler/SystemC versions not re-measured",
+    "historical trace not replayed",
+    "proposals remain unconfirmed"
+  ]
+}

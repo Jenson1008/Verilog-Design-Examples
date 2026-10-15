@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "counter4bit",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "single rising-edge clock with active-high asynchronous reset",
+    "top_level_port_groups": ["inputs", "outputs"]
+  },
+  "port_catalog": {
+    "reset": {
+      "canonical_path": "counter4bit.reset",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<bool>",
+      "width_bits": 1,
+      "role": "高电平异步复位 count_out。",
+      "polarity": "active_high",
+      "asserted_meaning": "异步将 count_out 设为 S0=8；count 不由该过程复位。"
+    },
+    "load": {
+      "canonical_path": "counter4bit.load",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "时钟沿序列控制；低电平将 count 设为 S0。"
+    },
+    "enable": {
+      "canonical_path": "counter4bit.enable",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "load 为高时的序列推进控制。"
+    },
+    "clk": {
+      "canonical_path": "counter4bit.clk",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<bool>",
+      "width_bits": 1,
+      "role": "两个时序过程使用的时钟。",
+      "edge": "rising"
+    },
+    "count_out": {
+      "canonical_path": "counter4bit.count_out",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<4>>",
+      "width_bits": 4,
+      "role": "四位序列输出寄存器；通常在时钟沿装入 count。"
+    },
+    "count": {
+      "canonical_path": "counter4bit.count",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<4>>",
+      "width_bits": 4,
+      "role": "向外可见的四位内部计数寄存器；RTL 未对其复位或初始化。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": ["reset", "load", "enable", "clk"],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": ["count_out", "count"],
+      "children": []
+    }
+  ],
+  "declared_unknowns": [
+    "count 没有复位或初始化。两个 RTL always 过程都能写 count_out；reset=1、load=1、enable=0 与 clk 上升沿同时发生时会竞争写 count_out，RTL 未定义优先级，且该碰撞未测试。",
+    "RTL 参数 S0..S13 决定序列状态；当前转换保留给定默认值 8,7,11,4,9,2,5,12,6,3,15,1,14,13。"
+  ]
+}

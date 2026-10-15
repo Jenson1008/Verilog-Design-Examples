@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "top_module": "univ_shift",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "univ_shift.clk", "active_edge": "rising"}],
+    "resets": [{"port": "univ_shift.reset", "polarity": "active_high", "behavior": "mixed", "sampling_edge": "rising", "asserted_meaning": "在时钟上升沿采样到高电平时将 data_out 置零；RTL 另在 reset 下降沿触发过程并按低电平路径执行一次。"}]
+  },
+  "ports": [
+    {"name": "data_in", "canonical_path": "univ_shift.data_in", "direction": "input", "systemc_type": "sc_dt::sc_lv<16>", "width": 16, "role": "并行移位或装载输入数据"},
+    {"name": "control", "canonical_path": "univ_shift.control", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "保持、左移、右移或直通选择"},
+    {"name": "clk", "canonical_path": "univ_shift.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "状态更新时钟"},
+    {"name": "reset", "canonical_path": "univ_shift.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "高有效条件，与 RTL 的下降沿敏感事件并存"},
+    {"name": "data_out", "canonical_path": "univ_shift.data_out", "direction": "output", "systemc_type": "sc_dt::sc_lv<16>", "width": 16, "role": "寄存的移位器结果"}
+  ],
+  "declared_unknowns": [
+    {"description": "RTL 参数 n 默认值为 16；本转换固定建模默认参数值，未提供运行期参数化实例。"},
+    {"description": "RTL 在 negedge reset 时触发，但条件为 if(reset)，因此 reset 高有效并且释放沿会进入数据路径；此实际行为已保留。"}
+  ]
+}

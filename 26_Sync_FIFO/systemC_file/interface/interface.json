@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "top_module": "syncfifo",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "syncfifo.clk", "active_edge": "rising"}],
+    "resets": [{"port": "syncfifo.reset", "polarity": "active_low", "behavior": "asynchronous", "sampling_edge": "falling", "asserted_meaning": "清除读写指针和占用计数；输出寄存器及 RAM 不由该复位分支赋值。"}]
+  },
+  "ports": [
+    {"name": "clk", "canonical_path": "syncfifo.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "FIFO 写读状态时钟"},
+    {"name": "reset", "canonical_path": "syncfifo.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "低有效异步复位"},
+    {"name": "write_en", "canonical_path": "syncfifo.write_en", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "请求写入"},
+    {"name": "read_en", "canonical_path": "syncfifo.read_en", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "请求读取"},
+    {"name": "data_in", "canonical_path": "syncfifo.data_in", "direction": "input", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "写入字节"},
+    {"name": "full", "canonical_path": "syncfifo.full", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "RTL 计数等于 8 时置位"},
+    {"name": "empty", "canonical_path": "syncfifo.empty", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "RTL 计数等于 0 时置位"},
+    {"name": "out", "canonical_path": "syncfifo.out", "direction": "output", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "成功读取时更新并保持的输出字节"}
+  ],
+  "declared_unknowns": [
+    {"description": "RAM 和 out 均无 RTL 初始化；仿真先执行异步复位并只在合法队列操作范围内比对。"},
+    {"description": "RTL count 对 write_en/read_en 的差异无条件加减，即使写入因 full 被屏蔽或读取因 empty 被屏蔽也会改变 count；验证避免触发超出合法容量的错误操作。"},
+    {"description": "仿真未验证 count 环绕/下溢以及满状态同时读写导致的指针/计数不一致。"}
+  ]
+}

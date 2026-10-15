@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "seqmult",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿在 load 为高时输出先前采样的部分积之和，并采样新的操作；reset 上升沿异步复位输出。"
+  },
+  "port_catalog": {
+    "in_a": {"canonical_path": "seqmult.in_a", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "被乘数"},
+    "in_b": {"canonical_path": "seqmult.in_b", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "乘数"},
+    "clk": {"canonical_path": "seqmult.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "部分积采样时钟", "edge": "rising"},
+    "load": {"canonical_path": "seqmult.load", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "高电平时使能新操作采样"},
+    "reset": {"canonical_path": "seqmult.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "异步高有效复位", "polarity": "active_high"},
+    "out_valid": {"canonical_path": "seqmult.out_valid", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "复位清零、load 操作后置位并保持的有效标志"},
+    "out_prod": {"canonical_path": "seqmult.out_prod", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<16>>", "width_bits": 16, "role": "先前存储的部分积之和"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "八组部分积没有初始化或复位赋值。load 首次采样时 out_prod 使用旧部分积，因此初始输出乘积未定义；该时钟沿之后才存入本次输入对应的部分积。",
+    "reset 置高时 out_prod 被赋为 16 位 Z，out_valid 清零；部分积状态保持不变。"
+  ]
+}

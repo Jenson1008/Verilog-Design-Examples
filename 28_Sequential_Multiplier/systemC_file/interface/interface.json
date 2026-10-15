@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "top_module": "seqmult",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "seqmult.clk", "active_edge": "rising"}],
+    "resets": [{"port": "seqmult.reset", "polarity": "active_high", "behavior": "asynchronous", "sampling_edge": "rising", "asserted_meaning": "复位有效时将输出乘积设置为 16 位 Z、valid 清零；8 级部分积不复位。"}]
+  },
+  "ports": [
+    {"name": "in_a", "canonical_path": "seqmult.in_a", "direction": "input", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "被乘数"},
+    {"name": "in_b", "canonical_path": "seqmult.in_b", "direction": "input", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "乘数"},
+    {"name": "clk", "canonical_path": "seqmult.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "部分积采样时钟"},
+    {"name": "load", "canonical_path": "seqmult.load", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "高电平时采样新操作并更新输出"},
+    {"name": "reset", "canonical_path": "seqmult.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "异步高有效复位"},
+    {"name": "out_valid", "canonical_path": "seqmult.out_valid", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "复位清零、首次 load 后置位并保持的有效标志"},
+    {"name": "out_prod", "canonical_path": "seqmult.out_prod", "direction": "output", "systemc_type": "sc_dt::sc_lv<16>", "width": 16, "role": "对先前存储的部分积求和所得乘积"}
+  ],
+  "declared_unknowns": [
+    {"description": "p1..p8 无复位赋值，初态未知；第一次 load 时 out_prod 使用旧部分积，因此为未知。模型保留此一拍历史行为。"},
+    {"description": "reset 分支明确将 out_prod 赋为 Z；已在二态输入测试中定向检查复位 Z 输出。"}
+  ]
+}

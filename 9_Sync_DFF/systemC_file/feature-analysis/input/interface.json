@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "dff_sync",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "single rising-edge clock with synchronous active-high reset",
+    "top_level_port_groups": [
+      "inputs",
+      "outputs"
+    ]
+  },
+  "port_catalog": {
+    "i_d": {
+      "canonical_path": "dff_sync.i_d",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 i_d",
+      "timing_contract": "由源码中的时钟/复位敏感条件定义；采样周期及 delta-cycle 需由后续实验明确。"
+    },
+    "clk": {
+      "canonical_path": "dff_sync.clk",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "时钟",
+      "timing_contract": "由源码中的时钟/复位敏感条件定义；采样周期及 delta-cycle 需由后续实验明确。",
+      "edge": "rising"
+    },
+    "reset": {
+      "canonical_path": "dff_sync.reset",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "高电平复位",
+      "timing_contract": "由源码中的时钟/复位敏感条件定义；采样周期及 delta-cycle 需由后续实验明确。"
+    },
+    "o_q": {
+      "canonical_path": "dff_sync.o_q",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输出端口 o_q",
+      "timing_contract": "由源码中的时钟/复位敏感条件定义；采样周期及 delta-cycle 需由后续实验明确。"
+    },
+    "o_qb": {
+      "canonical_path": "dff_sync.o_qb",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输出端口 o_qb",
+      "timing_contract": "由源码中的时钟/复位敏感条件定义；采样周期及 delta-cycle 需由后续实验明确。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": [
+        "i_d",
+        "clk",
+        "reset"
+      ],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": [
+        "o_q",
+        "o_qb"
+      ],
+      "children": []
+    }
+  ],
+  "declared_unknowns": [
+    "RTL register has no initialization; o_q and o_qb start unknown until a rising clock edge."
+  ]
+}

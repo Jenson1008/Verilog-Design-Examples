@@ -1,0 +1,151 @@
+$date
+     Oct 14, 2026       16:59:19
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  reset       $end
+$var wire    1  aaaab  clk       $end
+$var wire    1  aaaac  out_clk       $end
+$scope module dut $end
+$var wire    2  aaaad  clk_count [1:0]  $end
+$upscope $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+0aaaab
+xaaaac
+bXX aaaad
+$end
+
+#1
+1aaaaa
+
+#2
+1aaaab
+0aaaac
+b0 aaaad
+
+#3
+0aaaab
+
+#4
+0aaaaa
+1aaaab
+b1 aaaad
+
+#5
+0aaaab
+
+#6
+1aaaab
+b10 aaaad
+
+#7
+0aaaab
+
+#8
+1aaaab
+1aaaac
+b11 aaaad
+
+#9
+0aaaab
+
+#10
+1aaaab
+b0 aaaad
+
+#11
+0aaaab
+
+#12
+1aaaab
+0aaaac
+b1 aaaad
+
+#13
+0aaaab
+
+#14
+1aaaab
+b10 aaaad
+
+#15
+0aaaab
+
+#16
+1aaaab
+1aaaac
+b11 aaaad
+
+#17
+0aaaab
+
+#18
+1aaaab
+b0 aaaad
+
+#19
+0aaaab
+
+#20
+1aaaab
+0aaaac
+b1 aaaad
+
+#21
+0aaaab
+
+#22
+1aaaab
+b10 aaaad
+
+#23
+0aaaab
+
+#24
+1aaaab
+1aaaac
+b11 aaaad
+
+#25
+0aaaab
+
+#26
+1aaaab
+b0 aaaad
+
+#27
+0aaaab
+
+#28
+1aaaaa
+1aaaab
+0aaaac
+
+#29
+0aaaab
+
+#30
+0aaaaa
+1aaaab
+b1 aaaad
+
+#31
+0aaaab
+
+#32

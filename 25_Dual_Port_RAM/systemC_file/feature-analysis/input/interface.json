@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "dualport_ram",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿；端口 A、B 在同一沿分别执行读或写操作。"
+  },
+  "port_catalog": {
+    "data_in_a": {"canonical_path": "dualport_ram.data_in_a", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "端口 A 写入数据"},
+    "wr_en_a": {"canonical_path": "dualport_ram.wr_en_a", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "端口 A 写使能"},
+    "addr_a": {"canonical_path": "dualport_ram.addr_a", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<3>>", "width_bits": 3, "role": "端口 A 地址"},
+    "data_in_b": {"canonical_path": "dualport_ram.data_in_b", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "端口 B 写入数据"},
+    "wr_en_b": {"canonical_path": "dualport_ram.wr_en_b", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "端口 B 写使能"},
+    "addr_b": {"canonical_path": "dualport_ram.addr_b", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<3>>", "width_bits": 3, "role": "端口 B 地址"},
+    "clk": {"canonical_path": "dualport_ram.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "两端口共用的采样时钟", "edge": "rising"},
+    "data_out_a": {"canonical_path": "dualport_ram.data_out_a", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "端口 A 时钟沿读取的数据寄存器"},
+    "data_out_b": {"canonical_path": "dualport_ram.data_out_b", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "端口 B 时钟沿读取的数据寄存器"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "RAM 内容及 data_out_a、data_out_b 均无初始化或复位赋值；在相关地址写入之前，存储内容和读取结果未定义。",
+    "当两个写使能同时有效且两个有效地址相同时，RTL 的两个时钟过程对同一 RAM 字安排并发非阻塞写入，未定义可移植的端口优先级。受限 SystemC 转换仅将该冲突地址对应的字抽象为 X，不赋予端口 A 或端口 B 优先权；该冲突场景未被激励，必须保持 unknown。"
+  ]
+}

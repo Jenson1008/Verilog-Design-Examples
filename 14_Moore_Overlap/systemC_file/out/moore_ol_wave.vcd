@@ -1,0 +1,331 @@
+$date
+     Oct 14, 2026       17:01:41
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  in       $end
+$var wire    1  aaaab  clk       $end
+$var wire    1  aaaac  reset       $end
+$var wire    1  aaaad  out       $end
+$scope module dut $end
+$var wire    3  aaaae  state [2:0]  $end
+$upscope $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+0aaaab
+0aaaac
+xaaaad
+bXXX aaaae
+$end
+
+#1
+1aaaac
+0aaaad
+b0 aaaae
+
+#2
+0aaaac
+
+#3
+xaaaaa
+
+#4
+1aaaab
+
+#5
+0aaaab
+
+#6
+1aaaaa
+
+#7
+1aaaab
+b1 aaaae
+
+#8
+0aaaab
+
+#10
+1aaaab
+b10 aaaae
+
+#11
+0aaaab
+
+#12
+0aaaaa
+
+#13
+1aaaab
+b11 aaaae
+
+#14
+0aaaab
+
+#15
+1aaaaa
+
+#16
+1aaaab
+1aaaad
+b100 aaaae
+
+#17
+0aaaab
+
+#19
+1aaaab
+0aaaad
+b10 aaaae
+
+#20
+0aaaab
+
+#21
+0aaaaa
+
+#22
+1aaaab
+b11 aaaae
+
+#23
+0aaaab
+
+#24
+1aaaaa
+
+#25
+1aaaab
+1aaaad
+b100 aaaae
+
+#26
+0aaaab
+
+#27
+1aaaac
+0aaaad
+b0 aaaae
+
+#28
+0aaaac
+
+#30
+1aaaab
+b1 aaaae
+
+#31
+0aaaab
+
+#33
+1aaaab
+b10 aaaae
+
+#34
+0aaaab
+
+#36
+1aaaab
+
+#37
+0aaaab
+
+#38
+0aaaaa
+
+#39
+1aaaab
+b11 aaaae
+
+#40
+0aaaab
+
+#41
+1aaaaa
+
+#42
+1aaaab
+1aaaad
+b100 aaaae
+
+#43
+0aaaab
+
+#45
+1aaaab
+0aaaad
+b10 aaaae
+
+#46
+0aaaab
+
+#47
+0aaaaa
+
+#48
+1aaaab
+b11 aaaae
+
+#49
+0aaaab
+
+#50
+1aaaaa
+
+#51
+1aaaab
+1aaaad
+b100 aaaae
+
+#52
+0aaaab
+
+#54
+1aaaab
+0aaaad
+b10 aaaae
+
+#55
+0aaaab
+
+#56
+0aaaaa
+
+#57
+1aaaab
+b11 aaaae
+
+#58
+0aaaab
+
+#59
+1aaaaa
+
+#60
+1aaaab
+1aaaad
+b100 aaaae
+
+#61
+0aaaab
+
+#62
+1aaaac
+0aaaad
+b0 aaaae
+
+#63
+0aaaac
+
+#64
+0aaaaa
+
+#65
+1aaaab
+
+#66
+0aaaab
+
+#67
+1aaaaa
+
+#68
+1aaaab
+b1 aaaae
+
+#69
+0aaaab
+
+#70
+0aaaaa
+
+#71
+1aaaab
+b0 aaaae
+
+#72
+0aaaab
+
+#73
+1aaaaa
+
+#74
+1aaaab
+b1 aaaae
+
+#75
+0aaaab
+
+#77
+1aaaab
+b10 aaaae
+
+#78
+0aaaab
+
+#79
+0aaaaa
+
+#80
+1aaaab
+b11 aaaae
+
+#81
+0aaaab
+
+#82
+1aaaaa
+
+#83
+1aaaab
+1aaaad
+b100 aaaae
+
+#84
+0aaaab
+
+#86
+1aaaab
+0aaaad
+b10 aaaae
+
+#87
+0aaaab
+
+#88
+0aaaaa
+
+#89
+1aaaab
+b11 aaaae
+
+#90
+0aaaab
+
+#91
+1aaaaa
+
+#92
+1aaaab
+1aaaad
+b100 aaaae
+
+#93
+0aaaab
+
+#94

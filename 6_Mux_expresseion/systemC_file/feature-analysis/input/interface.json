@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "mux_always",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "combinational; no clock/reset",
+    "top_level_port_groups": [
+      "inputs",
+      "outputs"
+    ]
+  },
+  "port_catalog": {
+    "in0": {
+      "canonical_path": "mux_always.in0",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 in0",
+      "timing_contract": "组合过程按 DUT 敏感列表触发，输出经 SystemC delta-cycle 更新。"
+    },
+    "in1": {
+      "canonical_path": "mux_always.in1",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 in1",
+      "timing_contract": "组合过程按 DUT 敏感列表触发，输出经 SystemC delta-cycle 更新。"
+    },
+    "select": {
+      "canonical_path": "mux_always.select",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 select",
+      "timing_contract": "组合过程按 DUT 敏感列表触发，输出经 SystemC delta-cycle 更新。"
+    },
+    "out": {
+      "canonical_path": "mux_always.out",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输出端口 out",
+      "timing_contract": "组合过程按 DUT 敏感列表触发，输出经 SystemC delta-cycle 更新。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": [
+        "in0",
+        "in1",
+        "select"
+      ],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": [
+        "out"
+      ],
+      "children": []
+    }
+  ],
+  "declared_unknowns": []
+}

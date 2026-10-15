@@ -1,29 +1,6 @@
-
-        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
-        Copyright (c) 1996-2022 by all Contributors,
-        ALL RIGHTS RESERVED
-
-Info: (I703) tracing timescale unit set: 1 ns (half_adder_wave.vcd)
-time=1 ns test=four_state_truth_table i_a=0 i_b=0 expected_o_sum=0 expected_o_carry=0 actual_o_sum=0 actual_o_carry=0 result=PASS
-time=2 ns test=four_state_truth_table i_a=0 i_b=1 expected_o_sum=1 expected_o_carry=0 actual_o_sum=1 actual_o_carry=0 result=PASS
-time=3 ns test=four_state_truth_table i_a=0 i_b=X expected_o_sum=X expected_o_carry=0 actual_o_sum=X actual_o_carry=0 result=PASS
-time=4 ns test=four_state_truth_table i_a=0 i_b=Z expected_o_sum=X expected_o_carry=0 actual_o_sum=X actual_o_carry=0 result=PASS
-time=5 ns test=four_state_truth_table i_a=1 i_b=0 expected_o_sum=1 expected_o_carry=0 actual_o_sum=1 actual_o_carry=0 result=PASS
-time=6 ns test=four_state_truth_table i_a=1 i_b=1 expected_o_sum=0 expected_o_carry=1 actual_o_sum=0 actual_o_carry=1 result=PASS
-time=7 ns test=four_state_truth_table i_a=1 i_b=X expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=8 ns test=four_state_truth_table i_a=1 i_b=Z expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=9 ns test=four_state_truth_table i_a=X i_b=0 expected_o_sum=X expected_o_carry=0 actual_o_sum=X actual_o_carry=0 result=PASS
-time=10 ns test=four_state_truth_table i_a=X i_b=1 expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=11 ns test=four_state_truth_table i_a=X i_b=X expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=12 ns test=four_state_truth_table i_a=X i_b=Z expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=13 ns test=four_state_truth_table i_a=Z i_b=0 expected_o_sum=X expected_o_carry=0 actual_o_sum=X actual_o_carry=0 result=PASS
-time=14 ns test=four_state_truth_table i_a=Z i_b=1 expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=15 ns test=four_state_truth_table i_a=Z i_b=X expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-time=16 ns test=four_state_truth_table i_a=Z i_b=Z expected_o_sum=X expected_o_carry=X actual_o_sum=X actual_o_carry=X result=PASS
-# SUMMARY: PASS checks=16 failed=0
-CSV log: half_adder.csv
-VCD waveform: half_adder_wave.vcd
-Build log: /mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/out/build.log
-Simulation log: /mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/out/simulation.log
-CSV results: /mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/out/half_adder.csv
-VCD waveform: /mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/out/half_adder_wave.vcd
+time_ns,test_name,i_a,i_b,expected_sum,actual_sum,expected_carry,actual_carry,status
+1,exhaustive,0,0,0,0,0,0,PASS
+2,exhaustive,0,1,1,1,0,0,PASS
+3,exhaustive,1,0,1,1,0,0,PASS
+4,exhaustive,1,1,0,0,1,1,PASS
+SUMMARY checks=4 failures=0 csv=half_adder.csv vcd=half_adder_wave.vcd

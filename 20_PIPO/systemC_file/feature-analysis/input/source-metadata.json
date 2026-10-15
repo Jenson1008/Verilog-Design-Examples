@@ -1,0 +1,110 @@
+{
+    "metadata_version": 1,
+    "design": "20_PIPO",
+    "module": "pipo_shift",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository contains unrelated local modifications/deletions; listed source bytes bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "pipo_shift_sc_tb.cpp",
+            "DUT/pipo_shift_sc.h",
+            "stimulus/pipo_shift_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-I. -std=c++17 -O2 -Wall -Wextra -Wpedantic -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "20_PIPO/systemC_file/pipo_shift_sc_tb.cpp",
+            "sha256": "3417bd61a533c8729e782dc3a8527080324fe06e2965b175914bcd7c6c6455b9",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/DUT/pipo_shift_sc.h",
+            "sha256": "319e311611316b20dc64b6534a3238194844d5413b0bff76e14b9a0babfec22b",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/stimulus/pipo_shift_sc_stimulus.h",
+            "sha256": "efa581fc94004bb8089a0cee082c431c627acc50ca2c3ded0d1361654bf1deb1",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/Makefile",
+            "sha256": "5043864918410eb033f5238e7dbc123315ae7dccca947916633bd2e02738567d",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/interface/interface.json",
+            "sha256": "adc899f1f8adcdf40d4e5c05023fb82295d6f01937bee1fe8a96601a66e5e44d",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "20_PIPO/systemC_file/out/simulation.log",
+            "sha256": "8a41e6359c2427e05de629332f3e6bc16a7711b1205da155093a0886a4b11393",
+            "role": "prior finite SystemC self-check log"
+        },
+        {
+            "repository_path": "20_PIPO/pipo_shift.v",
+            "sha256": "88ee60217b666051b1a4c8471b9703fce863a6e26e70dafaf49239fe454f7d93",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "20_PIPO/systemC_file/interface/interface.json",
+        "authority_sha256": "adc899f1f8adcdf40d4e5c05023fb82295d6f01937bee1fe8a96601a66e5e44d",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness v2 projection; RTL/SystemC declarations and authority port contract cross-checked; bin_gry width uses default N=8."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavior unknowns retained",
+        "ports": [
+            "data_in",
+            "load",
+            "shift_en",
+            "clk",
+            "reset",
+            "data_out"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "20_PIPO/systemC_file/out/simulation.log",
+        "log_sha256": "8a41e6359c2427e05de629332f3e6bc16a7711b1205da155093a0886a4b11393",
+        "summary_line": "SUMMARY checks=11 failures=0 csv=pipo_shift.csv vcd=pipo_shift_wave.vcd",
+        "meaning": "Historical finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "2dccaaed0a4638ae742474e14d47036f6dd17ad9c00b7ea447569724fcba38fd"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "a99c9ec57065c34af7750819ef1a70552574295709276223d4a6996cd110de19"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "Historical log was read as an existing input and not replayed.",
+        "Compiler and SystemC versions were not re-measured.",
+        "Feature proposals remain hypotheses; no rules are confirmed.",
+        "No campaign snapshot or run-time evidence was created."
+    ]
+}

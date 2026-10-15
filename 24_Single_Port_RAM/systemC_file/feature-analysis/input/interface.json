@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "singleport_ram",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿写存储器并锁存读地址；data_out 随锁存地址和存储内容组合变化。"
+  },
+  "port_catalog": {
+    "data_in": {"canonical_path": "singleport_ram.data_in", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "写入存储阵列的数据"},
+    "wr_en": {"canonical_path": "singleport_ram.wr_en", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "高电平时允许时钟沿写入"},
+    "clk": {"canonical_path": "singleport_ram.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "写入及读地址锁存时钟", "edge": "rising"},
+    "addr": {"canonical_path": "singleport_ram.addr", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<3>>", "width_bits": 3, "role": "选择 8 个 128 位存储字之一"},
+    "data_out": {"canonical_path": "singleport_ram.data_out", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>", "width_bits": 128, "role": "由锁存读地址选择的存储数据"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "8 个 RAM 字及读地址均没有初始化或复位赋值；在写入已知数据和地址前，读出值未定义。",
+    "读地址在 clk 上升沿锁存，随后由该地址选择 RAM 字；端口读行为不是对当前 addr 的纯组合直连。"
+  ]
+}

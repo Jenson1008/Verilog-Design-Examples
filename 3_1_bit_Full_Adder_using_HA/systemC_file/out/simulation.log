@@ -1,24 +1,14 @@
-
-        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
-        Copyright (c) 1996-2022 by all Contributors,
-        ALL RIGHTS RESERVED
-
-Info: (I703) tracing timescale unit set: 1 ns (full_half_add_1bit_wave.vcd)
-time=1 ns test=binary_truth_table cycle=0 inputs=000 expected_sum=0 expected_carry=0 actual_sum=0 actual_carry=0 result=PASS
-time=2 ns test=binary_truth_table cycle=1 inputs=001 expected_sum=1 expected_carry=0 actual_sum=1 actual_carry=0 result=PASS
-time=3 ns test=binary_truth_table cycle=2 inputs=010 expected_sum=1 expected_carry=0 actual_sum=1 actual_carry=0 result=PASS
-time=4 ns test=binary_truth_table cycle=3 inputs=011 expected_sum=0 expected_carry=1 actual_sum=0 actual_carry=1 result=PASS
-time=5 ns test=binary_truth_table cycle=4 inputs=100 expected_sum=1 expected_carry=0 actual_sum=1 actual_carry=0 result=PASS
-time=6 ns test=binary_truth_table cycle=5 inputs=101 expected_sum=0 expected_carry=1 actual_sum=0 actual_carry=1 result=PASS
-time=7 ns test=binary_truth_table cycle=6 inputs=110 expected_sum=0 expected_carry=1 actual_sum=0 actual_carry=1 result=PASS
-time=8 ns test=binary_truth_table cycle=7 inputs=111 expected_sum=1 expected_carry=1 actual_sum=1 actual_carry=1 result=PASS
-time=9 ns test=x_input_with_zero cycle=8 inputs=0X0 expected_sum=X expected_carry=0 actual_sum=X actual_carry=0 result=PASS
-time=10 ns test=z_input_with_carry cycle=9 inputs=0Z1 expected_sum=X expected_carry=X actual_sum=X actual_carry=X result=PASS
-time=11 ns test=x_carry_in_after_two_ones cycle=10 inputs=11X expected_sum=X expected_carry=1 actual_sum=X actual_carry=1 result=PASS
-time=12 ns test=x_input_with_one_zero cycle=11 inputs=X00 expected_sum=X expected_carry=0 actual_sum=X actual_carry=0 result=PASS
-# SUMMARY: PASS checks=12 failed=0
-CSV log: full_half_add_1bit.csv
-VCD waveform: full_half_add_1bit_wave.vcd
-Simulation log: /mnt/d/repo_github/Verilog-Design-Examples/1_bit_Full_Adder_using_HA/systemC_file/out/simulation.log
-CSV results: /mnt/d/repo_github/Verilog-Design-Examples/1_bit_Full_Adder_using_HA/systemC_file/out/full_half_add_1bit.csv
-VCD waveform: /mnt/d/repo_github/Verilog-Design-Examples/1_bit_Full_Adder_using_HA/systemC_file/out/full_half_add_1bit_wave.vcd
+time_ns,test_name,inputs,expected_sum,actual_sum,expected_carry,actual_carry,status
+1,half_adder_leaf,h_a=0;h_b=0,0,0,0,0,PASS
+2,half_adder_leaf,h_a=0;h_b=1,1,1,0,0,PASS
+3,half_adder_leaf,h_a=1;h_b=0,1,1,0,0,PASS
+4,half_adder_leaf,h_a=1;h_b=1,0,0,1,1,PASS
+5,full_half_add_1bit,i_a=0;i_b=0;i_cin=0,0,0,0,0,PASS
+6,full_half_add_1bit,i_a=0;i_b=0;i_cin=1,1,1,0,0,PASS
+7,full_half_add_1bit,i_a=0;i_b=1;i_cin=0,1,1,0,0,PASS
+8,full_half_add_1bit,i_a=0;i_b=1;i_cin=1,0,0,1,1,PASS
+9,full_half_add_1bit,i_a=1;i_b=0;i_cin=0,1,1,0,0,PASS
+10,full_half_add_1bit,i_a=1;i_b=0;i_cin=1,0,0,1,1,PASS
+11,full_half_add_1bit,i_a=1;i_b=1;i_cin=0,0,0,1,1,PASS
+12,full_half_add_1bit,i_a=1;i_b=1;i_cin=1,1,1,1,1,PASS
+SUMMARY checks=12 failures=0 csv=full_half_add_1bit.csv vcd=full_half_add_1bit_wave.vcd

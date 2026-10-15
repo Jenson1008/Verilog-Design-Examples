@@ -1,0 +1,109 @@
+{
+  "metadata_version": 1,
+  "design": "2_Full_Adder",
+  "module": "full_adder_1bit",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; per-file digest binds exact current bytes"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "full_adder_1bit_sc_tb.cpp",
+      "DUT/full_adder_1bit_sc.h",
+      "stimulus/full_adder_1bit_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured; no build executed"
+  },
+  "source_files": [
+    {
+      "repository_path": "2_Full_Adder/systemC_file/full_adder_1bit_sc_tb.cpp",
+      "sha256": "6c0d6dbe57edfaadf0bc37bb4b8c028e7a2266878f065f5fa84334959812fe75",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/DUT/full_adder_1bit_sc.h",
+      "sha256": "c07aa88c6d2ecd67ceb4803b964c2b9843d7dfa6ac9d2dc004833e17e0c02bbb",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/stimulus/full_adder_1bit_sc_stimulus.h",
+      "sha256": "1897f6549ad0d081ca09ec545a245ddb5723d821269769bd683685ff21dd824e",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/Makefile",
+      "sha256": "cffde4c2a8877e1aa5a318f2715d97aac8c01610c76b570e095fe3d68a74ff07",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/interface/interface.json",
+      "sha256": "f56c7c3d3282b97f0267496926d0b1d853bddb917bfc420527f004f16e2a67be",
+      "role": "interface authority"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/interface/interface.schema.json",
+      "sha256": "9297128895dace8ad9e8a09418792d30fab33e6b92001ed174b9d6393c2e496b",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "2_Full_Adder/full_adder_1bit.v",
+      "sha256": "6701c74f14ede51ff751cc8eaf4d7bd7b7c63e3332e6ae955d03b3d0839f8f0f",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "2_Full_Adder/systemC_file/out/simulation.log",
+      "sha256": "9381e5145b7398c8d50c067c14c97f5360b7fd4b590f2905dc3925c8201e99bd",
+      "role": "historical self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "2_Full_Adder/systemC_file/interface/interface.json",
+    "authority_sha256": "f56c7c3d3282b97f0267496926d0b1d853bddb917bfc420527f004f16e2a67be",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection cross-checked against actual SystemC declarations and RTL ports"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "name/direction/type/width matched",
+    "rtl_vs_systemc": "top-level name/direction/width matched",
+    "ports": [
+      "i_a",
+      "i_b",
+      "i_cin",
+      "o_carry",
+      "o_sum"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "2_Full_Adder/systemC_file/out/simulation.log",
+    "log_sha256": "9381e5145b7398c8d50c067c14c97f5360b7fd4b590f2905dc3925c8201e99bd",
+    "summary_line": "SUMMARY checks=8 failures=0 csv=full_adder_1bit.csv vcd=full_adder_1bit_wave.vcd",
+    "interpretation": "historical finite self-check only; not replayed, not Evidence Gate output, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "c4e7d0b9f648bd2cb8a975f19e50dce902d24ce68c5f0fe29f4c43214a28624c"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "1c97146c1e9595cca2aba61ae4c924949afd3bf804b4092f6d70aa7e4c101477"
+    }
+  ],
+  "not_performed": [
+    "build/run DUT",
+    "campaign",
+    "VCD header preflight",
+    "Reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler and SystemC versions were not re-measured",
+    "historical log/trace not reconstructed",
+    "all proposed features/tests remain unconfirmed"
+  ]
+}

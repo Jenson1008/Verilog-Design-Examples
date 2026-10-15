@@ -1,0 +1,115 @@
+{
+  "metadata_version": 1,
+  "design": "3_1_bit_Full_Adder_using_HA",
+  "module": "full_half_add_1bit",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; exact bytes bound by file digests"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "full_half_add_1bit_sc_tb.cpp",
+      "DUT/full_half_add_1bit_sc.h",
+      "DUT/half_adder_sc.h",
+      "stimulus/full_half_add_1bit_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured"
+  },
+  "source_files": [
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/full_half_add_1bit_sc_tb.cpp",
+      "sha256": "2eef42aad07bb3f75670838c5a83d313b7f1b337bda5c159a04c0bc35b0cc2be",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/DUT/full_half_add_1bit_sc.h",
+      "sha256": "1628c4b69e627561fc4823f56b3052f38d598b6a91d760310601a040a45bce79",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/DUT/half_adder_sc.h",
+      "sha256": "b4602a1f2f51f5d0fde7062a2d5070e8dd8c73aebcbac4ff06ab5dacdc244872",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/stimulus/full_half_add_1bit_sc_stimulus.h",
+      "sha256": "73720625cb24624d6ba60abd63980fda179485d764b198f43a01bcdf048271b3",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/Makefile",
+      "sha256": "b601ee4af746a2e44c641edc9e9b5a807b331bdfa93b20dcff93f8d5dd8e1560",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/interface/interface.json",
+      "sha256": "3d2b53745c835214a9e7104da82b882c909bfe6cd9f05c911fdd71ccde740dce",
+      "role": "authority interface"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/interface/interface.schema.json",
+      "sha256": "9297128895dace8ad9e8a09418792d30fab33e6b92001ed174b9d6393c2e496b",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/full_half_add_1bit.v",
+      "sha256": "abc9512c7a8ad44feba987eca51f632af27ff157ac682b53f6052848ed0ab00f",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/out/simulation.log",
+      "sha256": "3b9ab8a0dab886005362cce8d5e002342fd3c6e652068adbd9cd5b039ae49775",
+      "role": "prior self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/interface/interface.json",
+    "authority_sha256": "3d2b53745c835214a9e7104da82b882c909bfe6cd9f05c911fdd71ccde740dce",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection; RTL/SystemC/authority top-level port maps cross-checked"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "names/directions/types/widths match",
+    "rtl_vs_systemc": "names/directions/widths match",
+    "ports": [
+      "i_a",
+      "i_b",
+      "i_cin",
+      "o_carry",
+      "o_sum"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "3_1_bit_Full_Adder_using_HA/systemC_file/out/simulation.log",
+    "log_sha256": "3b9ab8a0dab886005362cce8d5e002342fd3c6e652068adbd9cd5b039ae49775",
+    "summary_line": "SUMMARY checks=12 failures=0 csv=full_half_add_1bit.csv vcd=full_half_add_1bit_wave.vcd",
+    "meaning": "historical finite self-check only; not rerun, not Gate evidence, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "5313c5df042a1f1e45f574ac238280daf9e049acfadc8e6feb0331e11c8ce760"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "02fd2bf1aaa17ba059b1b057252417c8c84e44fdc579549abf9f66979ddc9899"
+    }
+  ],
+  "not_performed": [
+    "DUT build/run",
+    "campaign",
+    "VCD preflight",
+    "reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler/SystemC versions not re-measured",
+    "historical trace not replayed",
+    "proposals remain unconfirmed"
+  ]
+}

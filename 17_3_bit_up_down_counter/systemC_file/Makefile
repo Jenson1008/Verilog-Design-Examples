@@ -1,45 +1,16 @@
 CXX ?= g++
-SYSTEMC_HOME ?= /usr
-OUT_DIR ?= out
-TARGET := $(OUT_DIR)/cntr_3ud_tb
-BUILD_LOG := $(OUT_DIR)/cntr_3ud_build.log
-SIMULATION_LOG := $(OUT_DIR)/cntr_3ud.log
-WAVE := $(OUT_DIR)/cntr_3ud_wave.vcd
-
-CPPFLAGS += -I"$(SYSTEMC_HOME)/include"
-CXXFLAGS ?= -std=c++17 -Wall -Wextra -Wpedantic -O2
-LDFLAGS += -L"$(SYSTEMC_HOME)/lib" -Wl,-rpath,"$(SYSTEMC_HOME)/lib"
-LDLIBS += -lsystemc
-
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Wpedantic
+CPPFLAGS ?= -I.
+LDLIBS ?= -lsystemc
+OUT := out
+TARGET := $(OUT)/cntr_3ud_sc_sim
+SOURCES := cntr_3ud_sc_tb.cpp DUT/cntr_3ud_sc.h stimulus/cntr_3ud_sc_stimulus.h
 .PHONY: all run clean
-
 all: $(TARGET)
-
-$(TARGET): cntr_3ud_tb.cpp DUT/cntr_3ud.h stimulus/cntr_3ud_stimulus.h | $(OUT_DIR)
-	@status=0; \
-	  $(CXX) $(CPPFLAGS) $(CXXFLAGS) "$<" $(LDFLAGS) $(LDLIBS) -o "$@" >"$(BUILD_LOG)" 2>&1 || status=$$?; \
-	  chmod 0644 "$(BUILD_LOG)" || exit 1; \
-	  cat "$(BUILD_LOG)"; \
-	  if [ "$$status" -eq 0 ]; then chmod 0755 "$@" || exit 1; fi; \
-	  if [ "$$status" -ne 0 ]; then \
-	    printf 'Build failed with exit code %s; diagnostics retained in %s\n' "$$status" "$(BUILD_LOG)" >&2; \
-	    exit "$$status"; \
-	  fi
-
-$(OUT_DIR):
-	mkdir -p "$@"
-
+$(TARGET): $(SOURCES)
+	mkdir -p "$(OUT)"
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) cntr_3ud_sc_tb.cpp $(LDLIBS) -o "$@" > "$(OUT)/build.log" 2>&1 || { status=$$?; cat "$(OUT)/build.log"; exit $$status; }
 run: $(TARGET)
-	@status=0; \
-	  (cd "$(OUT_DIR)" && ./cntr_3ud_tb) || status=$$?; \
-	  if [ -f "$(SIMULATION_LOG)" ]; then chmod 0644 "$(SIMULATION_LOG)" || exit 1; fi; \
-	  if [ -f "$(WAVE)" ]; then chmod 0644 "$(WAVE)" || exit 1; fi; \
-	  cat "$(SIMULATION_LOG)"; \
-	  if [ "$$status" -ne 0 ]; then \
-	    printf 'Simulation failed with exit code %s; diagnostics retained in %s\n' "$$status" "$(SIMULATION_LOG)" >&2; \
-	    exit "$$status"; \
-	  fi; \
-	  printf 'Simulation log: %s\n' "$(SIMULATION_LOG)"
-
+	bash -o pipefail -c 'cd "$(OUT)" && ./cntr_3ud_sc_sim | tee simulation.log'
 clean:
-	rm -f "$(TARGET)" "$(BUILD_LOG)" "$(SIMULATION_LOG)" "$(WAVE)"
+	rm -f "$(TARGET)" "$(OUT)/build.log" "$(OUT)/simulation.log" "$(OUT)/cntr_3ud_sc.csv" "$(OUT)/cntr_3ud_sc_wave.vcd"

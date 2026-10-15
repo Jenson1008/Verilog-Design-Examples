@@ -1,0 +1,181 @@
+{
+  "schema_version": 3,
+  "artifact_type": "test-result-interface",
+  "campaign_id": "half-adder-binary-v2.2610141228",
+  "request_id": "request.half_adder.binary.truth_table",
+  "attempt_id": "attempt.4b8f451d4472",
+  "test_id": "test.half_adder.binary.truth_table",
+  "run_id": "run.5873f1d93b30",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "status": "passed",
+  "observations": [
+    {
+      "signal": "o_sum",
+      "cycle": 0,
+      "value": "0"
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 0,
+      "value": "0"
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 1,
+      "value": "1"
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 1,
+      "value": "0"
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 2,
+      "value": "1"
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 2,
+      "value": "0"
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 3,
+      "value": "0"
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 3,
+      "value": "1"
+    }
+  ],
+  "expectation_results": [
+    {
+      "signal": "o_sum",
+      "cycle": 0,
+      "expected": "0",
+      "actual": "0",
+      "matched": true
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 0,
+      "expected": "0",
+      "actual": "0",
+      "matched": true
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 1,
+      "expected": "1",
+      "actual": "1",
+      "matched": true
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 1,
+      "expected": "0",
+      "actual": "0",
+      "matched": true
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 2,
+      "expected": "1",
+      "actual": "1",
+      "matched": true
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 2,
+      "expected": "0",
+      "actual": "0",
+      "matched": true
+    },
+    {
+      "signal": "o_sum",
+      "cycle": 3,
+      "expected": "0",
+      "actual": "0",
+      "matched": true
+    },
+    {
+      "signal": "o_carry",
+      "cycle": 3,
+      "expected": "1",
+      "actual": "1",
+      "matched": true
+    }
+  ],
+  "oracle": {
+    "status": "supported",
+    "detail": "Bounded comparison against explicit per-vector expected values."
+  },
+  "artifacts": [
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/logs/build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "artifact.build-stdout",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/logs/build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "artifact.build-stderr",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/logs/run.stdout.log",
+      "sha256": "a2fa9e4cf4fc4c54f043a63062a3a6847038bf01e7d12e4ea81928cc792a9e0e",
+      "artifact_id": "artifact.run-stdout",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/logs/run.stderr.log",
+      "sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094",
+      "artifact_id": "artifact.run-stderr",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/logs/execution-record.json",
+      "sha256": "55b1e2ab68985781c6defb71fdc28caa0ba0e0ceb9937249754fac575f8d3574",
+      "artifact_id": "artifact.execution-record",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/half_adder.csv",
+      "sha256": "36a8b25d93c9b5cecd0be0249b597c3a321219f3d7eeca501be9ce8199a83acb",
+      "artifact_id": "artifact.test-log",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/half_adder_wave.vcd",
+      "sha256": "b415138a62d474b5a5b9c8186ccdd0665ded5b100f145196621d9154d1d36538",
+      "artifact_id": "artifact.waveform",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/trace-binding.json",
+      "sha256": "601367d430b256409ba110028a755be051cbe23fab74b0ed88ad051ce5cc62f3",
+      "artifact_id": "artifact.trace-binding",
+      "stage": "execute_test",
+      "attempt_id": "attempt.4b8f451d4472"
+    }
+  ],
+  "diagnostics": [],
+  "trace_binding_ref": {
+    "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/trace-binding.json",
+    "sha256": "601367d430b256409ba110028a755be051cbe23fab74b0ed88ad051ce5cc62f3",
+    "artifact_id": "artifact.trace-binding",
+    "stage": "execute_test",
+    "attempt_id": "attempt.4b8f451d4472"
+  }
+}

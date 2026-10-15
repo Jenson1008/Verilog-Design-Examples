@@ -1,59 +1,66 @@
 {
-  "schema_version": "1.0",
-  "top_module": "half_adder",
-  "clocking_model": {
-    "kind": "combinational",
-    "clocks": [],
-    "resets": []
+  "schema_version": 2,
+  "module": {
+    "name": "half_adder",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "combinational; no clock/reset",
+    "top_level_port_groups": [
+      "inputs",
+      "outputs"
+    ]
   },
-  "ports": [
-    {
-      "name": "i_a",
+  "port_catalog": {
+    "i_a": {
       "canonical_path": "half_adder.i_a",
       "direction": "input",
       "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "第一个二值或四态操作数。",
-      "timing_contract": {
-        "sampling": "组合逻辑对端口值变化敏感。",
-        "latency": "无时钟周期；输出在 SystemC delta-cycle 更新后稳定。"
-      }
+      "width_bits": 1,
+      "role": "顶层输入端口 i_a",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
     },
-    {
-      "name": "i_b",
+    "i_b": {
       "canonical_path": "half_adder.i_b",
       "direction": "input",
       "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "第二个二值或四态操作数。",
-      "timing_contract": {
-        "sampling": "组合逻辑对端口值变化敏感。",
-        "latency": "无时钟周期；输出在 SystemC delta-cycle 更新后稳定。"
-      }
+      "width_bits": 1,
+      "role": "顶层输入端口 i_b",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
     },
-    {
-      "name": "o_sum",
+    "o_sum": {
       "canonical_path": "half_adder.o_sum",
       "direction": "output",
       "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "两输入相加的和位。",
-      "timing_contract": {
-        "sampling": "在输入变化并经过组合逻辑 delta-cycle 更新后采样。",
-        "latency": "组合输出，无时钟周期延迟。"
-      }
+      "width_bits": 1,
+      "role": "顶层输出端口 o_sum",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
     },
-    {
-      "name": "o_carry",
+    "o_carry": {
       "canonical_path": "half_adder.o_carry",
       "direction": "output",
       "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "两输入相加的进位位。",
-      "timing_contract": {
-        "sampling": "在输入变化并经过组合逻辑 delta-cycle 更新后采样。",
-        "latency": "组合输出，无时钟周期延迟。"
-      }
+      "width_bits": 1,
+      "role": "顶层输出端口 o_carry",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": [
+        "i_a",
+        "i_b"
+      ],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": [
+        "o_sum",
+        "o_carry"
+      ],
+      "children": []
     }
   ],
   "declared_unknowns": []

@@ -1,0 +1,25 @@
+
+Info: (I703) tracing timescale unit set: 1 ns (no_1s_wave.vcd)
+t=1 ns test=uninitialized_output_before_first_edge i_a=1010010101011010 reset=0 bit_index=0 expected_no_ones=XXXX actual_no_ones=XXXX PASS
+t=3 ns test=reset_at_initial_bit_0 i_a=1010010101011010 reset=1 bit_index=1 expected_no_ones=0000 actual_no_ones=0000 PASS
+t=6 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=2 expected_no_ones=0001 actual_no_ones=0001 PASS
+t=9 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=3 expected_no_ones=0001 actual_no_ones=0001 PASS
+t=12 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=4 expected_no_ones=0010 actual_no_ones=0010 PASS
+t=15 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=5 expected_no_ones=0011 actual_no_ones=0011 PASS
+t=18 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=6 expected_no_ones=0011 actual_no_ones=0011 PASS
+t=21 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=7 expected_no_ones=0100 actual_no_ones=0100 PASS
+t=24 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=8 expected_no_ones=0100 actual_no_ones=0100 PASS
+t=27 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=9 expected_no_ones=0101 actual_no_ones=0101 PASS
+t=30 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=10 expected_no_ones=0101 actual_no_ones=0101 PASS
+t=33 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=11 expected_no_ones=0110 actual_no_ones=0110 PASS
+t=36 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=12 expected_no_ones=0110 actual_no_ones=0110 PASS
+t=39 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=13 expected_no_ones=0110 actual_no_ones=0110 PASS
+t=42 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=14 expected_no_ones=0111 actual_no_ones=0111 PASS
+t=45 ns test=consume_indexed_input_bit i_a=1010010101011010 reset=0 bit_index=15 expected_no_ones=0111 actual_no_ones=0111 PASS
+t=48 ns test=unknown_sample_propagates_to_accumulator i_a=X010010101011010 reset=0 bit_index=16 expected_no_ones=XXXX actual_no_ones=XXXX PASS
+t=51 ns test=hold_after_integer_reaches_16 i_a=X010010101011010 reset=0 bit_index=17 expected_no_ones=XXXX actual_no_ones=XXXX PASS
+t=54 ns test=reset_clears_count_but_does_not_reset_integer i_a=X010010101011010 reset=1 bit_index=18 expected_no_ones=0000 actual_no_ones=0000 PASS
+t=57 ns test=post_reset_hold_integer_still_16 i_a=X010010101011010 reset=0 bit_index=19 expected_no_ones=0000 actual_no_ones=0000 PASS
+SUMMARY checks=20 failures=0 bit_indices_tested=0..15 csv=no_1s.csv vcd=no_1s_wave.vcd
+
+Info: /OSCI/SystemC: Simulation stopped by user.

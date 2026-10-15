@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "artifact_type": "evidence-manifest",
+  "evidence": [
+    {
+      "id": "evidence.half_adder.binary.truth_table",
+      "rule_id": "rule.half_adder.binary",
+      "feature_id": "feature.half_adder.binary",
+      "source_fact_refs": [
+        "fact.half_adder.sum_xor",
+        "fact.half_adder.carry_and"
+      ],
+      "test_refs": [
+        "test.half_adder.binary.truth_table"
+      ],
+      "observation_refs": [
+        "observation.half_adder.binary.truth_table"
+      ],
+      "test_result_refs": [
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/result/test-result-interface.json",
+          "sha256": "b38518e0003d2911b44689e864d5d76d4582c1f82d047850d20a3958af703c83",
+          "artifact_id": "artifact.test-result",
+          "stage": "analyze_trace",
+          "attempt_id": "attempt.4b8f451d4472"
+        }
+      ],
+      "trace_refs": [
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/half_adder_wave.vcd",
+          "sha256": "b415138a62d474b5a5b9c8186ccdd0665ded5b100f145196621d9154d1d36538",
+          "artifact_id": "artifact.waveform",
+          "stage": "execute_test",
+          "attempt_id": "attempt.4b8f451d4472"
+        }
+      ],
+      "trace_identity": {
+        "test_id": "test.half_adder.binary.truth_table",
+        "run_id": "run.5873f1d93b30",
+        "cycle_semantics_version": "half-adder.binary.wait-1ns.v1"
+      },
+      "trace_binding_refs": [
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run/trace-binding.json",
+          "sha256": "601367d430b256409ba110028a755be051cbe23fab74b0ed88ad051ce5cc62f3",
+          "artifact_id": "artifact.trace-binding",
+          "stage": "execute_test",
+          "attempt_id": "attempt.4b8f451d4472"
+        }
+      ],
+      "transaction_refs": [],
+      "decision": "confirmed",
+      "reason": "All configured vectors passed, every required observable was sampled, and coverage mode was exhaustive."
+    }
+  ]
+}

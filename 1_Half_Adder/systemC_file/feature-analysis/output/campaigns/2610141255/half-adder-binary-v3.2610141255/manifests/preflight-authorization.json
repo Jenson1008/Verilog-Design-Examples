@@ -1,0 +1,502 @@
+{
+  "artifact_type": "execution-preflight-authorization",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "test_id": "test.half_adder.binary.truth_table",
+  "run_id": "run.preflight.3f0daa353721",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "attempt_id": "attempt.566324927ab5",
+  "preflight_id": "preflight.e18677a8120d",
+  "created_at": "2026-10-14T12:55:50.764482+00:00",
+  "authorization": {
+    "authority": "user/caller",
+    "authority_reference": "User authorized a successor campaign to repair provenance references; prior user authorization covers bounded Half Adder local build and simulation with SystemC 2.3.4",
+    "authorized_phases": [
+      "trace_config_preflight_build",
+      "trace_config_preflight_run",
+      "build",
+      "run"
+    ],
+    "excluded_phases": [
+      "accept",
+      "finalize",
+      "promotion"
+    ]
+  },
+  "snapshot_binding": {
+    "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+    "campaign_config_snapshot_relative_path": "input/campaign-config.json",
+    "campaign_config_snapshot_sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+    "config_schema_snapshot_relative_path": "input/campaign-config.schema.json",
+    "config_schema_snapshot_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+    "config_schema_loaded_from": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\run_scripts\\campaign-config.schema.json",
+    "config_schema_loaded_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+    "config_schema_title": "Deterministic campaign profile MVP v2/v3",
+    "config_profile_schema_version": 3,
+    "config_validation": "passed",
+    "validator": "run_scripts.schema_validation.validate_artifact",
+    "snapshot_files": [
+      {
+        "snapshot_relative_path": "input/interface.json",
+        "snapshot_sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+        "artifact_id": "input.interface"
+      },
+      {
+        "snapshot_relative_path": "input/basic-description.md",
+        "snapshot_sha256": "23621635bfe19d44508ea11a8723b559f75eb4f7f639a4ed0434fadae8fe76b3",
+        "artifact_id": "input.basic_description"
+      },
+      {
+        "snapshot_relative_path": "input/static-facts.json",
+        "snapshot_sha256": "f36aeb6762059ab2df245e60d10c575698844342873303d662cb0903e736b713",
+        "artifact_id": "input.static_facts"
+      },
+      {
+        "snapshot_relative_path": "input/feature-proposal.json",
+        "snapshot_sha256": "4610b0f7b6916405a2c5889e8a68cb962c4ef03e4ed8b9d40da78da447cd0f9e",
+        "artifact_id": "input.feature_proposal"
+      },
+      {
+        "snapshot_relative_path": "input/test-list.json",
+        "snapshot_sha256": "22570d3d9950a011d6062496971fdb7d906a28f8f940eaee5b271189aa762fdb",
+        "artifact_id": "input.test_list"
+      },
+      {
+        "snapshot_relative_path": "input/campaign-config.schema.json",
+        "snapshot_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+        "artifact_id": "input.campaign-config-schema"
+      },
+      {
+        "snapshot_relative_path": "input/campaign-config.json",
+        "snapshot_sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+        "artifact_id": "input.campaign-config"
+      },
+      {
+        "snapshot_relative_path": "input/source/DUT/half_adder_sc.h",
+        "snapshot_sha256": "8f601e137568d40a644c9531c239a9b7cca3e1976c9c7905bcbba626356d140c",
+        "artifact_id": "source.0"
+      },
+      {
+        "snapshot_relative_path": "input/source/campaign_testbench.cpp",
+        "snapshot_sha256": "632ba810a5c5e3ecd914263df7f472e65e2e48a0c5d7bdbdf850b9facbb5d973",
+        "artifact_id": "source.1"
+      },
+      {
+        "snapshot_relative_path": "input/test-request-interface.json",
+        "snapshot_sha256": "0f23273d81e6aa852d4f5c5eb06ac0f7919e8364b0f05cf7bbe2ca8fe39808af",
+        "artifact_id": "input.test-request"
+      }
+    ]
+  },
+  "parent_linkage": {
+    "parent_campaign_id": "half-adder-binary-v2.2610141228",
+    "parent_campaign_relative_path": "campaigns/2610141228/half-adder-binary-v2.2610141228",
+    "parent_run_manifest_sha256": "133ebdea8d4c4fdc51e47d02c493b19d1e5afe6f05bc34a9f294e68de0ec4bdc",
+    "parent_campaign_config_sha256": "f89d4a6ca81ccfb6bb858b12499bf44796fe44241ab78f51598ac45ed08134d9",
+    "change_reason": "Correct test oracle_ref to the snapshotted campaign profile and feature discovery_basis JSON Pointer to the actual interface port_catalog; preserve all prior attempts.",
+    "child_campaign_config_sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+    "change_digest": "738c8e072f878283b3b9138d1518b95b610448e37f75f6c049ee406fdaf53c81"
+  },
+  "harness_contract_inventory": {
+    "spec_revision": "Draft v0.7",
+    "declared_runner_version": "0.1.0",
+    "files": [
+      {
+        "relative_to_harness": "harness-implementation-plan.md",
+        "content_sha256": "5fee3e11b1d75bac27afa59a302e16f6c79057f14370d0c524ec09379f6092ad"
+      },
+      {
+        "relative_to_harness": "01-system-contract.md",
+        "content_sha256": "942ca12f69902ed32726b540080974da83d5bc84bc614ed52c34228033228e85"
+      },
+      {
+        "relative_to_harness": "02-layered-architecture.md",
+        "content_sha256": "35710ad6d819dd93b87aee84a7a4bae1bf5e22aa9fc45dca6bc5c5c911b80669"
+      },
+      {
+        "relative_to_harness": "03-campaign-and-phase-contracts.md",
+        "content_sha256": "a89d754e788dbcb0eba56280b1956b0e7223aeb66499d802497000de6b8332e1"
+      },
+      {
+        "relative_to_harness": "04-artifacts-and-schemas.md",
+        "content_sha256": "74c5b0136580c92505d368d8f6b5c950b2cd311e61f9d3e4c0eb7bda5dca00dc"
+      },
+      {
+        "relative_to_harness": "05-llm-and-execution-protocol.md",
+        "content_sha256": "d8351e6abb330e83dbbc17241b479b00cbe29ffa4c1991f5bb7f897bfbfb4bee"
+      },
+      {
+        "relative_to_harness": "06-validation-state-and-recovery.md",
+        "content_sha256": "981c6081c7907099e8ed1e675e34da3bc8afa36749730a3694c45da4f4370873"
+      },
+      {
+        "relative_to_harness": "07-implementation-and-acceptance.md",
+        "content_sha256": "efd4f047bb2da6375a89bff6c60959585e3ea093687ecfde316b59f3d2d3030c"
+      },
+      {
+        "relative_to_harness": "README.md",
+        "content_sha256": "9ec4a48aebca42a68acf8137ab4a9afea25e604f23d39ceaaaa49753d707cff3"
+      },
+      {
+        "relative_to_harness": "run_scripts/README.md",
+        "content_sha256": "8ff58042ffa302084a655a8155ec449bb8906a02c711161358235a64e677d941"
+      },
+      {
+        "relative_to_harness": "run_scripts/__init__.py",
+        "content_sha256": "c4ac5a28b3e8a9d5ffe5499c1f8ed2ebf928f78f9bf93a1ada5f4c5fc023aa9d"
+      },
+      {
+        "relative_to_harness": "run_scripts/campaign-config.schema.json",
+        "content_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee"
+      },
+      {
+        "relative_to_harness": "run_scripts/cli.py",
+        "content_sha256": "854345383fccca66c9e97cf576d323dbb8e749fa8f908ed01eba7877b113276b"
+      },
+      {
+        "relative_to_harness": "run_scripts/runner.py",
+        "content_sha256": "6e58918427aa03362467305931a57a13ab3f5dbce833d269a6451e02e991cdba"
+      },
+      {
+        "relative_to_harness": "run_scripts/backend.py",
+        "content_sha256": "794a38b21190cd46fb378b55af825bf7dbe0ca510b52bca0dd06d993e4dce61f"
+      },
+      {
+        "relative_to_harness": "run_scripts/schema_validation.py",
+        "content_sha256": "52eea3630398e95884a75148298defeddad90bccc15ab23464d21dc1e678c1f3"
+      },
+      {
+        "relative_to_harness": "run_scripts/campaign_validation.py",
+        "content_sha256": "125720c062b04d77f16ef6aa379d9e18a0672c262b86f2756cb1119646429a76"
+      },
+      {
+        "relative_to_harness": "run_scripts/promotion.py",
+        "content_sha256": "7b70eb5db0e82577e690ffee1a39c2bee4c7f782c78e29699ef49ddb6ce6995b"
+      },
+      {
+        "relative_to_harness": "run_scripts/markdown_links.py",
+        "content_sha256": "f95dd49742cd73317ef470d8b031a374606855709e10a1ff4cfdd62bbe984173"
+      },
+      {
+        "relative_to_harness": "run_scripts/requirements.txt",
+        "content_sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
+      },
+      {
+        "relative_to_harness": "schemas/README.md",
+        "content_sha256": "b7ee90ee972dee72c71f7c48581c12ce12030408a1cc3d4f6332f3f07ebabc01"
+      },
+      {
+        "relative_to_harness": "schemas/common.schema.json",
+        "content_sha256": "592a9216f27599092261ed14cdb13ec4489f3665aa68a0e0184c6c6a44430c09"
+      },
+      {
+        "relative_to_harness": "schemas/coverage-ledger.schema.json",
+        "content_sha256": "f9c798982bb9ac53cf5c8830246911480b7367f5217628495b1269868a8b2ec5"
+      },
+      {
+        "relative_to_harness": "schemas/evidence-manifest.schema.json",
+        "content_sha256": "6f9ae908fc7507de4bd429260793cf5acee68d0513fda12b23d08efc281d2c73"
+      },
+      {
+        "relative_to_harness": "schemas/experiment-plan.schema.json",
+        "content_sha256": "bf40eaa64c36cc4939135ec3f87129445eb3649760edba4048ccd7920df28d04"
+      },
+      {
+        "relative_to_harness": "schemas/feature-ir.schema.json",
+        "content_sha256": "659d8dec22724fc2e6953e4ffc744145645346017b0d6b67a5608fb040d8a94d"
+      },
+      {
+        "relative_to_harness": "schemas/feature-proposal.schema.json",
+        "content_sha256": "e6dbca90af825e877aa4d2b04194cd35795116223d47f4e89bded2081317980b"
+      },
+      {
+        "relative_to_harness": "schemas/interface.schema.json",
+        "content_sha256": "f5725043e333bb6bce622affedc435977fffd97308ee558b116f4b5fe15e1061"
+      },
+      {
+        "relative_to_harness": "schemas/observation-summary.schema.json",
+        "content_sha256": "453967bf339df4fe8155f2c3a1eb92be8461c3e869b26f586c5f6ae3c950bdbd"
+      },
+      {
+        "relative_to_harness": "schemas/promotion-record.schema.json",
+        "content_sha256": "4a2bb03d743884e1a7c76ca950f538f9663d79e8495e74ab848177a845052875"
+      },
+      {
+        "relative_to_harness": "schemas/release-manifest.schema.json",
+        "content_sha256": "be3a1791ae58dcd4b5129236a8dcbfbf8c32c24a21e894776763db4978b36bf9"
+      },
+      {
+        "relative_to_harness": "schemas/run-manifest.schema.json",
+        "content_sha256": "ec381613cfe2baf8b6538a91fa8c7e62f51aedb167ee6ceb3c5e317878874187"
+      },
+      {
+        "relative_to_harness": "schemas/spec-finalization.schema.json",
+        "content_sha256": "297ffd84998b9b1ba0c6a10af6ef43fe12c4515b55f19e8c904103513100222f"
+      },
+      {
+        "relative_to_harness": "schemas/static-facts.schema.json",
+        "content_sha256": "9aad0dc1e2c6aa1cd20a0a8685caaa2441efb4fbd5595e783b43a44f4027d3b8"
+      },
+      {
+        "relative_to_harness": "schemas/test-list.schema.json",
+        "content_sha256": "1658643a7ac2dc6815a440fdc18740a4172ecb0a86dd2a5c636d562c29d35988"
+      },
+      {
+        "relative_to_harness": "schemas/test-request-interface.schema.json",
+        "content_sha256": "3bd35923d85ae07dd8201ba742ee4b23cbb30073feeb7897e04b39a3ecbdf14e"
+      },
+      {
+        "relative_to_harness": "schemas/test-result-interface.schema.json",
+        "content_sha256": "b14597183b4082ae9c903907e452f0c79b305bbe5b28887b161518052869ad8a"
+      },
+      {
+        "relative_to_harness": "schemas/trace-binding.schema.json",
+        "content_sha256": "9906003e6bf3d94c57f9eafb836a0e734d106c13814b7f21872259bdd03d7ea5"
+      },
+      {
+        "relative_to_harness": "schemas/validation-decision.schema.json",
+        "content_sha256": "0a3f47585ca0d82926a2638db0bc02a7a53d50de4a96b57cb86e63ecaaa0748a"
+      }
+    ],
+    "inventory_sha256": "ccf09d87663d4a10f73c9119f3530b77afb2bc11cc8d36a8c7970ae765532644"
+  },
+  "known_spec_issue_review": {
+    "spec_issue_id": "SPEC-ISSUE-SCHEMA-README-001",
+    "assessment": "The local schemas directory contains feature-ir.schema.json for the top-level feature-ir.json artifact (schema v1). The schemas README says that separate feature-ir/ sub-artifacts such as manifests, feature maps, contracts, rules, and evidence have no schema. This campaign consumes the top-level Feature IR only; no authoritative Harness spec/schema was edited.",
+    "impact": "Top-level Feature IR structural validation is available; ancillary feature-ir/ artifacts remain outside this campaign and are not claimed schema-validated."
+  },
+  "command_binding": {
+    "backend": {
+      "kind": "wsl",
+      "distribution": "Ubuntu"
+    },
+    "toolchain_probe": {
+      "backend_argv": [
+        "bash",
+        "-lc",
+        "g++ --version | head -n 1; dpkg-query -W libsystemc-dev; uname -a"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "--exec",
+        "bash",
+        "-lc",
+        "g++ --version | head -n 1; dpkg-query -W libsystemc-dev; uname -a"
+      ],
+      "host_process_cwd": null,
+      "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source"
+    },
+    "preflight_build": {
+      "backend_argv": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "--exec",
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test"
+      ],
+      "host_process_cwd": null,
+      "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source"
+    },
+    "preflight_run": {
+      "backend_argv": [
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.preflight.3f0daa353721",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run",
+        "--exec",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.preflight.3f0daa353721",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "host_process_cwd": null,
+      "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run"
+    },
+    "campaign_build": {
+      "backend_argv": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/build/half_adder_campaign_test"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "--exec",
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/build/half_adder_campaign_test"
+      ],
+      "host_process_cwd": null,
+      "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source"
+    },
+    "campaign_run": {
+      "backend_argv": [
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.b2739de59ed3",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run",
+        "--exec",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.b2739de59ed3",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "host_process_cwd": null,
+      "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run"
+    },
+    "commands_sha256": "ccd2fee9951e7cad676f8270beb499dfb0961001350e12cbbbf9fab99d9c4995"
+  },
+  "environment_summary": {
+    "host_os": "Windows-11-10.0.26100-SP0",
+    "host_python": "3.14.5",
+    "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+    "validator_package": "jsonschema",
+    "validator_package_version": "4.26.0",
+    "backend": {
+      "kind": "wsl",
+      "distribution": "Ubuntu"
+    },
+    "configured_compiler": "g++",
+    "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "configured_systemc_version": "2.3.4-3build1",
+    "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only."
+  },
+  "sampling_contract": {
+    "cycle_semantics": "Drive one binary input pair, wait 1 ns, then sample o_sum and o_carry.",
+    "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+    "cycle_semantics_sha256": "9ed38f0e0b312658eb813e195f5ecfc7dbc7f343ce3e52588c538bb07e1de271",
+    "seed": 0,
+    "timeout_seconds_per_command": 30,
+    "max_log_bytes_per_command": 1048576,
+    "max_artifact_bytes": 10485760
+  },
+  "trace_config_preflight": {
+    "required_wave_signals": [
+      {
+        "port": "i_a",
+        "scope": [
+          "SystemC"
+        ],
+        "reference": "i_a"
+      },
+      {
+        "port": "i_b",
+        "scope": [
+          "SystemC"
+        ],
+        "reference": "i_b"
+      },
+      {
+        "port": "o_sum",
+        "scope": [
+          "SystemC"
+        ],
+        "reference": "o_sum"
+      },
+      {
+        "port": "o_carry",
+        "scope": [
+          "SystemC"
+        ],
+        "reference": "o_carry"
+      }
+    ],
+    "source_snapshot_is_campaign_input_source": true,
+    "diagnostic_only_not_campaign_evidence": true
+  },
+  "write_scope": {
+    "campaign_root": "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255",
+    "preflight_output_root": "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\attempts\\test.half_adder.binary.truth_table\\preflight.e18677a8120d",
+    "campaign_attempt_root": "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\attempts\\test.half_adder.binary.truth_table\\attempt.566324927ab5",
+    "intended_mutable_outputs": [
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\attempts\\test.half_adder.binary.truth_table\\preflight.e18677a8120d",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\attempts\\test.half_adder.binary.truth_table\\attempt.566324927ab5",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\manifests",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\analysis",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\evidence",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\feature-ir",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\spec",
+      "D:\\repo_github\\Verilog-Design-Examples\\1_Half_Adder\\systemC_file\\feature-analysis\\output\\campaigns\\2610141255\\half-adder-binary-v3.2610141255\\validation"
+    ],
+    "os_level_write_restriction": false
+  },
+  "isolation_limitations": "No OS/container sandbox; WSL commands run with the caller's WSL user permissions. The runner enforces per-command timeout and stdout/stderr byte limits, but does not enforce CPU, memory, network, process-count, or filesystem sandboxing."
+}

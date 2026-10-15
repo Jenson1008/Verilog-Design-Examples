@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "full_adder_1bit",
+    "kind": "SystemC SC_MODULE",
+    "clocking_model": "combinational; no clock/reset",
+    "top_level_port_groups": [
+      "inputs",
+      "outputs"
+    ]
+  },
+  "port_catalog": {
+    "i_a": {
+      "canonical_path": "full_adder_1bit.i_a",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 i_a",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    },
+    "i_b": {
+      "canonical_path": "full_adder_1bit.i_b",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 i_b",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    },
+    "i_cin": {
+      "canonical_path": "full_adder_1bit.i_cin",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输入端口 i_cin",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    },
+    "o_sum": {
+      "canonical_path": "full_adder_1bit.o_sum",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输出端口 o_sum",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    },
+    "o_carry": {
+      "canonical_path": "full_adder_1bit.o_carry",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "顶层输出端口 o_carry",
+      "timing_contract": "按 SystemC 源码登记的组合敏感列表运行，输出经 delta-cycle 更新。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "inputs",
+      "kind": "top_level_inputs",
+      "members": [
+        "i_a",
+        "i_b",
+        "i_cin"
+      ],
+      "children": []
+    },
+    {
+      "id": "outputs",
+      "kind": "top_level_outputs",
+      "members": [
+        "o_sum",
+        "o_carry"
+      ],
+      "children": []
+    }
+  ],
+  "declared_unknowns": []
+}

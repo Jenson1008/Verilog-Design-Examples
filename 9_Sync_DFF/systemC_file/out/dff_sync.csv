@@ -1,0 +1,16 @@
+time_ns,test_name,i_d,clk,reset,expected_o_q,actual_o_q,expected_o_qb,actual_o_qb,status
+1,reset_between_edges_hold,0,0,1,X,X,X,X,PASS
+2,synchronous_reset_posedge,0,1,1,0,0,1,1,PASS
+3,negedge_hold,0,0,1,0,0,1,1,PASS
+4,inputs_between_edges_hold,0,0,0,0,0,1,1,PASS
+5,sample_posedge,0,1,0,0,0,1,1,PASS
+6,negedge_hold,0,0,0,0,0,1,1,PASS
+7,inputs_between_edges_hold,1,0,0,0,0,1,1,PASS
+8,sample_posedge,1,1,0,1,1,0,0,PASS
+9,negedge_hold,1,0,0,1,1,0,0,PASS
+10,inputs_between_edges_hold,0,0,1,1,1,0,0,PASS
+11,sample_posedge,0,1,1,0,0,1,1,PASS
+12,negedge_hold,0,0,1,0,0,1,1,PASS
+13,inputs_between_edges_hold,1,0,1,0,0,1,1,PASS
+14,sample_posedge,1,1,1,0,0,1,1,PASS
+15,negedge_hold,1,0,1,0,0,1,1,PASS

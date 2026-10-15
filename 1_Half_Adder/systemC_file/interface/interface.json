@@ -1,60 +1,12 @@
 {
   "schema_version": "1.0",
   "top_module": "half_adder",
-  "clocking_model": {
-    "kind": "combinational",
-    "clocks": [],
-    "resets": []
-  },
+  "clocking_model": {"kind": "combinational", "clocks": [], "resets": []},
   "ports": [
-    {
-      "name": "i_a",
-      "canonical_path": "half_adder.i_a",
-      "direction": "input",
-      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "第一个二值或四态操作数。",
-      "timing_contract": {
-        "sampling": "组合逻辑对端口值变化敏感。",
-        "latency": "无时钟周期；输出在 SystemC delta-cycle 更新后稳定。"
-      }
-    },
-    {
-      "name": "i_b",
-      "canonical_path": "half_adder.i_b",
-      "direction": "input",
-      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "第二个二值或四态操作数。",
-      "timing_contract": {
-        "sampling": "组合逻辑对端口值变化敏感。",
-        "latency": "无时钟周期；输出在 SystemC delta-cycle 更新后稳定。"
-      }
-    },
-    {
-      "name": "o_sum",
-      "canonical_path": "half_adder.o_sum",
-      "direction": "output",
-      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "两输入相加的和位。",
-      "timing_contract": {
-        "sampling": "在输入变化并经过组合逻辑 delta-cycle 更新后采样。",
-        "latency": "组合输出，无时钟周期延迟。"
-      }
-    },
-    {
-      "name": "o_carry",
-      "canonical_path": "half_adder.o_carry",
-      "direction": "output",
-      "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>",
-      "width": 1,
-      "role": "两输入相加的进位位。",
-      "timing_contract": {
-        "sampling": "在输入变化并经过组合逻辑 delta-cycle 更新后采样。",
-        "latency": "组合输出，无时钟周期延迟。"
-      }
-    }
+    {"name": "i_a", "canonical_path": "i_a", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "first input bit"},
+    {"name": "i_b", "canonical_path": "i_b", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "second input bit"},
+    {"name": "o_sum", "canonical_path": "o_sum", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "sum bit"},
+    {"name": "o_carry", "canonical_path": "o_carry", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "carry bit"}
   ],
   "declared_unknowns": []
 }

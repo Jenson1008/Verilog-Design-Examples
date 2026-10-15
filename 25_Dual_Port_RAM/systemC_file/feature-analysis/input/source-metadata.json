@@ -1,0 +1,34 @@
+{
+  "metadata_version": "1.0",
+  "design": "25_Dual_Port_RAM",
+  "module": "dualport_ram",
+  "source_root": "D:/repo_github/Verilog-Design-Examples/25_Dual_Port_RAM",
+  "handoff_root": "systemC_file/feature-analysis/input",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "working_tree_state": "dirty; source file SHA-256 values below bind the inspected contents"
+  },
+  "build_entry": "systemC_file/Makefile",
+  "source_files": [
+    {"file": "dualport_ram.v", "sha256": "edbacfa34dd42376e281fa7cc2c2cdaefdbc8b2024d415062cb0a800b57333f9", "role": "原始 RTL"},
+    {"file": "systemC_file/DUT/dualport_ram_sc.h", "sha256": "06173c492e4fde07333bcabe2762c485c071cd9b7a9899ada1cb0feb2545a695", "role": "受限 SystemC DUT 原型"},
+    {"file": "systemC_file/interface/interface.json", "sha256": "9519f68d6dfcf5dfce16dcfd96ef2fc730a88046d6cde132309f6c4d5f716a49", "role": "现有设计接口来源"},
+    {"file": "systemC_file/interface/interface.schema.json", "sha256": "7a30f7db3fb665670122fbe43a16a2ba0997d1cebc230826dbb76f72c0676b00", "role": "现有本地接口 schema 来源"},
+    {"file": "systemC_file/Makefile", "sha256": "199b53a698eab4bc72a6d355a99d95134e2b4c9b6ab62c68517fe33e3211a92b", "role": "构建入口"},
+    {"file": "systemC_file/dualport_ram_sc_tb.cpp", "sha256": "80acd28d0f8aa14db505662fb8d9a0624f479c341b70afc9bcbf455b537e8750", "role": "现有自检 testbench"},
+    {"file": "systemC_file/stimulus/dualport_ram_sc_stimulus.h", "sha256": "a38e02bc7dcaa6f65f6ec092bc4f6e9351fb76e3403539f1475a6d3035035cf2", "role": "现有 testbench 激励"}
+  ],
+  "handoff_files": [
+    {"file": "interface.json", "sha256": "499a995b1a5bf0c44dc962b86d92b71f895fe53181f66b6e2c4a7eff3b35ddf8", "role": "下游接口投影"},
+    {"file": "basic-description.md", "sha256": "cc29da921b34fe2cad2f6f622aa9de69cbbd102daddecfcb7bc21f2d1818c066", "role": "下游行为简介"}
+  ],
+  "contract_basis": {
+    "interface_schema_version": 2,
+    "harness_contract": "Harness Spec Draft v0.7 interface schema v2",
+    "schema_file": "D:/repo_github/Harness-Engineering/MVP/code_to_spec_sp/code_to_spec/harness-spec/schemas/interface.schema.json",
+    "schema_sha256": "e286d29b948c4d4552d8bed628fdf7a35600a054a1f01770797d8f2cea8897bf",
+    "common_schema_file": "D:/repo_github/Harness-Engineering/MVP/code_to_spec_sp/code_to_spec/harness-spec/schemas/common.schema.json",
+    "common_schema_sha256": "19139c7c7e0197fbfbb754e360951024edbadf6fedaff3ea4fd3c1cb3c7bd753"
+  },
+  "metadata_schema_status": "未发现 Harness source-metadata 专用 schema；本文件仅记录来源和摘要，不声称通过专用 schema 校验。"
+}

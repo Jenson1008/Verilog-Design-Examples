@@ -1,0 +1,16 @@
+CXX ?= g++
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Wpedantic
+CPPFLAGS ?= -IDUT -Istimulus
+LDLIBS ?= -lsystemc
+OUT := out
+TARGET := $(OUT)/dff_sync_sim
+SOURCES := dff_sync_sc_tb.cpp DUT/dff_sync_sc.h stimulus/dff_sync_sc_stimulus.h
+.PHONY: all run clean
+all: $(TARGET)
+$(TARGET): $(SOURCES)
+	mkdir -p "$(OUT)"
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) dff_sync_sc_tb.cpp $(LDLIBS) -o "$@" > "$(OUT)/build.log" 2>&1 || { status=$$?; cat "$(OUT)/build.log"; exit $$status; }
+run: $(TARGET)
+	cd "$(OUT)" && ./dff_sync_sim
+clean:
+	rm -f "$(TARGET)" "$(OUT)/build.log" "$(OUT)/simulation.log" "$(OUT)/dff_sync.csv" "$(OUT)/dff_sync_wave.vcd"

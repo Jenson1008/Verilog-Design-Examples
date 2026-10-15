@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "univ_shift",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿；sequential 同时对 reset 下降沿敏感。"
+  },
+  "port_catalog": {
+    "data_in": {"canonical_path": "univ_shift.data_in", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<16>>", "width_bits": 16, "role": "并行移位或装载输入数据"},
+    "control": {"canonical_path": "univ_shift.control", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<2>>", "width_bits": 2, "role": "选择保持、左移、右移或直通"},
+    "clk": {"canonical_path": "univ_shift.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "状态更新时钟", "edge": "rising"},
+    "reset": {"canonical_path": "univ_shift.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "状态清除条件", "polarity": "active_high"},
+    "data_out": {"canonical_path": "univ_shift.data_out", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<16>>", "width_bits": 16, "role": "寄存的移位器结果"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "RTL 参数 n 默认值为 16；当前 SystemC 实现固定为 16 位，其他参数化配置不在此交接范围内。",
+    "过程对 clk 上升沿和 reset 下降沿敏感，但仅在 reset 为高时清零；reset 下降沿到达低电平时会进入 control 数据路径。该非典型事件行为已由实现保留。"
+  ]
+}

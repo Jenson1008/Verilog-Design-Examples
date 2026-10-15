@@ -1,0 +1,183 @@
+{
+  "schema_version": 3,
+  "campaign_id": "half-adder-binary-v3",
+  "scope": {
+    "kind": "ip",
+    "path": "1_Half_Adder/half_adder",
+    "parent_campaign_id": "half-adder-binary-v2.2610141228"
+  },
+  "source_root": "source",
+  "inputs": {
+    "interface": "interface.json",
+    "basic_description": "basic-description.md",
+    "static_facts": "static-facts.json",
+    "feature_proposal": "feature-proposal.json",
+    "test_list": "test-list.json"
+  },
+  "source_files": [
+    "DUT/half_adder_sc.h",
+    "campaign_testbench.cpp"
+  ],
+  "backend": {
+    "kind": "wsl",
+    "distribution": "Ubuntu"
+  },
+  "compiler": "g++",
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "systemc_version": "2.3.4-3build1",
+  "build_command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-I{source_root_wsl}",
+    "{source_root_wsl}/campaign_testbench.cpp",
+    "-lsystemc",
+    "-o",
+    "{executable_wsl}"
+  ],
+  "run_command": [
+    "{executable_wsl}"
+  ],
+  "executable_name": "half_adder_campaign_test",
+  "test_id": "test.half_adder.binary.truth_table",
+  "request_id": "request.half_adder.binary.truth_table",
+  "experiment_id": "experiment.half_adder.binary.truth_table",
+  "observation_id": "observation.half_adder.binary.truth_table",
+  "primary_feature_id": "feature.half_adder.binary",
+  "stimulus_signals": [
+    "i_a",
+    "i_b"
+  ],
+  "output_signals": [
+    "o_sum",
+    "o_carry"
+  ],
+  "test_vectors": [
+    {
+      "stimulus": {
+        "i_a": "0",
+        "i_b": "0"
+      },
+      "expected": {
+        "o_sum": "0",
+        "o_carry": "0"
+      }
+    },
+    {
+      "stimulus": {
+        "i_a": "0",
+        "i_b": "1"
+      },
+      "expected": {
+        "o_sum": "1",
+        "o_carry": "0"
+      }
+    },
+    {
+      "stimulus": {
+        "i_a": "1",
+        "i_b": "0"
+      },
+      "expected": {
+        "o_sum": "1",
+        "o_carry": "0"
+      }
+    },
+    {
+      "stimulus": {
+        "i_a": "1",
+        "i_b": "1"
+      },
+      "expected": {
+        "o_sum": "0",
+        "o_carry": "1"
+      }
+    }
+  ],
+  "log_file": "half_adder.csv",
+  "waveform_file": "half_adder_wave.vcd",
+  "required_wave_signals": [
+    {
+      "port": "i_a",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_a"
+    },
+    {
+      "port": "i_b",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_b"
+    },
+    {
+      "port": "o_sum",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_sum"
+    },
+    {
+      "port": "o_carry",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_carry"
+    }
+  ],
+  "log_columns": {
+    "inputs": {
+      "i_a": "i_a",
+      "i_b": "i_b"
+    },
+    "outputs": {
+      "o_sum": "actual_o_sum",
+      "o_carry": "actual_o_carry"
+    },
+    "status": "status"
+  },
+  "coverage": {
+    "mode": "exhaustive",
+    "signals": [
+      "i_a",
+      "i_b"
+    ],
+    "values": [
+      "0",
+      "1"
+    ]
+  },
+  "cycle_semantics": "Drive one binary input pair, wait 1 ns, then sample o_sum and o_carry.",
+  "trace_identity_protocol": "c2s.trace-identity.v1",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "experiment_time_window": "Sample each output once, 1 ns after its binary input pair is applied.",
+  "evidence_rules": [
+    {
+      "evidence_id": "evidence.half_adder.binary.truth_table",
+      "rule_id": "rule.half_adder.binary",
+      "feature_id": "feature.half_adder.binary",
+      "statement": "For each binary pair (i_a, i_b), sampled 1 ns after application, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "preconditions": [
+        "Both scalar inputs are driven with 0 or 1.",
+        "Outputs are sampled 1 ns after applying each pair."
+      ],
+      "required_observables": [
+        "o_sum",
+        "o_carry"
+      ],
+      "source_fact_refs": [
+        "fact.half_adder.sum_xor",
+        "fact.half_adder.carry_and"
+      ],
+      "require_complete_domain": true
+    }
+  ],
+  "timeout_seconds": 30,
+  "max_log_bytes": 1048576,
+  "max_artifact_bytes": 10485760,
+  "seed": 0
+}

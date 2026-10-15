@@ -1,0 +1,64 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "clkdivider",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single_clock; reset behavior according to source contract",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "reset":  {
+                                       "canonical_path":  "clkdivider.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "Active-high synchronous divider reset.",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "Clears the two-bit divider count and output clock."
+                                   },
+                         "clk":  {
+                                     "canonical_path":  "clkdivider.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Input rising-edge clock.",
+                                     "edge":  "rising"
+                                 },
+                         "out_clk":  {
+                                         "canonical_path":  "clkdivider.out_clk",
+                                         "direction":  "output",
+                                         "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_logic\u003e",
+                                         "width_bits":  1,
+                                         "role":  "Registered copy of the prior two-bit count MSB; forms a divide-by-four output-clock period."
+                                     }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "reset",
+                                               "clk"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "out_clk"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "The internal two-bit counter and output register are not declaration-time initialized in RTL; both remain unknown until a rising edge with reset asserted. The four-state output type preserves this initial state."
+                          ]
+}

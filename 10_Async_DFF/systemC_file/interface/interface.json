@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "top_module": "dff_async",
+  "clocking_model": {"kind": "single_clock", "clocks": [{"port": "clk", "active_edge": "rising"}], "resets": [{"port": "reset", "polarity": "active_high", "behavior": "asynchronous", "sampling_edge": "level", "asserted_meaning": "asynchronously sets o_q low"}]},
+  "ports": [
+    {"name": "i_d", "canonical_path": "i_d", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "data sampled at rising clock edge"},
+    {"name": "clk", "canonical_path": "clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "positive-edge active clock"},
+    {"name": "reset", "canonical_path": "reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "active-high asynchronous reset"},
+    {"name": "o_q", "canonical_path": "o_q", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "stored state"},
+    {"name": "o_qb", "canonical_path": "o_qb", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "complement of stored state"}
+  ],
+  "declared_unknowns": [{"description": "RTL register has no initialization; o_q and o_qb start unknown until a rising clock or reset edge."}]
+}

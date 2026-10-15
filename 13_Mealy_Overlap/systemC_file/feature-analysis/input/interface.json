@@ -1,0 +1,74 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "mealy_ol",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single_clock; reset behavior according to source contract",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "in":  {
+                                    "canonical_path":  "mealy_ol.in",
+                                    "direction":  "input",
+                                    "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_logic\u003e",
+                                    "width_bits":  1,
+                                    "role":  "Four-state serial sequence input used by the transition decoder."
+                                },
+                         "clk":  {
+                                     "canonical_path":  "mealy_ol.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Rising-edge state clock.",
+                                     "edge":  "rising"
+                                 },
+                         "reset":  {
+                                       "canonical_path":  "mealy_ol.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "Active-high asynchronous state reset.",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "Asynchronously returns the state to S0."
+                                   },
+                         "out":  {
+                                     "canonical_path":  "mealy_ol.out",
+                                     "direction":  "output",
+                                     "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_logic\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Four-state Mealy output pulse on matching 1101, with partial-match retention for overlap."
+                                 }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "in",
+                                               "clk",
+                                               "reset"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "out"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "The RTL state register has no declaration-time initialization; the test checks unknown output before asserting asynchronous reset.",
+                              "A directed X input confirms that procedural if follows the RTL false branch; Z behavior is not separately exercised. State encodings outside S0-S3 are unreachable after reset.",
+                              "RTL state parameters S0..S3 are represented by their defaults (0..3); non-default parameter overrides are not implemented or tested."
+                          ]
+}

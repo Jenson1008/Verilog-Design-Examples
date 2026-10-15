@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "top_module": "custdesign",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "custdesign.clk", "active_edge": "rising"}],
+    "resets": [{"port": "custdesign.reset", "polarity": "active_high", "behavior": "synchronous", "sampling_edge": "rising", "asserted_meaning": "在每个 SRFF 的时钟上升沿将 q 清零；qbar 仍在该沿更新为旧 q 的反相。"}]
+  },
+  "ports": [
+    {"name": "x", "canonical_path": "custdesign.x", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "组合输入，参与状态反馈"},
+    {"name": "clk", "canonical_path": "custdesign.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "两级 SRFF 共用的上升沿时钟"},
+    {"name": "reset", "canonical_path": "custdesign.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "同步高有效状态复位"},
+    {"name": "y", "canonical_path": "custdesign.y", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "由当前状态与输入形成的组合输出"}
+  ],
+  "declared_unknowns": [
+    {"description": "内部 SRFF 的 q/qbar 无初始化；qbar 在 reset 分支也更新为旧 q 的反相。仿真先用复位稳定状态后测试已知行为。"},
+    {"description": "保留 RTL 中 qbar 与 q 相差一个采样沿的寄存关系，不将 qbar 重设计为组合反相输出。"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "top_module": "mux_case",
+  "clocking_model": {"kind": "combinational", "clocks": [], "resets": []},
+  "ports": [
+    {"name": "in0", "canonical_path": "in0", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "data input selected by select=0"},
+    {"name": "in1", "canonical_path": "in1", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "data input selected by select=1"},
+    {"name": "in2", "canonical_path": "in2", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "data input selected by select=2"},
+    {"name": "in3", "canonical_path": "in3", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "data input selected by select=3"},
+    {"name": "select", "canonical_path": "select", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "data selection"},
+    {"name": "out", "canonical_path": "out", "direction": "output", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "selected data value", "timing_contract": {"sampling": "RTL always @(select); updates on select changes only", "notes": ["Data-only changes do not trigger reevaluation, matching the RTL sensitivity list."]}}
+  ],
+  "declared_unknowns": []
+}

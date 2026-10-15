@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "top_module": "dualport_ram",
+  "clocking_model": {
+    "kind": "single_clock",
+    "clocks": [{"port": "dualport_ram.clk", "active_edge": "rising"}],
+    "resets": []
+  },
+  "ports": [
+    {"name": "data_in_a", "canonical_path": "dualport_ram.data_in_a", "direction": "input", "systemc_type": "sc_dt::sc_lv<128>", "width": 128, "role": "端口 A 的写入数据"},
+    {"name": "wr_en_a", "canonical_path": "dualport_ram.wr_en_a", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "端口 A 写使能，高电平时写入"},
+    {"name": "addr_a", "canonical_path": "dualport_ram.addr_a", "direction": "input", "systemc_type": "sc_dt::sc_lv<3>", "width": 3, "role": "端口 A 的 8 字深度地址"},
+    {"name": "data_in_b", "canonical_path": "dualport_ram.data_in_b", "direction": "input", "systemc_type": "sc_dt::sc_lv<128>", "width": 128, "role": "端口 B 的写入数据"},
+    {"name": "wr_en_b", "canonical_path": "dualport_ram.wr_en_b", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "端口 B 写使能，高电平时写入"},
+    {"name": "addr_b", "canonical_path": "dualport_ram.addr_b", "direction": "input", "systemc_type": "sc_dt::sc_lv<3>", "width": 3, "role": "端口 B 的 8 字深度地址"},
+    {"name": "clk", "canonical_path": "dualport_ram.clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "两端口共同的上升沿采样时钟"},
+    {"name": "data_out_a", "canonical_path": "dualport_ram.data_out_a", "direction": "output", "systemc_type": "sc_dt::sc_lv<128>", "width": 128, "role": "端口 A 的时钟沿读数据寄存器"},
+    {"name": "data_out_b", "canonical_path": "dualport_ram.data_out_b", "direction": "output", "systemc_type": "sc_dt::sc_lv<128>", "width": 128, "role": "端口 B 的时钟沿读数据寄存器"}
+  ],
+  "declared_unknowns": [
+    {"description": "RAM 及两个输出寄存器无 RTL 初始化，初始公开输出/存储内容为未知。"},
+    {"description": "当 wr_en_a 与 wr_en_b 同时有效且 addr_a 与 addr_b 相同时，RTL 的两个 always 块对同一 RAM 字安排并发非阻塞写入，未定义可移植优先级。本受限转换将仅该字记为 X；不会将端口 A 或 B 设为优先端口。该冲突路径未由自检激励。", "related_ports": ["dualport_ram.wr_en_a", "dualport_ram.addr_a", "dualport_ram.data_in_a", "dualport_ram.wr_en_b", "dualport_ram.addr_b", "dualport_ram.data_in_b"]},
+    {"description": "在无同址双写的已验证路径中，读数据依据同一时钟沿更新前的 RAM 内容采样；输出在对应端口处于写模式时保持。"}
+  ]
+}

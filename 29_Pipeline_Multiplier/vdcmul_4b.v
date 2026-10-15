@@ -1,5 +1,5 @@
-`include "../src/vdcmul_2b.v"
-`include "../src/rca_4b.v"
+`include "vdcmul_2b.v"
+`include "rca_4b.v"
 
 module vdcmul_4b(
                    x,

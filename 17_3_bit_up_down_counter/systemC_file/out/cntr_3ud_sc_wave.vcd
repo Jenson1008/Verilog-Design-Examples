@@ -1,0 +1,256 @@
+$date
+     Oct 14, 2026       17:12:20
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  up_down       $end
+$var wire    1  aaaab  clk       $end
+$var wire    1  aaaac  reset       $end
+$var wire    3  aaaad  bin_count [2:0]  $end
+$scope module dut $end
+$var wire    3  aaaae  count_state [2:0]  $end
+$upscope $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+0aaaab
+0aaaac
+bXXX aaaad
+bXXX aaaae
+$end
+
+#1
+1aaaac
+
+#2
+1aaaab
+b0 aaaad
+b0 aaaae
+
+#3
+0aaaab
+
+#4
+0aaaac
+
+#5
+1aaaab
+b1 aaaad
+b1 aaaae
+
+#6
+0aaaab
+
+#8
+1aaaab
+b10 aaaad
+b10 aaaae
+
+#9
+0aaaab
+
+#11
+1aaaab
+b11 aaaad
+b11 aaaae
+
+#12
+0aaaab
+
+#14
+1aaaab
+b100 aaaad
+b100 aaaae
+
+#15
+0aaaab
+
+#17
+1aaaab
+b101 aaaad
+b101 aaaae
+
+#18
+0aaaab
+
+#20
+1aaaab
+b110 aaaad
+b110 aaaae
+
+#21
+0aaaab
+
+#23
+1aaaab
+b111 aaaad
+b111 aaaae
+
+#24
+0aaaab
+
+#26
+1aaaab
+b0 aaaad
+b0 aaaae
+
+#27
+0aaaab
+
+#29
+1aaaab
+b1 aaaad
+b1 aaaae
+
+#30
+0aaaab
+
+#32
+1aaaab
+b10 aaaad
+b10 aaaae
+
+#33
+0aaaab
+
+#35
+1aaaab
+b11 aaaad
+b11 aaaae
+
+#36
+0aaaab
+
+#37
+1aaaaa
+
+#38
+1aaaab
+b10 aaaad
+b10 aaaae
+
+#39
+0aaaab
+
+#41
+1aaaab
+b1 aaaad
+b1 aaaae
+
+#42
+0aaaab
+
+#44
+1aaaab
+b0 aaaad
+b0 aaaae
+
+#45
+0aaaab
+
+#47
+1aaaab
+b111 aaaad
+b111 aaaae
+
+#48
+0aaaab
+
+#50
+1aaaab
+b110 aaaad
+b110 aaaae
+
+#51
+0aaaab
+
+#53
+1aaaab
+b101 aaaad
+b101 aaaae
+
+#54
+0aaaab
+
+#56
+1aaaab
+b100 aaaad
+b100 aaaae
+
+#57
+0aaaab
+
+#59
+1aaaab
+b11 aaaad
+b11 aaaae
+
+#60
+0aaaab
+
+#62
+1aaaab
+b10 aaaad
+b10 aaaae
+
+#63
+0aaaab
+
+#65
+1aaaab
+b1 aaaad
+b1 aaaae
+
+#66
+0aaaab
+
+#67
+xaaaaa
+
+#68
+1aaaab
+b10 aaaad
+b10 aaaae
+
+#69
+0aaaab
+
+#70
+1aaaaa
+1aaaac
+
+#71
+1aaaab
+b0 aaaad
+b0 aaaae
+
+#72
+0aaaab
+
+#73
+0aaaaa
+0aaaac
+
+#74
+1aaaab
+b1 aaaad
+b1 aaaae
+
+#75
+0aaaab
+
+#76

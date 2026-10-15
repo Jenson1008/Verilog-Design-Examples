@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "static-facts",
+  "module": "half_adder",
+  "facts": [
+    {
+      "id": "fact.half_adder.sum_xor",
+      "kind": "combinational_expression",
+      "name": "o_sum",
+      "value": "i_a.read() ^ i_b.read()",
+      "source": {
+        "file": "DUT/half_adder_sc.h",
+        "start_line": 11,
+        "end_line": 11,
+        "symbol": "half_adder::evaluate"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.half_adder.carry_and",
+      "kind": "combinational_expression",
+      "name": "o_carry",
+      "value": "i_a.read() & i_b.read()",
+      "source": {
+        "file": "DUT/half_adder_sc.h",
+        "start_line": 12,
+        "end_line": 12,
+        "symbol": "half_adder::evaluate"
+      },
+      "confidence": "exact"
+    },
+    {
+      "id": "fact.half_adder.sensitivity",
+      "kind": "process_sensitivity",
+      "name": "evaluate",
+      "value": "SC_METHOD(evaluate) is sensitive to i_a and i_b; there is no clock or reset.",
+      "source": {
+        "file": "DUT/half_adder_sc.h",
+        "start_line": 15,
+        "end_line": 16,
+        "symbol": "half_adder::half_adder"
+      },
+      "confidence": "exact"
+    }
+  ]
+}

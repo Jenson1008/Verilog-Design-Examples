@@ -1,0 +1,109 @@
+{
+  "metadata_version": 1,
+  "design": "9_Sync_DFF",
+  "module": "dff_sync",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; exact bytes bound by file digests"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "dff_sync_sc_tb.cpp",
+      "DUT/dff_sync_sc.h",
+      "stimulus/dff_sync_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured"
+  },
+  "source_files": [
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/dff_sync_sc_tb.cpp",
+      "sha256": "f9888521916d2525810b67c6cfa9ce57ba4f63ca6d6ea53dc08497d6f416d844",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/DUT/dff_sync_sc.h",
+      "sha256": "d6f08f1664aef32adb88b9351b9cb5df55ae0e32abad3f9e89904d4541aa14ae",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/stimulus/dff_sync_sc_stimulus.h",
+      "sha256": "2e4387d6ec192b0bd87b23115312098a44e518908d32b0216aec8687aa1c3864",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/Makefile",
+      "sha256": "ade0142ba26615f8787fbec1ad0f61265714959181af0b4d1ef6ef8382e11c53",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/interface/interface.json",
+      "sha256": "bd209be431ca0b29aed474ebd22241917d51cb22019117f0abd2634b4e1572de",
+      "role": "authority interface"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/interface/interface.schema.json",
+      "sha256": "c6b449cbc4b929041dd2e6be6f52b85b879ecebc0dfe5c5888c59e2e75c48ac1",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "9_Sync_DFF/dff_sync.v",
+      "sha256": "b32079e096317a5b84bed75cdc9e72092032839fe429279cb743983f969f783c",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "9_Sync_DFF/systemC_file/out/simulation.log",
+      "sha256": "dfa4d8a0c923cf1be37d2aa081b15134b15e76fa3258829759360c4da9d8d349",
+      "role": "prior self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "9_Sync_DFF/systemC_file/interface/interface.json",
+    "authority_sha256": "bd209be431ca0b29aed474ebd22241917d51cb22019117f0abd2634b4e1572de",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection; RTL/SystemC/authority top-level port maps cross-checked"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "names/directions/types/widths match",
+    "rtl_vs_systemc": "names/directions/widths match",
+    "ports": [
+      "clk",
+      "i_d",
+      "o_q",
+      "o_qb",
+      "reset"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "9_Sync_DFF/systemC_file/out/simulation.log",
+    "log_sha256": "dfa4d8a0c923cf1be37d2aa081b15134b15e76fa3258829759360c4da9d8d349",
+    "summary_line": "SUMMARY checks=15 failures=0 csv=dff_sync.csv vcd=dff_sync_wave.vcd",
+    "meaning": "historical finite self-check only; not rerun, not Gate evidence, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "0e5fec60d3a0402f75c418409f756bb0bc762710963b641e98d6584556294b7f"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "58a711f4d505965ce1adae2336d4e351d13da9db82d042748326cd0de71b956c"
+    }
+  ],
+  "not_performed": [
+    "DUT build/run",
+    "campaign",
+    "VCD preflight",
+    "reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler/SystemC versions not re-measured",
+    "historical trace not replayed",
+    "proposals remain unconfirmed"
+  ]
+}

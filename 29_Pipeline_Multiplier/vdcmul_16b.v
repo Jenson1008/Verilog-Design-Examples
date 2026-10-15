@@ -1,5 +1,5 @@
-`include "../src/rca16b.v"
-`include "../src/half_adder.v"
+`include "rca16b.v"
+`include "half_adder.v"
 
 module vdcmul_16b(
                    x,

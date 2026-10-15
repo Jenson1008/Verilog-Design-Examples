@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "syncfifo",
+    "kind": "SystemC sc_module",
+    "clocking_model": "单时钟 clk 上升沿处理读写；reset 下降沿异步清除读写指针和占用计数。"
+  },
+  "port_catalog": {
+    "clk": {"canonical_path": "syncfifo.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "FIFO 读写状态时钟", "edge": "rising"},
+    "reset": {"canonical_path": "syncfifo.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "低有效异步复位", "polarity": "active_low"},
+    "write_en": {"canonical_path": "syncfifo.write_en", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "请求写入"},
+    "read_en": {"canonical_path": "syncfifo.read_en", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "请求读取"},
+    "data_in": {"canonical_path": "syncfifo.data_in", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "待写入字节"},
+    "full": {"canonical_path": "syncfifo.full", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "占用计数等于 8 时置位"},
+    "empty": {"canonical_path": "syncfifo.empty", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "占用计数等于 0 时置位"},
+    "out": {"canonical_path": "syncfifo.out", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "成功读取时更新并保持的输出字节"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "RAM 内容和 out 没有初始化赋值；reset 清除指针和 count，但不清除 RAM 或 out。",
+    "count 由 write_en/read_en 的不同取值直接增减，并不以 full/empty 对应的写入或读取是否被接受为条件；越界访问可能使状态计数与存储指针不一致。",
+    "计数回绕/下溢、满状态同时读写以及由非法访问导致的状态不一致未在本交接中确定。"
+  ]
+}

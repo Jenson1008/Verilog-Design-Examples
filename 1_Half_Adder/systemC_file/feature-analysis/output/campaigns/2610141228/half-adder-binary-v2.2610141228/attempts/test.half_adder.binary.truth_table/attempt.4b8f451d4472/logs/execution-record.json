@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "artifact_type": "execution-record",
+  "campaign_id": "half-adder-binary-v2.2610141228",
+  "attempt_id": "attempt.4b8f451d4472",
+  "test_id": "test.half_adder.binary.truth_table",
+  "run_id": "run.5873f1d93b30",
+  "recorded_at": "2026-10-14T12:28:22.566168+00:00",
+  "backend": {
+    "kind": "wsl",
+    "distribution": "Ubuntu"
+  },
+  "config_schema_snapshot": "input/campaign-config.schema.json",
+  "config_schema_snapshot_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+  "config_schema_loaded_from": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\run_scripts\\campaign-config.schema.json",
+  "config_schema_validation": {
+    "profile_schema_version": 3,
+    "schema_title": "Deterministic campaign profile MVP v2/v3",
+    "validation_status": "passed",
+    "validator": "run_scripts.schema_validation.validate_artifact",
+    "schema_file_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+    "snapshot_file_sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee"
+  },
+  "harness_contract_inventory_sha256": "ccf09d87663d4a10f73c9119f3530b77afb2bc11cc8d36a8c7970ae765532644",
+  "preflight_authorization_relative_path": "manifests/preflight-authorization.json",
+  "preflight_authorization_sha256": "b1b4af88a407880c675e2137976077944a45fefcf3a87770e91d61c0db67771f",
+  "trace_config_preflight_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.8c6106a40833/analysis/trace-config-preflight.json",
+  "trace_config_preflight_sha256": "ba897833c2d58d6dd78963c86ae722834954982b4e45915e70e32d3777ca9905",
+  "parent_linkage": {
+    "parent_campaign_id": null,
+    "parent_campaign_relative_path": null,
+    "parent_run_manifest_sha256": null,
+    "parent_campaign_config_sha256": null,
+    "change_reason": null,
+    "child_campaign_config_sha256": "f89d4a6ca81ccfb6bb858b12499bf44796fe44241ab78f51598ac45ed08134d9",
+    "change_digest": "4f707ac8d6081b7afc0abfea3841b44ea73ca9b787aa7a76adcaa1537f6e83fe"
+  },
+  "cycle_semantics": "Drive one binary input pair, wait 1 ns, then sample o_sum and o_carry.",
+  "cycle_semantics_sha256": "9ed38f0e0b312658eb813e195f5ecfc7dbc7f343ce3e52588c538bb07e1de271",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "run_environment_summary": {
+    "host_os": "Windows-11-10.0.26100-SP0",
+    "host_python": "3.14.5",
+    "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+    "validator_package": "jsonschema",
+    "validator_package_version": "4.26.0",
+    "backend": {
+      "kind": "wsl",
+      "distribution": "Ubuntu"
+    },
+    "configured_compiler": "g++",
+    "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "configured_systemc_version": "2.3.4-3build1",
+    "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+    "verified_toolchain": {
+      "compiler_profile_match": true,
+      "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "systemc_profile_match": true,
+      "actual_systemc_package_version": "2.3.4-3build1",
+      "configured_systemc_version": "2.3.4-3build1"
+    }
+  },
+  "commands": [
+    {
+      "phase": "build",
+      "status": "executed",
+      "started_at": "2026-10-14T12:28:20.733814+00:00",
+      "ended_at": "2026-10-14T12:28:22.407308+00:00",
+      "backend_argv": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/build/half_adder_campaign_test"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source",
+        "--exec",
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source/campaign_testbench.cpp",
+        "-lsystemc",
+        "-o",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/build/half_adder_campaign_test"
+      ],
+      "subprocess_cwd_argument": null,
+      "host_process_effective_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_execution_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source",
+      "environment_summary": {
+        "host_os": "Windows-11-10.0.26100-SP0",
+        "host_python": "3.14.5",
+        "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+        "validator_package": "jsonschema",
+        "validator_package_version": "4.26.0",
+        "backend": {
+          "kind": "wsl",
+          "distribution": "Ubuntu"
+        },
+        "configured_compiler": "g++",
+        "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "configured_systemc_version": "2.3.4-3build1",
+        "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+        "verified_toolchain": {
+          "compiler_profile_match": true,
+          "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "systemc_profile_match": true,
+          "actual_systemc_package_version": "2.3.4-3build1",
+          "configured_systemc_version": "2.3.4-3build1"
+        },
+        "stage": "build",
+        "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+        "backend_execution_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/input/source"
+      },
+      "process_return_code": 0,
+      "process_return_code_semantics": "Return code reported by the host wsl.exe process for the --exec command.",
+      "timed_out": false,
+      "output_limited": false,
+      "duration_seconds": 1.673
+    },
+    {
+      "phase": "run",
+      "status": "executed",
+      "started_at": "2026-10-14T12:28:22.407328+00:00",
+      "ended_at": "2026-10-14T12:28:22.566142+00:00",
+      "backend_argv": [
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.5873f1d93b30",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "host_process_argv": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run",
+        "--exec",
+        "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/build/half_adder_campaign_test",
+        "--c2s-test-id",
+        "test.half_adder.binary.truth_table",
+        "--c2s-run-id",
+        "run.5873f1d93b30",
+        "--c2s-cycle-semantics-version",
+        "half-adder.binary.wait-1ns.v1"
+      ],
+      "subprocess_cwd_argument": null,
+      "host_process_effective_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+      "backend_execution_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run",
+      "environment_summary": {
+        "host_os": "Windows-11-10.0.26100-SP0",
+        "host_python": "3.14.5",
+        "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+        "validator_package": "jsonschema",
+        "validator_package_version": "4.26.0",
+        "backend": {
+          "kind": "wsl",
+          "distribution": "Ubuntu"
+        },
+        "configured_compiler": "g++",
+        "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "configured_systemc_version": "2.3.4-3build1",
+        "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+        "verified_toolchain": {
+          "compiler_profile_match": true,
+          "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "systemc_profile_match": true,
+          "actual_systemc_package_version": "2.3.4-3build1",
+          "configured_systemc_version": "2.3.4-3build1"
+        },
+        "stage": "run",
+        "effective_host_cwd": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness",
+        "backend_execution_cwd": "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141228/half-adder-binary-v2.2610141228/attempts/test.half_adder.binary.truth_table/attempt.4b8f451d4472/run"
+      },
+      "process_return_code": 0,
+      "process_return_code_semantics": "Return code reported by the host wsl.exe process for the --exec command.",
+      "timed_out": false,
+      "output_limited": false,
+      "duration_seconds": 0.158
+    }
+  ]
+}

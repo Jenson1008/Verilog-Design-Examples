@@ -1,0 +1,108 @@
+{
+  "metadata_version": 1,
+  "design": "1_Half_Adder",
+  "module": "half_adder",
+  "source_revision": {
+    "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+    "worktree_state": "dirty/uncommitted; per-file digest binds exact current bytes"
+  },
+  "source_root": "systemC_file/",
+  "build_profile": {
+    "makefile": "Makefile",
+    "declared_sources": [
+      "half_adder_sc_tb.cpp",
+      "DUT/half_adder_sc.h",
+      "stimulus/half_adder_sc_stimulus.h"
+    ],
+    "default_compiler": "g++ (not invoked)",
+    "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -IDUT -Istimulus -lsystemc",
+    "systemc_version": "not re-measured; no build executed"
+  },
+  "source_files": [
+    {
+      "repository_path": "1_Half_Adder/systemC_file/half_adder_sc_tb.cpp",
+      "sha256": "1474822cfb0fdd025d5faea42d47d030ec905e08d02b8b7ff7320a107ac14fed",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/DUT/half_adder_sc.h",
+      "sha256": "8f601e137568d40a644c9531c239a9b7cca3e1976c9c7905bcbba626356d140c",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/stimulus/half_adder_sc_stimulus.h",
+      "sha256": "dea6a84bac315f2d5f48fbf5bbf4c8aa356bd06afea646ca65a2fe39a10f5a5f",
+      "role": "Makefile-declared build input"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/Makefile",
+      "sha256": "0bb9c556c9c693da7cdc06c6bc3e33bdc6a2f9667317f2a9b11ae6dbf249dc69",
+      "role": "build profile"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/interface/interface.json",
+      "sha256": "249c95c4916a9039c84ce6ac8bcdde76cea46f77ff21082161e92d20006cc4a2",
+      "role": "interface authority"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/interface/interface.schema.json",
+      "sha256": "9297128895dace8ad9e8a09418792d30fab33e6b92001ed174b9d6393c2e496b",
+      "role": "authority schema"
+    },
+    {
+      "repository_path": "1_Half_Adder/half_adder.v",
+      "sha256": "a99ca16b0e0a058c33f6e9082812e2578fe31a67248479ede08224a85d860510",
+      "role": "RTL comparison source"
+    },
+    {
+      "repository_path": "1_Half_Adder/systemC_file/out/simulation.log",
+      "sha256": "9c987b24c7ade84d70d930440abda29e208c781a21eac14b269ca0a16b195743",
+      "role": "historical self-check log"
+    }
+  ],
+  "interface_provenance": {
+    "authority_repository_path": "1_Half_Adder/systemC_file/interface/interface.json",
+    "authority_sha256": "249c95c4916a9039c84ce6ac8bcdde76cea46f77ff21082161e92d20006cc4a2",
+    "projection_artifact": "interface.json",
+    "derivation": "Harness v2 projection cross-checked against actual SystemC declarations and RTL ports"
+  },
+  "port_crosscheck": {
+    "result": "passed",
+    "systemc_vs_authority": "name/direction/type/width matched",
+    "rtl_vs_systemc": "top-level name/direction/width matched",
+    "ports": [
+      "i_a",
+      "i_b",
+      "o_carry",
+      "o_sum"
+    ]
+  },
+  "historical_self_check": {
+    "log_repository_path": "1_Half_Adder/systemC_file/out/simulation.log",
+    "log_sha256": "9c987b24c7ade84d70d930440abda29e208c781a21eac14b269ca0a16b195743",
+    "summary_line": "SUMMARY checks=4 failures=0 csv=half_adder.csv vcd=half_adder_wave.vcd",
+    "interpretation": "historical finite self-check only; not replayed, not Evidence Gate output, not unbounded equivalence"
+  },
+  "handoff_artifacts": [
+    {
+      "artifact_file": "interface.json",
+      "digest_sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130"
+    },
+    {
+      "artifact_file": "basic-description.md",
+      "digest_sha256": "23621635bfe19d44508ea11a8723b559f75eb4f7f639a4ed0434fadae8fe76b3"
+    }
+  ],
+  "not_performed": [
+    "build/run DUT",
+    "campaign",
+    "VCD header preflight",
+    "Reviewer",
+    "accept/finalize/promotion"
+  ],
+  "limitations": [
+    "compiler and SystemC versions were not re-measured",
+    "historical log/trace not reconstructed",
+    "all proposed features/tests remain unconfirmed"
+  ]
+}

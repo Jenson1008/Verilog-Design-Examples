@@ -1,0 +1,20 @@
+{
+  "schema_version": 3,
+  "artifact_type": "validation-decision",
+  "decision": "accept",
+  "authority": "User explicitly accepted candidate half-adder-binary-v3.2610141255 after READY_TO_PRESENT review.",
+  "validated_artifacts": {
+    "feature_ir": "feature-ir/feature-ir.json",
+    "test_catalog": "tests/test-list.json",
+    "readable_spec": "spec/spec.md"
+  },
+  "validated_artifact_digests": {
+    "feature_ir": "49dfb62bcd10a21ed28ecbf177e4a3d7b453d79348c7d2edcd5a0aac5513fe2b",
+    "test_catalog": "51bb6e076bf28a7781f10b3145f27d5eda40b4e721eb8cb91778858d14384fbd",
+    "readable_spec": "5e00823dd8dc2f9c7f337476c533bfa0b41f321a3b1c4c15369a64d835941f77"
+  },
+  "reviewed_unknowns": [
+    "精确的 delta-cycle 更新次数和延迟尚未测量；本次 campaign 在施加每组二态输入后 1 ns 采样输出。"
+  ],
+  "notes": "User explicitly accepted this digest-bound candidate and authorized subsequent publication."
+}

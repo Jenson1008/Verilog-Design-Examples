@@ -1,0 +1,107 @@
+{
+    "metadata_version": 1,
+    "design": "17_3_bit_up_down_counter",
+    "module": "cntr_3ud",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository has pre-existing local modifications; listed source bytes are bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "cntr_3ud_sc_tb.cpp",
+            "DUT/cntr_3ud_sc.h",
+            "stimulus/cntr_3ud_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -I. -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/cntr_3ud_sc_tb.cpp",
+            "sha256": "0ffceeee1b1fcbaad8f7b2f73da8ed3a19ebafa6951a032df6dfd89d420776d3",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/DUT/cntr_3ud_sc.h",
+            "sha256": "b910805c95283d530ff6dbd91c422f2cb10250de834258f5e01b262a3cca5a5d",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/stimulus/cntr_3ud_sc_stimulus.h",
+            "sha256": "20dcbf517250607d0759707d4f865e9f8e601eb09bb5472a3180eaa3c080d04a",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/Makefile",
+            "sha256": "676b79dd840a3aabcbfc4a33b3eea34016df749eec7844d58b2d8aa33cb19924",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/interface/interface.json",
+            "sha256": "6231d56fa1e00cc43aa11d532fc6fbafe2333906f9edbeab1eeb39028793737b",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/systemC_file/out/simulation.log",
+            "sha256": "729809f7c1ad858238a24f6790815bb10e765897152b59e24671ca933a09b8ce",
+            "role": "historical finite SystemC self-check log"
+        },
+        {
+            "repository_path": "17_3_bit_up_down_counter/cntr_3ud.v",
+            "sha256": "13674f0afadc4fd047d79cbf7f13949f142ef53aa1f62756d49468af66a099bd",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "17_3_bit_up_down_counter/systemC_file/interface/interface.json",
+        "authority_sha256": "6231d56fa1e00cc43aa11d532fc6fbafe2333906f9edbeab1eeb39028793737b",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness interface v2 projection from the design-owned interface contract; port names, directions, SystemC types, widths and top-level declarations cross-checked."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavioral unknowns preserved",
+        "ports": [
+            "up_down",
+            "clk",
+            "reset",
+            "bin_count"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "17_3_bit_up_down_counter/systemC_file/out/simulation.log",
+        "log_sha256": "729809f7c1ad858238a24f6790815bb10e765897152b59e24671ca933a09b8ce",
+        "summary_line": "SUMMARY checks=51 failures=0 csv=cntr_3ud_sc.csv vcd=cntr_3ud_sc_wave.vcd",
+        "meaning": "Previously completed finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, and not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "0294e65936d9c4f71de1cebc6e406e3fd80a84c4c40edaef9a76aaebfb2d8cea"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "19b0833d88351e9a41985a0d908002dd595314e844818698728bca76202f6024"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "This task prepares only the downstream input handoff; no DUT build, simulation, campaign, reviewer, or release stage was run.",
+        "Compiler and SystemC versions were not re-measured.",
+        "The finite historical self-check does not prove unbounded equivalence."
+    ]
+}

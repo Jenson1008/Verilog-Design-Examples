@@ -1,0 +1,78 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "mealy_nonol",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single rising-edge clock; reset semantics are recorded on its port",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "in":  {
+                                    "canonical_path":  "mealy_nonol.in",
+                                    "direction":  "input",
+                                    "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_logic\u003e",
+                                    "width_bits":  1,
+                                    "role":  "串行序列输入，由状态译码进程读取。",
+                                    "timing_contract":  "状态或 in 变化时触发组合译码。"
+                                },
+                         "clk":  {
+                                     "canonical_path":  "mealy_nonol.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "状态寄存器时钟。",
+                                     "edge":  "rising",
+                                     "timing_contract":  "状态在上升沿更新。"
+                                 },
+                         "reset":  {
+                                       "canonical_path":  "mealy_nonol.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "高电平异步状态复位。",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "异步将状态置为 S0。",
+                                       "timing_contract":  "reset 上升沿触发状态更新进程。"
+                                   },
+                         "out":  {
+                                     "canonical_path":  "mealy_nonol.out",
+                                     "direction":  "output",
+                                     "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_logic\u003e",
+                                     "width_bits":  1,
+                                     "role":  "由当前状态和输入组合译码的序列检测输出。",
+                                     "timing_contract":  "译码进程对 state 和 in 敏感，输出变化遵循 delta-cycle。"
+                                 }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "in",
+                                               "clk",
+                                               "reset"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "out"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "状态寄存器未初始化；复位或有效状态更新前状态/输出不确定。",
+                              "RTL 参数 S0..S3 与当前 SystemC 实现采用默认编码 0..3；非默认参数覆盖未实现、未验证。",
+                              "无效/未知状态进入 RTL default 时只更新 next_state、不赋 out；该路径不属于复位后可达状态。"
+                          ]
+}

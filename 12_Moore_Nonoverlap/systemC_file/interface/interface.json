@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "top_module":"moore_nonol",
+  "clocking_model":{
+    "kind":"single_clock",
+    "clocks":[{"port":"clk","active_edge":"rising"}],
+    "resets":[{"port":"reset","polarity":"active_high","behavior":"asynchronous","sampling_edge":"level","asserted_meaning":"Immediately sets the state register to S0 on the rising assertion of reset; the output then reflects S0."}]
+  },
+  "ports":[
+    {"name":"in","canonical_path":"in","direction":"input","systemc_type":"sc_dt::sc_logic","width":1,"role":"Serial input bit; the RTL samples its conditional-operator result into next_state before the active clock edge."},
+    {"name":"clk","canonical_path":"clk","direction":"input","systemc_type":"sc_dt::sc_logic","width":1,"role":"Positive-edge state clock."},
+    {"name":"reset","canonical_path":"reset","direction":"input","systemc_type":"sc_dt::sc_logic","width":1,"role":"Active-high asynchronous reset to state S0."},
+    {"name":"out","canonical_path":"out","direction":"output","systemc_type":"sc_dt::sc_logic","width":1,"role":"Moore output: high while the state is S4 after recognizing input pattern 1101."}
+  ],
+  "declared_unknowns":[
+    {"description":"present_state, next_state, and out have no declaration-time initialization. Before reset establishes S0, their observable result can remain X; the testbench checks the initial X output."},
+    {"description":"The RTL case statement has no default arm. For invalid or unknown present_state encodings, next_state and out retain their previous values; this latch behavior is preserved. A directed X input test checks transition to an invalid state and asynchronous reset recovery."},
+    {"description":"Directed X tests cover the input conditional merge and a 0-to-X reset event (including the RTL procedural-if else branch). Z on data/reset and X/Z clock transitions are not separately tested."},
+    {"description":"RTL parameters S0..S4 use defaults 0..4. The SystemC module models these defaults; parameter overrides are not exposed or verified."},
+    {"description":"The S4 transition on input 1 goes to S1 and treats that subsequent bit as the start of a new match. The RTL permits adjacent nonoverlapping 1101 detections (for example 11011101); this literal transition behavior is retained."}
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 3,
+  "artifact_type": "promotion-record",
+  "status": "promoted",
+  "promotion": "atomic",
+  "validation": "validation/validation-decision.json",
+  "release_id": "half-adder-binary-v3.2610141255",
+  "source_campaign_id": "half-adder-binary-v3.2610141255",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "release_manifest": {
+    "path": "release-manifest.json",
+    "sha256": "f4d39b471e86260ffc89dc5accdecc15706fccda9b9a14c7e64d748a619c5121",
+    "artifact_id": "artifact.release-manifest",
+    "stage": "promotion_snapshot"
+  },
+  "artifacts": [
+    {
+      "path": "manifests/run-manifest.json",
+      "sha256": "add1b231a07f019f7aaccdb046bf439e729453c6efb5bda8ce4e3a9be3a05563",
+      "artifact_id": "release.artifact.1",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "analysis/coverage-ledger.json",
+      "sha256": "b6f8087f1b222c2061a679d352b2774b95e967936f3003a62f28c7c38e91ae79",
+      "artifact_id": "release.artifact.2",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "analysis/observation-summary.json",
+      "sha256": "3e070a614b65c43ab4d26f0a32568324fc9b553fb901ec72b49b979917247012",
+      "artifact_id": "release.artifact.3",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "analysis/static-facts.json",
+      "sha256": "549d3378f18da9b9e4fe60efe5d5b90bd59eccb2791236628d31abe6a087e2a6",
+      "artifact_id": "release.artifact.4",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "evidence/evidence-manifest.json",
+      "sha256": "609a6751c1356e21c890492a1f049f9ac67abcb2a5079a0ec5ef0227e61654b8",
+      "artifact_id": "release.artifact.5",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "feature-ir/feature-ir.json",
+      "sha256": "49dfb62bcd10a21ed28ecbf177e4a3d7b453d79348c7d2edcd5a0aac5513fe2b",
+      "artifact_id": "release.artifact.6",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "spec/finalized/finalization-record.json",
+      "sha256": "2ca1e282fdc9c6b33b8f439a778d4f577bc861063b362dd3442bda73cb7679cf",
+      "artifact_id": "release.artifact.7",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "spec/finalized/spec.md",
+      "sha256": "78f140b2bc948c11e59f5697717e56d7b9a61c01cab2943c76119b2bebfc1e10",
+      "artifact_id": "release.artifact.8",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "tests/test-list.json",
+      "sha256": "51bb6e076bf28a7781f10b3145f27d5eda40b4e721eb8cb91778858d14384fbd",
+      "artifact_id": "release.artifact.9",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "validation/validation-decision.json",
+      "sha256": "98dde01546bab7ccd630745091948a8cbd8798d7e265ab6b4a34584b55f1d84d",
+      "artifact_id": "release.artifact.10",
+      "stage": "promotion_snapshot"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/trace-binding.json",
+      "sha256": "d6e3b874be98f6f23491f06f304ea6b5649599ca86a6cf67ce30d0f6ac3e7856",
+      "artifact_id": "release.artifact.11",
+      "stage": "promotion_snapshot"
+    }
+  ],
+  "external_artifacts": [
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/build/half_adder_campaign_test",
+      "sha256": "036a3b5b281f523732928d999bb2c758ccb2d5996f4904e199427639418208d6",
+      "artifact_id": "campaign.artifact.1",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "campaign.artifact.2",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "campaign.artifact.3",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/execution-record.json",
+      "sha256": "7d37f28e89e74e1ecf5567af868edc5a7e4eb10dd14e5508a12b39f7de6c2b43",
+      "artifact_id": "campaign.artifact.4",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/run.stderr.log",
+      "sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094",
+      "artifact_id": "campaign.artifact.5",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/run.stdout.log",
+      "sha256": "a2fa9e4cf4fc4c54f043a63062a3a6847038bf01e7d12e4ea81928cc792a9e0e",
+      "artifact_id": "campaign.artifact.6",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/result/test-result-interface.json",
+      "sha256": "16fcc0541f68f5dcc5ee6650064509ad889163d74c818ea6a415d23a889659e9",
+      "artifact_id": "campaign.artifact.7",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder.csv",
+      "sha256": "c846b0bdc3c2160a0de07cce3388a95059032b744c6fcd0002cc47fb79aaecc7",
+      "artifact_id": "campaign.artifact.8",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder_wave.vcd",
+      "sha256": "b8dab1c2b3fdcec09a056623ca5eed60845d6e9b50c388634c9a553598fd9b36",
+      "artifact_id": "campaign.artifact.9",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/analysis/trace-config-preflight.json",
+      "sha256": "2758d790c241087b960f7e17befce3337ae9b8e4a21266107887ac5849cd8b50",
+      "artifact_id": "campaign.artifact.10",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test",
+      "sha256": "036a3b5b281f523732928d999bb2c758ccb2d5996f4904e199427639418208d6",
+      "artifact_id": "campaign.artifact.11",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/build.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "campaign.artifact.12",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "campaign.artifact.13",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/run.stderr.log",
+      "sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094",
+      "artifact_id": "campaign.artifact.14",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/run.stdout.log",
+      "sha256": "a2fa9e4cf4fc4c54f043a63062a3a6847038bf01e7d12e4ea81928cc792a9e0e",
+      "artifact_id": "campaign.artifact.15",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/toolchain-probe.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "campaign.artifact.16",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/toolchain-probe.stdout.log",
+      "sha256": "ced40adeb652d3e1ee4472f8ef80c674dc138485e63392eecf20770f4d537e27",
+      "artifact_id": "campaign.artifact.17",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run/half_adder.csv",
+      "sha256": "3f2ead166226f18604f78375ba0c7b5b78ab9af03af2b142c0890487c71e0cf5",
+      "artifact_id": "campaign.artifact.18",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run/half_adder_wave.vcd",
+      "sha256": "3a629cb7ad391c669e6596f55fa7e3b0f9f4ccfe813ec7ae17c3b0956e70650f",
+      "artifact_id": "campaign.artifact.19",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run/trace-binding.json",
+      "sha256": "b95339454ee8f0c112ca8f06af744a1027ab038e5200d5eae30a92e77c503d71",
+      "artifact_id": "campaign.artifact.20",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/basic-description.md",
+      "sha256": "23621635bfe19d44508ea11a8723b559f75eb4f7f639a4ed0434fadae8fe76b3",
+      "artifact_id": "campaign.artifact.21",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/campaign-config.json",
+      "sha256": "8154a87ff55fbb644ac8091399fa73b1880c019aa6a3957a876eb836c1e0d6df",
+      "artifact_id": "campaign.artifact.22",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/campaign-config.schema.json",
+      "sha256": "c3d44293dba105132ff362eb4664b20cd7d89aa515bd901ca72d0b8af299e7ee",
+      "artifact_id": "campaign.artifact.23",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/feature-proposal.json",
+      "sha256": "4610b0f7b6916405a2c5889e8a68cb962c4ef03e4ed8b9d40da78da447cd0f9e",
+      "artifact_id": "campaign.artifact.24",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/interface.json",
+      "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+      "artifact_id": "campaign.artifact.25",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/source/campaign_testbench.cpp",
+      "sha256": "632ba810a5c5e3ecd914263df7f472e65e2e48a0c5d7bdbdf850b9facbb5d973",
+      "artifact_id": "campaign.artifact.26",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/source/DUT/half_adder_sc.h",
+      "sha256": "8f601e137568d40a644c9531c239a9b7cca3e1976c9c7905bcbba626356d140c",
+      "artifact_id": "campaign.artifact.27",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/static-facts.json",
+      "sha256": "f36aeb6762059ab2df245e60d10c575698844342873303d662cb0903e736b713",
+      "artifact_id": "campaign.artifact.28",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/test-list.json",
+      "sha256": "22570d3d9950a011d6062496971fdb7d906a28f8f940eaee5b271189aa762fdb",
+      "artifact_id": "campaign.artifact.29",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "input/test-request-interface.json",
+      "sha256": "0f23273d81e6aa852d4f5c5eb06ac0f7919e8364b0f05cf7bbe2ca8fe39808af",
+      "artifact_id": "campaign.artifact.30",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "manifests/preflight-authorization.json",
+      "sha256": "8c0d82059ad096a12dd58bbef3c7e1ad28cb9261a841f42259668e536a95dc73",
+      "artifact_id": "campaign.artifact.31",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "manifests/task-state.json",
+      "sha256": "66fe12a7b970e2509e9b1b1cc51d051b926fdb0d9d1e9e3da425313b54a64547",
+      "artifact_id": "campaign.artifact.32",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "proposals/experiment-plan.json",
+      "sha256": "1e5479a4a2ab099d095cb480cc873188dd925adf37a76159d9125efa31c5fb2f",
+      "artifact_id": "campaign.artifact.33",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "proposals/feature-proposal.json",
+      "sha256": "39b4c057f29c6a96798b5e6df8ad9b8e7e40f342045b9955b3f904e9d56cdd69",
+      "artifact_id": "campaign.artifact.34",
+      "stage": "campaign_external"
+    },
+    {
+      "path": "spec/spec.md",
+      "sha256": "5e00823dd8dc2f9c7f337476c533bfa0b41f321a3b1c4c15369a64d835941f77",
+      "artifact_id": "campaign.artifact.35",
+      "stage": "campaign_external"
+    }
+  ]
+}

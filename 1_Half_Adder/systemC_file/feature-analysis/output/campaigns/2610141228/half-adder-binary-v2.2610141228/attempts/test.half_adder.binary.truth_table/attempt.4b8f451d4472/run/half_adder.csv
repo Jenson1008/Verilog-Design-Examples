@@ -1,0 +1,5 @@
+test_id,run_id,cycle_semantics_version,i_a,i_b,expected_o_sum,actual_o_sum,expected_o_carry,actual_o_carry,status
+test.half_adder.binary.truth_table,run.5873f1d93b30,half-adder.binary.wait-1ns.v1,0,0,0,0,0,0,PASS
+test.half_adder.binary.truth_table,run.5873f1d93b30,half-adder.binary.wait-1ns.v1,0,1,1,1,0,0,PASS
+test.half_adder.binary.truth_table,run.5873f1d93b30,half-adder.binary.wait-1ns.v1,1,0,1,1,0,0,PASS
+test.half_adder.binary.truth_table,run.5873f1d93b30,half-adder.binary.wait-1ns.v1,1,1,0,0,1,1,PASS

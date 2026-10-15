@@ -1,0 +1,20 @@
+{
+  "schema_version": 3,
+  "artifact_type": "validation-decision",
+  "decision": "pending",
+  "authority": "human-review-required",
+  "validated_artifacts": {
+    "feature_ir": "feature-ir/feature-ir.json",
+    "test_catalog": "tests/test-list.json",
+    "readable_spec": "spec/spec.md"
+  },
+  "validated_artifact_digests": {
+    "feature_ir": "12f7647ffbb859761c0b908883c394d0054fb168960cacf9fad9fda277ee2fe4",
+    "test_catalog": "bb9ac15315c97fac63018ce75847317b10434d10703baa6811898d072a2fe144",
+    "readable_spec": "0f72316274cc4fb974320c9c27752d7e40d4332d649b90798eef94b8cf9ada39"
+  },
+  "reviewed_unknowns": [
+    "The exact delta-cycle update count and latency were not measured; this campaign samples outputs 1 ns after applying each binary input pair."
+  ],
+  "notes": "Pending human review. Accept is bound to the listed artifact digests."
+}

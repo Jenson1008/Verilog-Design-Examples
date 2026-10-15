@@ -1,0 +1,108 @@
+{
+    "metadata_version": 1,
+    "design": "11_Mealy_Nonoverlap",
+    "module": "mealy_nonol",
+    "source_revision": {
+        "git_commit": "0efe9afc38c244fd28794c775e30b3e9b24dc86d",
+        "worktree_state": "repository contains unrelated local modifications/deletions; listed source bytes bound by per-file SHA-256"
+    },
+    "source_root": "systemC_file/",
+    "build_profile": {
+        "makefile": "Makefile",
+        "declared_sources": [
+            "mealy_nonol_sc_tb.cpp",
+            "DUT/mealy_nonol_sc.h",
+            "stimulus/mealy_nonol_sc_stimulus.h"
+        ],
+        "default_compiler": "g++ (Makefile default; version not re-measured)",
+        "default_flags": "-I. -std=c++17 -O2 -Wall -Wextra -Wpedantic -lsystemc",
+        "systemc_version": "not re-measured"
+    },
+    "source_files": [
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/mealy_nonol_sc_tb.cpp",
+            "sha256": "a54a31b73da94315e6656048838dab0112cfc88c358026ca04928a651eb3e112",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/DUT/mealy_nonol_sc.h",
+            "sha256": "d44fe93554b41892b63104bff8a5fd4e2c80c457d82624ee531c68839ed927f9",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/stimulus/mealy_nonol_sc_stimulus.h",
+            "sha256": "cad42f30e7d993759294699ab79c19ea41192a64f1eb77aeb2de08e2896ac338",
+            "role": "Makefile-declared SystemC build input"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/Makefile",
+            "sha256": "92997b9f406d7884133ed907da928141c31027071ca3e7b914bb078252c8db74",
+            "role": "build profile"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/interface/interface.json",
+            "sha256": "63e7195bf7e7faef6fe83f1bb4deca0e37f43dbbd44d4022f5acae216ea32681",
+            "role": "authority interface contract"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/interface/interface.schema.json",
+            "sha256": "74ed56804caee15be4437ef1b8686b522f8880dbce9dd9436785c2ac472b45dd",
+            "role": "authority interface schema"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/systemC_file/out/simulation.log",
+            "sha256": "d0ed77ffcecc315733f129896a9847f5444080584fa9fa2fbae5534d376cacd9",
+            "role": "prior finite SystemC self-check log"
+        },
+        {
+            "repository_path": "11_Mealy_Nonoverlap/mealy_nonol.v",
+            "sha256": "fb92d609830d29347c8ec3eb6887455024f231bd1279d918a32fa7a2f3095240",
+            "role": "RTL comparison source"
+        }
+    ],
+    "interface_provenance": {
+        "authority_repository_path": "11_Mealy_Nonoverlap/systemC_file/interface/interface.json",
+        "authority_sha256": "63e7195bf7e7faef6fe83f1bb4deca0e37f43dbbd44d4022f5acae216ea32681",
+        "projection_artifact": "interface.json",
+        "derivation": "Harness v2 projection; RTL, SystemC top-level declarations and authority port contract cross-checked; bin_gry reflects default specialization N=8."
+    },
+    "port_crosscheck": {
+        "result": "passed",
+        "systemc_vs_authority": "names/directions/types/widths cross-checked",
+        "rtl_vs_systemc": "names/directions/widths cross-checked; behavior limits are recorded as unknowns",
+        "ports": [
+            "in",
+            "clk",
+            "reset",
+            "out"
+        ]
+    },
+    "historical_self_check": {
+        "log_repository_path": "11_Mealy_Nonoverlap/systemC_file/out/simulation.log",
+        "log_sha256": "d0ed77ffcecc315733f129896a9847f5444080584fa9fa2fbae5534d376cacd9",
+        "summary_line": "SUMMARY checks=63 failures=0 csv=mealy_nonol.csv vcd=mealy_nonol_wave.vcd",
+        "meaning": "Historical finite SystemC self-check only; not rerun for this handoff, not Harness campaign/Evidence Gate evidence, and not an unbounded equivalence proof."
+    },
+    "handoff_artifacts": [
+        {
+            "artifact_file": "interface.json",
+            "digest_sha256": "29df06d8fccc5062310539201991aa4f1f5039e28b9beed75f1e119654871f14"
+        },
+        {
+            "artifact_file": "basic-description.md",
+            "digest_sha256": "fd97ce6dd77fce252d713ca8b8c3aaedf804757875880da9fb2b66bfeec377ea"
+        }
+    ],
+    "not_performed": [
+        "current-task DUT build/run",
+        "campaign",
+        "reviewer",
+        "accept/finalize/promotion"
+    ],
+    "limitations": [
+        "Historical log was read as an existing input and was not replayed.",
+        "Compiler and SystemC versions were not re-measured.",
+        "Feature proposals remain hypotheses; no rules are confirmed.",
+        "No campaign snapshot or run-time evidence was created."
+    ]
+}

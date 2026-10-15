@@ -1,0 +1,20 @@
+time_ns,test,write_en,read_en,data_in,expected_full,actual_full,expected_empty,actual_empty,expected_out,actual_out,status
+5,"fill-0",1,0,11,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+8,"fill-1",1,0,48,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+11,"fill-2",1,0,85,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+14,"fill-3",1,0,122,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+17,"fill-4",1,0,159,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+20,"fill-5",1,0,196,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+23,"fill-6",1,0,233,0,0,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+26,"fill-7",1,0,14,1,1,0,0,"unknown (uninitialized/held)","XXXXXXXX",PASS
+29,"read-first",0,1,0,0,0,0,0,"00001011","00001011",PASS
+32,"simultaneous-interior-read-write",1,1,167,0,0,0,0,"00110000","00110000",PASS
+35,"drain-0",0,1,0,0,0,0,0,"01010101","01010101",PASS
+38,"drain-1",0,1,0,0,0,0,0,"01111010","01111010",PASS
+41,"drain-2",0,1,0,0,0,0,0,"10011111","10011111",PASS
+44,"drain-3",0,1,0,0,0,0,0,"11000100","11000100",PASS
+47,"drain-4",0,1,0,0,0,0,0,"11101001","11101001",PASS
+50,"drain-5",0,1,0,0,0,0,0,"00001110","00001110",PASS
+53,"drain-6",0,1,0,0,0,1,1,"10100111","10100111",PASS
+56,"idle-empty",0,0,0,0,0,1,1,"10100111","10100111",PASS
+#summary,checks=18,failures=0

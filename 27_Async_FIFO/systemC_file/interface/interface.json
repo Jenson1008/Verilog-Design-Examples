@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "top_module": "asyncfifo",
+  "clocking_model": {
+    "kind": "multi_clock",
+    "clocks": [
+      {"port": "asyncfifo.write_clk", "active_edge": "rising"},
+      {"port": "asyncfifo.read_clk", "active_edge": "rising"}
+    ],
+    "resets": [{"port": "asyncfifo.reset", "polarity": "active_low", "behavior": "asynchronous", "sampling_edge": "falling", "asserted_meaning": "分别清除读写指针及共享 count；mem 与 out 不在复位分支赋值。"}]
+  },
+  "ports": [
+    {"name": "write_clk", "canonical_path": "asyncfifo.write_clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "写入域上升沿时钟"},
+    {"name": "read_clk", "canonical_path": "asyncfifo.read_clk", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "读取域上升沿时钟"},
+    {"name": "reset", "canonical_path": "asyncfifo.reset", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "跨两时钟域的低有效异步复位"},
+    {"name": "write_en", "canonical_path": "asyncfifo.write_en", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "请求写入"},
+    {"name": "read_en", "canonical_path": "asyncfifo.read_en", "direction": "input", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "请求读取"},
+    {"name": "data_in", "canonical_path": "asyncfifo.data_in", "direction": "input", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "写入字节"},
+    {"name": "mem_full", "canonical_path": "asyncfifo.mem_full", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "共享计数等于 8 时置位"},
+    {"name": "mem_empty", "canonical_path": "asyncfifo.mem_empty", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "共享计数等于 0 时置位"},
+    {"name": "out", "canonical_path": "asyncfifo.out", "direction": "output", "systemc_type": "sc_dt::sc_lv<8>", "width": 8, "role": "读成功时给出数据，写成功时被置为高阻态 Z"}
+  ],
+  "declared_unknowns": [
+    {"description": "原 RTL 使用两个时钟域分别写 out，两个有效操作若上升沿同刻发生会产生竞争赋值。转换在该冲突事件将 out 抽象为 X；此定向冲突未测试。", "related_ports": ["asyncfifo.write_clk", "asyncfifo.read_clk", "asyncfifo.out"]},
+    {"description": "count 由两个异步时钟沿驱动，但单个 always 块在同一仿真时刻只触发一次；RTL 未实现 Gray 指针或 CDC 同步器。本模型保留公开 RTL 的行为，不代表安全 CDC FIFO。"},
+    {"description": "未测试 full/empty 违规访问、count 溢出/下溢、同时有效读写及异步指针 CDC 稳定性。"}
+  ]
+}

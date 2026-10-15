@@ -1,0 +1,75 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "moore_ol",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single_clock; reset behavior according to source contract",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "in":  {
+                                    "canonical_path":  "moore_ol.in",
+                                    "direction":  "input",
+                                    "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_logic\u003e",
+                                    "width_bits":  1,
+                                    "role":  "Four-state serial sequence input used by the transition decoder."
+                                },
+                         "clk":  {
+                                     "canonical_path":  "moore_ol.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Rising-edge state clock.",
+                                     "edge":  "rising"
+                                 },
+                         "reset":  {
+                                       "canonical_path":  "moore_ol.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "Active-high asynchronous state reset.",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "Asynchronously returns the state to S0."
+                                   },
+                         "out":  {
+                                     "canonical_path":  "moore_ol.out",
+                                     "direction":  "output",
+                                     "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_logic\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Four-state registered-state decode identifying completed sequence 1101."
+                                 }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "in",
+                                               "clk",
+                                               "reset"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "out"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "The RTL state register has no declaration-time initialization; the test checks unknown output before asserting asynchronous reset. A directed X input confirms procedural-if false behavior; Z input is not separately exercised.",
+                              "The RTL enters S2, rather than S1, from S4 on input 1, and S0 on input 0; this state transition is preserved.",
+                              "The default case assigns next_state but leaves out unchanged; invalid state encodings are unreachable after reset.",
+                              "RTL state parameters S0..S4 are represented by their defaults (0..4); non-default parameter overrides are not implemented or tested."
+                          ]
+}

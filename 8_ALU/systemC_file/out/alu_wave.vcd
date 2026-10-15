@@ -1,0 +1,13616 @@
+$date
+     Oct 14, 2026       15:47:27
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    4  aaaaa  a [3:0]  $end
+$var wire    4  aaaab  b [3:0]  $end
+$var wire    2  aaaac  select [1:0]  $end
+$var wire    4  aaaad  out [3:0]  $end
+$var wire    1  aaaae  zero       $end
+$var wire    1  aaaaf  carry       $end
+$var wire    1  aaaag  sign       $end
+$var wire    1  aaaah  parity       $end
+$var wire    1  aaaai  overflow       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+bXXXX aaaaa
+b1111 aaaab
+bXX aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+$end
+
+#1
+b0 aaaaa
+b0 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#2
+b1111 aaaab
+b1111 aaaad
+0aaaae
+1aaaag
+
+#3
+b0 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#4
+b1111 aaaab
+b1 aaaad
+0aaaae
+1aaaaf
+0aaaah
+
+#5
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#6
+b1111 aaaab
+
+#7
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#8
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#9
+b1 aaaab
+b0 aaaac
+b1 aaaad
+0aaaae
+0aaaah
+
+#10
+b1110 aaaab
+b1110 aaaad
+1aaaag
+
+#11
+b1 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#12
+b1110 aaaab
+b10 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#13
+b1 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#14
+b1110 aaaab
+
+#15
+b1 aaaab
+b11 aaaac
+
+#16
+b1101 aaaab
+
+#17
+b10 aaaab
+b0 aaaac
+b10 aaaad
+0aaaae
+0aaaah
+
+#18
+b1101 aaaab
+b1101 aaaad
+1aaaag
+
+#19
+b10 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#20
+b1101 aaaab
+b11 aaaad
+0aaaag
+1aaaah
+0aaaai
+
+#21
+b10 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#22
+b1101 aaaab
+
+#23
+b10 aaaab
+b11 aaaac
+
+#24
+b1100 aaaab
+
+#25
+b11 aaaab
+b0 aaaac
+b11 aaaad
+0aaaae
+
+#26
+b1100 aaaab
+b1100 aaaad
+1aaaag
+
+#27
+b11 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#28
+b1100 aaaab
+b100 aaaad
+0aaaag
+0aaaai
+
+#29
+b11 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#30
+b1100 aaaab
+
+#31
+b11 aaaab
+b11 aaaac
+
+#32
+b1011 aaaab
+
+#33
+b100 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#34
+b1011 aaaab
+b1011 aaaad
+1aaaag
+
+#35
+b100 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#36
+b1011 aaaab
+b101 aaaad
+0aaaag
+0aaaai
+
+#37
+b100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#38
+b1011 aaaab
+
+#39
+b100 aaaab
+b11 aaaac
+
+#40
+b1010 aaaab
+
+#41
+b101 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#42
+b1010 aaaab
+b1010 aaaad
+1aaaag
+
+#43
+b101 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#44
+b1010 aaaab
+b110 aaaad
+0aaaag
+1aaaah
+0aaaai
+
+#45
+b101 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#46
+b1010 aaaab
+
+#47
+b101 aaaab
+b11 aaaac
+
+#48
+b1001 aaaab
+
+#49
+b110 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#50
+b1001 aaaab
+b1001 aaaad
+1aaaag
+
+#51
+b110 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+1aaaai
+
+#52
+b1001 aaaab
+b111 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#53
+b110 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#54
+b1001 aaaab
+
+#55
+b110 aaaab
+b11 aaaac
+
+#56
+b1000 aaaab
+
+#57
+b111 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#58
+b1000 aaaab
+b1000 aaaad
+1aaaag
+
+#59
+b111 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#60
+b1000 aaaab
+b1000 aaaad
+0aaaah
+0aaaai
+
+#61
+b111 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#62
+b1000 aaaab
+
+#63
+b111 aaaab
+b11 aaaac
+
+#65
+b1000 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#66
+b111 aaaab
+b111 aaaad
+0aaaag
+
+#67
+b1000 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#68
+b111 aaaab
+b1001 aaaad
+1aaaah
+1aaaai
+
+#69
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#70
+b111 aaaab
+
+#71
+b1000 aaaab
+b11 aaaac
+
+#72
+b110 aaaab
+
+#73
+b1001 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+
+#74
+b110 aaaab
+b110 aaaad
+0aaaag
+
+#75
+b1001 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#76
+b110 aaaab
+b1010 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#77
+b1001 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#78
+b110 aaaab
+
+#79
+b1001 aaaab
+b11 aaaac
+
+#80
+b101 aaaab
+
+#81
+b1010 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+
+#82
+b101 aaaab
+b101 aaaad
+0aaaag
+
+#83
+b1010 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#84
+b101 aaaab
+b1011 aaaad
+1aaaag
+0aaaah
+1aaaai
+
+#85
+b1010 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#86
+b101 aaaab
+
+#87
+b1010 aaaab
+b11 aaaac
+
+#88
+b100 aaaab
+
+#89
+b1011 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#90
+b100 aaaab
+b100 aaaad
+0aaaag
+
+#91
+b1011 aaaab
+b1 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#92
+b100 aaaab
+b1100 aaaad
+1aaaag
+1aaaai
+
+#93
+b1011 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#94
+b100 aaaab
+
+#95
+b1011 aaaab
+b11 aaaac
+
+#96
+b11 aaaab
+
+#97
+b1100 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#98
+b11 aaaab
+b11 aaaad
+0aaaag
+
+#99
+b1100 aaaab
+b1 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#100
+b11 aaaab
+b1101 aaaad
+1aaaag
+1aaaai
+
+#101
+b1100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#102
+b11 aaaab
+
+#103
+b1100 aaaab
+b11 aaaac
+
+#104
+b10 aaaab
+
+#105
+b1101 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#106
+b10 aaaab
+b10 aaaad
+0aaaag
+
+#107
+b1101 aaaab
+b1 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+
+#108
+b10 aaaab
+b1110 aaaad
+1aaaag
+0aaaah
+1aaaai
+
+#109
+b1101 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#110
+b10 aaaab
+
+#111
+b1101 aaaab
+b11 aaaac
+
+#112
+b1 aaaab
+
+#113
+b1110 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#114
+b1 aaaab
+b1 aaaad
+0aaaag
+
+#115
+b1110 aaaab
+b1 aaaac
+b10 aaaad
+1aaaaf
+
+#116
+b1 aaaab
+b1111 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#117
+b1110 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#118
+b1 aaaab
+
+#119
+b1110 aaaab
+b11 aaaac
+
+#120
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#121
+b1111 aaaab
+b0 aaaac
+b1111 aaaad
+0aaaae
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#122
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+
+#123
+b1111 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+1aaaaf
+0aaaah
+
+#124
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#125
+b1111 aaaab
+b10 aaaac
+
+#126
+b0 aaaab
+
+#127
+b1111 aaaab
+b11 aaaac
+
+#129
+b1 aaaaa
+b0 aaaab
+b0 aaaac
+b1 aaaad
+0aaaae
+0aaaah
+
+#130
+b1111 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#131
+b0 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#132
+b1111 aaaab
+b10 aaaad
+1aaaaf
+
+#133
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#134
+b1111 aaaab
+b1111 aaaad
+0aaaae
+1aaaag
+
+#135
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#136
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#137
+b1 aaaab
+b0 aaaac
+b10 aaaad
+0aaaae
+0aaaah
+
+#138
+b1110 aaaab
+b1111 aaaad
+1aaaag
+1aaaah
+
+#139
+b1 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#140
+b1110 aaaab
+b11 aaaad
+0aaaae
+1aaaaf
+
+#141
+b1 aaaab
+b10 aaaac
+b1 aaaad
+0aaaaf
+0aaaah
+
+#142
+b1110 aaaab
+b1110 aaaad
+1aaaag
+
+#143
+b1 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+
+#144
+b1101 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#145
+b10 aaaab
+b0 aaaac
+b11 aaaad
+0aaaae
+
+#146
+b1101 aaaab
+b1110 aaaad
+1aaaag
+0aaaah
+
+#147
+b10 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#148
+b1101 aaaab
+b100 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#149
+b10 aaaab
+b10 aaaac
+b10 aaaad
+0aaaaf
+
+#150
+b1101 aaaab
+b1101 aaaad
+1aaaag
+
+#151
+b10 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#152
+b1100 aaaab
+
+#153
+b11 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#154
+b1100 aaaab
+b1101 aaaad
+1aaaag
+
+#155
+b11 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#156
+b1100 aaaab
+b101 aaaad
+0aaaag
+1aaaah
+0aaaai
+
+#157
+b11 aaaab
+b10 aaaac
+b11 aaaad
+0aaaaf
+
+#158
+b1100 aaaab
+b1100 aaaad
+1aaaag
+
+#159
+b11 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#160
+b1011 aaaab
+
+#161
+b100 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#162
+b1011 aaaab
+b1100 aaaad
+1aaaag
+
+#163
+b100 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#164
+b1011 aaaab
+b110 aaaad
+0aaaag
+1aaaah
+0aaaai
+
+#165
+b100 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#166
+b1011 aaaab
+b1011 aaaad
+1aaaag
+
+#167
+b100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#168
+b1010 aaaab
+
+#169
+b101 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#170
+b1010 aaaab
+b1011 aaaad
+1aaaag
+0aaaah
+
+#171
+b101 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#172
+b1010 aaaab
+b111 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#173
+b101 aaaab
+b10 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+
+#174
+b1010 aaaab
+b1010 aaaad
+1aaaag
+
+#175
+b101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#176
+b1001 aaaab
+
+#177
+b110 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#178
+b1001 aaaab
+b1010 aaaad
+1aaaag
+1aaaah
+
+#179
+b110 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#180
+b1001 aaaab
+b1000 aaaad
+0aaaai
+
+#181
+b110 aaaab
+b10 aaaac
+b110 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#182
+b1001 aaaab
+b1001 aaaad
+1aaaag
+
+#183
+b110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#184
+b1000 aaaab
+
+#185
+b111 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#186
+b1000 aaaab
+b1001 aaaad
+1aaaah
+0aaaai
+
+#187
+b111 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+1aaaai
+
+#188
+b1000 aaaab
+b1001 aaaad
+0aaaai
+
+#189
+b111 aaaab
+b10 aaaac
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#190
+b1000 aaaab
+b1000 aaaad
+1aaaag
+
+#191
+b111 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#193
+b1000 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+
+#194
+b111 aaaab
+b1000 aaaad
+0aaaah
+1aaaai
+
+#195
+b1000 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#196
+b111 aaaab
+b1010 aaaad
+1aaaai
+
+#197
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#198
+b111 aaaab
+b111 aaaad
+0aaaag
+
+#199
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#200
+b110 aaaab
+
+#201
+b1001 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+
+#202
+b110 aaaab
+b111 aaaad
+0aaaag
+0aaaah
+
+#203
+b1001 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#204
+b110 aaaab
+b1011 aaaad
+1aaaai
+
+#205
+b1001 aaaab
+b10 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#206
+b110 aaaab
+b110 aaaad
+0aaaag
+
+#207
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#208
+b101 aaaab
+
+#209
+b1010 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#210
+b101 aaaab
+b110 aaaad
+0aaaag
+1aaaah
+
+#211
+b1010 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#212
+b101 aaaab
+b1100 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#213
+b1010 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+0aaaai
+
+#214
+b101 aaaab
+b101 aaaad
+0aaaag
+
+#215
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#216
+b100 aaaab
+
+#217
+b1011 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#218
+b100 aaaab
+b101 aaaad
+0aaaag
+
+#219
+b1011 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#220
+b100 aaaab
+b1101 aaaad
+1aaaag
+0aaaah
+1aaaai
+
+#221
+b1011 aaaab
+b10 aaaac
+b1011 aaaad
+0aaaaf
+0aaaai
+
+#222
+b100 aaaab
+b100 aaaad
+0aaaag
+
+#223
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#224
+b11 aaaab
+
+#225
+b1100 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#226
+b11 aaaab
+b100 aaaad
+0aaaag
+
+#227
+b1100 aaaab
+b1 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#228
+b11 aaaab
+b1110 aaaad
+1aaaag
+0aaaah
+1aaaai
+
+#229
+b1100 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#230
+b11 aaaab
+b11 aaaad
+0aaaag
+
+#231
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#232
+b10 aaaab
+
+#233
+b1101 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#234
+b10 aaaab
+b11 aaaad
+0aaaag
+1aaaah
+
+#235
+b1101 aaaab
+b1 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#236
+b10 aaaab
+b1111 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#237
+b1101 aaaab
+b10 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#238
+b10 aaaab
+b10 aaaad
+0aaaag
+
+#239
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#240
+b1 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#241
+b1110 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#242
+b1 aaaab
+b10 aaaad
+0aaaag
+0aaaah
+
+#243
+b1110 aaaab
+b1 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+
+#244
+b1 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+
+#245
+b1110 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#246
+b1 aaaab
+b1 aaaad
+0aaaag
+
+#247
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#248
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#249
+b1111 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#250
+b0 aaaab
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#251
+b1111 aaaab
+b1 aaaac
+b10 aaaad
+1aaaaf
+
+#252
+b0 aaaab
+b1 aaaad
+0aaaaf
+
+#253
+b1111 aaaab
+b10 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#254
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+
+#255
+b1111 aaaab
+b11 aaaac
+
+#257
+b10 aaaaa
+b0 aaaab
+b0 aaaac
+b10 aaaad
+0aaaae
+0aaaah
+
+#258
+b1111 aaaab
+b1 aaaad
+1aaaaf
+
+#259
+b0 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#260
+b1111 aaaab
+b11 aaaad
+1aaaaf
+1aaaah
+
+#261
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#262
+b1111 aaaab
+b1110 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#263
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#264
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#265
+b1 aaaab
+b0 aaaac
+b11 aaaad
+0aaaae
+
+#266
+b1110 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+
+#267
+b1 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#268
+b1110 aaaab
+b100 aaaad
+1aaaaf
+
+#269
+b1 aaaab
+b10 aaaac
+b10 aaaad
+0aaaaf
+
+#270
+b1110 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#271
+b1 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#272
+b1101 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#273
+b10 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#274
+b1101 aaaab
+b1111 aaaad
+1aaaag
+1aaaah
+
+#275
+b10 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#276
+b1101 aaaab
+b101 aaaad
+0aaaae
+1aaaaf
+
+#277
+b10 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#278
+b1101 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#279
+b10 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#280
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#281
+b11 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#282
+b1100 aaaab
+b1110 aaaad
+1aaaag
+0aaaah
+
+#283
+b11 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#284
+b1100 aaaab
+b110 aaaad
+0aaaag
+0aaaai
+
+#285
+b11 aaaab
+b10 aaaac
+0aaaaf
+
+#286
+b1100 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#287
+b11 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#288
+b1011 aaaab
+
+#289
+b100 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#290
+b1011 aaaab
+b1101 aaaad
+1aaaag
+0aaaah
+
+#291
+b100 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#292
+b1011 aaaab
+b111 aaaad
+0aaaag
+0aaaai
+
+#293
+b100 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#294
+b1011 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#295
+b100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#296
+b1010 aaaab
+
+#297
+b101 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#298
+b1010 aaaab
+b1100 aaaad
+1aaaag
+1aaaah
+
+#299
+b101 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#300
+b1010 aaaab
+b1000 aaaad
+0aaaai
+
+#301
+b101 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#302
+b1010 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#303
+b101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#304
+b1001 aaaab
+
+#305
+b110 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#306
+b1001 aaaab
+b1011 aaaad
+0aaaai
+
+#307
+b110 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#308
+b1001 aaaab
+b1001 aaaad
+0aaaai
+
+#309
+b110 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaai
+
+#310
+b1001 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#311
+b110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#312
+b1000 aaaab
+
+#313
+b111 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#314
+b1000 aaaab
+b1010 aaaad
+0aaaai
+
+#315
+b111 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#316
+b1000 aaaab
+b1010 aaaad
+1aaaah
+0aaaai
+
+#317
+b111 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#318
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#319
+b111 aaaab
+b11 aaaac
+0aaaaf
+
+#321
+b1000 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+
+#322
+b111 aaaab
+b1001 aaaad
+1aaaai
+
+#323
+b1000 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#324
+b111 aaaab
+b1011 aaaad
+0aaaah
+1aaaai
+
+#325
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+0aaaai
+
+#326
+b111 aaaab
+b1110 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#327
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+0aaaai
+
+#328
+b110 aaaab
+
+#329
+b1001 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#330
+b110 aaaab
+b1000 aaaad
+1aaaai
+
+#331
+b1001 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#332
+b110 aaaab
+b1100 aaaad
+1aaaai
+
+#333
+b1001 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#334
+b110 aaaab
+b1100 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#335
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#336
+b101 aaaab
+
+#337
+b1010 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#338
+b101 aaaab
+b111 aaaad
+0aaaag
+0aaaah
+
+#339
+b1010 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#340
+b101 aaaab
+b1101 aaaad
+1aaaai
+
+#341
+b1010 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+0aaaai
+
+#342
+b101 aaaab
+b1010 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#343
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#344
+b100 aaaab
+
+#345
+b1011 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#346
+b100 aaaab
+b110 aaaad
+0aaaag
+1aaaah
+
+#347
+b1011 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#348
+b100 aaaab
+b1110 aaaad
+1aaaag
+1aaaai
+
+#349
+b1011 aaaab
+b10 aaaac
+b110 aaaad
+0aaaag
+1aaaah
+0aaaai
+
+#350
+b100 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#351
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+0aaaai
+
+#352
+b11 aaaab
+
+#353
+b1100 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#354
+b11 aaaab
+b101 aaaad
+0aaaag
+1aaaah
+
+#355
+b1100 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#356
+b11 aaaab
+b1111 aaaad
+1aaaag
+1aaaai
+
+#357
+b1100 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaah
+0aaaai
+
+#358
+b11 aaaab
+b110 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#359
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#360
+b10 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#361
+b1101 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#362
+b10 aaaab
+b100 aaaad
+0aaaag
+0aaaah
+
+#363
+b1101 aaaab
+b1 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#364
+b10 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+
+#365
+b1101 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaae
+1aaaaf
+1aaaag
+
+#366
+b10 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#367
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#368
+b1 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+
+#369
+b1110 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#370
+b1 aaaab
+b11 aaaad
+0aaaae
+0aaaaf
+
+#371
+b1110 aaaab
+b1 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#372
+b1 aaaab
+b1 aaaad
+0aaaaf
+
+#373
+b1110 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#374
+b1 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#375
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#376
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#377
+b1111 aaaab
+b0 aaaac
+b1 aaaad
+0aaaae
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#378
+b0 aaaab
+b10 aaaad
+0aaaaf
+
+#379
+b1111 aaaab
+b1 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+
+#380
+b0 aaaab
+b10 aaaad
+0aaaaf
+0aaaah
+
+#381
+b1111 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaaf
+1aaaag
+
+#382
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#383
+b1111 aaaab
+b11 aaaac
+
+#385
+b11 aaaaa
+b0 aaaab
+b0 aaaac
+b11 aaaad
+0aaaae
+
+#386
+b1111 aaaab
+b10 aaaad
+1aaaaf
+0aaaah
+
+#387
+b0 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+
+#388
+b1111 aaaab
+b100 aaaad
+1aaaaf
+0aaaah
+
+#389
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#390
+b1111 aaaab
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#391
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#392
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#393
+b1 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#394
+b1110 aaaab
+b1 aaaad
+1aaaaf
+
+#395
+b1 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#396
+b1110 aaaab
+b101 aaaad
+1aaaaf
+1aaaah
+
+#397
+b1 aaaab
+b10 aaaac
+b11 aaaad
+0aaaaf
+
+#398
+b1110 aaaab
+b1010 aaaad
+1aaaag
+
+#399
+b1 aaaab
+b11 aaaac
+b11 aaaad
+0aaaag
+
+#400
+b1101 aaaab
+b0 aaaad
+1aaaae
+
+#401
+b10 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#402
+b1101 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+
+#403
+b10 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#404
+b1101 aaaab
+b110 aaaad
+1aaaaf
+1aaaah
+
+#405
+b10 aaaab
+b10 aaaac
+0aaaaf
+
+#406
+b1101 aaaab
+b111 aaaad
+0aaaah
+
+#407
+b10 aaaab
+b11 aaaac
+b1 aaaad
+
+#408
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#409
+b11 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#410
+b1100 aaaab
+b1111 aaaad
+1aaaag
+
+#411
+b11 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#412
+b1100 aaaab
+b111 aaaad
+0aaaae
+1aaaaf
+0aaaah
+
+#413
+b11 aaaab
+b10 aaaac
+b1001 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#414
+b1100 aaaab
+b100 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#415
+b11 aaaab
+b11 aaaac
+b1 aaaad
+
+#416
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#417
+b100 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#418
+b1011 aaaab
+b1110 aaaad
+1aaaag
+
+#419
+b100 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#420
+b1011 aaaab
+b1000 aaaad
+0aaaah
+0aaaai
+
+#421
+b100 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#422
+b1011 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#423
+b100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#424
+b1010 aaaab
+
+#425
+b101 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#426
+b1010 aaaab
+b1101 aaaad
+0aaaai
+
+#427
+b101 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#428
+b1010 aaaab
+b1001 aaaad
+1aaaah
+0aaaai
+
+#429
+b101 aaaab
+b10 aaaac
+b1111 aaaad
+0aaaaf
+1aaaai
+
+#430
+b1010 aaaab
+b1110 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#431
+b101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#432
+b1001 aaaab
+
+#433
+b110 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#434
+b1001 aaaab
+b1100 aaaad
+0aaaai
+
+#435
+b110 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#436
+b1001 aaaab
+b1010 aaaad
+1aaaah
+0aaaai
+
+#437
+b110 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+
+#438
+b1001 aaaab
+b1011 aaaad
+1aaaag
+
+#439
+b110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#440
+b1000 aaaab
+
+#441
+b111 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#442
+b1000 aaaab
+b1011 aaaad
+0aaaah
+0aaaai
+
+#443
+b111 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#444
+b1000 aaaab
+b1011 aaaad
+0aaaah
+0aaaai
+
+#445
+b111 aaaab
+b10 aaaac
+b101 aaaad
+0aaaag
+1aaaah
+
+#446
+b1000 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+
+#447
+b111 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#449
+b1000 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#450
+b111 aaaab
+b1010 aaaad
+1aaaah
+1aaaai
+
+#451
+b1000 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#452
+b111 aaaab
+b1100 aaaad
+1aaaah
+1aaaai
+
+#453
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaah
+0aaaai
+
+#454
+b111 aaaab
+b101 aaaad
+0aaaag
+1aaaah
+
+#455
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#456
+b110 aaaab
+
+#457
+b1001 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#458
+b110 aaaab
+b1001 aaaad
+1aaaai
+
+#459
+b1001 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#460
+b110 aaaab
+b1101 aaaad
+0aaaah
+1aaaai
+
+#461
+b1001 aaaab
+b10 aaaac
+b1011 aaaad
+0aaaai
+
+#462
+b110 aaaab
+b10 aaaad
+0aaaag
+
+#463
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#464
+b101 aaaab
+
+#465
+b1010 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#466
+b101 aaaab
+b1000 aaaad
+1aaaai
+
+#467
+b1010 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#468
+b101 aaaab
+b1110 aaaad
+0aaaah
+1aaaai
+
+#469
+b1010 aaaab
+b10 aaaac
+0aaaai
+
+#470
+b101 aaaab
+b1111 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#471
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#472
+b100 aaaab
+
+#473
+b1011 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#474
+b100 aaaab
+b111 aaaad
+0aaaag
+
+#475
+b1011 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#476
+b100 aaaab
+b1111 aaaad
+1aaaah
+1aaaai
+
+#477
+b1011 aaaab
+b10 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#478
+b100 aaaab
+b1100 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#479
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#480
+b11 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#481
+b1100 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#482
+b11 aaaab
+b110 aaaad
+0aaaag
+
+#483
+b1100 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#484
+b11 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#485
+b1100 aaaab
+b10 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#486
+b11 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#487
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#488
+b10 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#489
+b1101 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#490
+b10 aaaab
+b101 aaaad
+0aaaae
+0aaaaf
+
+#491
+b1101 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#492
+b10 aaaab
+b1 aaaad
+0aaaaf
+0aaaah
+
+#493
+b1101 aaaab
+b10 aaaac
+b111 aaaad
+
+#494
+b10 aaaab
+b110 aaaad
+1aaaah
+
+#495
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#496
+b1 aaaab
+b11 aaaad
+0aaaae
+
+#497
+b1110 aaaab
+b0 aaaac
+b1 aaaad
+1aaaaf
+0aaaah
+
+#498
+b1 aaaab
+b100 aaaad
+0aaaaf
+
+#499
+b1110 aaaab
+b1 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#500
+b1 aaaab
+b10 aaaad
+0aaaaf
+0aaaah
+
+#501
+b1110 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaag
+1aaaah
+
+#502
+b1 aaaab
+b11 aaaad
+0aaaag
+
+#503
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#504
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#505
+b1111 aaaab
+b0 aaaac
+b10 aaaad
+0aaaae
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#506
+b0 aaaab
+b11 aaaad
+0aaaaf
+1aaaah
+
+#507
+b1111 aaaab
+b1 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#508
+b0 aaaab
+b11 aaaad
+0aaaaf
+1aaaah
+
+#509
+b1111 aaaab
+b10 aaaac
+b1101 aaaad
+1aaaag
+0aaaah
+
+#510
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#511
+b1111 aaaab
+b11 aaaac
+
+#513
+b100 aaaaa
+b0 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+
+#514
+b1111 aaaab
+b11 aaaad
+1aaaaf
+1aaaah
+
+#515
+b0 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#516
+b1111 aaaab
+b101 aaaad
+1aaaaf
+1aaaah
+
+#517
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#518
+b1111 aaaab
+b1100 aaaad
+0aaaae
+1aaaaf
+1aaaag
+
+#519
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#520
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#521
+b1 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#522
+b1110 aaaab
+b10 aaaad
+1aaaaf
+0aaaah
+
+#523
+b1 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+
+#524
+b1110 aaaab
+b110 aaaad
+1aaaaf
+
+#525
+b1 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#526
+b1110 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#527
+b1 aaaab
+b11 aaaac
+b100 aaaad
+0aaaaf
+0aaaag
+
+#528
+b1101 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#529
+b10 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#530
+b1101 aaaab
+b1 aaaad
+1aaaaf
+0aaaah
+
+#531
+b10 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#532
+b1101 aaaab
+b111 aaaad
+1aaaaf
+
+#533
+b10 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#534
+b1101 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaai
+
+#535
+b10 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+
+#536
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#537
+b11 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#538
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#539
+b11 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#540
+b1100 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#541
+b11 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#542
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+0aaaai
+
+#543
+b11 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#544
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#545
+b100 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#546
+b1011 aaaab
+b1111 aaaad
+1aaaah
+0aaaai
+
+#547
+b100 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#548
+b1011 aaaab
+b1001 aaaad
+0aaaae
+1aaaaf
+1aaaag
+
+#549
+b100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#550
+b1011 aaaab
+b1100 aaaad
+0aaaae
+0aaaaf
+1aaaag
+
+#551
+b100 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+
+#552
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#553
+b101 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#554
+b1010 aaaab
+b1110 aaaad
+0aaaah
+0aaaai
+
+#555
+b101 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#556
+b1010 aaaab
+b1010 aaaad
+0aaaai
+
+#557
+b101 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+0aaaah
+
+#558
+b1010 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+
+#559
+b101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#560
+b1001 aaaab
+
+#561
+b110 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#562
+b1001 aaaab
+b1101 aaaad
+0aaaah
+0aaaai
+
+#563
+b110 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#564
+b1001 aaaab
+b1011 aaaad
+0aaaai
+
+#565
+b110 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaai
+
+#566
+b1001 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaai
+
+#567
+b110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#568
+b1000 aaaab
+
+#569
+b111 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#570
+b1000 aaaab
+b1100 aaaad
+1aaaah
+0aaaai
+
+#571
+b111 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#572
+b1000 aaaab
+b1100 aaaad
+1aaaah
+0aaaai
+
+#573
+b111 aaaab
+b10 aaaac
+1aaaai
+
+#574
+b1000 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#575
+b111 aaaab
+b11 aaaac
+
+#577
+b1000 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#578
+b111 aaaab
+b1011 aaaad
+0aaaah
+1aaaai
+
+#579
+b1000 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#580
+b111 aaaab
+b1101 aaaad
+0aaaah
+1aaaai
+
+#581
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#582
+b111 aaaab
+b1100 aaaad
+0aaaae
+1aaaaf
+1aaaag
+1aaaai
+
+#583
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#584
+b110 aaaab
+
+#585
+b1001 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#586
+b110 aaaab
+b1010 aaaad
+1aaaah
+1aaaai
+
+#587
+b1001 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#588
+b110 aaaab
+b1110 aaaad
+1aaaai
+
+#589
+b1001 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaai
+
+#590
+b110 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+1aaaai
+
+#591
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#592
+b101 aaaab
+
+#593
+b1010 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#594
+b101 aaaab
+b1001 aaaad
+1aaaah
+1aaaai
+
+#595
+b1010 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#596
+b101 aaaab
+b1111 aaaad
+1aaaai
+
+#597
+b1010 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#598
+b101 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+
+#599
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#600
+b100 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#601
+b1011 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#602
+b100 aaaab
+b1000 aaaad
+0aaaah
+1aaaai
+
+#603
+b1011 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#604
+b100 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#605
+b1011 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+
+#606
+b100 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+
+#607
+b1011 aaaab
+b11 aaaac
+0aaaaf
+
+#608
+b11 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#609
+b1100 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#610
+b11 aaaab
+b111 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#611
+b1100 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#612
+b11 aaaab
+b1 aaaad
+0aaaaf
+0aaaag
+
+#613
+b1100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#614
+b11 aaaab
+b1100 aaaad
+0aaaae
+0aaaaf
+1aaaag
+1aaaai
+
+#615
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#616
+b10 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+
+#617
+b1101 aaaab
+b0 aaaac
+b1 aaaad
+1aaaaf
+
+#618
+b10 aaaab
+b110 aaaad
+0aaaaf
+1aaaah
+
+#619
+b1101 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#620
+b10 aaaab
+b10 aaaad
+0aaaaf
+
+#621
+b1101 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+
+#622
+b10 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#623
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+0aaaai
+
+#624
+b1 aaaab
+b100 aaaad
+0aaaae
+0aaaah
+
+#625
+b1110 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+
+#626
+b1 aaaab
+b101 aaaad
+0aaaaf
+1aaaah
+
+#627
+b1110 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#628
+b1 aaaab
+b11 aaaad
+0aaaaf
+
+#629
+b1110 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#630
+b1 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+
+#631
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#632
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#633
+b1111 aaaab
+b0 aaaac
+b11 aaaad
+0aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#634
+b0 aaaab
+b100 aaaad
+0aaaaf
+0aaaah
+
+#635
+b1111 aaaab
+b1 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#636
+b0 aaaab
+b100 aaaad
+0aaaaf
+0aaaah
+
+#637
+b1111 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#638
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#639
+b1111 aaaab
+b11 aaaac
+
+#641
+b101 aaaaa
+b0 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+
+#642
+b1111 aaaab
+b100 aaaad
+1aaaaf
+0aaaah
+
+#643
+b0 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+
+#644
+b1111 aaaab
+b110 aaaad
+1aaaaf
+
+#645
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#646
+b1111 aaaab
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#647
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#648
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#649
+b1 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#650
+b1110 aaaab
+b11 aaaad
+1aaaaf
+
+#651
+b1 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#652
+b1110 aaaab
+b111 aaaad
+1aaaaf
+
+#653
+b1 aaaab
+b10 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+
+#654
+b1110 aaaab
+b110 aaaad
+
+#655
+b1 aaaab
+b11 aaaac
+b101 aaaad
+
+#656
+b1101 aaaab
+b0 aaaad
+1aaaae
+
+#657
+b10 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#658
+b1101 aaaab
+b10 aaaad
+1aaaaf
+
+#659
+b10 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+
+#660
+b1101 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#661
+b10 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#662
+b1101 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#663
+b10 aaaab
+b11 aaaac
+b10 aaaad
+
+#664
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#665
+b11 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#666
+b1100 aaaab
+b1 aaaad
+1aaaaf
+0aaaag
+0aaaai
+
+#667
+b11 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#668
+b1100 aaaab
+b1001 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#669
+b11 aaaab
+b10 aaaac
+b1111 aaaad
+0aaaaf
+1aaaai
+
+#670
+b1100 aaaab
+b1100 aaaad
+1aaaaf
+0aaaai
+
+#671
+b11 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#672
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#673
+b100 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#674
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+0aaaai
+
+#675
+b100 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#676
+b1011 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#677
+b100 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+0aaaah
+
+#678
+b1011 aaaab
+b111 aaaad
+
+#679
+b100 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+
+#680
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#681
+b101 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#682
+b1010 aaaab
+b1111 aaaad
+0aaaai
+
+#683
+b101 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#684
+b1010 aaaab
+b1011 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#685
+b101 aaaab
+b10 aaaac
+b1001 aaaad
+1aaaah
+1aaaai
+
+#686
+b1010 aaaab
+b10 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#687
+b101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+
+#688
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#689
+b110 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#690
+b1001 aaaab
+b1110 aaaad
+0aaaai
+
+#691
+b110 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#692
+b1001 aaaab
+b1100 aaaad
+0aaaai
+
+#693
+b110 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaah
+1aaaai
+
+#694
+b1001 aaaab
+b1101 aaaad
+0aaaaf
+0aaaai
+
+#695
+b110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#696
+b1000 aaaab
+
+#697
+b111 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#698
+b1000 aaaab
+b1101 aaaad
+0aaaah
+0aaaai
+
+#699
+b111 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#700
+b1000 aaaab
+b1101 aaaad
+0aaaai
+
+#701
+b111 aaaab
+b10 aaaac
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#702
+b1000 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+
+#703
+b111 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#705
+b1000 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#706
+b111 aaaab
+b1100 aaaad
+1aaaah
+1aaaai
+
+#707
+b1000 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#708
+b111 aaaab
+b1110 aaaad
+1aaaai
+
+#709
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+0aaaai
+
+#710
+b111 aaaab
+b11 aaaad
+0aaaag
+1aaaah
+
+#711
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#712
+b110 aaaab
+
+#713
+b1001 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#714
+b110 aaaab
+b1011 aaaad
+1aaaai
+
+#715
+b1001 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#716
+b110 aaaab
+b1111 aaaad
+1aaaai
+
+#717
+b1001 aaaab
+b10 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#718
+b110 aaaab
+b1110 aaaad
+1aaaaf
+1aaaai
+
+#719
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#720
+b101 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#721
+b1010 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#722
+b101 aaaab
+b1010 aaaad
+1aaaai
+
+#723
+b1010 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#724
+b101 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#725
+b1010 aaaab
+b10 aaaac
+b10 aaaad
+0aaaae
+1aaaaf
+0aaaah
+
+#726
+b101 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#727
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#728
+b100 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#729
+b1011 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#730
+b100 aaaab
+b1001 aaaad
+0aaaae
+0aaaaf
+1aaaag
+1aaaai
+
+#731
+b1011 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#732
+b100 aaaab
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#733
+b1011 aaaab
+b10 aaaac
+b111 aaaad
+1aaaaf
+
+#734
+b100 aaaab
+b100 aaaad
+
+#735
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#736
+b11 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#737
+b1100 aaaab
+b0 aaaac
+1aaaaf
+
+#738
+b11 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#739
+b1100 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#740
+b11 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#741
+b1100 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#742
+b11 aaaab
+b1111 aaaad
+0aaaaf
+1aaaai
+
+#743
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#744
+b10 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+
+#745
+b1101 aaaab
+b0 aaaac
+1aaaaf
+
+#746
+b10 aaaab
+b111 aaaad
+0aaaaf
+
+#747
+b1101 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#748
+b10 aaaab
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#749
+b1101 aaaab
+b10 aaaac
+b1 aaaad
+0aaaah
+
+#750
+b10 aaaab
+b1010 aaaad
+1aaaag
+1aaaah
+1aaaai
+
+#751
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#752
+b1 aaaab
+b101 aaaad
+0aaaae
+
+#753
+b1110 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+
+#754
+b1 aaaab
+b110 aaaad
+0aaaaf
+
+#755
+b1110 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#756
+b1 aaaab
+b100 aaaad
+0aaaaf
+
+#757
+b1110 aaaab
+b10 aaaac
+b110 aaaad
+1aaaah
+
+#758
+b1 aaaab
+b101 aaaad
+
+#759
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#760
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#761
+b1111 aaaab
+b0 aaaac
+b100 aaaad
+0aaaae
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#762
+b0 aaaab
+b101 aaaad
+0aaaaf
+1aaaah
+
+#763
+b1111 aaaab
+b1 aaaac
+b110 aaaad
+1aaaaf
+
+#764
+b0 aaaab
+b101 aaaad
+0aaaaf
+
+#765
+b1111 aaaab
+b10 aaaac
+b1011 aaaad
+1aaaag
+0aaaah
+
+#766
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#767
+b1111 aaaab
+b11 aaaac
+
+#769
+b110 aaaaa
+b0 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+
+#770
+b1111 aaaab
+b101 aaaad
+1aaaaf
+
+#771
+b0 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+
+#772
+b1111 aaaab
+b111 aaaad
+1aaaaf
+0aaaah
+
+#773
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#774
+b1111 aaaab
+b1010 aaaad
+0aaaae
+1aaaaf
+1aaaag
+
+#775
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#776
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#777
+b1 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#778
+b1110 aaaab
+b100 aaaad
+1aaaaf
+
+#779
+b1 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+
+#780
+b1110 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#781
+b1 aaaab
+b10 aaaac
+b110 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#782
+b1110 aaaab
+b100 aaaad
+1aaaaf
+0aaaah
+
+#783
+b1 aaaab
+b11 aaaac
+b110 aaaad
+0aaaaf
+1aaaah
+
+#784
+b1101 aaaab
+b0 aaaad
+1aaaae
+
+#785
+b10 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#786
+b1101 aaaab
+b11 aaaad
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#787
+b10 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#788
+b1101 aaaab
+b1001 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#789
+b10 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaai
+
+#790
+b1101 aaaab
+b1110 aaaad
+0aaaah
+0aaaai
+
+#791
+b10 aaaab
+b11 aaaac
+b11 aaaad
+0aaaag
+1aaaah
+
+#792
+b1100 aaaab
+b0 aaaad
+1aaaae
+
+#793
+b11 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#794
+b1100 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#795
+b11 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+
+#796
+b1100 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+
+#797
+b11 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+
+#798
+b1100 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+
+#799
+b11 aaaab
+b11 aaaac
+b10 aaaad
+0aaaag
+
+#800
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#801
+b100 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#802
+b1011 aaaab
+b1 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#803
+b100 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#804
+b1011 aaaab
+b1011 aaaad
+1aaaaf
+1aaaag
+
+#805
+b100 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaai
+
+#806
+b1011 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaai
+
+#807
+b100 aaaab
+b11 aaaac
+b1 aaaad
+
+#808
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#809
+b101 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#810
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#811
+b101 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#812
+b1010 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#813
+b101 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaah
+1aaaai
+
+#814
+b1010 aaaab
+b1100 aaaad
+1aaaah
+0aaaai
+
+#815
+b101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#816
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#817
+b110 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#818
+b1001 aaaab
+b1111 aaaad
+0aaaai
+
+#819
+b110 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#820
+b1001 aaaab
+b1101 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#821
+b110 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaag
+
+#822
+b1001 aaaab
+b110 aaaad
+1aaaaf
+1aaaah
+
+#823
+b110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaah
+
+#824
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#825
+b111 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#826
+b1000 aaaab
+b1110 aaaad
+0aaaai
+
+#827
+b111 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#828
+b1000 aaaab
+b1110 aaaad
+0aaaah
+0aaaai
+
+#829
+b111 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#830
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+0aaaai
+
+#831
+b111 aaaab
+b11 aaaac
+0aaaaf
+
+#833
+b1000 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#834
+b111 aaaab
+b1101 aaaad
+1aaaai
+
+#835
+b1000 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+0aaaai
+
+#836
+b111 aaaab
+b1111 aaaad
+1aaaah
+1aaaai
+
+#837
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#838
+b111 aaaab
+b1010 aaaad
+0aaaae
+0aaaaf
+1aaaag
+1aaaai
+
+#839
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#840
+b110 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#841
+b1001 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#842
+b110 aaaab
+b1100 aaaad
+1aaaai
+
+#843
+b1001 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#844
+b110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#845
+b1001 aaaab
+b10 aaaac
+b110 aaaad
+0aaaae
+1aaaaf
+
+#846
+b110 aaaab
+b100 aaaad
+0aaaaf
+0aaaah
+
+#847
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#848
+b101 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#849
+b1010 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#850
+b101 aaaab
+b1011 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#851
+b1010 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#852
+b101 aaaab
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#853
+b1010 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#854
+b101 aaaab
+b1110 aaaad
+0aaaah
+1aaaai
+
+#855
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#856
+b100 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#857
+b1011 aaaab
+b0 aaaac
+1aaaaf
+
+#858
+b100 aaaab
+b1010 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#859
+b1011 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#860
+b100 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+
+#861
+b1011 aaaab
+b10 aaaac
+
+#862
+b100 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+1aaaai
+
+#863
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#864
+b11 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+
+#865
+b1100 aaaab
+b0 aaaac
+1aaaaf
+
+#866
+b11 aaaab
+b1001 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#867
+b1100 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#868
+b11 aaaab
+b11 aaaad
+0aaaaf
+0aaaag
+
+#869
+b1100 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+0aaaah
+
+#870
+b11 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+
+#871
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#872
+b10 aaaab
+b11 aaaad
+0aaaae
+
+#873
+b1101 aaaab
+b0 aaaac
+1aaaaf
+
+#874
+b10 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#875
+b1101 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#876
+b10 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#877
+b1101 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaag
+
+#878
+b10 aaaab
+b1100 aaaad
+1aaaah
+1aaaai
+
+#879
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#880
+b1 aaaab
+b110 aaaad
+0aaaae
+
+#881
+b1110 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#882
+b1 aaaab
+b111 aaaad
+0aaaaf
+
+#883
+b1110 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#884
+b1 aaaab
+b101 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#885
+b1110 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#886
+b1 aaaab
+b110 aaaad
+0aaaaf
+1aaaah
+
+#887
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#888
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#889
+b1111 aaaab
+b0 aaaac
+b101 aaaad
+0aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#890
+b0 aaaab
+b110 aaaad
+0aaaaf
+
+#891
+b1111 aaaab
+b1 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+
+#892
+b0 aaaab
+b110 aaaad
+0aaaaf
+1aaaah
+
+#893
+b1111 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+
+#894
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#895
+b1111 aaaab
+b11 aaaac
+
+#897
+b111 aaaaa
+b0 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+0aaaah
+
+#898
+b1111 aaaab
+b110 aaaad
+1aaaaf
+1aaaah
+
+#899
+b0 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+
+#900
+b1111 aaaab
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#901
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#902
+b1111 aaaab
+b1001 aaaad
+0aaaae
+1aaaag
+
+#903
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#904
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#905
+b1 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#906
+b1110 aaaab
+b101 aaaad
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#907
+b1 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+
+#908
+b1110 aaaab
+b1001 aaaad
+1aaaaf
+1aaaag
+
+#909
+b1 aaaab
+b10 aaaac
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#910
+b1110 aaaab
+b10 aaaad
+
+#911
+b1 aaaab
+b11 aaaac
+b111 aaaad
+
+#912
+b1101 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#913
+b10 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#914
+b1101 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#915
+b10 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+
+#916
+b1101 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+
+#917
+b10 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#918
+b1101 aaaab
+b1011 aaaad
+1aaaaf
+0aaaai
+
+#919
+b10 aaaab
+b11 aaaac
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#920
+b1100 aaaab
+b0 aaaad
+1aaaae
+
+#921
+b11 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#922
+b1100 aaaab
+b11 aaaad
+1aaaaf
+0aaaag
+0aaaai
+
+#923
+b11 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+
+#924
+b1100 aaaab
+b1011 aaaad
+1aaaaf
+1aaaag
+
+#925
+b11 aaaab
+b10 aaaac
+b101 aaaad
+0aaaag
+1aaaah
+
+#926
+b1100 aaaab
+b100 aaaad
+0aaaah
+
+#927
+b11 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+
+#928
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#929
+b100 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#930
+b1011 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+0aaaai
+
+#931
+b100 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+
+#932
+b1011 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+
+#933
+b100 aaaab
+b10 aaaac
+1aaaai
+
+#934
+b1011 aaaab
+b1101 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#935
+b100 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+
+#936
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#937
+b101 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+1aaaai
+
+#938
+b1010 aaaab
+b1 aaaad
+1aaaaf
+0aaaag
+0aaaah
+0aaaai
+
+#939
+b101 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+
+#940
+b1010 aaaab
+b1101 aaaad
+1aaaaf
+1aaaag
+
+#941
+b101 aaaab
+b10 aaaac
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#942
+b1010 aaaab
+b110 aaaad
+
+#943
+b101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaah
+
+#944
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#945
+b110 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#946
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#947
+b110 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+
+#948
+b1001 aaaab
+b1110 aaaad
+1aaaaf
+1aaaag
+
+#949
+b110 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#950
+b1001 aaaab
+b1111 aaaad
+1aaaaf
+0aaaai
+
+#951
+b110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#952
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+
+#953
+b111 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+1aaaai
+
+#954
+b1000 aaaab
+b1111 aaaad
+1aaaah
+0aaaai
+
+#955
+b111 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#956
+b1000 aaaab
+b1111 aaaad
+0aaaae
+1aaaaf
+1aaaag
+
+#957
+b111 aaaab
+b10 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+
+#958
+b1000 aaaab
+b1000 aaaad
+1aaaag
+
+#959
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+
+#961
+b1000 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+
+#962
+b111 aaaab
+b1110 aaaad
+0aaaah
+1aaaai
+
+#963
+b1000 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#964
+b111 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#965
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#966
+b111 aaaab
+b1 aaaad
+0aaaag
+
+#967
+b1000 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+
+#968
+b110 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#969
+b1001 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+
+#970
+b110 aaaab
+b1101 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#971
+b1001 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+0aaaai
+
+#972
+b110 aaaab
+b1 aaaad
+0aaaaf
+0aaaag
+
+#973
+b1001 aaaab
+b10 aaaac
+b1111 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#974
+b110 aaaab
+b1010 aaaad
+0aaaaf
+1aaaai
+
+#975
+b1001 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+0aaaai
+
+#976
+b101 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#977
+b1010 aaaab
+b0 aaaac
+1aaaaf
+
+#978
+b101 aaaab
+b1100 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#979
+b1010 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#980
+b101 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+
+#981
+b1010 aaaab
+b10 aaaac
+b110 aaaad
+1aaaah
+
+#982
+b101 aaaab
+b11 aaaad
+
+#983
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+
+#984
+b100 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+
+#985
+b1011 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+
+#986
+b100 aaaab
+b1011 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#987
+b1011 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#988
+b100 aaaab
+b11 aaaad
+0aaaaf
+0aaaag
+
+#989
+b1011 aaaab
+b10 aaaac
+b1101 aaaad
+1aaaag
+0aaaah
+
+#990
+b100 aaaab
+b1100 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#991
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+0aaaai
+
+#992
+b11 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+
+#993
+b1100 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+
+#994
+b11 aaaab
+b1010 aaaad
+0aaaaf
+1aaaag
+1aaaai
+
+#995
+b1100 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#996
+b11 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+
+#997
+b1100 aaaab
+b10 aaaac
+1aaaaf
+
+#998
+b11 aaaab
+b101 aaaad
+1aaaah
+
+#999
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+
+#1000
+b10 aaaab
+b11 aaaad
+0aaaae
+
+#1001
+b1101 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+
+#1002
+b10 aaaab
+b1001 aaaad
+0aaaaf
+1aaaag
+1aaaah
+1aaaai
+
+#1003
+b1101 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+0aaaai
+
+#1004
+b10 aaaab
+b101 aaaad
+0aaaaf
+0aaaag
+
+#1005
+b1101 aaaab
+b10 aaaac
+b1011 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1006
+b10 aaaab
+b1110 aaaad
+0aaaaf
+1aaaai
+
+#1007
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+0aaaai
+
+#1008
+b1 aaaab
+b111 aaaad
+0aaaae
+0aaaah
+
+#1009
+b1110 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+
+#1010
+b1 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaah
+1aaaai
+
+#1011
+b1110 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1012
+b1 aaaab
+b110 aaaad
+0aaaaf
+0aaaag
+
+#1013
+b1110 aaaab
+b10 aaaac
+b10 aaaad
+0aaaah
+
+#1014
+b1 aaaab
+b111 aaaad
+
+#1015
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+
+#1016
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+xaaaai
+
+#1017
+b1111 aaaab
+b0 aaaac
+b110 aaaad
+0aaaae
+1aaaaf
+0aaaag
+1aaaah
+0aaaai
+
+#1018
+b0 aaaab
+b111 aaaad
+0aaaaf
+0aaaah
+
+#1019
+b1111 aaaab
+b1 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1020
+b0 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+
+#1021
+b1111 aaaab
+b10 aaaac
+b1001 aaaad
+1aaaag
+1aaaah
+
+#1022
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+
+#1023
+b1111 aaaab
+b11 aaaac
+
+#1025
+b1000 aaaaa
+b0 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#1026
+b1111 aaaab
+b111 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1027
+b0 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1028
+b1111 aaaab
+b1001 aaaad
+1aaaaf
+1aaaah
+
+#1029
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#1030
+b1111 aaaab
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#1031
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+
+#1032
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1033
+b1 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1034
+b1110 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1035
+b1 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1036
+b1110 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1037
+b1 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+0aaaah
+
+#1038
+b1110 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1039
+b1 aaaab
+b11 aaaac
+b1000 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1040
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1041
+b10 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1042
+b1101 aaaab
+b101 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1043
+b10 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1044
+b1101 aaaab
+b1011 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1045
+b10 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#1046
+b1101 aaaab
+b1000 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+
+#1047
+b10 aaaab
+b11 aaaac
+b100 aaaad
+0aaaag
+
+#1048
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1049
+b11 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1050
+b1100 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1051
+b11 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1052
+b1100 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+
+#1053
+b11 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaah
+
+#1054
+b1100 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1055
+b11 aaaab
+b11 aaaac
+b10 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1056
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1057
+b100 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1058
+b1011 aaaab
+b11 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1059
+b100 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1060
+b1011 aaaab
+b1101 aaaad
+1aaaaf
+1aaaag
+
+#1061
+b100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1062
+b1011 aaaab
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#1063
+b100 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+
+#1064
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1065
+b101 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1066
+b1010 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1067
+b101 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1068
+b1010 aaaab
+b1110 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1069
+b101 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+
+#1070
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1071
+b101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1072
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1073
+b110 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1074
+b1001 aaaab
+b1 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1075
+b110 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+0aaaai
+
+#1076
+b1001 aaaab
+b1111 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1077
+b110 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+
+#1078
+b1001 aaaab
+b1000 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+
+#1079
+b110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+
+#1080
+b1000 aaaab
+1aaaai
+
+#1081
+b111 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1082
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaai
+
+#1083
+b111 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1084
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1085
+b111 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1086
+b1000 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1087
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1089
+b1000 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+1aaaai
+
+#1090
+b111 aaaab
+b1111 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaai
+
+#1091
+b1000 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1092
+b111 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1093
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1094
+b111 aaaab
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1095
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+1aaaai
+
+#1096
+b110 aaaab
+0aaaai
+
+#1097
+b1001 aaaab
+b0 aaaac
+1aaaaf
+1aaaai
+
+#1098
+b110 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1099
+b1001 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1100
+b110 aaaab
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1101
+b1001 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+
+#1102
+b110 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+
+#1103
+b1001 aaaab
+b11 aaaac
+0aaaaf
+1aaaai
+
+#1104
+b101 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1105
+b1010 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+1aaaai
+
+#1106
+b101 aaaab
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1107
+b1010 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1108
+b101 aaaab
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#1109
+b1010 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaai
+
+#1110
+b101 aaaab
+b1000 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1111
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1112
+b100 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1113
+b1011 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1114
+b100 aaaab
+b1100 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1115
+b1011 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1116
+b100 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+
+#1117
+b1011 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1118
+b100 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1119
+b1011 aaaab
+b11 aaaac
+1aaaai
+
+#1120
+b11 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1121
+b1100 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+1aaaai
+
+#1122
+b11 aaaab
+b1011 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1123
+b1100 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1124
+b11 aaaab
+b101 aaaad
+0aaaaf
+0aaaag
+
+#1125
+b1100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaai
+
+#1126
+b11 aaaab
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1127
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1128
+b10 aaaab
+b100 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1129
+b1101 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1130
+b10 aaaab
+b1010 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1131
+b1101 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1132
+b10 aaaab
+b110 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#1133
+b1101 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+0aaaah
+
+#1134
+b10 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaah
+
+#1135
+b1101 aaaab
+b11 aaaac
+0aaaaf
+1aaaai
+
+#1136
+b1 aaaab
+b1000 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1137
+b1110 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1138
+b1 aaaab
+b1001 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1139
+b1110 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+
+#1140
+b1 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1141
+b1110 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+1aaaai
+
+#1142
+b1 aaaab
+b1000 aaaad
+0aaaae
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1143
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1144
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1145
+b1111 aaaab
+b0 aaaac
+b111 aaaad
+0aaaae
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1146
+b0 aaaab
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1147
+b1111 aaaab
+b1 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+
+#1148
+b0 aaaab
+b1000 aaaad
+0aaaaf
+0aaaah
+
+#1149
+b1111 aaaab
+b10 aaaac
+1aaaaf
+
+#1150
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1151
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1153
+b1001 aaaaa
+b0 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1154
+b1111 aaaab
+b1000 aaaad
+1aaaaf
+0aaaah
+
+#1155
+b0 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1156
+b1111 aaaab
+b1010 aaaad
+1aaaaf
+
+#1157
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#1158
+b1111 aaaab
+b111 aaaad
+0aaaae
+0aaaah
+1aaaai
+
+#1159
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1160
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1161
+b1 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1162
+b1110 aaaab
+b111 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1163
+b1 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1164
+b1110 aaaab
+b1011 aaaad
+1aaaaf
+
+#1165
+b1 aaaab
+b10 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1166
+b1110 aaaab
+b1110 aaaad
+1aaaaf
+0aaaah
+
+#1167
+b1 aaaab
+b11 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1168
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1169
+b10 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1170
+b1101 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1171
+b10 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1172
+b1101 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1173
+b10 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+
+#1174
+b1101 aaaab
+b101 aaaad
+1aaaah
+1aaaai
+
+#1175
+b10 aaaab
+b11 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1176
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1177
+b11 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1178
+b1100 aaaab
+b101 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1179
+b11 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1180
+b1100 aaaab
+b1101 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1181
+b11 aaaab
+b10 aaaac
+b1011 aaaad
+
+#1182
+b1100 aaaab
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1183
+b11 aaaab
+b11 aaaac
+b11 aaaad
+0aaaag
+
+#1184
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1185
+b100 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1186
+b1011 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1187
+b100 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1188
+b1011 aaaab
+b1110 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1189
+b100 aaaab
+b10 aaaac
+b100 aaaad
+0aaaaf
+0aaaag
+
+#1190
+b1011 aaaab
+b11 aaaad
+1aaaah
+1aaaai
+
+#1191
+b100 aaaab
+b11 aaaac
+b10 aaaad
+0aaaah
+0aaaai
+
+#1192
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1193
+b101 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1194
+b1010 aaaab
+b11 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1195
+b101 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1196
+b1010 aaaab
+b1111 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1197
+b101 aaaab
+b10 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1198
+b1010 aaaab
+b1010 aaaad
+1aaaaf
+1aaaah
+
+#1199
+b101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1200
+b1001 aaaab
+1aaaai
+
+#1201
+b110 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1202
+b1001 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1203
+b110 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1204
+b1001 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1205
+b110 aaaab
+b10 aaaac
+b110 aaaad
+0aaaae
+1aaaaf
+0aaaai
+
+#1206
+b1001 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1207
+b110 aaaab
+b11 aaaac
+0aaaaf
+0aaaai
+
+#1208
+b1000 aaaab
+1aaaai
+
+#1209
+b111 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1210
+b1000 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+1aaaai
+
+#1211
+b111 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+0aaaai
+
+#1212
+b1000 aaaab
+b1 aaaad
+1aaaai
+
+#1213
+b111 aaaab
+b10 aaaac
+b1111 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1214
+b1000 aaaab
+b1000 aaaad
+0aaaaf
+0aaaah
+
+#1215
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+
+#1217
+b1000 aaaab
+b0 aaaac
+1aaaaf
+1aaaai
+
+#1218
+b111 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+0aaaai
+
+#1219
+b1000 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1220
+b111 aaaab
+b10 aaaad
+0aaaai
+
+#1221
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+
+#1222
+b111 aaaab
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1223
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1224
+b110 aaaab
+0aaaai
+
+#1225
+b1001 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+1aaaai
+
+#1226
+b110 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1227
+b1001 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1228
+b110 aaaab
+b11 aaaad
+0aaaae
+0aaaai
+
+#1229
+b1001 aaaab
+b10 aaaac
+b1 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#1230
+b110 aaaab
+b110 aaaad
+1aaaah
+0aaaai
+
+#1231
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#1232
+b101 aaaab
+0aaaai
+
+#1233
+b1010 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1234
+b101 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1235
+b1010 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1236
+b101 aaaab
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1237
+b1010 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1238
+b101 aaaab
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1239
+b1010 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1240
+b100 aaaab
+b10 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1241
+b1011 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+1aaaai
+
+#1242
+b100 aaaab
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1243
+b1011 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1244
+b100 aaaab
+b101 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#1245
+b1011 aaaab
+b10 aaaac
+b11 aaaad
+1aaaai
+
+#1246
+b100 aaaab
+b100 aaaad
+0aaaah
+0aaaai
+
+#1247
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1248
+b11 aaaab
+b11 aaaad
+0aaaae
+0aaaai
+
+#1249
+b1100 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaai
+
+#1250
+b11 aaaab
+b1100 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1251
+b1100 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1252
+b11 aaaab
+b110 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#1253
+b1100 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaag
+
+#1254
+b11 aaaab
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1255
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1256
+b10 aaaab
+b100 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1257
+b1101 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1258
+b10 aaaab
+b1011 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1259
+b1101 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1260
+b10 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1261
+b1101 aaaab
+b10 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1262
+b10 aaaab
+b10 aaaad
+0aaaah
+0aaaai
+
+#1263
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+1aaaai
+
+#1264
+b1 aaaab
+b1001 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1265
+b1110 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1266
+b1 aaaab
+b1010 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1267
+b1110 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1268
+b1 aaaab
+b1000 aaaad
+0aaaaf
+
+#1269
+b1110 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaaf
+
+#1270
+b1 aaaab
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1271
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1272
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1273
+b1111 aaaab
+b0 aaaac
+b1000 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#1274
+b0 aaaab
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1275
+b1111 aaaab
+b1 aaaac
+b1010 aaaad
+1aaaaf
+
+#1276
+b0 aaaab
+b1001 aaaad
+0aaaaf
+
+#1277
+b1111 aaaab
+b10 aaaac
+b111 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1278
+b0 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+0aaaai
+
+#1279
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1281
+b1010 aaaaa
+b0 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1282
+b1111 aaaab
+b1001 aaaad
+1aaaaf
+
+#1283
+b0 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1284
+b1111 aaaab
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1285
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1286
+b1111 aaaab
+b110 aaaad
+0aaaae
+1aaaaf
+1aaaai
+
+#1287
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1288
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1289
+b1 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1290
+b1110 aaaab
+b1000 aaaad
+1aaaaf
+
+#1291
+b1 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1292
+b1110 aaaab
+b1100 aaaad
+1aaaaf
+
+#1293
+b1 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaaf
+
+#1294
+b1110 aaaab
+b1100 aaaad
+
+#1295
+b1 aaaab
+b11 aaaac
+b1010 aaaad
+
+#1296
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1297
+b10 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1298
+b1101 aaaab
+b111 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1299
+b10 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1300
+b1101 aaaab
+b1101 aaaad
+1aaaaf
+
+#1301
+b10 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+
+#1302
+b1101 aaaab
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1303
+b10 aaaab
+b11 aaaac
+b101 aaaad
+1aaaah
+0aaaai
+
+#1304
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1305
+b11 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1306
+b1100 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1307
+b11 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1308
+b1100 aaaab
+b1110 aaaad
+1aaaaf
+1aaaag
+
+#1309
+b11 aaaab
+b10 aaaac
+
+#1310
+b1100 aaaab
+b1000 aaaad
+
+#1311
+b11 aaaab
+b11 aaaac
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+
+#1312
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1313
+b100 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1314
+b1011 aaaab
+b101 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1315
+b100 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1316
+b1011 aaaab
+b1111 aaaad
+1aaaaf
+1aaaag
+
+#1317
+b100 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaaf
+0aaaah
+
+#1318
+b1011 aaaab
+b1110 aaaad
+
+#1319
+b100 aaaab
+b11 aaaac
+b10 aaaad
+0aaaag
+
+#1320
+b1010 aaaab
+b1 aaaad
+1aaaai
+
+#1321
+b101 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1322
+b1010 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1323
+b101 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1324
+b1010 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1325
+b101 aaaab
+b10 aaaac
+b10 aaaad
+0aaaae
+1aaaaf
+0aaaah
+0aaaai
+
+#1326
+b1010 aaaab
+b100 aaaad
+0aaaaf
+1aaaai
+
+#1327
+b101 aaaab
+b11 aaaac
+b10 aaaad
+0aaaai
+
+#1328
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1329
+b110 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1330
+b1001 aaaab
+b11 aaaad
+0aaaae
+1aaaai
+
+#1331
+b110 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1332
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1333
+b110 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1334
+b1001 aaaab
+b1010 aaaad
+
+#1335
+b110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1336
+b1000 aaaab
+1aaaai
+
+#1337
+b111 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1338
+b1000 aaaab
+b10 aaaad
+1aaaai
+
+#1339
+b111 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1340
+b1000 aaaab
+b10 aaaad
+0aaaah
+1aaaai
+
+#1341
+b111 aaaab
+b10 aaaac
+b110 aaaad
+1aaaah
+0aaaai
+
+#1342
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaai
+
+#1343
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1345
+b1000 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+1aaaai
+
+#1346
+b111 aaaab
+b1 aaaad
+0aaaai
+
+#1347
+b1000 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1348
+b111 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1349
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaai
+
+#1350
+b111 aaaab
+b110 aaaad
+0aaaae
+0aaaaf
+0aaaai
+
+#1351
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaah
+1aaaai
+
+#1352
+b110 aaaab
+0aaaai
+
+#1353
+b1001 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1354
+b110 aaaab
+b0 aaaad
+1aaaae
+0aaaai
+
+#1355
+b1001 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1356
+b110 aaaab
+b100 aaaad
+0aaaai
+
+#1357
+b1001 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1358
+b110 aaaab
+b1100 aaaad
+
+#1359
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1360
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1361
+b1010 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+1aaaai
+
+#1362
+b101 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1363
+b1010 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1364
+b101 aaaab
+b101 aaaad
+0aaaae
+0aaaai
+
+#1365
+b1010 aaaab
+b10 aaaac
+b100 aaaad
+0aaaah
+1aaaai
+
+#1366
+b101 aaaab
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1367
+b1010 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+1aaaai
+
+#1368
+b100 aaaab
+b10 aaaad
+0aaaai
+
+#1369
+b1011 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1370
+b100 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1371
+b1011 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1372
+b100 aaaab
+b110 aaaad
+0aaaaf
+0aaaag
+
+#1373
+b1011 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaag
+0aaaah
+
+#1374
+b100 aaaab
+b1000 aaaad
+
+#1375
+b1011 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1376
+b11 aaaab
+b11 aaaad
+0aaaae
+0aaaai
+
+#1377
+b1100 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaai
+
+#1378
+b11 aaaab
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1379
+b1100 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1380
+b11 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+
+#1381
+b1100 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1382
+b11 aaaab
+b1110 aaaad
+
+#1383
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1384
+b10 aaaab
+b101 aaaad
+0aaaae
+0aaaai
+
+#1385
+b1101 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#1386
+b10 aaaab
+b1100 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1387
+b1101 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1388
+b10 aaaab
+b1000 aaaad
+0aaaaf
+
+#1389
+b1101 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+1aaaai
+
+#1390
+b10 aaaab
+b100 aaaad
+1aaaaf
+0aaaai
+
+#1391
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+1aaaai
+
+#1392
+b1 aaaab
+b1010 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1393
+b1110 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+0aaaah
+
+#1394
+b1 aaaab
+b1011 aaaad
+0aaaaf
+
+#1395
+b1110 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1396
+b1 aaaab
+b1001 aaaad
+0aaaaf
+
+#1397
+b1110 aaaab
+b10 aaaac
+b1100 aaaad
+
+#1398
+b1 aaaab
+b1010 aaaad
+
+#1399
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1400
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1401
+b1111 aaaab
+b0 aaaac
+b1001 aaaad
+0aaaae
+1aaaaf
+1aaaag
+1aaaah
+
+#1402
+b0 aaaab
+b1010 aaaad
+0aaaaf
+
+#1403
+b1111 aaaab
+b1 aaaac
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1404
+b0 aaaab
+b1010 aaaad
+0aaaaf
+1aaaah
+
+#1405
+b1111 aaaab
+b10 aaaac
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1406
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaai
+
+#1407
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1409
+b1011 aaaaa
+b0 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1410
+b1111 aaaab
+b1010 aaaad
+1aaaaf
+1aaaah
+
+#1411
+b0 aaaab
+b1 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1412
+b1111 aaaab
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1413
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#1414
+b1111 aaaab
+b101 aaaad
+0aaaae
+1aaaai
+
+#1415
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1416
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1417
+b1 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1418
+b1110 aaaab
+b1001 aaaad
+1aaaaf
+
+#1419
+b1 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1420
+b1110 aaaab
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1421
+b1 aaaab
+b10 aaaac
+b1011 aaaad
+0aaaaf
+
+#1422
+b1110 aaaab
+b1010 aaaad
+1aaaaf
+1aaaah
+
+#1423
+b1 aaaab
+b11 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1424
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1425
+b10 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1426
+b1101 aaaab
+b1000 aaaad
+1aaaaf
+
+#1427
+b10 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1428
+b1101 aaaab
+b1110 aaaad
+1aaaaf
+0aaaah
+
+#1429
+b10 aaaab
+b10 aaaac
+b110 aaaad
+0aaaag
+1aaaah
+
+#1430
+b1101 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+
+#1431
+b10 aaaab
+b11 aaaac
+b101 aaaad
+0aaaag
+
+#1432
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaai
+
+#1433
+b11 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1434
+b1100 aaaab
+b111 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1435
+b11 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1436
+b1100 aaaab
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1437
+b11 aaaab
+b10 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1438
+b1100 aaaab
+b100 aaaad
+1aaaai
+
+#1439
+b11 aaaab
+b11 aaaac
+b11 aaaad
+1aaaah
+0aaaai
+
+#1440
+b1011 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1441
+b100 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1442
+b1011 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1443
+b100 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1444
+b1011 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1445
+b100 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1446
+b1011 aaaab
+b1001 aaaad
+1aaaaf
+
+#1447
+b100 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1448
+b1010 aaaab
+b1 aaaad
+1aaaai
+
+#1449
+b101 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1450
+b1010 aaaab
+b101 aaaad
+0aaaae
+1aaaai
+
+#1451
+b101 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1452
+b1010 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1453
+b101 aaaab
+b10 aaaac
+b111 aaaad
+1aaaaf
+0aaaai
+
+#1454
+b1010 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+
+#1455
+b101 aaaab
+b11 aaaac
+b10 aaaad
+0aaaag
+
+#1456
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1457
+b110 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1458
+b1001 aaaab
+b100 aaaad
+1aaaai
+
+#1459
+b110 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1460
+b1001 aaaab
+b10 aaaad
+0aaaah
+1aaaai
+
+#1461
+b110 aaaab
+b10 aaaac
+0aaaai
+
+#1462
+b1001 aaaab
+b11 aaaad
+1aaaah
+1aaaai
+
+#1463
+b110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaah
+0aaaai
+
+#1464
+b1000 aaaab
+1aaaai
+
+#1465
+b111 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1466
+b1000 aaaab
+b11 aaaad
+1aaaah
+1aaaai
+
+#1467
+b111 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1468
+b1000 aaaab
+b11 aaaad
+1aaaah
+1aaaai
+
+#1469
+b111 aaaab
+b10 aaaac
+b1101 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1470
+b1000 aaaab
+b1000 aaaad
+1aaaaf
+
+#1471
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+
+#1473
+b1000 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1474
+b111 aaaab
+b10 aaaad
+0aaaah
+0aaaai
+
+#1475
+b1000 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1476
+b111 aaaab
+b100 aaaad
+0aaaah
+0aaaai
+
+#1477
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1478
+b111 aaaab
+b1101 aaaad
+0aaaaf
+
+#1479
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#1480
+b110 aaaab
+0aaaai
+
+#1481
+b1001 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+1aaaai
+
+#1482
+b110 aaaab
+b1 aaaad
+0aaaai
+
+#1483
+b1001 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1484
+b110 aaaab
+b101 aaaad
+1aaaah
+0aaaai
+
+#1485
+b1001 aaaab
+b10 aaaac
+b11 aaaad
+1aaaai
+
+#1486
+b110 aaaab
+b10 aaaad
+0aaaah
+0aaaai
+
+#1487
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+1aaaai
+
+#1488
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1489
+b1010 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1490
+b101 aaaab
+b0 aaaad
+1aaaae
+0aaaai
+
+#1491
+b1010 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1492
+b101 aaaab
+b110 aaaad
+1aaaah
+0aaaai
+
+#1493
+b1010 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaag
+0aaaah
+
+#1494
+b101 aaaab
+b111 aaaad
+1aaaaf
+0aaaag
+
+#1495
+b1010 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+1aaaai
+
+#1496
+b100 aaaab
+b10 aaaad
+0aaaai
+
+#1497
+b1011 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1498
+b100 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1499
+b1011 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1500
+b100 aaaab
+b111 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1501
+b1011 aaaab
+b10 aaaac
+b1001 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1502
+b100 aaaab
+b1100 aaaad
+0aaaaf
+
+#1503
+b1011 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1504
+b11 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1505
+b1100 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#1506
+b11 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1507
+b1100 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1508
+b11 aaaab
+b1000 aaaad
+0aaaaf
+0aaaah
+
+#1509
+b1100 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+1aaaai
+
+#1510
+b11 aaaab
+b1 aaaad
+0aaaai
+
+#1511
+b1100 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+1aaaah
+1aaaai
+
+#1512
+b10 aaaab
+b101 aaaad
+0aaaae
+0aaaai
+
+#1513
+b1101 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1514
+b10 aaaab
+b1101 aaaad
+0aaaaf
+
+#1515
+b1101 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1516
+b10 aaaab
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1517
+b1101 aaaab
+b10 aaaac
+b1111 aaaad
+
+#1518
+b10 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+
+#1519
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaai
+
+#1520
+b1 aaaab
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1521
+b1110 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaaf
+1aaaah
+
+#1522
+b1 aaaab
+b1100 aaaad
+0aaaaf
+
+#1523
+b1110 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1524
+b1 aaaab
+b1010 aaaad
+0aaaaf
+1aaaah
+
+#1525
+b1110 aaaab
+b10 aaaac
+1aaaaf
+
+#1526
+b1 aaaab
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1527
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1528
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1529
+b1111 aaaab
+b0 aaaac
+b1010 aaaad
+0aaaae
+1aaaaf
+1aaaag
+1aaaah
+
+#1530
+b0 aaaab
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1531
+b1111 aaaab
+b1 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1532
+b0 aaaab
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1533
+b1111 aaaab
+b10 aaaac
+b101 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#1534
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaai
+
+#1535
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1537
+b1100 aaaaa
+b0 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1538
+b1111 aaaab
+b1011 aaaad
+1aaaaf
+0aaaah
+
+#1539
+b0 aaaab
+b1 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1540
+b1111 aaaab
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1541
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1542
+b1111 aaaab
+b100 aaaad
+0aaaae
+1aaaaf
+0aaaah
+1aaaai
+
+#1543
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1544
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1545
+b1 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1546
+b1110 aaaab
+b1010 aaaad
+1aaaaf
+1aaaah
+
+#1547
+b1 aaaab
+b1 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1548
+b1110 aaaab
+b1110 aaaad
+1aaaaf
+
+#1549
+b1 aaaab
+b10 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1550
+b1110 aaaab
+b1000 aaaad
+0aaaah
+
+#1551
+b1 aaaab
+b11 aaaac
+b1100 aaaad
+1aaaah
+
+#1552
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1553
+b10 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1554
+b1101 aaaab
+b1001 aaaad
+1aaaaf
+1aaaah
+
+#1555
+b10 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1556
+b1101 aaaab
+b1111 aaaad
+1aaaaf
+
+#1557
+b10 aaaab
+b10 aaaac
+b1000 aaaad
+0aaaah
+
+#1558
+b1101 aaaab
+b1100 aaaad
+1aaaah
+
+#1559
+b10 aaaab
+b11 aaaac
+b110 aaaad
+0aaaaf
+0aaaag
+
+#1560
+b1100 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1561
+b11 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1562
+b1100 aaaab
+b1000 aaaad
+1aaaaf
+0aaaah
+
+#1563
+b11 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1564
+b1100 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1565
+b11 aaaab
+b10 aaaac
+b100 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1566
+b1100 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+1aaaai
+
+#1567
+b11 aaaab
+b11 aaaac
+b100 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1568
+b1011 aaaab
+b1 aaaad
+1aaaai
+
+#1569
+b100 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1570
+b1011 aaaab
+b111 aaaad
+0aaaae
+0aaaah
+1aaaai
+
+#1571
+b100 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1572
+b1011 aaaab
+b1 aaaad
+0aaaag
+1aaaai
+
+#1573
+b100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1574
+b1011 aaaab
+b100 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1575
+b100 aaaab
+b11 aaaac
+b11 aaaad
+1aaaah
+0aaaai
+
+#1576
+b1010 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1577
+b101 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1578
+b1010 aaaab
+b110 aaaad
+1aaaah
+1aaaai
+
+#1579
+b101 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1580
+b1010 aaaab
+b10 aaaad
+1aaaai
+
+#1581
+b101 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1582
+b1010 aaaab
+b1000 aaaad
+0aaaah
+
+#1583
+b101 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+
+#1584
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1585
+b110 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1586
+b1001 aaaab
+b101 aaaad
+1aaaah
+1aaaai
+
+#1587
+b110 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1588
+b1001 aaaab
+b11 aaaad
+1aaaai
+
+#1589
+b110 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1590
+b1001 aaaab
+b1100 aaaad
+1aaaah
+
+#1591
+b110 aaaab
+b11 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+
+#1592
+b1000 aaaab
+b1 aaaad
+1aaaai
+
+#1593
+b111 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1594
+b1000 aaaab
+b100 aaaad
+0aaaah
+1aaaai
+
+#1595
+b111 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1596
+b1000 aaaab
+b100 aaaad
+0aaaah
+1aaaai
+
+#1597
+b111 aaaab
+b10 aaaac
+1aaaaf
+0aaaai
+
+#1598
+b1000 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+1aaaai
+
+#1599
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaah
+0aaaai
+
+#1601
+b1000 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+1aaaai
+
+#1602
+b111 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1603
+b1000 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#1604
+b111 aaaab
+b101 aaaad
+1aaaah
+0aaaai
+
+#1605
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaai
+
+#1606
+b111 aaaab
+b100 aaaad
+0aaaae
+1aaaaf
+0aaaah
+0aaaai
+
+#1607
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+1aaaai
+
+#1608
+b110 aaaab
+b10 aaaad
+0aaaai
+
+#1609
+b1001 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1610
+b110 aaaab
+b10 aaaad
+0aaaah
+0aaaai
+
+#1611
+b1001 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1612
+b110 aaaab
+b110 aaaad
+0aaaai
+
+#1613
+b1001 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaag
+
+#1614
+b110 aaaab
+b1000 aaaad
+0aaaah
+
+#1615
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#1616
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1617
+b1010 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1618
+b101 aaaab
+b1 aaaad
+0aaaah
+0aaaai
+
+#1619
+b1010 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1620
+b101 aaaab
+b111 aaaad
+0aaaai
+
+#1621
+b1010 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1622
+b101 aaaab
+b1100 aaaad
+1aaaah
+
+#1623
+b1010 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1624
+b100 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1625
+b1011 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+0aaaah
+1aaaai
+
+#1626
+b100 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+0aaaai
+
+#1627
+b1011 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1628
+b100 aaaab
+b1000 aaaad
+1aaaag
+0aaaai
+
+#1629
+b1011 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+1aaaai
+
+#1630
+b100 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1631
+b1011 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1632
+b11 aaaab
+b100 aaaad
+0aaaai
+
+#1633
+b1100 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1634
+b11 aaaab
+b1111 aaaad
+0aaaaf
+1aaaah
+
+#1635
+b1100 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1636
+b11 aaaab
+b1001 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1637
+b1100 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+0aaaag
+1aaaai
+
+#1638
+b11 aaaab
+b100 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1639
+b1100 aaaab
+b11 aaaac
+b1 aaaad
+1aaaai
+
+#1640
+b10 aaaab
+b110 aaaad
+1aaaah
+0aaaai
+
+#1641
+b1101 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaaf
+1aaaag
+
+#1642
+b10 aaaab
+b1110 aaaad
+0aaaaf
+0aaaah
+
+#1643
+b1101 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1644
+b10 aaaab
+b1010 aaaad
+0aaaaf
+
+#1645
+b1101 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+
+#1646
+b10 aaaab
+b1000 aaaad
+0aaaah
+
+#1647
+b1101 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1648
+b1 aaaab
+b1100 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1649
+b1110 aaaab
+b0 aaaac
+b1010 aaaad
+1aaaaf
+
+#1650
+b1 aaaab
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1651
+b1110 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1652
+b1 aaaab
+b1011 aaaad
+0aaaaf
+
+#1653
+b1110 aaaab
+b10 aaaac
+b1000 aaaad
+
+#1654
+b1 aaaab
+b1100 aaaad
+1aaaah
+
+#1655
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1656
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1657
+b1111 aaaab
+b0 aaaac
+b1011 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#1658
+b0 aaaab
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1659
+b1111 aaaab
+b1 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#1660
+b0 aaaab
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1661
+b1111 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1662
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+0aaaai
+
+#1663
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1665
+b1101 aaaaa
+b0 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1666
+b1111 aaaab
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1667
+b0 aaaab
+b1 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1668
+b1111 aaaab
+b1110 aaaad
+1aaaaf
+
+#1669
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+
+#1670
+b1111 aaaab
+b11 aaaad
+0aaaae
+1aaaai
+
+#1671
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1672
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1673
+b1 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1674
+b1110 aaaab
+b1011 aaaad
+1aaaaf
+
+#1675
+b1 aaaab
+b1 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1676
+b1110 aaaab
+b1111 aaaad
+1aaaaf
+
+#1677
+b1 aaaab
+b10 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1678
+b1110 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1679
+b1 aaaab
+b11 aaaac
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1680
+b1101 aaaab
+b1 aaaad
+0aaaag
+1aaaai
+
+#1681
+b10 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1682
+b1101 aaaab
+b1010 aaaad
+1aaaaf
+
+#1683
+b10 aaaab
+b1 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1684
+b1101 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1685
+b10 aaaab
+b10 aaaac
+b1010 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaai
+
+#1686
+b1101 aaaab
+b1001 aaaad
+0aaaaf
+
+#1687
+b10 aaaab
+b11 aaaac
+b110 aaaad
+0aaaag
+
+#1688
+b1100 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1689
+b11 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1690
+b1100 aaaab
+b1001 aaaad
+0aaaae
+1aaaag
+
+#1691
+b11 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1692
+b1100 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1693
+b11 aaaab
+b10 aaaac
+b111 aaaad
+0aaaai
+
+#1694
+b1100 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1695
+b11 aaaab
+b11 aaaac
+b100 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1696
+b1011 aaaab
+b1 aaaad
+1aaaai
+
+#1697
+b100 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1698
+b1011 aaaab
+b1000 aaaad
+1aaaag
+
+#1699
+b100 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1700
+b1011 aaaab
+b10 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1701
+b100 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+0aaaai
+
+#1702
+b1011 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+1aaaah
+
+#1703
+b100 aaaab
+b11 aaaac
+b11 aaaad
+0aaaag
+
+#1704
+b1010 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1705
+b101 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1706
+b1010 aaaab
+b111 aaaad
+1aaaai
+
+#1707
+b101 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1708
+b1010 aaaab
+b11 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#1709
+b101 aaaab
+b10 aaaac
+b1 aaaad
+0aaaah
+0aaaai
+
+#1710
+b1010 aaaab
+b10 aaaad
+1aaaai
+
+#1711
+b101 aaaab
+b11 aaaac
+0aaaai
+
+#1712
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1713
+b110 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1714
+b1001 aaaab
+b110 aaaad
+1aaaai
+
+#1715
+b110 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1716
+b1001 aaaab
+b100 aaaad
+1aaaai
+
+#1717
+b110 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaag
+0aaaai
+
+#1718
+b1001 aaaab
+b101 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1719
+b110 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1720
+b1000 aaaab
+b1 aaaad
+1aaaai
+
+#1721
+b111 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+0aaaai
+
+#1722
+b1000 aaaab
+b101 aaaad
+1aaaah
+1aaaai
+
+#1723
+b111 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+0aaaai
+
+#1724
+b1000 aaaab
+b101 aaaad
+1aaaai
+
+#1725
+b111 aaaab
+b10 aaaac
+b1011 aaaad
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1726
+b1000 aaaab
+b1000 aaaad
+0aaaaf
+
+#1727
+b111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+
+#1729
+b1000 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1730
+b111 aaaab
+b100 aaaad
+0aaaah
+0aaaai
+
+#1731
+b1000 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1732
+b111 aaaab
+b110 aaaad
+0aaaai
+
+#1733
+b1000 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaag
+0aaaah
+
+#1734
+b111 aaaab
+b1011 aaaad
+1aaaaf
+
+#1735
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+1aaaai
+
+#1736
+b110 aaaab
+b10 aaaad
+0aaaai
+
+#1737
+b1001 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1738
+b110 aaaab
+b11 aaaad
+0aaaai
+
+#1739
+b1001 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#1740
+b110 aaaab
+b111 aaaad
+0aaaai
+
+#1741
+b1001 aaaab
+b10 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1742
+b110 aaaab
+b1110 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1743
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#1744
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1745
+b1010 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+1aaaai
+
+#1746
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1747
+b1010 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1748
+b101 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1749
+b1010 aaaab
+b10 aaaac
+b10 aaaad
+0aaaag
+1aaaai
+
+#1750
+b101 aaaab
+b1 aaaad
+0aaaai
+
+#1751
+b1010 aaaab
+b11 aaaac
+1aaaai
+
+#1752
+b100 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1753
+b1011 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#1754
+b100 aaaab
+b1 aaaad
+0aaaag
+
+#1755
+b1011 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1756
+b100 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1757
+b1011 aaaab
+b10 aaaac
+b1111 aaaad
+
+#1758
+b100 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+
+#1759
+b1011 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+1aaaai
+
+#1760
+b11 aaaab
+b100 aaaad
+0aaaai
+
+#1761
+b1100 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1762
+b11 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+
+#1763
+b1100 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1764
+b11 aaaab
+b1010 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1765
+b1100 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+
+#1766
+b11 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+
+#1767
+b1100 aaaab
+b11 aaaac
+b1 aaaad
+1aaaai
+
+#1768
+b10 aaaab
+b110 aaaad
+1aaaah
+0aaaai
+
+#1769
+b1101 aaaab
+b0 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+
+#1770
+b10 aaaab
+b1111 aaaad
+0aaaaf
+
+#1771
+b1101 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1772
+b10 aaaab
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1773
+b1101 aaaab
+b10 aaaac
+b1001 aaaad
+1aaaah
+
+#1774
+b10 aaaab
+b1010 aaaad
+1aaaaf
+
+#1775
+b1101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1776
+b1 aaaab
+b1101 aaaad
+1aaaag
+0aaaai
+
+#1777
+b1110 aaaab
+b0 aaaac
+b1011 aaaad
+1aaaaf
+
+#1778
+b1 aaaab
+b1110 aaaad
+0aaaaf
+
+#1779
+b1110 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1780
+b1 aaaab
+b1100 aaaad
+0aaaaf
+
+#1781
+b1110 aaaab
+b10 aaaac
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1782
+b1 aaaab
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1783
+b1110 aaaab
+b11 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1784
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1785
+b1111 aaaab
+b0 aaaac
+b1100 aaaad
+0aaaae
+1aaaaf
+1aaaag
+1aaaah
+
+#1786
+b0 aaaab
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1787
+b1111 aaaab
+b1 aaaac
+b1110 aaaad
+1aaaaf
+
+#1788
+b0 aaaab
+b1101 aaaad
+0aaaaf
+
+#1789
+b1111 aaaab
+b10 aaaac
+b11 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#1790
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaai
+
+#1791
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1793
+b1110 aaaaa
+b0 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1794
+b1111 aaaab
+b1101 aaaad
+1aaaaf
+
+#1795
+b0 aaaab
+b1 aaaac
+b1110 aaaad
+0aaaaf
+
+#1796
+b1111 aaaab
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1797
+b0 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+0aaaaf
+0aaaag
+
+#1798
+b1111 aaaab
+b10 aaaad
+0aaaae
+1aaaaf
+0aaaah
+1aaaai
+
+#1799
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1800
+b1110 aaaab
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1801
+b1 aaaab
+b0 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1802
+b1110 aaaab
+b1100 aaaad
+1aaaaf
+
+#1803
+b1 aaaab
+b1 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1804
+b1110 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+1aaaai
+
+#1805
+b1 aaaab
+b10 aaaac
+b1110 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1806
+b1110 aaaab
+b100 aaaad
+0aaaag
+1aaaai
+
+#1807
+b1 aaaab
+b11 aaaac
+b1110 aaaad
+1aaaag
+0aaaai
+
+#1808
+b1101 aaaab
+b1 aaaad
+0aaaag
+1aaaai
+
+#1809
+b10 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1810
+b1101 aaaab
+b1011 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#1811
+b10 aaaab
+b1 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1812
+b1101 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1813
+b10 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1814
+b1101 aaaab
+b110 aaaad
+0aaaag
+1aaaai
+
+#1815
+b10 aaaab
+b11 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1816
+b1100 aaaab
+b1 aaaad
+1aaaai
+
+#1817
+b11 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1818
+b1100 aaaab
+b1010 aaaad
+1aaaag
+1aaaah
+
+#1819
+b11 aaaab
+b1 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1820
+b1100 aaaab
+b10 aaaad
+0aaaag
+1aaaai
+
+#1821
+b11 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1822
+b1100 aaaab
+b1000 aaaad
+0aaaah
+
+#1823
+b11 aaaab
+b11 aaaac
+b100 aaaad
+0aaaag
+
+#1824
+b1011 aaaab
+b1 aaaad
+1aaaai
+
+#1825
+b100 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1826
+b1011 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+
+#1827
+b100 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1828
+b1011 aaaab
+b11 aaaad
+0aaaag
+1aaaai
+
+#1829
+b100 aaaab
+b10 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#1830
+b1011 aaaab
+b1010 aaaad
+1aaaah
+
+#1831
+b100 aaaab
+b11 aaaac
+b11 aaaad
+0aaaaf
+0aaaag
+
+#1832
+b1010 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1833
+b101 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1834
+b1010 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+
+#1835
+b101 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1836
+b1010 aaaab
+b100 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1837
+b101 aaaab
+b10 aaaac
+b110 aaaad
+1aaaah
+0aaaai
+
+#1838
+b1010 aaaab
+b1100 aaaad
+1aaaag
+
+#1839
+b101 aaaab
+b11 aaaac
+b10 aaaad
+0aaaag
+0aaaah
+
+#1840
+b1001 aaaab
+b1 aaaad
+1aaaai
+
+#1841
+b110 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+0aaaai
+
+#1842
+b1001 aaaab
+b111 aaaad
+1aaaai
+
+#1843
+b110 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1844
+b1001 aaaab
+b101 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#1845
+b110 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+0aaaah
+0aaaai
+
+#1846
+b1001 aaaab
+b1110 aaaad
+1aaaag
+
+#1847
+b110 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+
+#1848
+b1000 aaaab
+b1 aaaad
+1aaaai
+
+#1849
+b111 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1850
+b1000 aaaab
+b110 aaaad
+1aaaai
+
+#1851
+b111 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+0aaaai
+
+#1852
+b1000 aaaab
+b110 aaaad
+1aaaah
+1aaaai
+
+#1853
+b111 aaaab
+b10 aaaac
+b10 aaaad
+0aaaah
+0aaaai
+
+#1854
+b1000 aaaab
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+1aaaai
+
+#1855
+b111 aaaab
+b11 aaaac
+b10 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1857
+b1000 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+1aaaai
+
+#1858
+b111 aaaab
+b101 aaaad
+0aaaai
+
+#1859
+b1000 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+1aaaai
+
+#1860
+b111 aaaab
+b111 aaaad
+0aaaah
+0aaaai
+
+#1861
+b1000 aaaab
+b10 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+1aaaai
+
+#1862
+b111 aaaab
+b10 aaaad
+0aaaae
+0aaaaf
+0aaaah
+0aaaai
+
+#1863
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+1aaaai
+
+#1864
+b110 aaaab
+b10 aaaad
+0aaaai
+
+#1865
+b1001 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+1aaaai
+
+#1866
+b110 aaaab
+b100 aaaad
+0aaaai
+
+#1867
+b1001 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1868
+b110 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1869
+b1001 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaaf
+
+#1870
+b110 aaaab
+b100 aaaad
+0aaaag
+
+#1871
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+1aaaai
+
+#1872
+b101 aaaab
+b10 aaaad
+0aaaai
+
+#1873
+b1010 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1874
+b101 aaaab
+b11 aaaad
+0aaaag
+1aaaah
+
+#1875
+b1010 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#1876
+b101 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1877
+b1010 aaaab
+b10 aaaac
+b1100 aaaad
+
+#1878
+b101 aaaab
+b110 aaaad
+0aaaag
+
+#1879
+b1010 aaaab
+b11 aaaac
+b1 aaaad
+0aaaah
+1aaaai
+
+#1880
+b100 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#1881
+b1011 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaaf
+1aaaag
+
+#1882
+b100 aaaab
+b10 aaaad
+0aaaag
+0aaaah
+
+#1883
+b1011 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#1884
+b100 aaaab
+b1010 aaaad
+1aaaag
+0aaaai
+
+#1885
+b1011 aaaab
+b10 aaaac
+1aaaaf
+
+#1886
+b100 aaaab
+b1000 aaaad
+0aaaah
+
+#1887
+b1011 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+1aaaai
+
+#1888
+b11 aaaab
+b100 aaaad
+0aaaai
+
+#1889
+b1100 aaaab
+b0 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#1890
+b11 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+
+#1891
+b1100 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#1892
+b11 aaaab
+b1011 aaaad
+1aaaag
+0aaaai
+
+#1893
+b1100 aaaab
+b10 aaaac
+b1000 aaaad
+
+#1894
+b11 aaaab
+b1010 aaaad
+1aaaah
+
+#1895
+b1100 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1896
+b10 aaaab
+b111 aaaad
+0aaaai
+
+#1897
+b1101 aaaab
+b0 aaaac
+b1011 aaaad
+1aaaaf
+1aaaag
+
+#1898
+b10 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#1899
+b1101 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#1900
+b10 aaaab
+b1100 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1901
+b1101 aaaab
+b10 aaaac
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1902
+b10 aaaab
+b1100 aaaad
+1aaaag
+0aaaai
+
+#1903
+b1101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1904
+b1 aaaab
+b1110 aaaad
+1aaaag
+0aaaai
+
+#1905
+b1110 aaaab
+b0 aaaac
+b1100 aaaad
+1aaaaf
+1aaaah
+
+#1906
+b1 aaaab
+b1111 aaaad
+0aaaaf
+
+#1907
+b1110 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1908
+b1 aaaab
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+0aaaai
+
+#1909
+b1110 aaaab
+b10 aaaac
+b100 aaaad
+0aaaag
+1aaaai
+
+#1910
+b1 aaaab
+b1110 aaaad
+1aaaag
+0aaaai
+
+#1911
+b1110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#1912
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1913
+b1111 aaaab
+b0 aaaac
+b1101 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#1914
+b0 aaaab
+b1110 aaaad
+0aaaaf
+
+#1915
+b1111 aaaab
+b1 aaaac
+b1111 aaaad
+1aaaaf
+1aaaah
+
+#1916
+b0 aaaab
+b1110 aaaad
+0aaaaf
+0aaaah
+
+#1917
+b1111 aaaab
+b10 aaaac
+b10 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1918
+b0 aaaab
+b0 aaaad
+1aaaae
+0aaaaf
+1aaaah
+0aaaai
+
+#1919
+b1111 aaaab
+b11 aaaac
+1aaaai
+
+#1921
+b1111 aaaaa
+b0 aaaab
+b0 aaaac
+b1111 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#1922
+b1111 aaaab
+b1110 aaaad
+1aaaaf
+0aaaah
+
+#1923
+b0 aaaab
+b1 aaaac
+b1111 aaaad
+0aaaaf
+1aaaah
+
+#1924
+b1111 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#1925
+b0 aaaab
+b10 aaaac
+0aaaai
+
+#1926
+b1111 aaaab
+b1 aaaad
+0aaaae
+0aaaah
+1aaaai
+
+#1927
+b0 aaaab
+b11 aaaac
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#1928
+b1110 aaaab
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1929
+b1 aaaab
+b0 aaaac
+b0 aaaad
+1aaaae
+1aaaaf
+1aaaah
+0aaaai
+
+#1930
+b1110 aaaab
+b1101 aaaad
+0aaaae
+1aaaag
+0aaaah
+
+#1931
+b1 aaaab
+b1 aaaac
+b1110 aaaad
+0aaaaf
+
+#1932
+b1110 aaaab
+b1 aaaad
+0aaaag
+1aaaai
+
+#1933
+b1 aaaab
+b10 aaaac
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1934
+b1110 aaaab
+b10 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1935
+b1 aaaab
+b11 aaaac
+b1111 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1936
+b1101 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1937
+b10 aaaab
+b0 aaaac
+1aaaaf
+0aaaai
+
+#1938
+b1101 aaaab
+b1100 aaaad
+1aaaag
+1aaaah
+
+#1939
+b10 aaaab
+b1 aaaac
+b1101 aaaad
+0aaaaf
+0aaaah
+
+#1940
+b1101 aaaab
+b10 aaaad
+0aaaag
+1aaaai
+
+#1941
+b10 aaaab
+b10 aaaac
+b1110 aaaad
+1aaaaf
+1aaaag
+0aaaai
+
+#1942
+b1101 aaaab
+b11 aaaad
+0aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1943
+b10 aaaab
+b11 aaaac
+b111 aaaad
+0aaaah
+0aaaai
+
+#1944
+b1100 aaaab
+b1 aaaad
+1aaaai
+
+#1945
+b11 aaaab
+b0 aaaac
+b10 aaaad
+1aaaaf
+0aaaai
+
+#1946
+b1100 aaaab
+b1011 aaaad
+1aaaag
+
+#1947
+b11 aaaab
+b1 aaaac
+b1100 aaaad
+0aaaaf
+1aaaah
+
+#1948
+b1100 aaaab
+b11 aaaad
+0aaaag
+1aaaai
+
+#1949
+b11 aaaab
+b10 aaaac
+b1101 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1950
+b1100 aaaab
+b100 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#1951
+b11 aaaab
+b11 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+0aaaai
+
+#1952
+b1011 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1953
+b100 aaaab
+b0 aaaac
+b11 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1954
+b1011 aaaab
+b1010 aaaad
+1aaaag
+
+#1955
+b100 aaaab
+b1 aaaac
+b1011 aaaad
+0aaaaf
+0aaaah
+
+#1956
+b1011 aaaab
+b100 aaaad
+0aaaag
+1aaaai
+
+#1957
+b100 aaaab
+b10 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1958
+b1011 aaaab
+b101 aaaad
+0aaaaf
+0aaaag
+1aaaai
+
+#1959
+b100 aaaab
+b11 aaaac
+b11 aaaad
+0aaaai
+
+#1960
+b1010 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1961
+b101 aaaab
+b0 aaaac
+b100 aaaad
+1aaaaf
+0aaaai
+
+#1962
+b1010 aaaab
+b1001 aaaad
+1aaaag
+1aaaah
+
+#1963
+b101 aaaab
+b1 aaaac
+b1010 aaaad
+0aaaaf
+
+#1964
+b1010 aaaab
+b101 aaaad
+0aaaag
+1aaaai
+
+#1965
+b101 aaaab
+b10 aaaac
+b1011 aaaad
+1aaaag
+0aaaah
+0aaaai
+
+#1966
+b1010 aaaab
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaah
+1aaaai
+
+#1967
+b101 aaaab
+b11 aaaac
+b11 aaaad
+0aaaaf
+0aaaai
+
+#1968
+b1001 aaaab
+b1 aaaad
+0aaaah
+1aaaai
+
+#1969
+b110 aaaab
+b0 aaaac
+b101 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1970
+b1001 aaaab
+b1000 aaaad
+1aaaag
+0aaaah
+
+#1971
+b110 aaaab
+b1 aaaac
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1972
+b1001 aaaab
+b110 aaaad
+0aaaag
+1aaaai
+
+#1973
+b110 aaaab
+b10 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+0aaaai
+
+#1974
+b1001 aaaab
+b111 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#1975
+b110 aaaab
+b11 aaaac
+b10 aaaad
+0aaaai
+
+#1976
+b1000 aaaab
+b1 aaaad
+1aaaai
+
+#1977
+b111 aaaab
+b0 aaaac
+b110 aaaad
+1aaaaf
+1aaaah
+0aaaai
+
+#1978
+b1000 aaaab
+b111 aaaad
+0aaaah
+1aaaai
+
+#1979
+b111 aaaab
+b1 aaaac
+b1000 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#1980
+b1000 aaaab
+b111 aaaad
+0aaaag
+1aaaai
+
+#1981
+b111 aaaab
+b10 aaaac
+b1001 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#1982
+b1000 aaaab
+b1000 aaaad
+1aaaaf
+0aaaah
+
+#1983
+b111 aaaab
+b11 aaaac
+b10 aaaad
+0aaaaf
+0aaaag
+
+#1985
+b1000 aaaab
+b0 aaaac
+b111 aaaad
+1aaaaf
+1aaaai
+
+#1986
+b111 aaaab
+b110 aaaad
+1aaaah
+0aaaai
+
+#1987
+b1000 aaaab
+b1 aaaac
+b111 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#1988
+b111 aaaab
+b1000 aaaad
+1aaaag
+0aaaai
+
+#1989
+b1000 aaaab
+b10 aaaac
+1aaaaf
+
+#1990
+b111 aaaab
+b1001 aaaad
+0aaaaf
+1aaaah
+
+#1991
+b1000 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1992
+b110 aaaab
+b10 aaaad
+0aaaai
+
+#1993
+b1001 aaaab
+b0 aaaac
+b1000 aaaad
+1aaaaf
+1aaaag
+
+#1994
+b110 aaaab
+b101 aaaad
+0aaaag
+1aaaah
+
+#1995
+b1001 aaaab
+b1 aaaac
+b110 aaaad
+0aaaaf
+1aaaai
+
+#1996
+b110 aaaab
+b1001 aaaad
+1aaaag
+0aaaai
+
+#1997
+b1001 aaaab
+b10 aaaac
+b111 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#1998
+b110 aaaab
+b1010 aaaad
+1aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#1999
+b1001 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#2000
+b101 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#2001
+b1010 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaaf
+1aaaag
+
+#2002
+b101 aaaab
+b100 aaaad
+0aaaag
+0aaaah
+
+#2003
+b1010 aaaab
+b1 aaaac
+b101 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#2004
+b101 aaaab
+b1010 aaaad
+1aaaag
+0aaaai
+
+#2005
+b1010 aaaab
+b10 aaaac
+b110 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#2006
+b101 aaaab
+b1011 aaaad
+0aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#2007
+b1010 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#2008
+b100 aaaab
+b11 aaaad
+1aaaah
+0aaaai
+
+#2009
+b1011 aaaab
+b0 aaaac
+b1010 aaaad
+1aaaaf
+1aaaag
+
+#2010
+b100 aaaab
+b11 aaaad
+0aaaag
+
+#2011
+b1011 aaaab
+b1 aaaac
+b100 aaaad
+0aaaaf
+0aaaah
+1aaaai
+
+#2012
+b100 aaaab
+b1011 aaaad
+1aaaag
+0aaaai
+
+#2013
+b1011 aaaab
+b10 aaaac
+b101 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#2014
+b100 aaaab
+b1100 aaaad
+1aaaaf
+1aaaag
+0aaaai
+
+#2015
+b1011 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#2016
+b11 aaaab
+b101 aaaad
+1aaaah
+0aaaai
+
+#2017
+b1100 aaaab
+b0 aaaac
+b1011 aaaad
+1aaaaf
+1aaaag
+0aaaah
+
+#2018
+b11 aaaab
+b10 aaaad
+0aaaag
+
+#2019
+b1100 aaaab
+b1 aaaac
+b11 aaaad
+0aaaaf
+1aaaah
+1aaaai
+
+#2020
+b11 aaaab
+b1100 aaaad
+1aaaag
+0aaaai
+
+#2021
+b1100 aaaab
+b10 aaaac
+b100 aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaai
+
+#2022
+b11 aaaab
+b1101 aaaad
+0aaaaf
+1aaaag
+0aaaai
+
+#2023
+b1100 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+1aaaai
+
+#2024
+b10 aaaab
+b111 aaaad
+0aaaai
+
+#2025
+b1101 aaaab
+b0 aaaac
+b1100 aaaad
+1aaaaf
+1aaaag
+1aaaah
+
+#2026
+b10 aaaab
+b1 aaaad
+0aaaag
+0aaaah
+
+#2027
+b1101 aaaab
+b1 aaaac
+b10 aaaad
+0aaaaf
+1aaaai
+
+#2028
+b10 aaaab
+b1101 aaaad
+1aaaag
+0aaaai
+
+#2029
+b1101 aaaab
+b10 aaaac
+b11 aaaad
+0aaaag
+1aaaah
+1aaaai
+
+#2030
+b10 aaaab
+b1110 aaaad
+1aaaaf
+1aaaag
+0aaaah
+0aaaai
+
+#2031
+b1101 aaaab
+b11 aaaac
+b1 aaaad
+0aaaaf
+0aaaag
+1aaaai
+
+#2032
+b1 aaaab
+b1111 aaaad
+1aaaag
+1aaaah
+0aaaai
+
+#2033
+b1110 aaaab
+b0 aaaac
+b1101 aaaad
+1aaaaf
+0aaaah
+
+#2034
+b1 aaaab
+b0 aaaad
+1aaaae
+0aaaag
+1aaaah
+
+#2035
+b1110 aaaab
+b1 aaaac
+b1 aaaad
+0aaaae
+0aaaaf
+0aaaah
+1aaaai
+
+#2036
+b1 aaaab
+b1110 aaaad
+1aaaag
+0aaaai
+
+#2037
+b1110 aaaab
+b10 aaaac
+b10 aaaad
+1aaaaf
+0aaaag
+1aaaai
+
+#2038
+b1 aaaab
+b1111 aaaad
+0aaaaf
+1aaaag
+1aaaah
+0aaaai
+
+#2039
+b1110 aaaab
+b11 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#2040
+b0 aaaab
+bXXXX aaaad
+xaaaae
+xaaaaf
+xaaaag
+xaaaah
+0aaaai
+
+#2041
+b1111 aaaab
+b0 aaaac
+b1110 aaaad
+0aaaae
+1aaaaf
+1aaaag
+0aaaah
+
+#2042
+b0 aaaab
+b1111 aaaad
+0aaaaf
+1aaaah
+
+#2043
+b1111 aaaab
+b1 aaaac
+b0 aaaad
+1aaaae
+0aaaag
+1aaaai
+
+#2044
+b0 aaaab
+b1111 aaaad
+0aaaae
+1aaaag
+0aaaai
+
+#2045
+b1111 aaaab
+b10 aaaac
+b1 aaaad
+0aaaag
+0aaaah
+1aaaai
+
+#2046
+b0 aaaab
+b0 aaaad
+1aaaae
+1aaaah
+0aaaai
+
+#2047
+b1111 aaaab
+b11 aaaac
+b1 aaaad
+0aaaae
+0aaaah
+1aaaai
+
+#2048
+b1100 aaaab
+
+#2049
+b110 aaaaa
+b11 aaaab
+b0 aaaac
+b1001 aaaad
+1aaaag
+1aaaah
+
+#2050
+b1 aaaac
+
+#2051
+b111 aaaaa
+b100 aaaad
+0aaaag
+0aaaah
+0aaaai
+
+#2052

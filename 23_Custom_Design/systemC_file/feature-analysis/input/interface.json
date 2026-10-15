@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "custdesign",
+    "kind": "SystemC sc_module",
+    "clocking_model": "两个内部 SRFF 共用 clk 上升沿；y 由内部状态和 x 组合产生。"
+  },
+  "port_catalog": {
+    "x": {"canonical_path": "custdesign.x", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "组合输入，参与状态反馈"},
+    "clk": {"canonical_path": "custdesign.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "两级 SRFF 共用的上升沿时钟", "edge": "rising"},
+    "reset": {"canonical_path": "custdesign.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "同步高有效状态复位", "polarity": "active_high"},
+    "y": {"canonical_path": "custdesign.y", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "由当前内部状态与 x 形成的组合输出"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "内部 SRFF 状态 q 和 qbar 没有初始化；复位前状态及由其产生的输出不确定。",
+    "每个 SRFF 的 qbar 在时钟沿写入旧 q 的反相，包括 reset 清除 q 的时钟沿；qbar 并非 q 的组合反相。"
+  ]
+}

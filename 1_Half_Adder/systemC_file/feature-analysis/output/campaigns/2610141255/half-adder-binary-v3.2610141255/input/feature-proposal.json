@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "artifact_type": "feature-proposal",
+  "status": "proposed",
+  "inputs": {
+    "interface": "interface.json",
+    "basic_description": "basic-description.md",
+    "static_facts": "static-facts.json"
+  },
+  "features": [
+    {
+      "id": "feature.half_adder.binary",
+      "hypothesis": "For every binary input pair i_a, i_b in {0,1}, after applying the pair and allowing 1 ns for settling, o_sum equals i_a XOR i_b and o_carry equals i_a AND i_b.",
+      "scope": "The half_adder top-level outputs for the four two-state input combinations only; outputs are sampled 1 ns after each input pair is applied.",
+      "triggers": [
+        "i_a changes",
+        "i_b changes"
+      ],
+      "observables": [
+        "o_sum",
+        "o_carry"
+      ],
+      "discovery_basis": [
+        {
+          "kind": "interface_contract",
+          "reference": "interface.json#/port_catalog",
+          "rationale": "The interface declares scalar inputs i_a and i_b and scalar outputs o_sum and o_carry."
+        },
+        {
+          "kind": "basic_description",
+          "reference": "basic-description.md",
+          "rationale": "The description identifies the module as a combinational half-adder without clock or stored state."
+        },
+        {
+          "kind": "static_fact",
+          "reference": "fact.half_adder.sum_xor",
+          "rationale": "The SystemC evaluate method writes XOR of the two inputs to o_sum."
+        },
+        {
+          "kind": "static_fact",
+          "reference": "fact.half_adder.carry_and",
+          "rationale": "The SystemC evaluate method writes AND of the two inputs to o_carry."
+        }
+      ],
+      "source_refs": [
+        {
+          "file": "DUT/half_adder_sc.h",
+          "start_line": 11,
+          "end_line": 12,
+          "symbol": "half_adder::evaluate"
+        },
+        {
+          "file": "DUT/half_adder_sc.h",
+          "start_line": 15,
+          "end_line": 16,
+          "symbol": "half_adder::half_adder"
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "The exact delta-cycle update count and latency were not measured; this campaign samples outputs 1 ns after applying each binary input pair."
+  ]
+}

@@ -1,5 +1,5 @@
-`include "../src/rca64.v"
-`include "../src/half_adder.v"
+`include "rca64.v"
+`include "half_adder.v"
 
 module pipeline(
                    x          ,//input
@@ -25,15 +25,15 @@ reg      [ 63:0]  temps1, temps2, temps3              ;//registers for sum
 always @ (posedge clk)
    begin
       if (reset)
+      begin
          xtemp  <= 0 ;
          ytemp  <= 0 ;
-         
-   end
-
-always @ (posedge clk)
-   begin
-      xtemp <= x  ;
-      ytemp <= y  ;
+      end
+      else
+      begin
+         xtemp <= x  ;
+         ytemp <= y  ;
+      end
    end
 
 //instantiation of 32 bit multipliers

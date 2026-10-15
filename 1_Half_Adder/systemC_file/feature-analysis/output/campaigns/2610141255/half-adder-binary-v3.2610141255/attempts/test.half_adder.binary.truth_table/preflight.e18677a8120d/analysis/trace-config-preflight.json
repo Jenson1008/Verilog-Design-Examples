@@ -1,0 +1,242 @@
+{
+  "artifact_type": "trace-config-preflight-result",
+  "campaign_id": "half-adder-binary-v3.2610141255",
+  "preflight_id": "preflight.e18677a8120d",
+  "test_id": "test.half_adder.binary.truth_table",
+  "run_id": "run.preflight.3f0daa353721",
+  "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+  "status": "passed",
+  "started_at": "2026-10-14T12:55:50.948620+00:00",
+  "ended_at": "2026-10-14T12:55:53.299284+00:00",
+  "source_revision": "sha256:adb920374396567f8a5e645df9cd5bffee754eebc88226876f24cfbb7925999b",
+  "execution_authorization_relative_path": "manifests/preflight-authorization.json",
+  "execution_authorization_sha256": "8c0d82059ad096a12dd58bbef3c7e1ad28cb9261a841f42259668e536a95dc73",
+  "trace_config": [
+    {
+      "port": "i_a",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_a"
+    },
+    {
+      "port": "i_b",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_b"
+    },
+    {
+      "port": "o_sum",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_sum"
+    },
+    {
+      "port": "o_carry",
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_carry"
+    }
+  ],
+  "vcd_header_declarations": [
+    {
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_a",
+      "width_bits": 1
+    },
+    {
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "i_b",
+      "width_bits": 1
+    },
+    {
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_carry",
+      "width_bits": 1
+    },
+    {
+      "scope": [
+        "SystemC"
+      ],
+      "reference": "o_sum",
+      "width_bits": 1
+    }
+  ],
+  "vcd_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run/half_adder_wave.vcd",
+  "vcd_sha256": "3a629cb7ad391c669e6596f55fa7e3b0f9f4ccfe813ec7ae17c3b0956e70650f",
+  "trace_binding_ref": {
+    "path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run/trace-binding.json",
+    "sha256": "b95339454ee8f0c112ca8f06af744a1027ab038e5200d5eae30a92e77c503d71",
+    "artifact_id": "artifact.trace-config-preflight-binding",
+    "stage": "trace_config_preflight",
+    "attempt_id": "preflight.e18677a8120d"
+  },
+  "toolchain_probe": {
+    "started_at": "2026-10-14T12:55:50.788664+00:00",
+    "ended_at": "2026-10-14T12:55:50.946192+00:00",
+    "argv": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu",
+      "--cd",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+      "--exec",
+      "bash",
+      "-lc",
+      "g++ --version | head -n 1; dpkg-query -W libsystemc-dev; uname -a"
+    ],
+    "return_code": 0,
+    "timed_out": false,
+    "output_limited": false,
+    "stdout_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/toolchain-probe.stdout.log",
+    "stdout_sha256": "ced40adeb652d3e1ee4472f8ef80c674dc138485e63392eecf20770f4d537e27",
+    "stderr_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/toolchain-probe.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "preflight_build": {
+    "started_at": "2026-10-14T12:55:50.948620+00:00",
+    "ended_at": "2026-10-14T12:55:53.084733+00:00",
+    "argv": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu",
+      "--cd",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+      "--exec",
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-I/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/input/source/campaign_testbench.cpp",
+      "-lsystemc",
+      "-o",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test"
+    ],
+    "return_code": 0,
+    "timed_out": false,
+    "output_limited": false,
+    "duration_seconds": 2.135,
+    "environment_summary": {
+      "host_os": "Windows-11-10.0.26100-SP0",
+      "host_python": "3.14.5",
+      "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+      "validator_package": "jsonschema",
+      "validator_package_version": "4.26.0",
+      "backend": {
+        "kind": "wsl",
+        "distribution": "Ubuntu"
+      },
+      "configured_compiler": "g++",
+      "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "configured_systemc_version": "2.3.4-3build1",
+      "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+      "verified_toolchain": {
+        "compiler_profile_match": true,
+        "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "systemc_profile_match": true,
+        "actual_systemc_package_version": "2.3.4-3build1",
+        "configured_systemc_version": "2.3.4-3build1"
+      }
+    },
+    "stdout_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/build.stdout.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/build.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "preflight_run": {
+    "started_at": "2026-10-14T12:55:53.084761+00:00",
+    "ended_at": "2026-10-14T12:55:53.299284+00:00",
+    "argv": [
+      "wsl.exe",
+      "-d",
+      "Ubuntu",
+      "--cd",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/run",
+      "--exec",
+      "/mnt/d/repo_github/Verilog-Design-Examples/1_Half_Adder/systemC_file/feature-analysis/output/campaigns/2610141255/half-adder-binary-v3.2610141255/attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/build/half_adder_campaign_test",
+      "--c2s-test-id",
+      "test.half_adder.binary.truth_table",
+      "--c2s-run-id",
+      "run.preflight.3f0daa353721",
+      "--c2s-cycle-semantics-version",
+      "half-adder.binary.wait-1ns.v1"
+    ],
+    "return_code": 0,
+    "timed_out": false,
+    "output_limited": false,
+    "duration_seconds": 0.213,
+    "environment_summary": {
+      "host_os": "Windows-11-10.0.26100-SP0",
+      "host_python": "3.14.5",
+      "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+      "validator_package": "jsonschema",
+      "validator_package_version": "4.26.0",
+      "backend": {
+        "kind": "wsl",
+        "distribution": "Ubuntu"
+      },
+      "configured_compiler": "g++",
+      "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "configured_systemc_version": "2.3.4-3build1",
+      "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+      "verified_toolchain": {
+        "compiler_profile_match": true,
+        "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "systemc_profile_match": true,
+        "actual_systemc_package_version": "2.3.4-3build1",
+        "configured_systemc_version": "2.3.4-3build1"
+      }
+    },
+    "stdout_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/run.stdout.log",
+    "stdout_sha256": "a2fa9e4cf4fc4c54f043a63062a3a6847038bf01e7d12e4ea81928cc792a9e0e",
+    "stderr_relative_path": "attempts/test.half_adder.binary.truth_table/preflight.e18677a8120d/logs/run.stderr.log",
+    "stderr_sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094"
+  },
+  "environment_summary": {
+    "host_os": "Windows-11-10.0.26100-SP0",
+    "host_python": "3.14.5",
+    "host_python_executable": "C:\\Users\\guojiamin\\.copilot\\agents\\systemc-to-spec.harness\\.venv\\Scripts\\python.exe",
+    "validator_package": "jsonschema",
+    "validator_package_version": "4.26.0",
+    "backend": {
+      "kind": "wsl",
+      "distribution": "Ubuntu"
+    },
+    "configured_compiler": "g++",
+    "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "configured_systemc_version": "2.3.4-3build1",
+    "isolation": "No OS/container sandbox; configured command runs with caller permissions. Runner limits wall time, log output, and campaign artifact size only.",
+    "verified_toolchain": {
+      "compiler_profile_match": true,
+      "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "systemc_profile_match": true,
+      "actual_systemc_package_version": "2.3.4-3build1",
+      "configured_systemc_version": "2.3.4-3build1"
+    }
+  },
+  "toolchain_validation": {
+    "compiler_profile_match": true,
+    "actual_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "configured_compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "systemc_profile_match": true,
+    "actual_systemc_package_version": "2.3.4-3build1",
+    "configured_systemc_version": "2.3.4-3build1"
+  },
+  "diagnostic": null,
+  "evidence_use": "Trace mapping preflight only; never counted as test or DUT evidence."
+}

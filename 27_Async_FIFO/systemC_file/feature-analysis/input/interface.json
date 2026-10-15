@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "asyncfifo",
+    "kind": "SystemC sc_module",
+    "clocking_model": "write_clk 与 read_clk 分别触发写读过程；共享 count 过程对两个时钟上升沿及 reset 下降沿敏感。"
+  },
+  "port_catalog": {
+    "write_clk": {"canonical_path": "asyncfifo.write_clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "写入域时钟", "edge": "rising"},
+    "read_clk": {"canonical_path": "asyncfifo.read_clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "读取域时钟", "edge": "rising"},
+    "reset": {"canonical_path": "asyncfifo.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "跨时钟域低有效异步复位", "polarity": "active_low"},
+    "write_en": {"canonical_path": "asyncfifo.write_en", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "请求写入"},
+    "read_en": {"canonical_path": "asyncfifo.read_en", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "请求读取"},
+    "data_in": {"canonical_path": "asyncfifo.data_in", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "待写入字节"},
+    "mem_full": {"canonical_path": "asyncfifo.mem_full", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "共享计数等于 8 时置位"},
+    "mem_empty": {"canonical_path": "asyncfifo.mem_empty", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_logic>", "width_bits": 1, "role": "共享计数等于 0 时置位"},
+    "out": {"canonical_path": "asyncfifo.out", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<8>>", "width_bits": 8, "role": "读成功输出数据；写成功输出 Z；同刻双操作碰撞输出 X"}
+  },
+  "port_hierarchy": [],
+  "declared_unknowns": [
+    "该实现是受限原型而非无条件等价模型。读写时钟同一仿真时刻均出现有效上升沿、且读写操作均被接受时，原 RTL 对 out 有竞争赋值；SystemC 原型将该路径抽象为 X，不承诺与某种 Verilog 调度顺序等价。该碰撞行为未定向测试，必须保持 unknown。",
+    "读写过程由各自时钟驱动，但 count 是共享状态并对两个时钟敏感；RTL 未使用 Gray 指针或 CDC 同步器。本模型不构成安全异步 FIFO 或 CDC 正确性的承诺。",
+    "满/空违规访问、count 溢出/下溢、同时有效读写以及异步指针 CDC 稳定性未验证。"
+  ]
+}

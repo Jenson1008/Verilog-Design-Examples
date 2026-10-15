@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "artifact_type": "test-request-interface",
+  "origin": "caller_seed",
+  "dut_interface_ref": {
+    "path": "input/interface.json",
+    "sha256": "d5348e4cba24dc8c9f4f4f6ac17fec84bbc0b4462b2b6b9d95803290adb07130",
+    "artifact_id": "input.interface",
+    "stage": "snapshot_inputs"
+  },
+  "requests": [
+    {
+      "request_id": "request.half_adder.binary.truth_table",
+      "feature_id": "feature.half_adder.binary",
+      "experiment_id": "experiment.half_adder.binary.truth_table",
+      "stimulus": [
+        {
+          "signal": "i_a",
+          "value": "0",
+          "cycle": 0
+        },
+        {
+          "signal": "i_b",
+          "value": "0",
+          "cycle": 0
+        },
+        {
+          "signal": "i_a",
+          "value": "0",
+          "cycle": 1
+        },
+        {
+          "signal": "i_b",
+          "value": "1",
+          "cycle": 1
+        },
+        {
+          "signal": "i_a",
+          "value": "1",
+          "cycle": 2
+        },
+        {
+          "signal": "i_b",
+          "value": "0",
+          "cycle": 2
+        },
+        {
+          "signal": "i_a",
+          "value": "1",
+          "cycle": 3
+        },
+        {
+          "signal": "i_b",
+          "value": "1",
+          "cycle": 3
+        }
+      ],
+      "observe": [
+        {
+          "signal": "o_sum",
+          "from_cycle": 0,
+          "to_cycle": 3
+        },
+        {
+          "signal": "o_carry",
+          "from_cycle": 0,
+          "to_cycle": 3
+        }
+      ],
+      "expected": [
+        {
+          "signal": "o_sum",
+          "cycle": 0,
+          "value": "0"
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 0,
+          "value": "0"
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 1,
+          "value": "1"
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 1,
+          "value": "0"
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 2,
+          "value": "1"
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 2,
+          "value": "0"
+        },
+        {
+          "signal": "o_sum",
+          "cycle": 3,
+          "value": "0"
+        },
+        {
+          "signal": "o_carry",
+          "cycle": 3,
+          "value": "1"
+        }
+      ],
+      "constraints": {
+        "max_cycles": 4,
+        "timeout_s": 30
+      },
+      "expected_status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+$date
+     Oct 14, 2026       17:24:03
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  in       $end
+$var wire    1  aaaab  clk       $end
+$var wire    1  aaaac  reset       $end
+$var wire    1  aaaad  out       $end
+$scope module dut $end
+$var wire    3  aaaae  present_state [2:0]  $end
+$var wire    3  aaaaf  next_state [2:0]  $end
+$upscope $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+0aaaab
+0aaaac
+xaaaad
+bXXX aaaae
+bXXX aaaaf
+$end
+
+#1
+1aaaac
+0aaaad
+b0 aaaae
+b0 aaaaf
+
+#2
+0aaaac
+
+#4
+1aaaab
+
+#5
+0aaaab
+
+#7
+1aaaab
+
+#8
+0aaaab
+
+#9
+1aaaaa
+b1 aaaaf
+
+#10
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#11
+0aaaab
+
+#12
+0aaaaa
+b0 aaaaf
+
+#13
+1aaaab
+b0 aaaae
+
+#14
+0aaaab
+
+#15
+1aaaac
+
+#16
+0aaaac
+
+#17
+1aaaaa
+b1 aaaaf
+
+#18
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#19
+0aaaab
+
+#21
+1aaaab
+b10 aaaae
+
+#22
+0aaaab
+
+#23
+0aaaaa
+b11 aaaaf
+
+#24
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#25
+0aaaab
+
+#26
+1aaaaa
+b100 aaaaf
+
+#27
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#28
+0aaaab
+
+#29
+1aaaac
+0aaaad
+b0 aaaae
+
+#30
+0aaaac
+
+#32
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#33
+0aaaab
+
+#35
+1aaaab
+b10 aaaae
+
+#36
+0aaaab
+
+#38
+1aaaab
+
+#39
+0aaaab
+
+#40
+0aaaaa
+b11 aaaaf
+
+#41
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#42
+0aaaab
+
+#43
+1aaaac
+b0 aaaae
+
+#44
+0aaaac
+
+#45
+1aaaaa
+b1 aaaaf
+
+#46
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#47
+0aaaab
+
+#49
+1aaaab
+b10 aaaae
+
+#50
+0aaaab
+
+#51
+0aaaaa
+b11 aaaaf
+
+#52
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#53
+0aaaab
+
+#55
+1aaaab
+b0 aaaae
+
+#56
+0aaaab
+
+#57
+1aaaac
+
+#58
+0aaaac
+
+#59
+1aaaaa
+b1 aaaaf
+
+#60
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#61
+0aaaab
+
+#63
+1aaaab
+b10 aaaae
+
+#64
+0aaaab
+
+#65
+0aaaaa
+b11 aaaaf
+
+#66
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#67
+0aaaab
+
+#68
+1aaaaa
+b100 aaaaf
+
+#69
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#70
+0aaaab
+
+#71
+0aaaaa
+b0 aaaaf
+
+#72
+1aaaab
+0aaaad
+b0 aaaae
+
+#73
+0aaaab
+
+#74
+1aaaac
+
+#75
+0aaaac
+
+#76
+1aaaaa
+b1 aaaaf
+
+#77
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#78
+0aaaab
+
+#80
+1aaaab
+b10 aaaae
+
+#81
+0aaaab
+
+#82
+0aaaaa
+b11 aaaaf
+
+#83
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#84
+0aaaab
+
+#85
+1aaaaa
+b100 aaaaf
+
+#86
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#87
+0aaaab
+
+#89
+1aaaab
+0aaaad
+b1 aaaae
+b10 aaaaf
+
+#90
+0aaaab
+
+#91
+1aaaac
+b0 aaaae
+b1 aaaaf
+
+#92
+0aaaac
+
+#94
+1aaaab
+b1 aaaae
+b10 aaaaf
+
+#95
+0aaaab
+
+#97
+1aaaab
+b10 aaaae
+
+#98
+0aaaab
+
+#99
+0aaaaa
+b11 aaaaf
+
+#100
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#101
+0aaaab
+
+#102
+1aaaaa
+b100 aaaaf
+
+#103
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#104
+0aaaab
+
+#106
+1aaaab
+0aaaad
+b1 aaaae
+b10 aaaaf
+
+#107
+0aaaab
+
+#109
+1aaaab
+b10 aaaae
+
+#110
+0aaaab
+
+#111
+0aaaaa
+b11 aaaaf
+
+#112
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#113
+0aaaab
+
+#114
+1aaaaa
+b100 aaaaf
+
+#115
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#116
+0aaaab
+
+#117
+1aaaac
+0aaaad
+b0 aaaae
+
+#118
+0aaaac
+
+#119
+xaaaaa
+b0X aaaaf
+
+#120
+1aaaab
+b0X aaaae
+
+#121
+0aaaab
+
+#122
+1aaaaa
+
+#123
+1aaaab
+
+#124
+0aaaab
+
+#125
+1aaaac
+b0 aaaae
+b1 aaaaf
+
+#126
+0aaaac
+
+#128
+xaaaac
+b1 aaaae
+b10 aaaaf
+
+#129
+0aaaac
+
+#131
+1aaaab
+b10 aaaae
+
+#132
+0aaaab
+
+#133
+0aaaaa
+b11 aaaaf
+
+#134
+1aaaab
+b11 aaaae
+b0 aaaaf
+
+#135
+0aaaab
+
+#136
+1aaaaa
+b100 aaaaf
+
+#137
+1aaaab
+1aaaad
+b100 aaaae
+b1 aaaaf
+
+#138
+0aaaab
+
+#139
+1aaaac
+0aaaad
+b0 aaaae
+
+#140
+0aaaac
+
+#141

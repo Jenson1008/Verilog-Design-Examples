@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "module": {
+    "name": "pipeline",
+    "kind": "SystemC sc_module",
+    "clocking_model": "single rising-edge clock with synchronous active-high reset",
+    "top_level_port_groups": [
+      "clock_reset",
+      "operands",
+      "result"
+    ]
+  },
+  "port_catalog": {
+    "x": {
+      "canonical_path": "pipeline.x",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>",
+      "width_bits": 64,
+      "role": "64 位被乘数输入；在 reset 未为高电平时于时钟上升沿采样。"
+    },
+    "y": {
+      "canonical_path": "pipeline.y",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_lv<64>>",
+      "width_bits": 64,
+      "role": "64 位乘数输入；在 reset 未为高电平时于时钟上升沿采样。"
+    },
+    "clk": {
+      "canonical_path": "pipeline.clk",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "内部流水寄存器共用时钟。",
+      "edge": "rising"
+    },
+    "reset": {
+      "canonical_path": "pipeline.reset",
+      "direction": "input",
+      "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>",
+      "width_bits": 1,
+      "role": "同步高有效复位。",
+      "polarity": "active_high",
+      "sampling": "仅在 clk 上升沿采样。",
+      "asserted_meaning": "在该上升沿将内部 xtemp、ytemp 清零；其他流水级寄存器不由 reset 清零。"
+    },
+    "prod": {
+      "canonical_path": "pipeline.prod",
+      "direction": "output",
+      "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<128>>",
+      "width_bits": 128,
+      "role": "128 位乘积输出，由不同流水级寄存器片段拼接。",
+      "timing_contract": "x、y 保持稳定时，从首次采样它们的上升沿起经过 5 个上升沿后，prod 收敛为 x*y。输入连续逐拍变化时，prod 的各片段可能对应不同输入采样时刻；没有 valid/ready 信号。"
+    }
+  },
+  "port_hierarchy": [
+    {
+      "id": "clock_reset",
+      "kind": "control",
+      "members": [
+        "clk",
+        "reset"
+      ],
+      "children": []
+    },
+    {
+      "id": "operands",
+      "kind": "data_input",
+      "members": [
+        "x",
+        "y"
+      ],
+      "children": []
+    },
+    {
+      "id": "result",
+      "kind": "data_output",
+      "members": [
+        "prod"
+      ],
+      "children": []
+    }
+  ],
+  "declared_unknowns": []
+}

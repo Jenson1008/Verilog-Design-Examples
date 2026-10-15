@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "top_module": "alu",
+  "clocking_model": {"kind": "combinational", "clocks": [], "resets": []},
+  "ports": [
+    {"name": "a", "canonical_path": "a", "direction": "input", "systemc_type": "sc_dt::sc_lv<4>", "width": 4, "role": "first four-bit arithmetic operand"},
+    {"name": "b", "canonical_path": "b", "direction": "input", "systemc_type": "sc_dt::sc_lv<4>", "width": 4, "role": "second four-bit arithmetic operand"},
+    {"name": "select", "canonical_path": "select", "direction": "input", "systemc_type": "sc_dt::sc_lv<2>", "width": 2, "role": "operation selector: add, subtract, multiply, divide"},
+    {"name": "zero", "canonical_path": "zero", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "result-is-zero flag"},
+    {"name": "carry", "canonical_path": "carry", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "bit 4 of the five-bit arithmetic result"},
+    {"name": "sign", "canonical_path": "sign", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "result bit 3"},
+    {"name": "parity", "canonical_path": "parity", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "even parity of the four-bit result"},
+    {"name": "overflow", "canonical_path": "overflow", "direction": "output", "systemc_type": "sc_dt::sc_logic", "width": 1, "role": "RTL sign-based overflow expression"},
+    {"name": "out", "canonical_path": "out", "direction": "output", "systemc_type": "sc_dt::sc_lv<4>", "width": 4, "role": "low four bits of the arithmetic result"}
+  ],
+  "declared_unknowns": [
+    {"description": "RTL sensitivity list is always @(a or b), so changes to select alone do not recompute out/carry; division by zero produces four-state unknown arithmetic output."}
+  ]
+}

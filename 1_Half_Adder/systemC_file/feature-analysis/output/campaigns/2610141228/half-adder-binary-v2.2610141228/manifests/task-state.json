@@ -1,0 +1,50 @@
+{
+  "campaign_id": "half-adder-binary-v2.2610141228",
+  "status": "awaiting_validation",
+  "phases": [
+    {
+      "phase": "snapshot_and_contracts",
+      "status": "succeeded"
+    },
+    {
+      "phase": "preflight_execution",
+      "status": "succeeded"
+    },
+    {
+      "phase": "trace_config_preflight",
+      "status": "succeeded"
+    },
+    {
+      "phase": "build",
+      "status": "succeeded"
+    },
+    {
+      "phase": "execute_test",
+      "status": "succeeded"
+    },
+    {
+      "phase": "analyze_trace",
+      "status": "succeeded"
+    },
+    {
+      "phase": "evidence_gate",
+      "status": "succeeded"
+    },
+    {
+      "phase": "build_feature_ir",
+      "status": "succeeded"
+    },
+    {
+      "phase": "await_human_validation",
+      "status": "pending"
+    },
+    {
+      "phase": "complete",
+      "status": "awaiting_validation"
+    },
+    {
+      "phase": "campaign_validation",
+      "status": "succeeded"
+    }
+  ]
+}

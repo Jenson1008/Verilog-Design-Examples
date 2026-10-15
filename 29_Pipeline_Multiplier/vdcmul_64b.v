@@ -1,5 +1,5 @@
-`include "../src/rca64.v"
-`include "../src/half_adder.v"
+`include "rca64.v"
+`include "half_adder.v"
 
 module vdcmul_64b(
                    x,

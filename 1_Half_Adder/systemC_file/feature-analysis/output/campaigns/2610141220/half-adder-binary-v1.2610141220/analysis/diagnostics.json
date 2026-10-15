@@ -1,0 +1,9 @@
+{
+  "campaign_id": "half-adder-binary-v1.2610141220",
+  "diagnostics": [
+    {
+      "code": "contract_conflict",
+      "message": "DUT/interface mismatch:\n- port i_a: declaration not found in SC_MODULE(half_adder)\n- port i_b: declaration not found in SC_MODULE(half_adder)\n- port o_sum: declaration not found in SC_MODULE(half_adder)\n- port o_carry: declaration not found in SC_MODULE(half_adder)"
+    }
+  ]
+}

@@ -1,21 +1,20 @@
 {
-  "schema_version": 2,
-  "module": {
-    "name": "cntr_3ud",
-    "kind": "SystemC sc_module",
-    "clocking_model": "Single-clock, positive-edge-triggered, three-bit modulo-8 counter. State changes only on a Verilog positive-edge transition.",
-    "top_level_port_groups": []
+  "schema_version":"1.0",
+  "top_module":"cntr_3ud",
+  "clocking_model":{
+    "kind":"single_clock",
+    "clocks":[{"port":"clk","active_edge":"rising"}],
+    "resets":[{"port":"reset","polarity":"active_high","behavior":"synchronous","sampling_edge":"rising","asserted_meaning":"Sets the 3-bit count to 0 on a rising clock edge."}]
   },
-  "port_catalog": {
-    "up_down": {"canonical_path": "cntr_3ud.up_down", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Logic 1 decrements; logic 0, X, or Z takes the procedural if else branch and increments.", "sampling": "Sampled on each Verilog positive-edge transition of clk.", "timing_contract": "The value at the active clock event controls the next count."},
-    "clk": {"canonical_path": "cntr_3ud.clk", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Clock; active edge is positive, including Verilog 0-to-1/X/Z and X/Z-to-1 transitions.", "edge": "rising", "timing_contract": "A Verilog positive-edge transition triggers the state update."},
-    "reset": {"canonical_path": "cntr_3ud.reset", "direction": "input", "systemc_type": "sc_core::sc_in<sc_dt::sc_logic>", "width_bits": 1, "role": "Active-high synchronous reset sampled on the active clock edge; X/Z follows procedural Verilog if semantics.", "polarity": "active_high", "sampling": "Synchronous to clk; sampled only on its Verilog positive-edge transition.", "asserted_meaning": "Logic 1 clears bin_count to 000.", "reset_binding": "cntr_3ud.clk", "timing_contract": "Reset assertion and release affect state only when sampled at an active clock event."},
-    "bin_count": {"canonical_path": "cntr_3ud.bin_count", "direction": "output", "systemc_type": "sc_core::sc_out<sc_dt::sc_lv<3>>", "width_bits": 3, "role": "Three-bit modulo-8 count; wraps on increment/decrement overflow.", "timing_contract": "Updated after a Verilog positive-edge transition of clk."}
-  },
-  "port_hierarchy": [],
-  "declared_unknowns": [
-    "The RTL does not initialize bin_count; its power-up value is unknown until a positive clock edge evaluates reset as logic 1.",
-    "The Verilog testbench changes reset at 25 ns, coincident with a positive clock edge, so the value sampled at that edge is scheduling-dependent.",
-    "The original testbench also drives up_down on the same positive edge at which the DUT samples it; this SystemC stimulus avoids that race and does not claim to reproduce its random sequence."
+  "ports":[
+    {"name":"up_down","canonical_path":"up_down","direction":"input","systemc_type":"sc_dt::sc_logic","width":1,"role":"When 1, count down; when 0, count up. An X/Z value follows the Verilog procedural-if else branch (count up)."},
+    {"name":"clk","canonical_path":"clk","direction":"input","systemc_type":"bool","width":1,"role":"Rising-edge counter clock."},
+    {"name":"reset","canonical_path":"reset","direction":"input","systemc_type":"bool","width":1,"role":"Active-high synchronous reset."},
+    {"name":"bin_count","canonical_path":"bin_count","direction":"output","systemc_type":"sc_dt::sc_lv<3>","width":3,"role":"Modulo-8 binary count; reset loads 0, up/down steps wrap at 7/0."}
+  ],
+  "declared_unknowns":[
+    {"description":"The RTL output register has no declaration-time initialization; it remains unknown until a rising edge with reset asserted. The self-check verifies the initial unknown state."},
+    {"description":"A directed X value on up_down verifies Verilog if/else semantics: X is not true, so the counter takes the up-count branch. Z on up_down is not separately tested."},
+    {"description":"Clock and reset are represented as bool and only binary 0/1 behavior is modeled; X/Z on clock or reset is outside this conversion's verification scope."}
   ]
 }

@@ -1,0 +1,29 @@
+
+        SystemC 2.3.4-Accellera --- Apr 22 2024 14:54:19
+        Copyright (c) 1996-2022 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I703) tracing timescale unit set: 1 ns (wave.vcd)
+t=3 ns synchronous-reset-seed reset=1 expected_data_out=0001 actual_data_out=0001 PASS
+t=6 ns first-feedback reset=0 expected_data_out=1000 actual_data_out=1000 PASS
+t=9 ns lfsr-transition-0 reset=0 expected_data_out=0100 actual_data_out=0100 PASS
+t=12 ns lfsr-transition-1 reset=0 expected_data_out=0010 actual_data_out=0010 PASS
+t=15 ns lfsr-transition-2 reset=0 expected_data_out=1001 actual_data_out=1001 PASS
+t=18 ns lfsr-transition-3 reset=0 expected_data_out=1100 actual_data_out=1100 PASS
+t=21 ns lfsr-transition-4 reset=0 expected_data_out=0110 actual_data_out=0110 PASS
+t=24 ns lfsr-transition-5 reset=0 expected_data_out=1011 actual_data_out=1011 PASS
+t=27 ns lfsr-transition-6 reset=0 expected_data_out=0101 actual_data_out=0101 PASS
+t=30 ns lfsr-transition-7 reset=0 expected_data_out=1010 actual_data_out=1010 PASS
+t=33 ns lfsr-transition-8 reset=0 expected_data_out=1101 actual_data_out=1101 PASS
+t=36 ns lfsr-transition-9 reset=0 expected_data_out=1110 actual_data_out=1110 PASS
+t=39 ns lfsr-transition-10 reset=0 expected_data_out=1111 actual_data_out=1111 PASS
+t=42 ns lfsr-transition-11 reset=0 expected_data_out=0111 actual_data_out=0111 PASS
+t=45 ns lfsr-transition-12 reset=0 expected_data_out=0011 actual_data_out=0011 PASS
+t=48 ns lfsr-transition-13 reset=0 expected_data_out=0001 actual_data_out=0001 PASS
+t=51 ns lfsr-transition-14 reset=0 expected_data_out=1000 actual_data_out=1000 PASS
+t=54 ns lfsr-transition-15 reset=0 expected_data_out=0100 actual_data_out=0100 PASS
+t=57 ns lfsr-transition-16 reset=0 expected_data_out=0010 actual_data_out=0010 PASS
+t=60 ns lfsr-transition-17 reset=0 expected_data_out=1001 actual_data_out=1001 PASS
+t=63 ns reset-reseed reset=1 expected_data_out=0001 actual_data_out=0001 PASS
+t=66 ns post-reset-transition reset=0 expected_data_out=1000 actual_data_out=1000 PASS
+SUMMARY checks=22 failures=0 csv=checks.csv vcd=wave.vcd

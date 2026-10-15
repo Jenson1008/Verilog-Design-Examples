@@ -1,4 +1,4 @@
-`include "../src/rca16b.v"
+`include "rca16b.v"
 
 module rca32b(
                a,

@@ -1,5 +1,5 @@
 $date
-     Oct 09, 2026       09:45:02
+     Oct 14, 2026       15:53:38
 $end
 
 $version
@@ -16,9 +16,10 @@ $var wire    1  aaaab  i_b       $end
 $var wire    1  aaaac  i_cin       $end
 $var wire    1  aaaad  o_sum       $end
 $var wire    1  aaaae  o_carry       $end
-$var wire    1  aaaaf  w_sum1       $end
-$var wire    1  aaaag  w_carry1       $end
-$var wire    1  aaaah  w_carry2       $end
+$var wire    1  aaaaf  leaf_h_a       $end
+$var wire    1  aaaag  leaf_h_b       $end
+$var wire    1  aaaah  leaf_h_sum       $end
+$var wire    1  aaaai  leaf_h_carry       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -27,86 +28,68 @@ All initial values are dumped below at time 0 sec = 0 timescale units.
 $end
 
 $dumpvars
+xaaaaa
+xaaaab
+xaaaac
+xaaaad
+xaaaae
+0aaaaf
+0aaaag
+0aaaah
+0aaaai
+$end
+
+#1
+1aaaag
+1aaaah
+
+#2
+1aaaaf
+0aaaag
+
+#3
+1aaaag
+0aaaah
+1aaaai
+
+#4
 0aaaaa
 0aaaab
 0aaaac
 0aaaad
 0aaaae
-0aaaaf
-0aaaag
-0aaaah
-$end
-
-#1
-1aaaac
-1aaaad
-
-#2
-1aaaab
-0aaaac
-1aaaaf
-
-#3
-1aaaac
-0aaaad
-1aaaae
-1aaaah
-
-#4
-1aaaaa
-0aaaab
-0aaaac
-1aaaad
-0aaaae
-0aaaah
 
 #5
 1aaaac
-0aaaad
-1aaaae
-1aaaah
+1aaaad
 
 #6
 1aaaab
 0aaaac
-0aaaaf
-1aaaag
-0aaaah
 
 #7
 1aaaac
-1aaaad
+0aaaad
+1aaaae
 
 #8
-0aaaaa
-xaaaab
-0aaaac
-xaaaad
-0aaaae
-xaaaaf
-0aaaag
-
-#9
-zaaaab
-1aaaac
-xaaaae
-xaaaah
-
-#10
 1aaaaa
-1aaaab
-xaaaac
-1aaaae
-0aaaaf
-1aaaag
-0aaaah
-
-#11
-xaaaaa
 0aaaab
 0aaaac
+1aaaad
 0aaaae
-xaaaaf
-0aaaag
+
+#9
+1aaaac
+0aaaad
+1aaaae
+
+#10
+1aaaab
+0aaaac
+
+#11
+1aaaac
+1aaaad
 
 #12

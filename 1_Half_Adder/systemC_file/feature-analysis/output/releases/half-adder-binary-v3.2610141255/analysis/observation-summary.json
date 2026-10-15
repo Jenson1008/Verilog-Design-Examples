@@ -1,0 +1,127 @@
+{
+  "schema_version": 3,
+  "artifact_type": "observation-summary",
+  "observations": [
+    {
+      "observation_id": "observation.half_adder.binary.truth_table",
+      "test_id": "test.half_adder.binary.truth_table",
+      "run_id": "run.b2739de59ed3",
+      "attempt_id": "attempt.566324927ab5",
+      "cycle_semantics_version": "half-adder.binary.wait-1ns.v1",
+      "request_id": "request.half_adder.binary.truth_table",
+      "test_result_ref": {
+        "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/result/test-result-interface.json",
+        "sha256": "16fcc0541f68f5dcc5ee6650064509ad889163d74c818ea6a415d23a889659e9",
+        "artifact_id": "artifact.test-result",
+        "stage": "analyze_trace",
+        "attempt_id": "attempt.566324927ab5"
+      },
+      "observed_events": [
+        {
+          "cycle": 0,
+          "i_a": "0",
+          "i_b": "0",
+          "o_sum": "0",
+          "o_carry": "0"
+        },
+        {
+          "cycle": 1,
+          "i_a": "0",
+          "i_b": "1",
+          "o_sum": "1",
+          "o_carry": "0"
+        },
+        {
+          "cycle": 2,
+          "i_a": "1",
+          "i_b": "0",
+          "o_sum": "1",
+          "o_carry": "0"
+        },
+        {
+          "cycle": 3,
+          "i_a": "1",
+          "i_b": "1",
+          "o_sum": "0",
+          "o_carry": "1"
+        }
+      ],
+      "cycle_semantics": "Drive one binary input pair, wait 1 ns, then sample o_sum and o_carry.",
+      "support_status": "supported",
+      "counterexamples": [],
+      "coverage": {
+        "mode": "exhaustive",
+        "domain_complete": true,
+        "expected_vectors": 4,
+        "observed_vectors": 4,
+        "passing_vectors": 4,
+        "failing_vectors": 0
+      },
+      "artifact_refs": [
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/build.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "artifact_id": "artifact.build-stdout",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/build.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "artifact_id": "artifact.build-stderr",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/run.stdout.log",
+          "sha256": "a2fa9e4cf4fc4c54f043a63062a3a6847038bf01e7d12e4ea81928cc792a9e0e",
+          "artifact_id": "artifact.run-stdout",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/run.stderr.log",
+          "sha256": "6bd73854a82afa9b98f2469046392b9e9444dc057fabe5ff476d8686e1de4094",
+          "artifact_id": "artifact.run-stderr",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/logs/execution-record.json",
+          "sha256": "7d37f28e89e74e1ecf5567af868edc5a7e4eb10dd14e5508a12b39f7de6c2b43",
+          "artifact_id": "artifact.execution-record",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder.csv",
+          "sha256": "c846b0bdc3c2160a0de07cce3388a95059032b744c6fcd0002cc47fb79aaecc7",
+          "artifact_id": "artifact.test-log",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/half_adder_wave.vcd",
+          "sha256": "b8dab1c2b3fdcec09a056623ca5eed60845d6e9b50c388634c9a553598fd9b36",
+          "artifact_id": "artifact.waveform",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        },
+        {
+          "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/trace-binding.json",
+          "sha256": "d6e3b874be98f6f23491f06f304ea6b5649599ca86a6cf67ce30d0f6ac3e7856",
+          "artifact_id": "artifact.trace-binding",
+          "stage": "execute_test",
+          "attempt_id": "attempt.566324927ab5"
+        }
+      ],
+      "trace_binding_ref": {
+        "path": "attempts/test.half_adder.binary.truth_table/attempt.566324927ab5/run/trace-binding.json",
+        "sha256": "d6e3b874be98f6f23491f06f304ea6b5649599ca86a6cf67ce30d0f6ac3e7856",
+        "artifact_id": "artifact.trace-binding",
+        "stage": "execute_test",
+        "attempt_id": "attempt.566324927ab5"
+      }
+    }
+  ]
+}

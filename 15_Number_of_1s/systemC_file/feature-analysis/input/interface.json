@@ -1,0 +1,73 @@
+{
+    "schema_version":  2,
+    "module":  {
+                   "name":  "no_1s",
+                   "kind":  "SystemC SC_MODULE",
+                   "clocking_model":  "single_clock; reset behavior according to source contract",
+                   "top_level_port_groups":  [
+                                                 "inputs",
+                                                 "outputs"
+                                             ]
+               },
+    "port_catalog":  {
+                         "clk":  {
+                                     "canonical_path":  "no_1s.clk",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                     "width_bits":  1,
+                                     "role":  "Rising-edge sampling clock.",
+                                     "edge":  "rising"
+                                 },
+                         "reset":  {
+                                       "canonical_path":  "no_1s.reset",
+                                       "direction":  "input",
+                                       "systemc_type":  "sc_core::sc_in\u003cbool\u003e",
+                                       "width_bits":  1,
+                                       "role":  "Active-high synchronous output accumulator reset.",
+                                       "polarity":  "active_high",
+                                       "asserted_meaning":  "Sets no_ones to zero; the integer bit index is not reset."
+                                   },
+                         "i_a":  {
+                                     "canonical_path":  "no_1s.i_a",
+                                     "direction":  "input",
+                                     "systemc_type":  "sc_core::sc_in\u003csc_dt::sc_lv\u003c16\u003e\u003e",
+                                     "width_bits":  16,
+                                     "role":  "16-bit vector whose bits are examined in successive cycles by the integer index."
+                                 },
+                         "no_ones":  {
+                                         "canonical_path":  "no_1s.no_ones",
+                                         "direction":  "output",
+                                         "systemc_type":  "sc_core::sc_out\u003csc_dt::sc_lv\u003c4\u003e\u003e",
+                                         "width_bits":  4,
+                                         "role":  "Four-bit running sum of examined input bits that are 1, until integer index reaches 16."
+                                     }
+                     },
+    "port_hierarchy":  [
+                           {
+                               "id":  "inputs",
+                               "kind":  "top_level_inputs",
+                               "members":  [
+                                               "clk",
+                                               "reset",
+                                               "i_a"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           },
+                           {
+                               "id":  "outputs",
+                               "kind":  "top_level_outputs",
+                               "members":  [
+                                               "no_ones"
+                                           ],
+                               "children":  [
+
+                                            ]
+                           }
+                       ],
+    "declared_unknowns":  [
+                              "The output register is not initialized in RTL and remains unknown until a rising edge with reset asserted; the integer index initializes to zero, increments even during reset, and is never reset.",
+                              "An X-valued sampled input bit makes the RTL arithmetic result unknown; a directed X sample verifies propagation. The accumulator stops updating when the index is no longer less than 16. Only index values 0 through 16 are exercised; signed integer overflow and out-of-range indexing are not tested."
+                          ]
+}
